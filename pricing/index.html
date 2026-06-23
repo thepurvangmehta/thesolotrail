@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — The Solo Trail</title>
+<meta name="description" content="Simple, transparent pricing for solo trekkers. Free trail guides forever, or go Pro for offline PDFs, GPS waypoints, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: clip; }
+  body { min-width: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+  :root {
+    --forest:        #1A3A2A;
+    --forest-light:  #2A5240;
+    --forest-pale:   #E8F0EB;
+    --glacier:       #4A8FA8;
+    --glacier-light: #EBF4F8;
+    --amber:         #D4882A;
+    --amber-light:   #FDF3E3;
+    --bg:            #F7F4EE;
+    --white:         #FFFFFF;
+    --text:          #1C1C1C;
+    --text-mid:      #4A4A4A;
+    --text-muted:    #7A7A7A;
+    --border:        #DDD8CE;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--forest);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo span { color: #7EC8A0; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color .2s; }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta { background: var(--glacier) !important; color: #fff !important; padding: 7px 16px; border-radius: 6px; font-size: 13px !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,.85); border-radius: 2px; }
+
+  /* ── HERO ── */
+  .pricing-hero {
+    background: var(--forest);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+  .pricing-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .pricing-hero p {
+    font-size: 16px;
+    color: rgba(255,255,255,.68);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── BILLING TOGGLE ── */
+  .billing-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 36px 24px 0;
+  }
+  .billing-toggle {
+    display: inline-flex;
+    background: var(--border);
+    border-radius: 10px;
+    padding: 4px;
+    gap: 2px;
+  }
+  .toggle-btn {
+    padding: 9px 22px;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all .2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .toggle-btn.active { background: var(--white); color: var(--text); box-shadow: 0 1px 5px rgba(0,0,0,.1); }
+  .save-badge {
+    font-size: 11px;
+    font-weight: 600;
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 2px 7px;
+    border-radius: 10px;
+    letter-spacing: .01em;
+  }
+
+  /* ── CARDS GRID ── */
+  .pricing-grid {
+    max-width: 1040px;
+    margin: 32px auto 0;
+    padding: 0 24px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .pricing-grid > * { min-width: 0; }
+
+  /* ── CARD BASE ── */
+  .price-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .price-card-featured {
+    border: 2px solid var(--forest);
+    box-shadow: 0 8px 32px rgba(26,58,42,.12);
+  }
+  .price-card-lifetime {
+    border-color: var(--amber);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--forest);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .card-tier-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .price-card-featured .card-tier-label { color: var(--forest); }
+  .price-card-lifetime .card-tier-label { color: var(--amber); }
+
+  .card-price { margin-bottom: 4px; }
+  .price-main {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .price-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+  }
+  .price-period {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .price-annual-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    display: block;
+  }
+  .price-free-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* ── CTA BUTTONS ── */
+  .btn-card {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: background .2s, opacity .2s;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--forest);
+    border: 2px solid var(--forest);
+  }
+  .btn-outline:hover { background: var(--forest-pale); }
+  .btn-primary-card {
+    background: var(--forest);
+    color: #fff;
+  }
+  .btn-primary-card:hover { background: var(--forest-light); }
+  .btn-amber {
+    background: var(--amber);
+    color: #fff;
+  }
+  .btn-amber:hover { background: #B8741E; }
+
+  /* ── FEATURE LIST ── */
+  .feature-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin-bottom: 18px;
+  }
+  .feature-group-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  .fi-check {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 10px;
+  }
+  .fi-check.yes { background: var(--forest-pale); color: var(--forest); }
+  .fi-check.no  { background: #F0EDE7; color: #C8C0B4; }
+  .feature-item.dim { color: var(--text-muted); }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 0 24px 64px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .trust-icon { font-size: 16px; }
+
+  /* ── FAQ ── */
+  .faq-section {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  .faq-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--forest);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    gap: 16px;
+  }
+  .faq-chevron { font-size: 18px; color: var(--text-muted); transition: transform .25s; flex-shrink: 0; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer {
+    display: none;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.75;
+    padding-bottom: 18px;
+  }
+  .faq-item.open .faq-answer { display: block; }
+
+  /* ── SUCCESS MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 36px 32px;
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+  }
+  .modal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--forest-pale);
+    color: var(--forest);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+  }
+  .modal-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+  .modal-body { font-size: 14px; color: var(--text-mid); line-height: 1.75; margin-bottom: 20px; }
+  .modal-pid {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-family: monospace;
+    color: var(--text);
+    word-break: break-all;
+    margin-bottom: 20px;
+  }
+  .modal-close {
+    display: inline-block;
+    padding: 11px 28px;
+    background: var(--forest);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
+    .price-card-featured { order: -1; }
+  }
+  @media (max-width: 640px) {
+    nav { padding: 0 16px; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 56px; left: 0; right: 0;
+      background: var(--forest);
+      flex-direction: column;
+      padding: 12px 16px 20px;
+      gap: 2px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      z-index: 99;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 4px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,.07); width: 100%; }
+    .nav-links .nav-cta { margin-top: 8px; text-align: center; padding: 11px; border-radius: 7px; }
+    .nav-hamburger { display: flex; }
+
+    .pricing-hero { padding: 44px 20px 36px; }
+    .pricing-hero h1 { font-size: 30px; }
+    .pricing-hero p { font-size: 14px; }
+    .billing-wrap { padding: 28px 20px 0; }
+    .toggle-btn { padding: 8px 16px; font-size: 13px; }
+    .pricing-grid { padding: 0 16px 60px; }
+    .price-num { font-size: 38px; }
+    .trust-bar { gap: 16px; padding: 0 16px 48px; }
+    .faq-section { padding: 0 16px 60px; }
+    .faq-question { font-size: 14px; }
+    .modal-box { padding: 28px 20px; }
+  }
+  @media (max-width: 400px) {
+    .save-badge { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="/" class="nav-logo">the solo <span>trail</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/">Trails</a>
+    <a href="#">Guides</a>
+    <a href="#">Community</a>
+    <a href="#">About</a>
+    <a href="/pricing/" class="nav-cta">Go Pro</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="pricing-hero">
+  <h1>Simple pricing.<br>Trek further.</h1>
+  <p>Free trail guides forever. Go Pro when you want the complete offline kit — PDF, GPS, and every detail that doesn't fit a webpage.</p>
+</section>
+
+<!-- ── BILLING TOGGLE ── -->
+<div class="billing-wrap">
+  <div class="billing-toggle">
+    <button class="toggle-btn active" data-cycle="monthly" onclick="setBilling('monthly')">Monthly</button>
+    <button class="toggle-btn" data-cycle="annual" onclick="setBilling('annual')">
+      Annual <span class="save-badge">Save 28%</span>
+    </button>
+  </div>
+</div>
+
+<!-- ── PRICING CARDS ── -->
+<div class="pricing-grid">
+
+  <!-- FREE -->
+  <div class="price-card">
+    <div class="card-tier-label">Free</div>
+    <div class="card-price">
+      <div class="price-main">
+        <span class="price-num">$0</span>
+        <span class="price-period">forever</span>
+      </div>
+      <p class="price-free-sub">No card required</p>
+    </div>
+    <a href="/" class="btn-card btn-outline">Start exploring</a>
+    <hr class="feature-divider">
+    <div class="feature-group-label">What's included</div>
+    <ul class="feature-list">
+      <li class="feature-item"><span class="fi-check yes">✓</span> All trail overviews and summaries</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> First day of every itinerary</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> General cost estimates</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Safety tips and emergency contacts</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Currency conversion for all prices</li>
+      <li class="feature-item dim"><span class="fi-check no">✗</span> Full day-by-day itineraries</li>
+      <li class="feature-item dim"><span class="fi-check no">✗</span> Offline PDF guides</li>
+      <li class="feature-item dim"><span class="fi-check no">✗</span> GPX waypoint files</li>
+      <li class="feature-item dim"><span class="fi-check no">✗</span> Accommodation contacts</li>
+    </ul>
+  </div>
+
+  <!-- PRO -->
+  <div class="price-card price-card-featured">
+    <div class="popular-badge">Most Popular</div>
+    <div class="card-tier-label">Pro</div>
+
+    <!-- Monthly price -->
+    <div class="card-price price-monthly">
+      <div class="price-main">
+        <span class="price-num" data-price="7">$7</span>
+        <span class="price-period">/month</span>
+      </div>
+      <span class="price-annual-note">Billed monthly · cancel anytime</span>
+    </div>
+
+    <!-- Annual price (hidden by default) -->
+    <div class="card-price price-annual" style="display:none">
+      <div class="price-main">
+        <span class="price-num" data-price="5">$5</span>
+        <span class="price-period">/month</span>
+      </div>
+      <span class="price-annual-note">Billed <span data-price="60">$60</span> once a year</span>
+    </div>
+
+    <button class="btn-card btn-primary-card"
+            id="pro-cta"
+            data-plan="monthly"
+            onclick="pay('pro')">Get Pro</button>
+    <hr class="feature-divider">
+    <div class="feature-group-label">Everything in Free, plus</div>
+    <ul class="feature-list">
+      <li class="feature-item"><span class="fi-check yes">✓</span> Complete itineraries for every trail</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Downloadable offline PDF trail guides</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> GPX waypoints for Maps.me &amp; Gaia GPS</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Curated stays with direct booking contacts</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Emergency contacts sorted by altitude zone</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> New trails added every month</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Ad-free experience</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Email support</li>
+    </ul>
+  </div>
+
+  <!-- LIFETIME -->
+  <div class="price-card price-card-lifetime">
+    <div class="card-tier-label">Lifetime</div>
+    <div class="card-price">
+      <div class="price-main">
+        <span class="price-num" data-price="149">$149</span>
+        <span class="price-period">once</span>
+      </div>
+      <span class="price-annual-note">Pay once, trek forever</span>
+    </div>
+    <button class="btn-card btn-amber" onclick="pay('lifetime')">Get Lifetime Access</button>
+    <hr class="feature-divider">
+    <div class="feature-group-label">Everything in Pro, plus</div>
+    <ul class="feature-list">
+      <li class="feature-item"><span class="fi-check yes">✓</span> No renewals — ever</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> All future trails automatically included</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Founding member badge in community</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Priority support channel</li>
+      <li class="feature-item"><span class="fi-check yes">✓</span> Input on which trails get added next</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🔒</span> Secure payments via Razorpay</div>
+  <div class="trust-item"><span class="trust-icon">↩️</span> 7-day refund, no questions</div>
+  <div class="trust-item"><span class="trust-icon">📶</span> Guides work fully offline</div>
+  <div class="trust-item"><span class="trust-icon">✉️</span> Delivered to your inbox</div>
+</div>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <h2 class="faq-heading">Common questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      How do I get the PDF guides and GPX files after paying?
+      <span class="faq-chevron">↓</span>
+    </button>
+    <div class="faq-answer">
+      After your payment goes through, you'll see a confirmation screen with your payment ID. Email that ID to <strong>hello@thesolotrail.com</strong> and we'll send your guides within a few hours — usually much faster. We're working on instant delivery; until then, email is the handoff.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      What exactly is in the PDF guide?
+      <span class="faq-chevron">↓</span>
+    </button>
+    <div class="faq-answer">
+      Each trail guide is a dense, printable PDF covering: the complete day-by-day itinerary with elevation and distances, tea house recommendations at each stop with WhatsApp contacts where available, a curated gear checklist, permit details, and an emergency contact sheet sorted by altitude zone. It's everything on the website plus the offline-only details that don't make sense to publish publicly (like direct lodge numbers).
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      The price shows in my currency — but what do you actually charge?
+      <span class="faq-chevron">↓</span>
+    </button>
+    <div class="faq-answer">
+      Payments are processed in INR via Razorpay. The prices you see on this page are converted to your local currency for reference — the Razorpay checkout will show the INR equivalent. Razorpay supports all major international cards and UPI, so there's no extra step for Indian or international trekkers.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      Can I cancel my Pro subscription?
+      <span class="faq-chevron">↓</span>
+    </button>
+    <div class="faq-answer">
+      Yes — email <strong>hello@thesolotrail.com</strong> at any time and we'll cancel your subscription before the next billing date. If you're within 7 days of any payment, we'll refund it in full. No retention flows, no guilt trips.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFaq(this)">
+      Is the Lifetime deal really lifetime?
+      <span class="faq-chevron">↓</span>
+    </button>
+    <div class="faq-answer">
+      Yes. One payment, and every trail we ever add is automatically yours. We use "Lifetime" to mean the lifetime of the product — if we ever shut down, we'll send you a download of everything first.
+    </div>
+  </div>
+</section>
+
+<!-- ── SUCCESS MODAL ── -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal-box">
+    <div class="modal-icon">✓</div>
+    <div class="modal-title">Payment confirmed</div>
+    <div class="modal-body">
+      Your <strong id="success-plan-name"></strong> is active. Email your payment ID below to <strong>hello@thesolotrail.com</strong> and we'll send your guides within a few hours.
+    </div>
+    <div class="modal-pid" id="success-pid">—</div>
+    <a id="success-email-link" href="mailto:hello@thesolotrail.com" class="modal-close" style="display:inline-block;margin-bottom:10px;text-decoration:none">
+      Open email
+    </a><br>
+    <button class="modal-close" style="background:transparent;color:var(--text-muted);margin-top:8px;" onclick="closeModal()">
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+  // ─────────────────────────────────────────────────────────────────
+  // RAZORPAY CONFIGURATION
+  // 1. Sign up at razorpay.com and create an account
+  // 2. Go to Settings → API Keys → Generate Key
+  // 3. Replace the key below with your Key ID (starts with rzp_live_)
+  // ─────────────────────────────────────────────────────────────────
+  var RAZORPAY_KEY = 'YOUR_RAZORPAY_KEY_ID';
+
+  var PLANS = {
+    pro_monthly:  { amount: 59900,   inr: '₹599',    label: 'Pro — Monthly'  },
+    pro_annual:   { amount: 499900,  inr: '₹4,999',  label: 'Pro — Annual'   },
+    lifetime:     { amount: 1199900, inr: '₹11,999', label: 'Lifetime Access' },
+  };
+
+  // ── Billing toggle ──
+  var currentCycle = 'monthly';
+
+  function setBilling(cycle) {
+    currentCycle = cycle;
+    document.querySelectorAll('.toggle-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.cycle === cycle);
+    });
+    document.querySelectorAll('.price-monthly').forEach(function(el) {
+      el.style.display = cycle === 'monthly' ? '' : 'none';
+    });
+    document.querySelectorAll('.price-annual').forEach(function(el) {
+      el.style.display = cycle === 'annual' ? 'block' : 'none';
+    });
+    // re-trigger currency.js conversion on the newly visible elements
+    if (window.TSTApplyAll) window.TSTApplyAll();
+  }
+
+  // ── Razorpay checkout ──
+  function pay(product) {
+    var planKey = product === 'pro'
+      ? (currentCycle === 'annual' ? 'pro_annual' : 'pro_monthly')
+      : 'lifetime';
+
+    var plan = PLANS[planKey];
+
+    if (RAZORPAY_KEY === 'YOUR_RAZORPAY_KEY_ID') {
+      alert('Payment coming soon!\n\nTo enable: replace YOUR_RAZORPAY_KEY_ID in pricing/index.html with your Razorpay Key ID.');
+      return;
+    }
+
+    var options = {
+      key:         RAZORPAY_KEY,
+      amount:      plan.amount,
+      currency:    'INR',
+      name:        'The Solo Trail',
+      description: plan.label,
+      handler: function(response) {
+        openSuccessModal(response.razorpay_payment_id, plan);
+      },
+      prefill:  {},
+      notes:    { plan: planKey },
+      theme:    { color: '#1A3A2A' },
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.on('payment.failed', function() {
+      alert('Payment failed. Please try again or contact hello@thesolotrail.com.');
+    });
+    rzp.open();
+  }
+
+  // ── Success modal ──
+  function openSuccessModal(paymentId, plan) {
+    document.getElementById('success-plan-name').textContent = plan.label;
+    document.getElementById('success-pid').textContent = paymentId;
+    document.getElementById('success-email-link').href =
+      'mailto:hello@thesolotrail.com?subject=Pro Access — ' + encodeURIComponent(paymentId) +
+      '&body=Hi%2C%0A%0AI just paid for ' + encodeURIComponent(plan.label) +
+      '.%0AMy payment ID is: ' + encodeURIComponent(paymentId) +
+      '%0A%0APlease send my guides. Thanks!';
+    document.getElementById('success-modal').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('success-modal').classList.remove('open');
+  }
+
+  // Close modal on backdrop click
+  document.getElementById('success-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  // ── Hamburger nav ──
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) {
+      document.getElementById('nav-links').classList.remove('open');
+    }
+  });
+
+  // ── FAQ accordion ──
+  function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+<script src="/assets/currency.js"></script>
+</body>
+</html>
