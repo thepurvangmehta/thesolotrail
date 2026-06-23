@@ -104,11 +104,8 @@
   <p>Poon Hill is where most first-time solo trekkers discover they can do this. Short enough to complete in a long weekend, with enough Himalayan drama to last a lifetime. The 5am climb to the viewpoint in the dark, then Dhaulagiri and Annapurna South materialising out of the mist — it earns every step.</p>
   <p>The solo guide covers the ACAP permit, the Ghorepani teahouses that welcome single travellers, and how to time the hill for quiet.</p>
   <div class="waitlist-row">
-    <input type="email" class="wl-input" id="wl-email" placeholder="your@email.com">
-    <button class="wl-btn" onclick="submitWaitlist('Poon Hill')">Notify me</button>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
   </div>
-  <p class="wl-note">One email when the guide publishes.</p>
-  <div class="wl-success" id="wl-success">You're on the list for Poon Hill.</div>
   <div class="while-waiting">
     <h3>While you wait</h3>
     <div class="action-cards">
@@ -129,16 +126,6 @@
 </div>
 <footer class="site-footer"><div class="footer-inner"><a href="/" class="footer-logo">the solo <span>trail</span></a><span class="footer-copy">© 2025 The Solo Trail</span></div></footer>
 <script>
-  function submitWaitlist(trail) {
-    var email = document.getElementById('wl-email').value.trim();
-    if (!email || !email.includes('@')) { document.getElementById('wl-email').focus(); return; }
-    document.querySelector('.waitlist-row').style.display = 'none';
-    document.querySelector('.wl-note').style.display = 'none';
-    document.getElementById('wl-success').style.display = 'block';
-    var a = document.createElement('a');
-    a.href = 'mailto:hello@thesolotrail.com?subject=Trail Waitlist – ' + encodeURIComponent(trail) + '&body=' + encodeURIComponent(email);
-    a.click();
-  }
   document.getElementById('nav-hamburger').addEventListener('click', function() { document.getElementById('nav-links').classList.toggle('open'); });
   document.addEventListener('click', function(e) { if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open'); });
 </script>

@@ -103,11 +103,8 @@
   <p>The Hampta Pass crossing is one of India's most dramatic landscape transitions. Start in the lush, forested Kullu valley. Cross the 4,270m pass. Emerge into the stark, lunar terrain of Lahaul — all within a single day's walk. It's a trek that makes you understand why mountain passes defined ancient trade routes.</p>
   <p>We're building the full solo guide for the Jobra to Chatru route, including the optional Chandratal Lake extension.</p>
   <div class="waitlist-row">
-    <input type="email" class="wl-input" id="wl-email" placeholder="your@email.com">
-    <button class="wl-btn" onclick="submitWaitlist('Hampta Pass')">Notify me</button>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
   </div>
-  <p class="wl-note">One email when the guide publishes.</p>
-  <div class="wl-success" id="wl-success">You're on the list for Hampta Pass.</div>
   <div class="while-waiting">
     <h3>While you wait</h3>
     <div class="action-cards">
@@ -128,16 +125,6 @@
 </div>
 <footer class="site-footer"><div class="footer-inner"><a href="/" class="footer-logo">the solo <span>trail</span></a><span class="footer-copy">© 2025 The Solo Trail</span></div></footer>
 <script>
-  function submitWaitlist(trail) {
-    var email = document.getElementById('wl-email').value.trim();
-    if (!email || !email.includes('@')) { document.getElementById('wl-email').focus(); return; }
-    document.querySelector('.waitlist-row').style.display = 'none';
-    document.querySelector('.wl-note').style.display = 'none';
-    document.getElementById('wl-success').style.display = 'block';
-    var a = document.createElement('a');
-    a.href = 'mailto:hello@thesolotrail.com?subject=Trail Waitlist – ' + encodeURIComponent(trail) + '&body=' + encodeURIComponent(email);
-    a.click();
-  }
   document.getElementById('nav-hamburger').addEventListener('click', function() { document.getElementById('nav-links').classList.toggle('open'); });
   document.addEventListener('click', function(e) { if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open'); });
 </script>

@@ -121,10 +121,8 @@
   <p>Trip reports, honest beta, and a place where "going alone" is the default assumption. No tour groups here.</p>
 
   <div class="waitlist-form">
-    <div class="input-row">
-      <input type="email" class="waitlist-input" id="waitlist-email" placeholder="your@email.com" autocomplete="email">
-      <button class="btn-waitlist" onclick="joinWaitlist()">Notify me</button>
-    </div>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
+  </div>
     <p class="waitlist-note">No spam. One email when we launch.</p>
     <div class="waitlist-success" id="waitlist-success">You're on the list — we'll reach out when Community launches.</div>
   </div>
@@ -210,22 +208,6 @@
 </footer>
 
 <script>
-  function joinWaitlist() {
-    var email = document.getElementById('waitlist-email').value.trim();
-    if (!email || !email.includes('@')) {
-      document.getElementById('waitlist-email').focus();
-      return;
-    }
-    document.querySelector('.input-row').style.display = 'none';
-    document.getElementById('waitlist-success').style.display = 'block';
-    // Wire up to your email service (Mailchimp, ConvertKit, etc.) when ready
-    var a = document.createElement('a');
-    a.href = 'mailto:hello@thesolotrail.com?subject=Community Waitlist&body=Add me to the community waitlist: ' + encodeURIComponent(email);
-    a.click();
-  }
-  document.getElementById('waitlist-email').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') joinWaitlist();
-  });
   document.getElementById('nav-hamburger').addEventListener('click', function() {
     document.getElementById('nav-links').classList.toggle('open');
   });

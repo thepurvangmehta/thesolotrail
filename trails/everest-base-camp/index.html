@@ -119,11 +119,8 @@
   <p>We're researching this trail now. Get notified when the guide goes live.</p>
 
   <div class="waitlist-row">
-    <input type="email" class="wl-input" id="wl-email" placeholder="your@email.com">
-    <button class="wl-btn" onclick="submitWaitlist('Everest Base Camp')">Notify me</button>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
   </div>
-  <p class="wl-note">One email when the guide publishes. Nothing else.</p>
-  <div class="wl-success" id="wl-success">You're on the list for Everest Base Camp.</div>
 
   <div class="while-waiting">
     <h3>While you wait</h3>
@@ -160,22 +157,8 @@
 </footer>
 
 <script>
-  function submitWaitlist(trail) {
-    var email = document.getElementById('wl-email').value.trim();
-    if (!email || !email.includes('@')) { document.getElementById('wl-email').focus(); return; }
-    document.querySelector('.waitlist-row').style.display = 'none';
-    document.querySelector('.wl-note').style.display = 'none';
-    document.getElementById('wl-success').style.display = 'block';
-    var a = document.createElement('a');
-    a.href = 'mailto:hello@thesolotrail.com?subject=Trail Waitlist – ' + encodeURIComponent(trail) + '&body=' + encodeURIComponent(email);
-    a.click();
-  }
-  document.getElementById('nav-hamburger').addEventListener('click', function() {
-    document.getElementById('nav-links').classList.toggle('open');
-  });
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open');
-  });
+  document.getElementById('nav-hamburger').addEventListener('click', function() { document.getElementById('nav-links').classList.toggle('open'); });
+  document.addEventListener('click', function(e) { if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open'); });
 </script>
 </body>
 </html>

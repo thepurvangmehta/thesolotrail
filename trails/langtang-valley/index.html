@@ -103,11 +103,8 @@
   <p>Langtang is the trek that rewards the solo trekker for going independent. Less infrastructure than Annapurna, smaller groups at the teahouses, and a Tamang culture that feels far removed from the tourist circuit. The valley above Langtang village opens into glacier-fed bowls that most people never reach.</p>
   <p>We're building the full solo guide — permits, teahouse breakdown, and what changed after the 2015 earthquake rebuilding.</p>
   <div class="waitlist-row">
-    <input type="email" class="wl-input" id="wl-email" placeholder="your@email.com">
-    <button class="wl-btn" onclick="submitWaitlist('Langtang Valley')">Notify me</button>
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
   </div>
-  <p class="wl-note">One email when the guide publishes.</p>
-  <div class="wl-success" id="wl-success">You're on the list for Langtang Valley.</div>
   <div class="while-waiting">
     <h3>While you wait</h3>
     <div class="action-cards">
@@ -128,16 +125,6 @@
 </div>
 <footer class="site-footer"><div class="footer-inner"><a href="/" class="footer-logo">the solo <span>trail</span></a><span class="footer-copy">© 2025 The Solo Trail</span></div></footer>
 <script>
-  function submitWaitlist(trail) {
-    var email = document.getElementById('wl-email').value.trim();
-    if (!email || !email.includes('@')) { document.getElementById('wl-email').focus(); return; }
-    document.querySelector('.waitlist-row').style.display = 'none';
-    document.querySelector('.wl-note').style.display = 'none';
-    document.getElementById('wl-success').style.display = 'block';
-    var a = document.createElement('a');
-    a.href = 'mailto:hello@thesolotrail.com?subject=Trail Waitlist – ' + encodeURIComponent(trail) + '&body=' + encodeURIComponent(email);
-    a.click();
-  }
   document.getElementById('nav-hamburger').addEventListener('click', function() { document.getElementById('nav-links').classList.toggle('open'); });
   document.addEventListener('click', function(e) { if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open'); });
 </script>
