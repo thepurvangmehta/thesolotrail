@@ -11,7 +11,7 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { overflow-x: clip; }
-  body { overflow-x: hidden; width: 100%; }
+  body { min-width: 0; }
 
   :root {
     --forest:        #1A3A2A;
@@ -176,6 +176,7 @@
     background: var(--white);
     border-bottom: 1px solid var(--border);
     display: flex;
+    width: 100%;
     overflow-x: auto;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -247,6 +248,9 @@
     gap: 40px;
     align-items: start;
   }
+  /* Grid items default to min-content width; this prevents expansion beyond track */
+  .page-body > main,
+  .page-body > aside { min-width: 0; }
 
   /* — TABS — */
   .tabs {
@@ -301,6 +305,7 @@
     gap: 16px;
     margin-bottom: 32px;
   }
+  .overview-grid > * { min-width: 0; }
   .overview-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -516,6 +521,7 @@
     gap: 12px;
     margin-top: 20px;
   }
+  .safety-grid > * { min-width: 0; }
   .safety-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
   .safety-card-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
   .safety-card-body  { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
@@ -669,6 +675,7 @@
     .nav-links a { padding: 10px 4px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.07); width: 100%; }
     .nav-links .nav-cta { margin-top: 8px; text-align: center; padding: 11px; font-size: 14px !important; border-radius: 7px; }
     .nav-hamburger { display: flex; }
+    .best-time-grid { grid-template-columns: 1fr; }
 
     .hero { height: 380px; }
     .hero h1 { font-size: 30px; }
