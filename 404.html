@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Off-trail — The Solo Trail</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow-x: clip; }
+  body { min-width: 0; font-family: 'Inter', sans-serif; background: #1A3A2A; color: #fff; display: flex; flex-direction: column; min-height: 100vh; }
+
+  nav { padding: 0 24px; display: flex; align-items: center; height: 56px; }
+  .nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; }
+  .nav-logo span { color: #7EC8A0; }
+
+  .error-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 24px; text-align: center; }
+
+  .error-elevation { display: flex; align-items: flex-end; justify-content: center; gap: 4px; height: 80px; margin-bottom: 40px; }
+  .error-elevation .bar { background: rgba(255,255,255,.15); border-radius: 3px 3px 0 0; width: 12px; transition: height .4s; }
+
+  .error-code { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px; }
+  .error-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 52px); font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
+  .error-title em { color: #7EC8A0; font-style: normal; }
+  .error-desc { font-size: 15px; color: rgba(255,255,255,.55); max-width: 380px; line-height: 1.7; margin-bottom: 36px; }
+
+  .error-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-back-trail { display: inline-block; background: #7EC8A0; color: #1A3A2A; padding: 12px 28px; border-radius: 7px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s; }
+  .btn-back-trail:hover { background: #5AB588; }
+  .btn-home { display: inline-block; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.7); padding: 12px 28px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all .2s; }
+  .btn-home:hover { border-color: rgba(255,255,255,.6); color: #fff; }
+
+  .error-suggestion { margin-top: 56px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,.1); width: 100%; max-width: 420px; }
+  .error-suggestion p { font-size: 12px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 16px; }
+  .quick-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .quick-link { display: inline-block; padding: 6px 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 6px; font-size: 13px; color: rgba(255,255,255,.65); text-decoration: none; transition: all .15s; }
+  .quick-link:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+  @media (max-width: 480px) {
+    .error-elevation { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">the solo <span>trail</span></a>
+</nav>
+
+<div class="error-body">
+  <div class="error-elevation" id="elevation-bars"></div>
+
+  <div class="error-code">404 — Page not found</div>
+  <h1 class="error-title">You've gone<br><em>off-trail</em></h1>
+  <p class="error-desc">This page doesn't exist — or it moved. Either way, time to reorient and get back on the path.</p>
+
+  <div class="error-links">
+    <a href="/trails/" class="btn-back-trail">Find a trail →</a>
+    <a href="/" class="btn-home">Go home</a>
+  </div>
+
+  <div class="error-suggestion">
+    <p>Popular destinations</p>
+    <div class="quick-links">
+      <a href="/trails/annapurna-base-camp/" class="quick-link">Annapurna Base Camp</a>
+      <a href="/trails/" class="quick-link">All Trails</a>
+      <a href="/pricing/" class="quick-link">Pricing</a>
+      <a href="/about/" class="quick-link">About</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Decorative elevation silhouette
+  var heights = [18, 24, 32, 38, 48, 58, 68, 74, 70, 62, 54, 42, 36, 28, 20, 25, 33, 44, 56, 65, 72, 78, 80, 74, 66, 55, 44, 35, 26, 18];
+  var container = document.getElementById('elevation-bars');
+  heights.forEach(function(h) {
+    var bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.height = h + 'px';
+    container.appendChild(bar);
+  });
+</script>
+</body>
+</html>

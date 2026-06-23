@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Trails — The Solo Trail</title>
+<meta name="description" content="Solo trekking guides for Nepal and India. Filter by region, difficulty, and season. Full offline kits for Pro members.">
+<meta property="og:title" content="All Trails — The Solo Trail">
+<meta property="og:description" content="Solo trekking guides for Nepal and India. Full offline kits, GPS waypoints, real costs.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80">
+<meta property="og:url" content="https://thesolotrail.com/trails/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thesolotrail.com/trails/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: clip; }
+  body { min-width: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+  :root {
+    --forest: #1A3A2A; --forest-light: #2A5240; --forest-pale: #E8F0EB;
+    --glacier: #4A8FA8; --glacier-light: #EBF4F8;
+    --amber: #D4882A; --amber-light: #FDF3E3;
+    --bg: #F7F4EE; --white: #FFFFFF;
+    --text: #1C1C1C; --text-mid: #4A4A4A; --text-muted: #7A7A7A; --border: #DDD8CE;
+  }
+
+  /* NAV */
+  nav { background: var(--forest); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo span { color: #7EC8A0; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: #fff; }
+  .nav-cta { background: var(--glacier) !important; color: #fff !important; padding: 7px 16px; border-radius: 6px; font-size: 13px !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,.85); border-radius: 2px; }
+
+  /* HERO */
+  .trails-hero { background: var(--forest); padding: 52px 24px 48px; text-align: center; }
+  .trails-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 46px); color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .trails-hero p { font-size: 15px; color: rgba(255,255,255,.6); }
+
+  /* FILTERS */
+  .filters-bar { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 56px; z-index: 90; }
+  .filters-inner { max-width: 1040px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .filter-label { font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+  .chip { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: transparent; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: var(--text-mid); cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .chip:hover { border-color: var(--forest); color: var(--forest); }
+  .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+  .filter-sep { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
+  .trail-count { margin-left: auto; font-size: 12px; color: var(--text-muted); font-weight: 500; white-space: nowrap; }
+
+  /* GRID */
+  .trails-wrap { max-width: 1040px; margin: 0 auto; padding: 40px 24px 64px; }
+  .trails-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .trails-grid > * { min-width: 0; }
+
+  /* CARD */
+  .trail-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow .2s, transform .2s; display: flex; flex-direction: column; }
+  .trail-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.1); transform: translateY(-2px); }
+  .trail-card > a { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
+
+  .card-img { position: relative; height: 180px; overflow: hidden; flex-shrink: 0; }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+  .trail-card:hover .card-img img { transform: scale(1.04); }
+  .card-badges { position: absolute; bottom: 10px; left: 10px; right: 10px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .badge-country { font-size: 11px; font-weight: 600; background: rgba(0,0,0,.55); color: #fff; padding: 3px 9px; border-radius: 10px; backdrop-filter: blur(4px); }
+  .badge-status { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 10px; }
+  .badge-full { background: #E8F5E9; color: #2E7D32; }
+  .badge-soon { background: rgba(255,255,255,.85); color: var(--text-muted); }
+
+  .card-body { padding: 18px 18px 20px; flex: 1; display: flex; flex-direction: column; }
+  .card-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 5px; line-height: 1.3; }
+  .card-desc { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 14px; flex: 1; }
+  .card-stats { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cs { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 4px; white-space: nowrap; }
+  .cs-alt  { background: var(--glacier-light); color: #2A6A82; }
+  .cs-days { background: var(--forest-pale); color: var(--forest); }
+  .cs-diff-easy     { background: #E8F5E9; color: #2E7D32; }
+  .cs-diff-moderate { background: var(--amber-light); color: #8B5A00; }
+  .cs-diff-hard     { background: #FDEDEC; color: #C0392B; }
+  .cs-price { background: var(--bg); color: var(--text-mid); border: 1px solid var(--border); }
+
+  .card-cta { margin-top: 16px; display: flex; align-items: center; justify-content: space-between; }
+  .card-cta-link { font-size: 13px; font-weight: 600; color: var(--forest); }
+  .trail-card-soon .card-cta-link { color: var(--text-muted); }
+  .cta-arrow { font-size: 14px; }
+
+  /* EMPTY STATE */
+  .empty-state { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-muted); }
+  .empty-state p { font-size: 15px; margin-top: 8px; }
+
+  /* PRO CTA STRIP */
+  .pro-strip { background: var(--forest); padding: 40px 24px; text-align: center; }
+  .pro-strip h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: #fff; font-weight: 600; margin-bottom: 8px; }
+  .pro-strip p { font-size: 14px; color: rgba(255,255,255,.65); margin-bottom: 20px; }
+  .btn-pro-strip { display: inline-block; background: var(--glacier); color: #fff; padding: 11px 28px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .btn-pro-strip:hover { background: #3A7F98; }
+
+  /* FOOTER */
+  .site-footer { background: #0F2318; padding: 40px 24px 28px; }
+  .footer-inner { max-width: 1040px; margin: 0 auto; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; }
+  .footer-brand .footer-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; display: block; margin-bottom: 6px; }
+  .footer-brand .footer-logo span { color: #7EC8A0; }
+  .footer-brand p { font-size: 12px; color: rgba(255,255,255,.4); max-width: 220px; line-height: 1.6; }
+  .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+  .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 12px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.6); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,.3); }
+  .footer-email { font-size: 12px; color: rgba(255,255,255,.4); text-decoration: none; }
+  .footer-email:hover { color: rgba(255,255,255,.7); }
+
+  /* RESPONSIVE */
+  @media (max-width: 820px) { .trails-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) {
+    nav { padding: 0 16px; }
+    .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--forest); flex-direction: column; padding: 12px 16px 20px; gap: 2px; border-top: 1px solid rgba(255,255,255,.1); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 4px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,.07); width: 100%; }
+    .nav-links .nav-cta { margin-top: 8px; text-align: center; padding: 11px; border-radius: 7px; }
+    .nav-hamburger { display: flex; }
+    .trails-hero { padding: 36px 16px 32px; }
+    .filters-inner { padding: 12px 16px; gap: 12px; }
+    .trail-count { display: none; }
+    .trails-wrap { padding: 24px 16px 48px; }
+    .trails-grid { grid-template-columns: 1fr; }
+    .footer-links { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">the solo <span>trail</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/trails/" class="active">Trails</a>
+    <a href="/guides/">Guides</a>
+    <a href="/community/">Community</a>
+    <a href="/about/">About</a>
+    <a href="/pricing/" class="nav-cta">Go Pro</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="trails-hero">
+  <h1>Find your solo trail</h1>
+  <p>6 trails across Nepal and India — more added monthly</p>
+</section>
+
+<div class="filters-bar">
+  <div class="filters-inner">
+    <div class="filter-group">
+      <span class="filter-label">Region</span>
+      <button class="chip active" data-filter="region" data-val="all" onclick="setFilter('region','all',this)">All</button>
+      <button class="chip" data-filter="region" data-val="nepal" onclick="setFilter('region','nepal',this)">🇳🇵 Nepal</button>
+      <button class="chip" data-filter="region" data-val="india" onclick="setFilter('region','india',this)">🇮🇳 India</button>
+    </div>
+    <div class="filter-sep"></div>
+    <div class="filter-group">
+      <span class="filter-label">Difficulty</span>
+      <button class="chip active" data-filter="diff" data-val="all" onclick="setFilter('diff','all',this)">All</button>
+      <button class="chip" data-filter="diff" data-val="easy" onclick="setFilter('diff','easy',this)">Easy</button>
+      <button class="chip" data-filter="diff" data-val="moderate" onclick="setFilter('diff','moderate',this)">Moderate</button>
+      <button class="chip" data-filter="diff" data-val="challenging" onclick="setFilter('diff','challenging',this)">Challenging</button>
+    </div>
+    <span class="trail-count" id="trail-count">6 trails</span>
+  </div>
+</div>
+
+<div class="trails-wrap">
+  <div class="trails-grid" id="trails-grid">
+
+    <!-- ABC — Full guide -->
+    <article class="trail-card" data-region="nepal" data-diff="moderate">
+      <a href="/trails/annapurna-base-camp/">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=75" alt="Annapurna Base Camp">
+          <div class="card-badges">
+            <span class="badge-country">🇳🇵 Nepal</span>
+            <span class="badge-status badge-full">Full guide</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Annapurna Base Camp</div>
+          <p class="card-desc">An amphitheatre ringed by eight-thousanders. The classic Himalayan solo — well-marked, deeply rewarding.</p>
+          <div class="card-stats">
+            <span class="cs cs-alt">4,130m</span>
+            <span class="cs cs-days">7–10 days</span>
+            <span class="cs cs-diff-moderate">Moderate+</span>
+            <span class="cs cs-price"><span data-price="400-800">$400–$800</span></span>
+          </div>
+          <div class="card-cta">
+            <span class="card-cta-link">Read full guide</span>
+            <span class="cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- EBC — Coming soon -->
+    <article class="trail-card trail-card-soon" data-region="nepal" data-diff="challenging">
+      <a href="/trails/everest-base-camp/">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1590523741831-ab3fc6fe3bc2?w=600&q=75" alt="Everest Base Camp">
+          <div class="card-badges">
+            <span class="badge-country">🇳🇵 Nepal</span>
+            <span class="badge-status badge-soon">Coming soon</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Everest Base Camp</div>
+          <p class="card-desc">Stand at the foot of the world's highest peak. The most famous trek on Earth — and solo-doable with the right prep.</p>
+          <div class="card-stats">
+            <span class="cs cs-alt">5,364m</span>
+            <span class="cs cs-days">12–14 days</span>
+            <span class="cs cs-diff-hard">Challenging</span>
+            <span class="cs cs-price"><span data-price="800-1500">$800–$1,500</span></span>
+          </div>
+          <div class="card-cta">
+            <span class="card-cta-link">Preview trail</span>
+            <span class="cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Poon Hill — Coming soon -->
+    <article class="trail-card trail-card-soon" data-region="nepal" data-diff="easy">
+      <a href="/trails/poon-hill/">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=75" alt="Poon Hill">
+          <div class="card-badges">
+            <span class="badge-country">🇳🇵 Nepal</span>
+            <span class="badge-status badge-soon">Coming soon</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Poon Hill Circuit</div>
+          <p class="card-desc">Nepal's most iconic sunrise viewpoint. The perfect first Himalayan trek — short, accessible, and unforgettable.</p>
+          <div class="card-stats">
+            <span class="cs cs-alt">3,210m</span>
+            <span class="cs cs-days">4–5 days</span>
+            <span class="cs cs-diff-easy">Easy–Moderate</span>
+            <span class="cs cs-price"><span data-price="150-300">$150–$300</span></span>
+          </div>
+          <div class="card-cta">
+            <span class="card-cta-link">Preview trail</span>
+            <span class="cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Langtang — Coming soon -->
+    <article class="trail-card trail-card-soon" data-region="nepal" data-diff="moderate">
+      <a href="/trails/langtang-valley/">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=75" alt="Langtang Valley">
+          <div class="card-badges">
+            <span class="badge-country">🇳🇵 Nepal</span>
+            <span class="badge-status badge-soon">Coming soon</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Langtang Valley</div>
+          <p class="card-desc">Nepal's closest Himalayan valley to Kathmandu. Quieter than Annapurna, richer Tibetan culture, and equally stunning.</p>
+          <div class="card-stats">
+            <span class="cs cs-alt">3,870m</span>
+            <span class="cs cs-days">7–9 days</span>
+            <span class="cs cs-diff-moderate">Moderate</span>
+            <span class="cs cs-price"><span data-price="300-600">$300–$600</span></span>
+          </div>
+          <div class="card-cta">
+            <span class="card-cta-link">Preview trail</span>
+            <span class="cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Kedarkantha — Coming soon -->
+    <article class="trail-card trail-card-soon" data-region="india" data-diff="easy">
+      <a href="/trails/kedarkantha/">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1455156218388-5e61287818cc?w=600&q=75" alt="Kedarkantha Peak">
+          <div class="card-badges">
+            <span class="badge-country">🇮🇳 India</span>
+            <span class="badge-status badge-soon">Coming soon</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Kedarkantha Peak</div>
+          <p class="card-desc">India's most popular winter summit. Snow-covered meadows, 360° Garhwal panoramas, and no altitude acclimatisation needed.</p>
+          <div class="card-stats">
+            <span class="cs cs-alt">3,810m</span>
+            <span class="cs cs-days">4–6 days</span>
+            <span class="cs cs-diff-easy">Easy–Moderate</span>
+            <span class="cs cs-price"><span data-price="100-200">$100–$200</span></span>
+          </div>
+          <div class="card-cta">
+            <span class="card-cta-link">Preview trail</span>
+            <span class="cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Hampta Pass — Coming soon -->
+    <article class="trail-card trail-card-soon" data-region="india" data-diff="moderate">
+      <a href="/trails/hampta-pass/">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1490718720478-364a07a997cd?w=600&q=75" alt="Hampta Pass">
+          <div class="card-badges">
+            <span class="badge-country">🇮🇳 India</span>
+            <span class="badge-status badge-soon">Coming soon</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Hampta Pass</div>
+          <p class="card-desc">Crosses from lush Kullu valley into barren Lahaul in one dramatic day. Two completely different worlds separated by 4,270m.</p>
+          <div class="card-stats">
+            <span class="cs cs-alt">4,270m</span>
+            <span class="cs cs-days">5–6 days</span>
+            <span class="cs cs-diff-moderate">Moderate+</span>
+            <span class="cs cs-price"><span data-price="150-300">$150–$300</span></span>
+          </div>
+          <div class="card-cta">
+            <span class="card-cta-link">Preview trail</span>
+            <span class="cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <div class="empty-state" id="empty-state" style="display:none">
+      <div style="font-size:32px">🏔️</div>
+      <p>No trails match those filters — try broadening your search.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="pro-strip">
+  <h2>New trail added every month</h2>
+  <p>Pro members get offline PDFs and GPS waypoints for every guide — the moment it drops.</p>
+  <a href="/pricing/" class="btn-pro-strip">See Pro plans →</a>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">the solo <span>trail</span></a>
+        <p>Built for independent trekkers who plan their own routes.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Trails</h4>
+          <a href="/trails/annapurna-base-camp/">Annapurna Base Camp</a>
+          <a href="/trails/everest-base-camp/">Everest Base Camp</a>
+          <a href="/trails/poon-hill/">Poon Hill</a>
+          <a href="/trails/langtang-valley/">Langtang Valley</a>
+          <a href="/trails/kedarkantha/">Kedarkantha</a>
+          <a href="/trails/hampta-pass/">Hampta Pass</a>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="/about/">About</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/community/">Community</a>
+          <a href="/guides/">Guides</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 The Solo Trail · Made for independent trekkers</span>
+      <a href="mailto:hello@thesolotrail.com" class="footer-email">hello@thesolotrail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var filters = { region: 'all', diff: 'all' };
+
+  function setFilter(key, val, btn) {
+    filters[key] = val;
+    document.querySelectorAll('[data-filter="' + key + '"]').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.val === val);
+    });
+    applyFilters();
+  }
+
+  function applyFilters() {
+    var cards = document.querySelectorAll('#trails-grid .trail-card');
+    var count = 0;
+    cards.forEach(function(c) {
+      var show =
+        (filters.region === 'all' || c.dataset.region === filters.region) &&
+        (filters.diff   === 'all' || c.dataset.diff   === filters.diff);
+      c.style.display = show ? '' : 'none';
+      if (show) count++;
+    });
+    var el = document.getElementById('trail-count');
+    if (el) el.textContent = count + ' trail' + (count !== 1 ? 's' : '');
+    var empty = document.getElementById('empty-state');
+    if (empty) empty.style.display = count === 0 ? '' : 'none';
+  }
+
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open');
+  });
+</script>
+<script src="/assets/currency.js"></script>
+</body>
+</html>

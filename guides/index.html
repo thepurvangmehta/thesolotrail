@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guides — The Solo Trail</title>
+<meta name="description" content="Verified local guides for solo trekkers who want expert support without a full tour package. Register your interest.">
+<meta property="og:title" content="Guides — The Solo Trail">
+<meta property="og:description" content="Verified local guides for ABC, EBC, and more. Hire by day or by section.">
+<meta property="og:url" content="https://thesolotrail.com/guides/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://thesolotrail.com/guides/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: clip; }
+  body { min-width: 0; font-family: 'Inter', sans-serif; background: #F7F4EE; color: #1C1C1C; font-size: 16px; line-height: 1.7; }
+
+  :root {
+    --forest: #1A3A2A; --glacier: #4A8FA8; --glacier-light: #EBF4F8;
+    --amber: #D4882A; --amber-light: #FDF3E3;
+    --bg: #F7F4EE; --white: #FFFFFF;
+    --text: #1C1C1C; --text-mid: #4A4A4A; --text-muted: #7A7A7A; --border: #DDD8CE;
+    --forest-pale: #E8F0EB;
+  }
+
+  nav { background: var(--forest); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; flex-shrink: 0; }
+  .nav-logo span { color: #7EC8A0; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: #fff; }
+  .nav-cta { background: var(--glacier) !important; color: #fff !important; padding: 7px 16px; border-radius: 6px; font-size: 13px !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,.85); border-radius: 2px; }
+
+  /* HERO */
+  .guides-hero { background: var(--forest); padding: 64px 24px 56px; text-align: center; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #7EC8A0; margin-bottom: 12px; }
+  .guides-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 5vw, 44px); color: #fff; font-weight: 700; line-height: 1.2; max-width: 520px; margin: 0 auto 14px; }
+  .guides-hero p { font-size: 15px; color: rgba(255,255,255,.6); max-width: 420px; margin: 0 auto; }
+
+  /* MAIN */
+  .guides-main { max-width: 860px; margin: 0 auto; padding: 56px 24px 72px; }
+
+  /* VALUE PROPS */
+  .value-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 64px; }
+  .value-grid > * { min-width: 0; }
+  .value-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 24px 20px; }
+  .value-icon { font-size: 22px; margin-bottom: 12px; }
+  .value-card h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .value-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+  /* CTA SPLIT */
+  .cta-split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 64px; }
+  .cta-split > * { min-width: 0; }
+  .cta-card { border-radius: 12px; padding: 32px; }
+  .cta-trekker { background: var(--glacier-light); border: 1px solid #BDD8E4; }
+  .cta-guide-reg { background: var(--amber-light); border: 1px solid #E8C98A; }
+  .cta-card h2 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+  .cta-trekker h2 { color: #1A4A5A; }
+  .cta-guide-reg h2 { color: #6B4000; }
+  .cta-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; }
+  .btn-trekker { display: inline-block; background: var(--glacier); color: #fff; padding: 10px 22px; border-radius: 7px; font-size: 13px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .btn-trekker:hover { background: #3A7F98; }
+  .btn-guide-reg { display: inline-block; background: var(--amber); color: #fff; padding: 10px 22px; border-radius: 7px; font-size: 13px; font-weight: 600; text-decoration: none; transition: background .2s; }
+  .btn-guide-reg:hover { background: #B8761F; }
+
+  /* HOW IT WORKS */
+  .how-section h2 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; margin-bottom: 24px; }
+  .how-steps { display: flex; flex-direction: column; gap: 12px; }
+  .how-step { display: flex; gap: 16px; align-items: flex-start; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+  .step-num { font-size: 13px; font-weight: 700; color: var(--glacier); background: var(--glacier-light); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .step-body strong { display: block; font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+  .step-body span { font-size: 13px; color: var(--text-muted); }
+  .step-badge { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: #F0EDE7; padding: 2px 7px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+
+  /* FOOTER */
+  .site-footer { background: #0F2318; padding: 40px 24px 28px; }
+  .footer-inner { max-width: 1040px; margin: 0 auto; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; }
+  .footer-brand .footer-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; display: block; margin-bottom: 6px; }
+  .footer-brand .footer-logo span { color: #7EC8A0; }
+  .footer-brand p { font-size: 12px; color: rgba(255,255,255,.4); max-width: 220px; line-height: 1.6; }
+  .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
+  .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 12px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,.6); text-decoration: none; margin-bottom: 8px; transition: color .2s; }
+  .footer-col a:hover { color: #fff; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,.3); }
+  .footer-email { font-size: 12px; color: rgba(255,255,255,.4); text-decoration: none; }
+
+  @media (max-width: 700px) {
+    nav { padding: 0 16px; }
+    .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--forest); flex-direction: column; padding: 12px 16px 20px; gap: 2px; border-top: 1px solid rgba(255,255,255,.1); z-index: 99; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 4px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,.07); width: 100%; }
+    .nav-links .nav-cta { margin-top: 8px; text-align: center; padding: 11px; border-radius: 7px; }
+    .nav-hamburger { display: flex; }
+    .value-grid { grid-template-columns: 1fr 1fr; }
+    .cta-split { grid-template-columns: 1fr; }
+    .guides-main { padding: 40px 16px 56px; }
+  }
+  @media (max-width: 480px) {
+    .value-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">the solo <span>trail</span></a>
+  <div class="nav-links" id="nav-links">
+    <a href="/trails/">Trails</a>
+    <a href="/guides/" class="active">Guides</a>
+    <a href="/community/">Community</a>
+    <a href="/about/">About</a>
+    <a href="/pricing/" class="nav-cta">Go Pro</a>
+  </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="guides-hero">
+  <div class="eyebrow">Guide marketplace — coming soon</div>
+  <h1>Expert support, on your terms</h1>
+  <p>Sometimes you want a guide for a tricky section, not for the whole trek. We're building a marketplace for exactly that.</p>
+</section>
+
+<div class="guides-main">
+
+  <div class="value-grid">
+    <div class="value-card">
+      <div class="value-icon">✅</div>
+      <h3>Verified locals</h3>
+      <p>Every guide is vetted — licensed, English-speaking, and reviewed by solo trekkers like you.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">📅</div>
+      <h3>Hire by the day</h3>
+      <p>You don't need a guide for the whole trek. Book for a tough section — a high pass, a remote route — and go solo the rest.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💰</div>
+      <h3>Transparent rates</h3>
+      <p>Published day rates in local currency. No negotiation, no commission surprises.</p>
+    </div>
+  </div>
+
+  <div class="cta-split">
+    <div class="cta-card cta-trekker">
+      <h2>I'm a solo trekker</h2>
+      <p>Get notified when the guide marketplace goes live. Priority access for early waitlist members on Annapurna and Everest routes.</p>
+      <a href="mailto:hello@thesolotrail.com?subject=Guide Marketplace – Trekker Interest&body=I'd like to be notified when the guide marketplace launches." class="btn-trekker">Join trekker waitlist →</a>
+    </div>
+    <div class="cta-card cta-guide-reg">
+      <h2>I'm a local guide</h2>
+      <p>Register your interest to be listed. We're onboarding verified guides for ABC, Poon Hill, and EBC first.</p>
+      <a href="mailto:hello@thesolotrail.com?subject=Guide Registration Interest&body=I'd like to register as a guide on The Solo Trail." class="btn-guide-reg">Register as a guide →</a>
+    </div>
+  </div>
+
+  <div class="how-section">
+    <h2>How it'll work</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Browse verified guides by trail and section</strong>
+          <span>Filter by language, specialty (altitude sickness, navigation, photography), and availability.</span>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Book by day or section <span class="step-badge">Not group tours</span></strong>
+          <span>Hire a guide for day 3 over Thorong La, or the full first week — you decide the scope.</span>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Pay securely, leave a verified review</strong>
+          <span>Payment held in escrow until your trek day confirms. Review goes back to the community.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">the solo <span>trail</span></a>
+        <p>Built for independent trekkers who plan their own routes.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Trails</h4>
+          <a href="/trails/annapurna-base-camp/">Annapurna Base Camp</a>
+          <a href="/trails/">All Trails</a>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="/about/">About</a>
+          <a href="/pricing/">Pricing</a>
+          <a href="/community/">Community</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 The Solo Trail · Made for independent trekkers</span>
+      <a href="mailto:hello@thesolotrail.com" class="footer-email">hello@thesolotrail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open');
+  });
+</script>
+</body>
+</html>
