@@ -12,25 +12,24 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --forest:   #1A3A2A;
-    --forest-light: #2A5240;
-    --forest-pale: #E8F0EB;
-    --glacier:  #4A8FA8;
+    --forest:        #1A3A2A;
+    --forest-light:  #2A5240;
+    --forest-pale:   #E8F0EB;
+    --glacier:       #4A8FA8;
     --glacier-light: #EBF4F8;
-    --amber:    #D4882A;
-    --amber-light: #FDF3E3;
-    --bg:       #F7F4EE;
-    --white:    #FFFFFF;
-    --text:     #1C1C1C;
-    --text-mid: #4A4A4A;
-    --text-muted: #7A7A7A;
-    --border:   #DDD8CE;
-    --danger:   #C0392B;
-    --danger-light: #FDEDEC;
+    --amber:         #D4882A;
+    --amber-light:   #FDF3E3;
+    --bg:            #F7F4EE;
+    --white:         #FFFFFF;
+    --text:          #1C1C1C;
+    --text-mid:      #4A4A4A;
+    --text-muted:    #7A7A7A;
+    --border:        #DDD8CE;
+    --danger:        #C0392B;
+    --danger-light:  #FDEDEC;
   }
 
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Inter', sans-serif;
     background: var(--bg);
@@ -57,9 +56,14 @@
     font-size: 18px;
     letter-spacing: 0.01em;
     text-decoration: none;
+    flex-shrink: 0;
   }
   .nav-logo span { color: #7EC8A0; }
-  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
   .nav-links a {
     color: rgba(255,255,255,0.7);
     text-decoration: none;
@@ -67,6 +71,7 @@
     font-weight: 500;
     letter-spacing: 0.02em;
     transition: color 0.2s;
+    white-space: nowrap;
   }
   .nav-links a:hover { color: var(--white); }
   .nav-cta {
@@ -75,6 +80,23 @@
     padding: 7px 16px;
     border-radius: 6px;
     font-size: 13px !important;
+  }
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 4px;
+    flex-shrink: 0;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 2px;
   }
 
   /* — HERO — */
@@ -121,7 +143,7 @@
   }
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 5vw, 54px);
+    font-size: clamp(32px, 5vw, 54px);
     font-weight: 700;
     color: var(--white);
     line-height: 1.15;
@@ -154,6 +176,7 @@
     display: flex;
     overflow-x: auto;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
   .stats-bar::-webkit-scrollbar { display: none; }
   .stat-item {
@@ -189,6 +212,7 @@
     background: var(--white);
     border-bottom: 1px solid var(--border);
     padding: 16px 24px 12px;
+    overflow: hidden;
   }
   .elevation-label {
     font-size: 10px;
@@ -222,11 +246,11 @@
   /* — TABS — */
   .tabs {
     display: flex;
-    gap: 0;
     border-bottom: 1px solid var(--border);
     margin-bottom: 32px;
     overflow-x: auto;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
   .tabs::-webkit-scrollbar { display: none; }
   .tab {
@@ -246,7 +270,6 @@
   }
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--forest); border-bottom-color: var(--forest); }
-
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
@@ -288,13 +311,8 @@
     color: var(--text-muted);
     margin-bottom: 8px;
   }
-  .oc-value {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.65;
-  }
+  .oc-value { font-size: 14px; color: var(--text); line-height: 1.65; }
   .oc-value strong { font-weight: 600; color: var(--forest); }
-
   .best-time-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -342,10 +360,10 @@
     flex-shrink: 0;
   }
   .day-num.summit { background: var(--forest); color: var(--white); }
-  .day-info { flex: 1; }
+  .day-info { flex: 1; min-width: 0; }
   .day-title { font-size: 14px; font-weight: 600; color: var(--text); }
   .day-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-  .day-stats { display: flex; gap: 12px; align-items: center; flex-shrink: 0; }
+  .day-stats { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
   .dst {
     font-size: 11px;
     font-weight: 500;
@@ -353,11 +371,11 @@
     border-radius: 4px;
     white-space: nowrap;
   }
-  .dst.elev { background: var(--glacier-light); color: #2A6A82; }
-  .dst.dist { background: var(--forest-pale); color: var(--forest); }
-  .dst.diff-easy { background: #E8F5E9; color: #2E7D32; }
+  .dst.elev  { background: var(--glacier-light); color: #2A6A82; }
+  .dst.dist  { background: var(--forest-pale); color: var(--forest); }
+  .dst.diff-easy     { background: #E8F5E9; color: #2E7D32; }
   .dst.diff-moderate { background: var(--amber-light); color: #8B5A00; }
-  .dst.diff-hard { background: var(--danger-light); color: var(--danger); }
+  .dst.diff-hard     { background: var(--danger-light); color: var(--danger); }
   .day-chevron { color: var(--text-muted); font-size: 18px; transition: transform 0.25s; flex-shrink: 0; }
   .day-card.open .day-chevron { transform: rotate(180deg); }
   .day-body {
@@ -384,7 +402,7 @@
   }
   .stay-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     margin-top: 14px;
     padding-top: 14px;
@@ -392,15 +410,10 @@
     font-size: 13px;
     color: var(--text-muted);
   }
-  .stay-icon { font-size: 16px; }
+  .stay-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
 
   /* — HOW TO REACH — */
-  .reach-step {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-    align-items: flex-start;
-  }
+  .reach-step { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
   .reach-step-num {
     width: 32px;
     height: 32px;
@@ -415,7 +428,7 @@
     flex-shrink: 0;
     margin-top: 2px;
   }
-  .reach-content { flex: 1; }
+  .reach-content { flex: 1; min-width: 0; }
   .reach-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
   .reach-desc { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
   .reach-options { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -425,10 +438,10 @@
     border-radius: 6px;
     padding: 8px 14px;
     font-size: 13px;
+    min-width: 0;
   }
   .reach-opt strong { display: block; color: var(--text); font-weight: 600; font-size: 12px; }
   .reach-opt span { color: var(--text-muted); font-size: 12px; }
-
   .connector-line {
     width: 1px;
     height: 20px;
@@ -451,15 +464,16 @@
   .cost-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 0;
     border-bottom: 1px solid #F0EDE7;
     font-size: 14px;
+    gap: 16px;
   }
   .cost-row:last-child { border-bottom: none; }
   .cost-item { color: var(--text); }
   .cost-note { font-size: 12px; color: var(--text-muted); }
-  .cost-amount { font-weight: 600; color: var(--text); white-space: nowrap; }
+  .cost-amount { font-weight: 600; color: var(--text); white-space: nowrap; flex-shrink: 0; }
   .cost-total {
     background: var(--forest-pale);
     border-radius: 8px;
@@ -468,12 +482,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
   }
   .cost-total-label { font-size: 14px; font-weight: 600; color: var(--forest); }
-  .cost-total-value { font-size: 18px; font-weight: 700; color: var(--forest); }
+  .cost-total-value { font-size: 18px; font-weight: 700; color: var(--forest); white-space: nowrap; }
   .cost-sub-note { font-size: 12px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
 
-  /* — SAFETY — */
+  /* — ALERT BOXES — */
   .alert-box {
     border-radius: 8px;
     padding: 14px 16px;
@@ -482,27 +497,23 @@
     gap: 12px;
     align-items: flex-start;
   }
-  .alert-box.danger { background: var(--danger-light); border-left: 3px solid var(--danger); }
-  .alert-box.warning { background: var(--amber-light); border-left: 3px solid var(--amber); }
-  .alert-box.info { background: var(--glacier-light); border-left: 3px solid var(--glacier); }
+  .alert-box.danger  { background: var(--danger-light); border-left: 3px solid var(--danger); }
+  .alert-box.warning { background: var(--amber-light);  border-left: 3px solid var(--amber); }
+  .alert-box.info    { background: var(--glacier-light); border-left: 3px solid var(--glacier); }
   .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-  .alert-text { font-size: 14px; line-height: 1.65; color: var(--text-mid); }
+  .alert-text { font-size: 14px; line-height: 1.65; color: var(--text-mid); min-width: 0; }
   .alert-text strong { display: block; font-weight: 600; color: var(--text); margin-bottom: 2px; }
 
+  /* — SAFETY — */
   .safety-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-top: 20px;
   }
-  .safety-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-  }
+  .safety-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
   .safety-card-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
-  .safety-card-body { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+  .safety-card-body  { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
   .emergency-row {
     display: flex;
     justify-content: space-between;
@@ -510,19 +521,15 @@
     padding: 10px 0;
     border-bottom: 1px solid var(--border);
     font-size: 14px;
+    gap: 12px;
   }
   .emergency-row:last-child { border-bottom: none; }
   .em-label { color: var(--text-mid); }
-  .em-value { font-weight: 600; color: var(--glacier); }
+  .em-value { font-weight: 600; color: var(--glacier); white-space: nowrap; }
 
   /* — SIDEBAR — */
   .sidebar { display: flex; flex-direction: column; gap: 16px; }
-  .sidebar-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
+  .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
   .sc-head {
     padding: 14px 18px;
     font-size: 13px;
@@ -533,107 +540,44 @@
   }
   .sc-body { padding: 16px 18px; }
 
-  /* Book a guide card */
-  .guide-cta {
-    background: var(--forest);
-    border-radius: 12px;
-    padding: 22px 20px;
-    color: var(--white);
-  }
-  .guide-cta-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .guide-cta-desc {
-    font-size: 13px;
-    color: rgba(255,255,255,0.72);
-    line-height: 1.6;
-    margin-bottom: 18px;
-  }
+  .guide-cta { background: var(--forest); border-radius: 12px; padding: 22px 20px; color: var(--white); }
+  .guide-cta-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .guide-cta-desc { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 18px; }
   .guide-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-  .gf {
-    font-size: 13px;
-    color: rgba(255,255,255,0.85);
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
+  .gf { font-size: 13px; color: rgba(255,255,255,0.85); display: flex; gap: 8px; align-items: flex-start; }
   .gf::before { content: '✓'; color: #7EC8A0; font-weight: 700; flex-shrink: 0; }
   .btn-primary {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: var(--glacier);
-    color: var(--white);
-    padding: 12px;
-    border-radius: 7px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s;
-    border: none;
-    cursor: pointer;
+    display: block; width: 100%; text-align: center;
+    background: var(--glacier); color: var(--white);
+    padding: 12px; border-radius: 7px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: background 0.2s; border: none; cursor: pointer;
     font-family: 'Inter', sans-serif;
   }
   .btn-primary:hover { background: #3A7F98; }
   .btn-secondary {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: transparent;
-    color: rgba(255,255,255,0.8);
-    padding: 10px;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    margin-top: 8px;
-    border: 1px solid rgba(255,255,255,0.2);
-    transition: border-color 0.2s;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    display: block; width: 100%; text-align: center;
+    background: transparent; color: rgba(255,255,255,0.8);
+    padding: 10px; border-radius: 7px; font-size: 13px; font-weight: 500;
+    text-decoration: none; margin-top: 8px; border: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.2s; cursor: pointer; font-family: 'Inter', sans-serif;
   }
   .btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
 
-  /* Permits mini-card */
-  .permit-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-  }
+  .permit-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
   .permit-row:last-child { border-bottom: none; }
   .permit-name { font-weight: 600; color: var(--text); }
   .permit-note { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
   .permit-price { font-weight: 600; color: var(--glacier); white-space: nowrap; }
 
-  /* Weather card */
-  .weather-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-  }
+  .weather-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
   .weather-row:last-child { border-bottom: none; }
   .wr-season { font-weight: 500; color: var(--text); }
-  .wr-temp { color: var(--text-muted); }
-  .wr-badge {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 10px;
-  }
-  .wr-best { background: #E8F5E9; color: #2E7D32; }
-  .wr-ok { background: var(--amber-light); color: #8B5A00; }
-  .wr-avoid { background: var(--danger-light); color: var(--danger); }
+  .wr-temp   { color: var(--text-muted); font-size: 12px; }
+  .wr-badge  { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .wr-best   { background: #E8F5E9; color: #2E7D32; }
+  .wr-ok     { background: var(--amber-light); color: #8B5A00; }
+  .wr-avoid  { background: var(--danger-light); color: var(--danger); }
 
-  /* Solo tip */
   .solo-tip {
     background: var(--forest-pale);
     border-left: 3px solid var(--forest);
@@ -646,7 +590,6 @@
   }
   .solo-tip strong { font-weight: 600; }
 
-  /* Pro teaser */
   .pro-teaser {
     background: linear-gradient(135deg, #1A3A2A 0%, #2A5240 100%);
     border-radius: 10px;
@@ -654,78 +597,106 @@
     color: var(--white);
     margin-top: 32px;
   }
-  .pro-teaser-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #7EC8A0;
-    margin-bottom: 6px;
-  }
+  .pro-teaser-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #7EC8A0; margin-bottom: 6px; }
   .pro-teaser-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-  .pro-teaser-desc { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 16px; line-height: 1.6; }
+  .pro-teaser-desc  { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 16px; line-height: 1.6; }
   .pro-features-mini { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-  .pfm {
-    font-size: 12px;
-    color: rgba(255,255,255,0.8);
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
+  .pfm { font-size: 12px; color: rgba(255,255,255,0.8); display: flex; align-items: flex-start; gap: 7px; }
   .pfm::before { content: '✓'; color: #7EC8A0; font-size: 13px; font-weight: 600; flex-shrink: 0; }
   .btn-pro {
-    display: block;
-    text-align: center;
-    background: var(--glacier);
-    color: var(--white);
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s;
+    display: block; text-align: center; background: var(--glacier); color: var(--white);
+    padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600;
+    text-decoration: none; transition: background 0.2s;
   }
   .btn-pro:hover { background: #3A7F98; }
 
-  /* Packing list */
+  /* — PACKING — */
   .pack-category { margin-bottom: 16px; }
   .pack-cat-title { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
-  .pack-items { display: flex; flex-direction: column; gap: 4px; }
   .pack-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--text-mid);
-    cursor: pointer;
-    padding: 3px 0;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; color: var(--text-mid); cursor: pointer; padding: 3px 0;
   }
   .pack-item input[type="checkbox"] { accent-color: var(--forest); width: 14px; height: 14px; cursor: pointer; flex-shrink: 0; }
   .pack-item.checked { color: var(--text-muted); text-decoration: line-through; }
 
-  /* Breadcrumb */
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 24px;
-  }
+  /* — BREADCRUMB — */
+  .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
   .breadcrumb a { color: var(--text-muted); text-decoration: none; }
   .breadcrumb a:hover { color: var(--glacier); }
   .breadcrumb-sep { color: var(--border); }
 
-  @media (max-width: 768px) {
+  /* — RESPONSIVE — */
+  @media (max-width: 900px) {
     .page-body { grid-template-columns: 1fr; }
-    .sidebar { order: -1; }
-    .hero { height: 400px; }
+    .sidebar { order: 2; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { height: 420px; }
     .hero-content { padding: 24px 20px; }
+    .hero-sub { font-size: 14px; }
     .overview-grid { grid-template-columns: 1fr; }
-    .safety-grid { grid-template-columns: 1fr; }
     .best-time-grid { grid-template-columns: 1fr 1fr; }
+    .safety-grid { grid-template-columns: 1fr; }
     .day-stats { display: none; }
-    nav .nav-links { display: none; }
+    .day-body { padding: 0 16px 16px 16px; }
+    .page-body { padding: 24px 16px; }
+    .elevation-bar { padding: 12px 16px 10px; }
+    .reach-options { flex-direction: column; }
+    .cost-total { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 16px; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 56px; left: 0; right: 0;
+      background: var(--forest);
+      flex-direction: column;
+      padding: 12px 16px 20px;
+      gap: 2px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      z-index: 99;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 10px 4px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.07); width: 100%; }
+    .nav-links .nav-cta { margin-top: 8px; text-align: center; padding: 11px; font-size: 14px !important; border-radius: 7px; }
+    .nav-hamburger { display: flex; }
+
+    .hero { height: 380px; }
+    .hero h1 { font-size: 30px; }
+    .hero-sub { display: none; }
+    .hero-tags .htag { font-size: 11px; padding: 4px 10px; }
+
+    .stats-bar .stat-item { padding: 12px 14px; min-width: 100px; }
+    .stat-value { font-size: 14px; }
+
+    .tabs .tab { padding: 10px 14px; font-size: 12px; }
+
+    .section-heading { font-size: 20px; }
+    .overview-grid { gap: 10px; }
+    .overview-card { padding: 14px 16px; }
+
+    .day-header { padding: 14px 14px; gap: 10px; }
+    .day-title { font-size: 13px; }
+    .day-meta { font-size: 11px; }
+    .day-body { padding: 0 14px 14px 14px; }
+
+    .cost-row { font-size: 13px; }
+    .cost-amount { font-size: 13px; }
+
+    .safety-card { padding: 12px 14px; }
+
+    .emergency-row { font-size: 13px; }
+    .em-value { font-size: 13px; }
+  }
+
+  @media (max-width: 400px) {
+    .hero { height: 340px; }
+    .hero h1 { font-size: 26px; }
+    .best-time-grid { grid-template-columns: 1fr; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -738,13 +709,16 @@
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">the solo <span>trail</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="nav-links">
     <a href="/">Trails</a>
     <a href="#">Guides</a>
     <a href="#">Community</a>
     <a href="#">About</a>
     <a href="#" class="nav-cta">Go Pro</a>
   </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -787,7 +761,7 @@
   </div>
   <div class="stat-item">
     <span class="stat-label">Solo Cost</span>
-    <span class="stat-value">$400–$800</span>
+    <span class="stat-value"><span data-price="400-800">$400–$800</span></span>
     <span class="stat-sub">All-in, independent</span>
   </div>
   <div class="stat-item">
@@ -830,8 +804,6 @@
 
 <!-- PAGE BODY -->
 <div class="page-body">
-
-  <!-- MAIN CONTENT -->
   <main>
     <div class="breadcrumb">
       <a href="/">Home</a>
@@ -841,7 +813,6 @@
       <span>Annapurna Base Camp</span>
     </div>
 
-    <!-- TABS -->
     <div class="tabs" role="tablist">
       <button class="tab active" onclick="switchTab('overview', this)" role="tab">Overview</button>
       <button class="tab" onclick="switchTab('itinerary', this)" role="tab">Itinerary</button>
@@ -851,7 +822,7 @@
       <button class="tab" onclick="switchTab('packing', this)" role="tab">Packing</button>
     </div>
 
-    <!-- OVERVIEW TAB -->
+    <!-- OVERVIEW -->
     <div class="tab-panel active" id="panel-overview">
       <h2 class="section-heading">About this trek</h2>
       <p class="section-intro">The Annapurna Base Camp trek is the rare Himalayan route where the destination lives up to the reputation. You arrive inside a natural amphitheatre — Annapurna I (8,091m), Machhapuchhre (6,993m), and Hiunchuli (6,441m) rising on three sides. The approach through Gurung villages, rhododendron forests, and the Modi Khola river gorge is as good as the summit.</p>
@@ -885,7 +856,7 @@
       </div>
 
       <div class="solo-tip">
-        <strong>Solo trekker's note:</strong> No mandatory guide required in 2025/26. The trail is extremely well-marked and busy with other trekkers — you're never truly alone. However, if it's your first Himalayan trek, hiring a guide ($25–35/day) is genuinely worth it for logistics, language, and safety above 3,500m.
+        <strong>Solo trekker's note:</strong> No mandatory guide required in 2025/26. The trail is extremely well-marked and busy with other trekkers — you're never truly alone. However, if it's your first Himalayan trek, hiring a guide (<span data-price="25-35">$25–35</span>/day) is genuinely worth it for logistics, language, and safety above 3,500m.
       </div>
 
       <div class="pro-teaser">
@@ -897,11 +868,11 @@
           <span class="pfm">GPS waypoints file (.gpx)</span>
           <span class="pfm">Emergency contact sheet by altitude zone</span>
         </div>
-        <a href="#" class="btn-pro">Get Pro — $7/month</a>
+        <a href="#" class="btn-pro">Get Pro — <span data-price="7" data-price-suffix="/month">$7/month</span></a>
       </div>
     </div>
 
-    <!-- ITINERARY TAB -->
+    <!-- ITINERARY -->
     <div class="tab-panel" id="panel-itinerary">
       <h2 class="section-heading">10-day itinerary</h2>
       <p class="section-intro">The classic route via Ghorepani and Poon Hill. Adds a sunrise viewpoint and better acclimatisation before the push to ABC. A 7-day direct route via Chhomrong is also possible.</p>
@@ -921,7 +892,7 @@
           <span class="day-chevron">↓</span>
         </div>
         <div class="day-body">
-          <p class="day-desc">Start with a 1.5-hour drive from Pokhara to Nayapul (fare: ~₹200 NPR local bus or $10–15 taxi). The trail follows the Modi Khola river through Birethanti — pick up your ACAP/TIMS stamps here at the checkpoint. An easy walk through farmland and small settlements brings you to Tikhedunga for the night.</p>
+          <p class="day-desc">Start with a 1.5-hour drive from Pokhara to Nayapul (fare: ~₹200 NPR local bus or <span data-price="10-15">$10–15</span> taxi). The trail follows the Modi Khola river through Birethanti — pick up your ACAP/TIMS stamps here at the checkpoint. An easy walk through farmland and small settlements brings you to Tikhedunga for the night.</p>
           <div class="day-highlights">
             <span class="dh">Modi Khola river walk</span>
             <span class="dh">Birethanti checkpoint</span>
@@ -929,7 +900,7 @@
           </div>
           <div class="stay-row">
             <span class="stay-icon">🏡</span>
-            <span>Stay: Tikhedunga (1,495m) — multiple tea houses, budget $10–18/night</span>
+            <span>Stay: Tikhedunga (1,495m) — multiple tea houses, budget <span data-price="10-18">$10–18</span>/night</span>
           </div>
         </div>
       </div>
@@ -957,7 +928,7 @@
           </div>
           <div class="stay-row">
             <span class="stay-icon">🏡</span>
-            <span>Stay: Ghorepani (2,860m) — well-developed, many lodges, $12–22/night</span>
+            <span>Stay: Ghorepani (2,860m) — well-developed, many lodges, <span data-price="12-22">$12–22</span>/night</span>
           </div>
         </div>
       </div>
@@ -1070,7 +1041,7 @@
           </div>
           <div class="stay-row">
             <span class="stay-icon">⛺</span>
-            <span>Stay: Annapurna Base Camp (4,130m) — 5 tea houses, book ahead in Oct–Nov. Expect $20–30/night</span>
+            <span>Stay: Annapurna Base Camp (4,130m) — 5 tea houses, book ahead in Oct–Nov. <span data-price="20-30">$20–30</span>/night</span>
           </div>
         </div>
       </div>
@@ -1155,10 +1126,9 @@
           </div>
         </div>
       </div>
-
     </div>
 
-    <!-- HOW TO REACH TAB -->
+    <!-- HOW TO REACH -->
     <div class="tab-panel" id="panel-reach">
       <h2 class="section-heading">How to get there</h2>
       <p class="section-intro">All roads lead to Pokhara. From there, it's a short drive to the trailhead. Here's the complete journey from your home country to your first step on the trail.</p>
@@ -1174,12 +1144,12 @@
               <span>Delhi→KTM from ₹4,500 (IndiGo, Air India, Nepal Airlines)</span>
             </div>
             <div class="reach-opt">
-              <strong>From Europe/US</strong>
-              <span>Via Delhi, Dubai, or Doha. Budget $400–900 return.</span>
+              <strong>From Europe / US</strong>
+              <span>Via Delhi, Dubai, or Doha. Budget <span data-price="400-900">$400–900</span> return.</span>
             </div>
             <div class="reach-opt">
               <strong>Visa on arrival</strong>
-              <span>Most nationalities. $25 (15 days) or $50 (30 days) USD cash.</span>
+              <span>Most nationalities. <span data-price="25">$25</span> (15 days) or <span data-price="50">$50</span> (30 days) USD cash.</span>
             </div>
           </div>
         </div>
@@ -1194,15 +1164,15 @@
           <div class="reach-options">
             <div class="reach-opt">
               <strong>Domestic flight ✈</strong>
-              <span>25–30 mins · $100–130 one way · Best option, weather delays possible</span>
+              <span>25–30 mins · <span data-price="100-130">$100–130</span> one way · Best option, weather delays possible</span>
             </div>
             <div class="reach-opt">
               <strong>Tourist bus 🚌</strong>
-              <span>6–7 hrs · $15–20 · Comfortable, scenic, book at Thamel guesthouses</span>
+              <span>6–7 hrs · <span data-price="15-20">$15–20</span> · Comfortable, scenic</span>
             </div>
             <div class="reach-opt">
               <strong>Local bus 🚌</strong>
-              <span>7–8 hrs · $6–10 · Cheapest, from Gongabu bus park</span>
+              <span>7–8 hrs · <span data-price="6-10">$6–10</span> · Cheapest, from Gongabu bus park</span>
             </div>
           </div>
         </div>
@@ -1213,15 +1183,15 @@
         <div class="reach-step-num">3</div>
         <div class="reach-content">
           <div class="reach-title">Get your permits in Pokhara</div>
-          <div class="reach-desc">Permits are available at the ACAP office and TIMS office near Pokhara Lakeside (Damside area). Bring 2 passport photos and your passport. Takes 30–60 minutes. Open 8am–5pm daily. Cannot be obtained online in advance.</div>
+          <div class="reach-desc">Permits are available at the ACAP office and TIMS office near Pokhara Lakeside (Damside area). Bring 2 passport photos and your passport. Takes 30–60 minutes. Open 8am–5pm daily.</div>
           <div class="reach-options">
             <div class="reach-opt">
               <strong>ACAP permit</strong>
-              <span>$24 (foreigners) · $8 (SAARC nationals incl. India)</span>
+              <span><span data-price="24">$24</span> (foreigners) · <span data-price="8">$8</span> (SAARC nationals incl. India)</span>
             </div>
             <div class="reach-opt">
               <strong>TIMS card</strong>
-              <span>$17 (foreigners) · $9 (SAARC)</span>
+              <span><span data-price="17">$17</span> (foreigners) · <span data-price="9">$9</span> (SAARC)</span>
             </div>
           </div>
         </div>
@@ -1236,11 +1206,11 @@
           <div class="reach-options">
             <div class="reach-opt">
               <strong>Local bus</strong>
-              <span>Baglung bus park · 1.5 hrs · $2–4 · Departs 6am–1pm</span>
+              <span>Baglung bus park · 1.5 hrs · <span data-price="2-4">$2–4</span> · Departs 6am–1pm</span>
             </div>
             <div class="reach-opt">
               <strong>Taxi / private jeep</strong>
-              <span>$10–15 to Nayapul · $30–50 direct to Ghandruk</span>
+              <span><span data-price="10-15">$10–15</span> to Nayapul · <span data-price="30-50">$30–50</span> direct to Ghandruk</span>
             </div>
           </div>
         </div>
@@ -1250,25 +1220,25 @@
         <span class="alert-icon">💡</span>
         <div class="alert-text">
           <strong>Solo trekker tip — arrive Pokhara the day before</strong>
-          Don't do the Kathmandu→Pokhara→trailhead journey in a single day. Spend one night in Pokhara, sort permits in the morning, and start Day 1 fresh. Pokhara is wonderful anyway.
+          Don't do the Kathmandu→Pokhara→trailhead journey in a single day. Spend one night in Pokhara, sort permits in the morning, and start Day 1 fresh.
         </div>
       </div>
     </div>
 
-    <!-- COSTS TAB -->
+    <!-- COSTS -->
     <div class="tab-panel" id="panel-costs">
       <h2 class="section-heading">Complete cost breakdown</h2>
-      <p class="section-intro">Budget for a 10-day solo trek, independent (no guide). All costs in USD. Prices current as of 2025/26.</p>
+      <p class="section-intro">Budget for a 10-day solo trek, independent (no guide). Prices current as of 2025/26. Amounts shown in your local currency — switch using the selector in the nav.</p>
 
       <div class="cost-section">
         <div class="cost-section-title">Mandatory permits</div>
         <div class="cost-row">
-          <div><div class="cost-item">ACAP — Annapurna Conservation Area Permit</div><div class="cost-note">SAARC nationals (India, Pakistan, etc.) pay ~$8</div></div>
-          <div class="cost-amount">$24</div>
+          <div><div class="cost-item">ACAP — Annapurna Conservation Area Permit</div><div class="cost-note">SAARC nationals (India, Pakistan, etc.) pay <span data-price="8">$8</span></div></div>
+          <div class="cost-amount"><span data-price="24">$24</span></div>
         </div>
         <div class="cost-row">
           <div><div class="cost-item">TIMS card</div><div class="cost-note">Trekkers' Information Management System</div></div>
-          <div class="cost-amount">$17</div>
+          <div class="cost-amount"><span data-price="17">$17</span></div>
         </div>
       </div>
 
@@ -1276,15 +1246,15 @@
         <div class="cost-section-title">Getting there (from India)</div>
         <div class="cost-row">
           <div><div class="cost-item">Delhi → Kathmandu (return)</div><div class="cost-note">IndiGo / Air India — book 3–4 weeks ahead</div></div>
-          <div class="cost-amount">$120–200</div>
+          <div class="cost-amount"><span data-price="120-200">$120–200</span></div>
         </div>
         <div class="cost-row">
-          <div><div class="cost-item">Kathmandu → Pokhara (domestic flight)</div><div class="cost-note">Or bus $15 if not in a rush</div></div>
-          <div class="cost-amount">$100–130</div>
+          <div><div class="cost-item">Kathmandu → Pokhara (domestic flight)</div><div class="cost-note">Or bus <span data-price="15">$15</span> if not in a rush</div></div>
+          <div class="cost-amount"><span data-price="100-130">$100–130</span></div>
         </div>
         <div class="cost-row">
           <div><div class="cost-item">Pokhara → Nayapul → Pokhara (local bus)</div><div class="cost-note">Both directions combined</div></div>
-          <div class="cost-amount">$8–12</div>
+          <div class="cost-amount"><span data-price="8-12">$8–12</span></div>
         </div>
       </div>
 
@@ -1292,15 +1262,15 @@
         <div class="cost-section-title">On the trail (per day)</div>
         <div class="cost-row">
           <div><div class="cost-item">Tea house accommodation</div><div class="cost-note">Budget double room; rises above Chhomrong</div></div>
-          <div class="cost-amount">$8–25/night</div>
+          <div class="cost-amount"><span data-price="8-25" data-price-suffix="/night">$8–25/night</span></div>
         </div>
         <div class="cost-row">
           <div><div class="cost-item">3 meals (dal bhat, noodles, soups)</div><div class="cost-note">Dal bhat is the best value — free refills</div></div>
-          <div class="cost-amount">$15–25/day</div>
+          <div class="cost-amount"><span data-price="15-25" data-price-suffix="/day">$15–25/day</span></div>
         </div>
         <div class="cost-row">
-          <div><div class="cost-item">Extras (hot shower, wifi, charging)</div><div class="cost-note">Each item $1–3, adds up quickly</div></div>
-          <div class="cost-amount">$5–15/day</div>
+          <div><div class="cost-item">Extras (hot shower, wifi, charging)</div><div class="cost-note">Each item <span data-price="1-3">$1–3</span>, adds up quickly</div></div>
+          <div class="cost-amount"><span data-price="5-15" data-price-suffix="/day">$5–15/day</span></div>
         </div>
       </div>
 
@@ -1308,11 +1278,11 @@
         <div class="cost-section-title">Recommended extras</div>
         <div class="cost-row">
           <div><div class="cost-item">Travel insurance (with helicopter evac)</div><div class="cost-note">Non-negotiable for Himalayan trekking</div></div>
-          <div class="cost-amount">$50–100</div>
+          <div class="cost-amount"><span data-price="50-100">$50–100</span></div>
         </div>
         <div class="cost-row">
-          <div><div class="cost-item">Porter (optional, worth it solo)</div><div class="cost-note">$20–25/day — carries your bag, you carry day pack</div></div>
-          <div class="cost-amount">$200–250</div>
+          <div><div class="cost-item">Porter (optional, worth it solo)</div><div class="cost-note"><span data-price="20-25">$20–25</span>/day — carries your bag, you carry day pack</div></div>
+          <div class="cost-amount"><span data-price="200-250">$200–250</span></div>
         </div>
       </div>
 
@@ -1321,20 +1291,23 @@
           <div class="cost-total-label">Total estimated (10 days, solo, no guide)</div>
           <div class="cost-sub-note">Flying Pokhara, budget lodging, local food · Excludes porter</div>
         </div>
-        <div class="cost-total-value">$400–650</div>
+        <div class="cost-total-value"><span data-price="400-650">$400–650</span></div>
       </div>
-      <p class="cost-sub-note" style="margin-top: 12px;"><strong>With guide + porter:</strong> Add $250–400. Total $650–1,000. <br><strong>Cash note:</strong> No ATMs after Jhinu Danda. Withdraw at least NPR 40,000 (~$300) in Pokhara before starting.</p>
+      <p class="cost-sub-note" style="margin-top:12px">
+        <strong>With guide + porter:</strong> Add <span data-price="250-400">$250–400</span>. Total <span data-price="650-1000">$650–1,000</span>.<br>
+        <strong>Cash note:</strong> No ATMs after Jhinu Danda. Withdraw at least <span data-price="300">$300</span> equivalent in Pokhara before starting.
+      </p>
 
-      <div class="alert-box warning" style="margin-top: 20px;">
+      <div class="alert-box warning" style="margin-top:20px">
         <span class="alert-icon">⚠️</span>
         <div class="alert-text">
           <strong>Hidden cost: food inflation above 3,000m</strong>
-          A bowl of noodles at Nayapul costs $2. The same bowl at ABC costs $8–10. Everything gets carried up on a porter's back, so prices triple at altitude. Budget an extra $10–15 per day above Deurali.
+          A bowl of noodles at Nayapul costs <span data-price="2">$2</span>. The same bowl at ABC costs <span data-price="8-10">$8–10</span>. Everything gets carried up on a porter's back. Budget an extra <span data-price="10-15">$10–15</span> per day above Deurali.
         </div>
       </div>
     </div>
 
-    <!-- SAFETY TAB -->
+    <!-- SAFETY -->
     <div class="tab-panel" id="panel-safety">
       <h2 class="section-heading">Safety for solo trekkers</h2>
       <p class="section-intro">ABC is well-trodden and generally safe. But altitude, weather, and solo logistics still carry real risks. Know these before you go.</p>
@@ -1343,7 +1316,7 @@
         <span class="alert-icon">🚨</span>
         <div class="alert-text">
           <strong>Altitude sickness (AMS) — most serious risk</strong>
-          Symptoms above 3,000m: headache, nausea, dizziness, fatigue. If symptoms worsen — descend immediately. Never ascend with AMS symptoms. Dexamethasone is not a cure, it's an emergency tool. Diamox (125–250mg twice daily) can help prevent AMS — consult a doctor before the trek.
+          Symptoms above 3,000m: headache, nausea, dizziness, fatigue. If symptoms worsen — descend immediately. Never ascend with AMS symptoms. Diamox (125–250mg twice daily) can help prevent AMS — consult a doctor before the trek.
         </div>
       </div>
 
@@ -1351,7 +1324,7 @@
         <span class="alert-icon">⚠️</span>
         <div class="alert-text">
           <strong>Deurali avalanche zone</strong>
-          The section between Himalaya Hotel and MBC passes through an active avalanche corridor. Move through this section early in the morning, quickly, and never linger. An April 2025 avalanche near Deurali killed a trekker — do not take this lightly.
+          The section between Himalaya Hotel and MBC passes through an active avalanche corridor. Move through early in the morning, quickly, and never linger. An April 2025 avalanche near Deurali killed a trekker — do not take this lightly.
         </div>
       </div>
 
@@ -1359,7 +1332,7 @@
         <span class="alert-icon">🌧️</span>
         <div class="alert-text">
           <strong>Sudden weather changes above 3,500m</strong>
-          The Sanctuary can close in within 30 minutes. Always start summit day by 6am. If clouds roll in, stop at MBC and wait — don't push to ABC in a whiteout. Carry emergency layers regardless of the forecast.
+          The Sanctuary can close in within 30 minutes. Always start summit day by 6am. If clouds roll in, stop at MBC and wait — don't push to ABC in a whiteout.
         </div>
       </div>
 
@@ -1382,39 +1355,24 @@
         </div>
       </div>
 
-      <h3 style="font-size:16px; font-weight:600; margin: 28px 0 14px; color: var(--text);">Emergency contacts</h3>
-      <div class="overview-card" style="margin-bottom: 0;">
-        <div class="emergency-row">
-          <span class="em-label">Nepal Police (National)</span>
-          <span class="em-value">100</span>
-        </div>
-        <div class="emergency-row">
-          <span class="em-label">Tourism Emergency Helpline</span>
-          <span class="em-value">1144</span>
-        </div>
-        <div class="emergency-row">
-          <span class="em-label">Himalayan Rescue Association (Pokhara)</span>
-          <span class="em-value">+977-61-440066</span>
-        </div>
-        <div class="emergency-row">
-          <span class="em-label">ACAP Office, Pokhara</span>
-          <span class="em-value">+977-61-466477</span>
-        </div>
-        <div class="emergency-row">
-          <span class="em-label">Fishtail Air (heli rescue)</span>
-          <span class="em-value">+977-61-465111</span>
-        </div>
+      <h3 style="font-size:16px;font-weight:600;margin:28px 0 14px;color:var(--text)">Emergency contacts</h3>
+      <div class="overview-card" style="margin-bottom:0">
+        <div class="emergency-row"><span class="em-label">Nepal Police (National)</span><span class="em-value">100</span></div>
+        <div class="emergency-row"><span class="em-label">Tourism Emergency Helpline</span><span class="em-value">1144</span></div>
+        <div class="emergency-row"><span class="em-label">Himalayan Rescue Association (Pokhara)</span><span class="em-value">+977-61-440066</span></div>
+        <div class="emergency-row"><span class="em-label">ACAP Office, Pokhara</span><span class="em-value">+977-61-466477</span></div>
+        <div class="emergency-row"><span class="em-label">Fishtail Air (heli rescue)</span><span class="em-value">+977-61-465111</span></div>
       </div>
     </div>
 
-    <!-- PACKING TAB -->
+    <!-- PACKING -->
     <div class="tab-panel" id="panel-packing">
       <h2 class="section-heading">Packing list</h2>
-      <p class="section-intro">For a 10-day solo trek to 4,130m. Check items off as you pack. Target total pack weight: under 10kg (lighter is better — the Ulleri staircase will remind you).</p>
+      <p class="section-intro">For a 10-day solo trek to 4,130m. Check items off as you pack. Target total pack weight: under 10kg — the Ulleri staircase will remind you why.</p>
 
       <div class="pack-category">
         <div class="pack-cat-title">Clothing</div>
-        <div class="pack-items" id="pack-clothing">
+        <div class="pack-items">
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Down jacket (600-fill or higher)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Fleece mid-layer</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Waterproof rain jacket + trousers</label>
@@ -1426,7 +1384,6 @@
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Gaiters (optional but useful in snow)</label>
         </div>
       </div>
-
       <div class="pack-category">
         <div class="pack-cat-title">Footwear</div>
         <div class="pack-items">
@@ -1435,12 +1392,11 @@
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking poles (strong recommendation)</label>
         </div>
       </div>
-
       <div class="pack-category">
         <div class="pack-cat-title">Gear &amp; safety</div>
         <div class="pack-items">
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Headlamp + spare batteries</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sleeping bag liner (tea houses provide blankets but liners add warmth)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sleeping bag liner (tea houses provide blankets)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Water bottles ×2 (1L each) + purification tablets</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Power bank (20,000mAh minimum)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Universal power adapter</label>
@@ -1448,7 +1404,6 @@
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sunglasses (UV protection essential)</label>
         </div>
       </div>
-
       <div class="pack-category">
         <div class="pack-cat-title">First aid &amp; meds</div>
         <div class="pack-items">
@@ -1457,10 +1412,9 @@
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Blister kit (Compeed + needle)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Rehydration sachets (ORS)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Antidiarrheal (Imodium)</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Altitude sickness pulse oximeter (optional, useful)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Pulse oximeter (optional, useful at altitude)</label>
         </div>
       </div>
-
       <div class="pack-category">
         <div class="pack-cat-title">Documents &amp; money</div>
         <div class="pack-items">
@@ -1471,23 +1425,21 @@
         </div>
       </div>
 
-      <div class="alert-box info" style="margin-top: 4px;">
+      <div class="alert-box info" style="margin-top:4px">
         <span class="alert-icon">💡</span>
         <div class="alert-text">
           <strong>Leave behind at your Pokhara hotel</strong>
-          Anything you don't need on the trail — city clothes, laptop, extra bags. Most hotels offer free luggage storage. Travel light; the mountains reward it.
+          City clothes, laptop, extra bags. Most hotels offer free luggage storage. Travel light; the mountains reward it.
         </div>
       </div>
     </div>
-
   </main>
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-
     <div class="guide-cta">
       <div class="guide-cta-title">Trek with a local guide</div>
-      <div class="guide-cta-desc">Verified Pokhara-based guides. Solo rates, flexible itineraries. Starting from $28/day.</div>
+      <div class="guide-cta-desc">Verified Pokhara-based guides. Solo rates, flexible itineraries. Starting from <span data-price="28">$28</span>/day.</div>
       <div class="guide-features">
         <span class="gf">Verified &amp; certified guides only</span>
         <span class="gf">Solo trekker pricing — no group surcharge</span>
@@ -1506,83 +1458,54 @@
             <div class="permit-name">ACAP permit</div>
             <div class="permit-note">Get in Pokhara (Damside) or Kathmandu</div>
           </div>
-          <div class="permit-price">$24 / $8*</div>
+          <div class="permit-price"><span data-price="24">$24</span> / <span data-price="8">$8</span>*</div>
         </div>
         <div class="permit-row">
           <div>
             <div class="permit-name">TIMS card</div>
             <div class="permit-note">Same office as ACAP. Bring 2 photos.</div>
           </div>
-          <div class="permit-price">$17 / $9*</div>
+          <div class="permit-price"><span data-price="17">$17</span> / <span data-price="9">$9</span>*</div>
         </div>
-        <p style="font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5;">* SAARC nationals (India, Sri Lanka, Bangladesh, Pakistan, etc.) pay the lower rate.</p>
+        <p style="font-size:11px;color:var(--text-muted);margin-top:10px;line-height:1.5">* SAARC nationals (India, Sri Lanka, Bangladesh, Pakistan) pay the lower rate.</p>
       </div>
     </div>
 
     <div class="sidebar-card">
       <div class="sc-head">When to go</div>
       <div class="sc-body">
-        <div class="weather-row">
-          <span class="wr-season">Oct – Nov</span>
-          <span class="wr-temp">5°C to 15°C</span>
-          <span class="wr-badge wr-best">Best</span>
-        </div>
-        <div class="weather-row">
-          <span class="wr-season">Mar – May</span>
-          <span class="wr-temp">8°C to 18°C</span>
-          <span class="wr-badge wr-best">Best</span>
-        </div>
-        <div class="weather-row">
-          <span class="wr-season">Dec – Feb</span>
-          <span class="wr-temp">-5°C to 10°C</span>
-          <span class="wr-badge wr-ok">Doable</span>
-        </div>
-        <div class="weather-row">
-          <span class="wr-season">Jun – Sep</span>
-          <span class="wr-temp">10°C to 22°C</span>
-          <span class="wr-badge wr-avoid">Monsoon</span>
-        </div>
+        <div class="weather-row"><span class="wr-season">Oct – Nov</span><span class="wr-temp">5°C to 15°C</span><span class="wr-badge wr-best">Best</span></div>
+        <div class="weather-row"><span class="wr-season">Mar – May</span><span class="wr-temp">8°C to 18°C</span><span class="wr-badge wr-best">Best</span></div>
+        <div class="weather-row"><span class="wr-season">Dec – Feb</span><span class="wr-temp">-5°C to 10°C</span><span class="wr-badge wr-ok">Doable</span></div>
+        <div class="weather-row"><span class="wr-season">Jun – Sep</span><span class="wr-temp">10°C to 22°C</span><span class="wr-badge wr-avoid">Monsoon</span></div>
       </div>
     </div>
 
     <div class="sidebar-card">
       <div class="sc-head">Quick facts</div>
       <div class="sc-body">
-        <div class="cost-row">
-          <span style="font-size:13px; color:var(--text-mid)">Country</span>
-          <span style="font-size:13px; font-weight:600">Nepal</span>
-        </div>
-        <div class="cost-row">
-          <span style="font-size:13px; color:var(--text-mid)">Max altitude</span>
-          <span style="font-size:13px; font-weight:600">4,130m</span>
-        </div>
-        <div class="cost-row">
-          <span style="font-size:13px; color:var(--text-mid)">Total distance</span>
-          <span style="font-size:13px; font-weight:600">~110 km RT</span>
-        </div>
-        <div class="cost-row">
-          <span style="font-size:13px; color:var(--text-mid)">Duration</span>
-          <span style="font-size:13px; font-weight:600">7–10 days</span>
-        </div>
-        <div class="cost-row">
-          <span style="font-size:13px; color:var(--text-mid)">Trailhead</span>
-          <span style="font-size:13px; font-weight:600">Nayapul</span>
-        </div>
-        <div class="cost-row">
-          <span style="font-size:13px; color:var(--text-mid)">Nearest city</span>
-          <span style="font-size:13px; font-weight:600">Pokhara</span>
-        </div>
-        <div class="cost-row" style="border-bottom: none;">
-          <span style="font-size:13px; color:var(--text-mid)">Guide mandatory</span>
-          <span style="font-size:13px; font-weight:600; color: #2E7D32;">No (2025/26)</span>
-        </div>
+        <div class="cost-row"><span style="font-size:13px;color:var(--text-mid)">Country</span><span style="font-size:13px;font-weight:600">Nepal</span></div>
+        <div class="cost-row"><span style="font-size:13px;color:var(--text-mid)">Max altitude</span><span style="font-size:13px;font-weight:600">4,130m</span></div>
+        <div class="cost-row"><span style="font-size:13px;color:var(--text-mid)">Total distance</span><span style="font-size:13px;font-weight:600">~110 km RT</span></div>
+        <div class="cost-row"><span style="font-size:13px;color:var(--text-mid)">Duration</span><span style="font-size:13px;font-weight:600">7–10 days</span></div>
+        <div class="cost-row"><span style="font-size:13px;color:var(--text-mid)">Trailhead</span><span style="font-size:13px;font-weight:600">Nayapul</span></div>
+        <div class="cost-row"><span style="font-size:13px;color:var(--text-mid)">Nearest city</span><span style="font-size:13px;font-weight:600">Pokhara</span></div>
+        <div class="cost-row" style="border-bottom:none"><span style="font-size:13px;color:var(--text-mid)">Guide mandatory</span><span style="font-size:13px;font-weight:600;color:#2E7D32">No (2025/26)</span></div>
       </div>
     </div>
-
   </aside>
 </div>
 
 <script>
+  document.getElementById('nav-hamburger').addEventListener('click', function () {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('nav')) {
+      document.getElementById('nav-links').classList.remove('open');
+    }
+  });
+
   function switchTab(id, btn) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -1591,14 +1514,13 @@
   }
 
   function toggleDay(id) {
-    const card = document.getElementById(id);
-    card.classList.toggle('open');
+    document.getElementById(id).classList.toggle('open');
   }
 
   function togglePacked(checkbox) {
-    const label = checkbox.parentElement;
-    label.classList.toggle('checked', checkbox.checked);
+    checkbox.parentElement.classList.toggle('checked', checkbox.checked);
   }
 </script>
+<script src="/assets/currency.js"></script>
 </body>
 </html>
