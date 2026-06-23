@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annapurna Base Camp — The Solo Trail</title>
+<meta name="description" content="Complete solo trekker's guide to Annapurna Base Camp. 10-day itinerary, permits, costs, safety and packing list. No guide required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --forest:   #1A3A2A;
+    --forest-light: #2A5240;
+    --forest-pale: #E8F0EB;
+    --glacier:  #4A8FA8;
+    --glacier-light: #EBF4F8;
+    --amber:    #D4882A;
+    --amber-light: #FDF3E3;
+    --bg:       #F7F4EE;
+    --white:    #FFFFFF;
+    --text:     #1C1C1C;
+    --text-mid: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --border:   #DDD8CE;
+    --danger:   #C0392B;
+    --danger-light: #FDEDEC;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* — NAV — */
+  nav {
+    background: var(--forest);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: #7EC8A0; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--glacier) !important;
+    color: var(--white) !important;
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 13px !important;
+  }
+
+  /* — HERO — */
+  .hero {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(10,25,16,0.92) 0%, rgba(10,25,16,0.4) 50%, rgba(10,25,16,0.2) 100%),
+      url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1400&q=80') center/cover no-repeat;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 48px;
+    max-width: 860px;
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .eyebrow-flag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7EC8A0;
+  }
+  .eyebrow-sep { color: rgba(255,255,255,0.3); font-size: 11px; }
+  .eyebrow-region {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    max-width: 520px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .htag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.08);
+  }
+  .htag.green { border-color: #7EC8A0; color: #7EC8A0; background: rgba(126,200,160,0.1); }
+  .htag.amber { border-color: #D4882A; color: #F4AD5A; background: rgba(212,136,42,0.1); }
+
+  /* — QUICK STATS BAR — */
+  .stats-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .stats-bar::-webkit-scrollbar { display: none; }
+  .stat-item {
+    flex: 1;
+    min-width: 110px;
+    padding: 16px 20px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .stat-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .stat-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* — ELEVATION VISUAL — */
+  .elevation-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px 12px;
+  }
+  .elevation-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .elevation-track {
+    position: relative;
+    height: 48px;
+  }
+  .elevation-track svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  /* — MAIN LAYOUT — */
+  .page-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* — TABS — */
+  .tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: 'Inter', sans-serif;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--forest); border-bottom-color: var(--forest); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* — SECTION TITLES — */
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+  .section-intro {
+    font-size: 15px;
+    color: var(--text-mid);
+    margin-bottom: 28px;
+    max-width: 640px;
+    line-height: 1.7;
+  }
+
+  /* — OVERVIEW — */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .overview-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .overview-card.full { grid-column: 1/-1; }
+  .oc-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .oc-value {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .oc-value strong { font-weight: 600; color: var(--forest); }
+
+  .best-time-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .bts {
+    background: var(--forest-pale);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: var(--forest);
+    font-weight: 500;
+  }
+  .bts span { display: block; font-size: 11px; color: var(--text-muted); font-weight: 400; margin-top: 1px; }
+
+  /* — ITINERARY — */
+  .day-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .day-header:hover { background: #FAFAF8; }
+  .day-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--forest-pale);
+    color: var(--forest);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .day-num.summit { background: var(--forest); color: var(--white); }
+  .day-info { flex: 1; }
+  .day-title { font-size: 14px; font-weight: 600; color: var(--text); }
+  .day-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .day-stats { display: flex; gap: 12px; align-items: center; flex-shrink: 0; }
+  .dst {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .dst.elev { background: var(--glacier-light); color: #2A6A82; }
+  .dst.dist { background: var(--forest-pale); color: var(--forest); }
+  .dst.diff-easy { background: #E8F5E9; color: #2E7D32; }
+  .dst.diff-moderate { background: var(--amber-light); color: #8B5A00; }
+  .dst.diff-hard { background: var(--danger-light); color: var(--danger); }
+  .day-chevron { color: var(--text-muted); font-size: 18px; transition: transform 0.25s; flex-shrink: 0; }
+  .day-card.open .day-chevron { transform: rotate(180deg); }
+  .day-body {
+    display: none;
+    padding: 0 20px 20px 70px;
+    border-top: 1px solid var(--border);
+  }
+  .day-card.open .day-body { display: block; }
+  .day-desc {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .day-highlights { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dh {
+    font-size: 11px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 9px;
+    color: var(--text-mid);
+  }
+  .stay-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .stay-icon { font-size: 16px; }
+
+  /* — HOW TO REACH — */
+  .reach-step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+  .reach-step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .reach-content { flex: 1; }
+  .reach-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .reach-desc { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+  .reach-options { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .reach-opt {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .reach-opt strong { display: block; color: var(--text); font-weight: 600; font-size: 12px; }
+  .reach-opt span { color: var(--text-muted); font-size: 12px; }
+
+  .connector-line {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+    margin: 4px 0 4px 15px;
+  }
+
+  /* — COST TABLE — */
+  .cost-section { margin-bottom: 28px; }
+  .cost-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F0EDE7;
+    font-size: 14px;
+  }
+  .cost-row:last-child { border-bottom: none; }
+  .cost-item { color: var(--text); }
+  .cost-note { font-size: 12px; color: var(--text-muted); }
+  .cost-amount { font-weight: 600; color: var(--text); white-space: nowrap; }
+  .cost-total {
+    background: var(--forest-pale);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cost-total-label { font-size: 14px; font-weight: 600; color: var(--forest); }
+  .cost-total-value { font-size: 18px; font-weight: 700; color: var(--forest); }
+  .cost-sub-note { font-size: 12px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+
+  /* — SAFETY — */
+  .alert-box {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .alert-box.danger { background: var(--danger-light); border-left: 3px solid var(--danger); }
+  .alert-box.warning { background: var(--amber-light); border-left: 3px solid var(--amber); }
+  .alert-box.info { background: var(--glacier-light); border-left: 3px solid var(--glacier); }
+  .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .alert-text { font-size: 14px; line-height: 1.65; color: var(--text-mid); }
+  .alert-text strong { display: block; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+
+  .safety-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .safety-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .safety-card-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .safety-card-body { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+  .emergency-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .emergency-row:last-child { border-bottom: none; }
+  .em-label { color: var(--text-mid); }
+  .em-value { font-weight: 600; color: var(--glacier); }
+
+  /* — SIDEBAR — */
+  .sidebar { display: flex; flex-direction: column; gap: 16px; }
+  .sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .sc-head {
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    background: #FAFAF8;
+  }
+  .sc-body { padding: 16px 18px; }
+
+  /* Book a guide card */
+  .guide-cta {
+    background: var(--forest);
+    border-radius: 12px;
+    padding: 22px 20px;
+    color: var(--white);
+  }
+  .guide-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .guide-cta-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .guide-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .gf {
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .gf::before { content: '✓'; color: #7EC8A0; font-weight: 700; flex-shrink: 0; }
+  .btn-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--glacier);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-primary:hover { background: #3A7F98; }
+  .btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: border-color 0.2s;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
+
+  /* Permits mini-card */
+  .permit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .permit-row:last-child { border-bottom: none; }
+  .permit-name { font-weight: 600; color: var(--text); }
+  .permit-note { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+  .permit-price { font-weight: 600; color: var(--glacier); white-space: nowrap; }
+
+  /* Weather card */
+  .weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .weather-row:last-child { border-bottom: none; }
+  .wr-season { font-weight: 500; color: var(--text); }
+  .wr-temp { color: var(--text-muted); }
+  .wr-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .wr-best { background: #E8F5E9; color: #2E7D32; }
+  .wr-ok { background: var(--amber-light); color: #8B5A00; }
+  .wr-avoid { background: var(--danger-light); color: var(--danger); }
+
+  /* Solo tip */
+  .solo-tip {
+    background: var(--forest-pale);
+    border-left: 3px solid var(--forest);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--forest);
+    line-height: 1.65;
+  }
+  .solo-tip strong { font-weight: 600; }
+
+  /* Pro teaser */
+  .pro-teaser {
+    background: linear-gradient(135deg, #1A3A2A 0%, #2A5240 100%);
+    border-radius: 10px;
+    padding: 18px 20px;
+    color: var(--white);
+    margin-top: 32px;
+  }
+  .pro-teaser-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7EC8A0;
+    margin-bottom: 6px;
+  }
+  .pro-teaser-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+  .pro-teaser-desc { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 16px; line-height: 1.6; }
+  .pro-features-mini { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .pfm {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .pfm::before { content: '✓'; color: #7EC8A0; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+  .btn-pro {
+    display: block;
+    text-align: center;
+    background: var(--glacier);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-pro:hover { background: #3A7F98; }
+
+  /* Packing list */
+  .pack-category { margin-bottom: 16px; }
+  .pack-cat-title { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+  .pack-items { display: flex; flex-direction: column; gap: 4px; }
+  .pack-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-mid);
+    cursor: pointer;
+    padding: 3px 0;
+  }
+  .pack-item input[type="checkbox"] { accent-color: var(--forest); width: 14px; height: 14px; cursor: pointer; flex-shrink: 0; }
+  .pack-item.checked { color: var(--text-muted); text-decoration: line-through; }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--glacier); }
+  .breadcrumb-sep { color: var(--border); }
+
+  @media (max-width: 768px) {
+    .page-body { grid-template-columns: 1fr; }
+    .sidebar { order: -1; }
+    .hero { height: 400px; }
+    .hero-content { padding: 24px 20px; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .safety-grid { grid-template-columns: 1fr; }
+    .best-time-grid { grid-template-columns: 1fr 1fr; }
+    .day-stats { display: none; }
+    nav .nav-links { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">the solo <span>trail</span></a>
+  <div class="nav-links">
+    <a href="/">Trails</a>
+    <a href="#">Guides</a>
+    <a href="#">Community</a>
+    <a href="#">About</a>
+    <a href="#" class="nav-cta">Go Pro</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-flag">🇳🇵 Nepal</span>
+      <span class="eyebrow-sep">·</span>
+      <span class="eyebrow-region">Annapurna Region</span>
+    </div>
+    <h1>Annapurna<br>Base Camp</h1>
+    <p class="hero-sub">A high-altitude amphitheatre ringed by eight-thousanders. Solo-doable, deeply rewarding — and one of the few Himalayan classics with no mandatory guide requirement.</p>
+    <div class="hero-tags">
+      <span class="htag green">Solo-friendly</span>
+      <span class="htag">4,130m summit</span>
+      <span class="htag">7–10 days</span>
+      <span class="htag amber">Moderate–Challenging</span>
+      <span class="htag">Best: Oct–Nov, Mar–May</span>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-label">Max Altitude</span>
+    <span class="stat-value">4,130m</span>
+    <span class="stat-sub">Annapurna Base Camp</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">Duration</span>
+    <span class="stat-value">7–10 days</span>
+    <span class="stat-sub">From Pokhara</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">Total Distance</span>
+    <span class="stat-value">~110 km</span>
+    <span class="stat-sub">Round trip</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">Solo Cost</span>
+    <span class="stat-value">$400–$800</span>
+    <span class="stat-sub">All-in, independent</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">Difficulty</span>
+    <span class="stat-value">Moderate+</span>
+    <span class="stat-sub">Fit beginners OK</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">Guide Required</span>
+    <span class="stat-value">No</span>
+    <span class="stat-sub">Recommended</span>
+  </div>
+</div>
+
+<!-- ELEVATION PROFILE -->
+<div class="elevation-bar">
+  <div class="elevation-label">Elevation profile — Nayapul to ABC and back</div>
+  <div class="elevation-track">
+    <svg viewBox="0 0 800 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="elev-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1A3A2A" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#1A3A2A" stop-opacity="0.04"/>
+        </linearGradient>
+      </defs>
+      <polygon points="0,48 0,42 40,38 80,34 120,28 160,30 200,26 240,22 280,18 320,14 360,8 380,6 400,8 420,12 460,16 500,20 540,26 560,28 580,24 600,18 620,12 640,6 660,2 680,6 700,10 720,20 760,30 800,38 800,48" fill="url(#elev-grad)" stroke="none"/>
+      <polyline points="0,42 40,38 80,34 120,28 160,30 200,26 240,22 280,18 320,14 360,8 380,6 400,8 420,12 460,16 500,20 540,26 560,28 580,24 600,18 620,12 640,6 660,2 680,6 700,10 720,20 760,30 800,38" fill="none" stroke="#1A3A2A" stroke-width="1.5" stroke-linejoin="round"/>
+      <circle cx="660" cy="2" r="4" fill="#D4882A"/>
+      <text x="660" y="0" text-anchor="middle" font-size="9" fill="#D4882A" font-family="Inter,sans-serif" font-weight="600">ABC 4,130m</text>
+      <text x="40"  y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D1</text>
+      <text x="160" y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D2</text>
+      <text x="280" y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D3</text>
+      <text x="400" y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D4</text>
+      <text x="520" y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D5</text>
+      <text x="640" y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D6</text>
+      <text x="720" y="47" text-anchor="middle" font-size="8" fill="#7A7A7A" font-family="Inter,sans-serif">D7</text>
+    </svg>
+  </div>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/">Trails</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Annapurna Base Camp</span>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs" role="tablist">
+      <button class="tab active" onclick="switchTab('overview', this)" role="tab">Overview</button>
+      <button class="tab" onclick="switchTab('itinerary', this)" role="tab">Itinerary</button>
+      <button class="tab" onclick="switchTab('reach', this)" role="tab">How to Reach</button>
+      <button class="tab" onclick="switchTab('costs', this)" role="tab">Costs</button>
+      <button class="tab" onclick="switchTab('safety', this)" role="tab">Safety</button>
+      <button class="tab" onclick="switchTab('packing', this)" role="tab">Packing</button>
+    </div>
+
+    <!-- OVERVIEW TAB -->
+    <div class="tab-panel active" id="panel-overview">
+      <h2 class="section-heading">About this trek</h2>
+      <p class="section-intro">The Annapurna Base Camp trek is the rare Himalayan route where the destination lives up to the reputation. You arrive inside a natural amphitheatre — Annapurna I (8,091m), Machhapuchhre (6,993m), and Hiunchuli (6,441m) rising on three sides. The approach through Gurung villages, rhododendron forests, and the Modi Khola river gorge is as good as the summit.</p>
+
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="oc-label">Route</div>
+          <div class="oc-value">Nayapul → Ghandruk → Chhomrong → Bamboo → Deurali → MBC → <strong>ABC 4,130m</strong> → return same route</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Trailhead</div>
+          <div class="oc-value"><strong>Nayapul</strong> (1,070m) — 1.5h drive from Pokhara. Some trekkers start at Ghandruk or Jhinu Danda via jeep to shorten the route.</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Physical demand</div>
+          <div class="oc-value">8–10 km per day average. Significant stone staircase ascents (Ulleri, Chhomrong). No technical climbing. <strong>AMS risk above 3,500m</strong> — acclimatise properly.</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Accommodation</div>
+          <div class="oc-value">Tea houses all the way. Private rooms available most of the route. Above Chhomrong, options thin out — <strong>book ahead in peak season</strong> (Oct–Nov).</div>
+        </div>
+        <div class="overview-card full">
+          <div class="oc-label">Best time to go</div>
+          <div class="best-time-grid">
+            <div class="bts">Oct – Nov <span>Clear skies, peak crowds, best views</span></div>
+            <div class="bts">Mar – May <span>Rhododendron bloom, warm, some haze</span></div>
+            <div class="bts" style="opacity:0.55">Dec – Feb <span>Cold, possible snow above 3,000m</span></div>
+            <div class="bts" style="opacity:0.45">Jun – Sep <span>Monsoon — leeches, landslides, poor views</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="solo-tip">
+        <strong>Solo trekker's note:</strong> No mandatory guide required in 2025/26. The trail is extremely well-marked and busy with other trekkers — you're never truly alone. However, if it's your first Himalayan trek, hiring a guide ($25–35/day) is genuinely worth it for logistics, language, and safety above 3,500m.
+      </div>
+
+      <div class="pro-teaser">
+        <div class="pro-teaser-label">Solo Trail Pro</div>
+        <div class="pro-teaser-title">Download the full offline guide</div>
+        <div class="pro-teaser-desc">Take everything — itinerary, maps, emergency contacts, packing list — with you. No signal needed above Chhomrong.</div>
+        <div class="pro-features-mini">
+          <span class="pfm">Full offline trail guide PDF</span>
+          <span class="pfm">GPS waypoints file (.gpx)</span>
+          <span class="pfm">Emergency contact sheet by altitude zone</span>
+        </div>
+        <a href="#" class="btn-pro">Get Pro — $7/month</a>
+      </div>
+    </div>
+
+    <!-- ITINERARY TAB -->
+    <div class="tab-panel" id="panel-itinerary">
+      <h2 class="section-heading">10-day itinerary</h2>
+      <p class="section-intro">The classic route via Ghorepani and Poon Hill. Adds a sunrise viewpoint and better acclimatisation before the push to ABC. A 7-day direct route via Chhomrong is also possible.</p>
+
+      <div class="day-card open" id="day1">
+        <div class="day-header" onclick="toggleDay('day1')">
+          <div class="day-num">1</div>
+          <div class="day-info">
+            <div class="day-title">Pokhara → Nayapul → Tikhedunga</div>
+            <div class="day-meta">Drive + Trek · Arrive afternoon</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↑ 1,495m</span>
+            <span class="dst dist">7 km</span>
+            <span class="dst diff-easy">Easy</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Start with a 1.5-hour drive from Pokhara to Nayapul (fare: ~₹200 NPR local bus or $10–15 taxi). The trail follows the Modi Khola river through Birethanti — pick up your ACAP/TIMS stamps here at the checkpoint. An easy walk through farmland and small settlements brings you to Tikhedunga for the night.</p>
+          <div class="day-highlights">
+            <span class="dh">Modi Khola river walk</span>
+            <span class="dh">Birethanti checkpoint</span>
+            <span class="dh">Terraced farmland</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Tikhedunga (1,495m) — multiple tea houses, budget $10–18/night</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day2">
+        <div class="day-header" onclick="toggleDay('day2')">
+          <div class="day-num">2</div>
+          <div class="day-info">
+            <div class="day-title">Tikhedunga → Ghorepani</div>
+            <div class="day-meta">Steep ascent day · 5–6 hrs</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↑ 2,860m</span>
+            <span class="dst dist">11 km</span>
+            <span class="dst diff-moderate">Moderate</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">The day begins with the infamous stone staircase up to Ulleri — over 3,000 steps. Relentless but manageable. After Ulleri, the gradient eases through oak and rhododendron forest before the final push to Ghorepani. Arrive with enough time to rest for the early Poon Hill start tomorrow.</p>
+          <div class="day-highlights">
+            <span class="dh">Ulleri staircase</span>
+            <span class="dh">Rhododendron forest</span>
+            <span class="dh">First Himalayan views</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Ghorepani (2,860m) — well-developed, many lodges, $12–22/night</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day3">
+        <div class="day-header" onclick="toggleDay('day3')">
+          <div class="day-num">3</div>
+          <div class="day-info">
+            <div class="day-title">Poon Hill sunrise → Tadapani</div>
+            <div class="day-meta">Early start 4:30am · 6–7 hrs total</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↑ 3,210m (Poon Hill)</span>
+            <span class="dst dist">12 km</span>
+            <span class="dst diff-moderate">Moderate</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Wake at 4:30am for the 45-minute climb to Poon Hill (3,210m). On clear mornings, you get a 180° panorama — Dhaulagiri, Annapurna I, Annapurna South, Machhapuchhre, and more. Descend for breakfast, then continue through dense forest to Tadapani, passing the Gurung village of Deurali en route.</p>
+          <div class="day-highlights">
+            <span class="dh">Poon Hill sunrise 3,210m</span>
+            <span class="dh">Dhaulagiri panorama</span>
+            <span class="dh">Gurung villages</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Tadapani (2,630m) — smaller village, quieter than Ghorepani</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day4">
+        <div class="day-header" onclick="toggleDay('day4')">
+          <div class="day-num">4</div>
+          <div class="day-info">
+            <div class="day-title">Tadapani → Chhomrong</div>
+            <div class="day-meta">Descent then climb · 5–6 hrs</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↑ 2,170m</span>
+            <span class="dst dist">10 km</span>
+            <span class="dst diff-moderate">Moderate</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Descend through dense forest to Gurung village Chhomrong — the gateway to the Annapurna Sanctuary. This is your last settlement with reliable ATMs, good connectivity, and warm showers. Stock up on snacks and cash here; above Chhomrong, prices rise and facilities thin out significantly.</p>
+          <div class="day-highlights">
+            <span class="dh">Chhomrong village views</span>
+            <span class="dh">Last ATM point</span>
+            <span class="dh">Annapurna South close-up</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Chhomrong (2,170m) — good lodge options, best last chance for reliable wifi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day5">
+        <div class="day-header" onclick="toggleDay('day5')">
+          <div class="day-num">5</div>
+          <div class="day-info">
+            <div class="day-title">Chhomrong → Himalaya Hotel</div>
+            <div class="day-meta">Into the Sanctuary · 6–7 hrs</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↑ 2,920m</span>
+            <span class="dst dist">13 km</span>
+            <span class="dst diff-moderate">Moderate</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Descend steeply from Chhomrong to Sinuwa, then enter the bamboo and rhododendron forest. The trail follows the Modi Khola gorge — dense, green, and atmospheric. Pass through Bamboo and Doban before climbing to Himalaya Hotel. The walls of the Sanctuary start to close in.</p>
+          <div class="day-highlights">
+            <span class="dh">Bamboo forest zone</span>
+            <span class="dh">Modi Khola gorge</span>
+            <span class="dh">Sanctuary entrance</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Himalaya Hotel (2,920m) — basic lodges, meals get pricier from here</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day6">
+        <div class="day-header" onclick="toggleDay('day6')">
+          <div class="day-num summit">6</div>
+          <div class="day-info">
+            <div class="day-title">Himalaya Hotel → Annapurna Base Camp</div>
+            <div class="day-meta">Summit day · 6–8 hrs · Stop at MBC first</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↑ 4,130m</span>
+            <span class="dst dist">14 km</span>
+            <span class="dst diff-hard">Challenging</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">The culminating day. Pass through Deurali (avalanche zone — move quickly) to Machhapuchhre Base Camp (3,700m) for an acclimatisation stop and tea. From MBC, the Sanctuary opens up completely — you're surrounded by glaciers. The final 430m to ABC is steady but the altitude bites. Arrive for sunset on Annapurna I.</p>
+          <div class="day-highlights">
+            <span class="dh">Machhapuchhre Base Camp</span>
+            <span class="dh">Annapurna amphitheatre</span>
+            <span class="dh">Sunset on Annapurna I</span>
+            <span class="dh">Gangapurna glacier</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">⛺</span>
+            <span>Stay: Annapurna Base Camp (4,130m) — 5 tea houses, book ahead in Oct–Nov. Expect $20–30/night</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day7">
+        <div class="day-header" onclick="toggleDay('day7')">
+          <div class="day-num">7</div>
+          <div class="day-info">
+            <div class="day-title">ABC → Bamboo (sunrise first)</div>
+            <div class="day-meta">Long descent · 7–8 hrs</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↓ 2,310m</span>
+            <span class="dst dist">18 km</span>
+            <span class="dst diff-moderate">Moderate</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Wake early for the ABC sunrise — arguably the best moment of the entire trek. Then begin the long descent: MBC → Deurali → Himalaya Hotel → Bamboo. Your knees will feel it, but the effort feels lighter now. The mountain is behind you.</p>
+          <div class="day-highlights">
+            <span class="dh">ABC sunrise</span>
+            <span class="dh">Descent through gorge</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Bamboo (2,310m)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day8">
+        <div class="day-header" onclick="toggleDay('day8')">
+          <div class="day-num">8</div>
+          <div class="day-info">
+            <div class="day-title">Bamboo → Jhinu Danda (hot springs)</div>
+            <div class="day-meta">Recovery day · 5–6 hrs</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↓ 1,760m</span>
+            <span class="dst dist">12 km</span>
+            <span class="dst diff-easy">Easy</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Descend back through Chhomrong to Jhinu Danda, home of the natural hot springs on the Modi Khola river. After days of high altitude, a soak here is genuinely one of the best moments of the trek. Entry fee ~200 NPR. Arrive by mid-afternoon to beat the crowds.</p>
+          <div class="day-highlights">
+            <span class="dh">Jhinu Danda hot springs</span>
+            <span class="dh">Modi Khola riverside</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏡</span>
+            <span>Stay: Jhinu Danda (1,760m) — hot springs town, relaxed pace</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card" id="day9">
+        <div class="day-header" onclick="toggleDay('day9')">
+          <div class="day-num">9</div>
+          <div class="day-info">
+            <div class="day-title">Jhinu Danda → Nayapul → Pokhara</div>
+            <div class="day-meta">Trek out + drive · 4 hrs trek + 1.5 hrs drive</div>
+          </div>
+          <div class="day-stats">
+            <span class="dst elev">↓ 1,070m</span>
+            <span class="dst dist">9 km</span>
+            <span class="dst diff-easy">Easy</span>
+          </div>
+          <span class="day-chevron">↓</span>
+        </div>
+        <div class="day-body">
+          <p class="day-desc">Final trail day. An easy walk along the Modi Khola back to Nayapul, then catch a local bus or arrange a jeep back to Pokhara. Arrive Pokhara Lakeside by early afternoon. Shower, cold beer, and Fishtail views from Phewa Lake.</p>
+          <div class="day-highlights">
+            <span class="dh">Phewa Lake, Pokhara</span>
+            <span class="dh">Last day on trail</span>
+          </div>
+          <div class="stay-row">
+            <span class="stay-icon">🏨</span>
+            <span>Stay: Pokhara — treat yourself, you've earned it</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- HOW TO REACH TAB -->
+    <div class="tab-panel" id="panel-reach">
+      <h2 class="section-heading">How to get there</h2>
+      <p class="section-intro">All roads lead to Pokhara. From there, it's a short drive to the trailhead. Here's the complete journey from your home country to your first step on the trail.</p>
+
+      <div class="reach-step">
+        <div class="reach-step-num">1</div>
+        <div class="reach-content">
+          <div class="reach-title">Fly to Kathmandu (KTM) or Pokhara (PKR)</div>
+          <div class="reach-desc">Most international flights land in Kathmandu. Pokhara now has a new international airport (opened 2023) with some direct regional connections. From India, direct flights from Delhi, Mumbai, Kolkata, and Bangalore run daily.</div>
+          <div class="reach-options">
+            <div class="reach-opt">
+              <strong>From India</strong>
+              <span>Delhi→KTM from ₹4,500 (IndiGo, Air India, Nepal Airlines)</span>
+            </div>
+            <div class="reach-opt">
+              <strong>From Europe/US</strong>
+              <span>Via Delhi, Dubai, or Doha. Budget $400–900 return.</span>
+            </div>
+            <div class="reach-opt">
+              <strong>Visa on arrival</strong>
+              <span>Most nationalities. $25 (15 days) or $50 (30 days) USD cash.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="connector-line"></div>
+
+      <div class="reach-step">
+        <div class="reach-step-num">2</div>
+        <div class="reach-content">
+          <div class="reach-title">Kathmandu → Pokhara</div>
+          <div class="reach-desc">You need to be in Pokhara to start the trek. Three options:</div>
+          <div class="reach-options">
+            <div class="reach-opt">
+              <strong>Domestic flight ✈</strong>
+              <span>25–30 mins · $100–130 one way · Best option, weather delays possible</span>
+            </div>
+            <div class="reach-opt">
+              <strong>Tourist bus 🚌</strong>
+              <span>6–7 hrs · $15–20 · Comfortable, scenic, book at Thamel guesthouses</span>
+            </div>
+            <div class="reach-opt">
+              <strong>Local bus 🚌</strong>
+              <span>7–8 hrs · $6–10 · Cheapest, from Gongabu bus park</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="connector-line"></div>
+
+      <div class="reach-step">
+        <div class="reach-step-num">3</div>
+        <div class="reach-content">
+          <div class="reach-title">Get your permits in Pokhara</div>
+          <div class="reach-desc">Permits are available at the ACAP office and TIMS office near Pokhara Lakeside (Damside area). Bring 2 passport photos and your passport. Takes 30–60 minutes. Open 8am–5pm daily. Cannot be obtained online in advance.</div>
+          <div class="reach-options">
+            <div class="reach-opt">
+              <strong>ACAP permit</strong>
+              <span>$24 (foreigners) · $8 (SAARC nationals incl. India)</span>
+            </div>
+            <div class="reach-opt">
+              <strong>TIMS card</strong>
+              <span>$17 (foreigners) · $9 (SAARC)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="connector-line"></div>
+
+      <div class="reach-step">
+        <div class="reach-step-num">4</div>
+        <div class="reach-content">
+          <div class="reach-title">Pokhara → Nayapul (trailhead)</div>
+          <div class="reach-desc">Nayapul is your trailhead, 42km west of Pokhara. Some trekkers take a jeep further to Ghandruk or Jhinu Danda to shorten the first stretch.</div>
+          <div class="reach-options">
+            <div class="reach-opt">
+              <strong>Local bus</strong>
+              <span>Baglung bus park · 1.5 hrs · $2–4 · Departs 6am–1pm</span>
+            </div>
+            <div class="reach-opt">
+              <strong>Taxi / private jeep</strong>
+              <span>$10–15 to Nayapul · $30–50 direct to Ghandruk</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert-box info" style="margin-top: 24px;">
+        <span class="alert-icon">💡</span>
+        <div class="alert-text">
+          <strong>Solo trekker tip — arrive Pokhara the day before</strong>
+          Don't do the Kathmandu→Pokhara→trailhead journey in a single day. Spend one night in Pokhara, sort permits in the morning, and start Day 1 fresh. Pokhara is wonderful anyway.
+        </div>
+      </div>
+    </div>
+
+    <!-- COSTS TAB -->
+    <div class="tab-panel" id="panel-costs">
+      <h2 class="section-heading">Complete cost breakdown</h2>
+      <p class="section-intro">Budget for a 10-day solo trek, independent (no guide). All costs in USD. Prices current as of 2025/26.</p>
+
+      <div class="cost-section">
+        <div class="cost-section-title">Mandatory permits</div>
+        <div class="cost-row">
+          <div><div class="cost-item">ACAP — Annapurna Conservation Area Permit</div><div class="cost-note">SAARC nationals (India, Pakistan, etc.) pay ~$8</div></div>
+          <div class="cost-amount">$24</div>
+        </div>
+        <div class="cost-row">
+          <div><div class="cost-item">TIMS card</div><div class="cost-note">Trekkers' Information Management System</div></div>
+          <div class="cost-amount">$17</div>
+        </div>
+      </div>
+
+      <div class="cost-section">
+        <div class="cost-section-title">Getting there (from India)</div>
+        <div class="cost-row">
+          <div><div class="cost-item">Delhi → Kathmandu (return)</div><div class="cost-note">IndiGo / Air India — book 3–4 weeks ahead</div></div>
+          <div class="cost-amount">$120–200</div>
+        </div>
+        <div class="cost-row">
+          <div><div class="cost-item">Kathmandu → Pokhara (domestic flight)</div><div class="cost-note">Or bus $15 if not in a rush</div></div>
+          <div class="cost-amount">$100–130</div>
+        </div>
+        <div class="cost-row">
+          <div><div class="cost-item">Pokhara → Nayapul → Pokhara (local bus)</div><div class="cost-note">Both directions combined</div></div>
+          <div class="cost-amount">$8–12</div>
+        </div>
+      </div>
+
+      <div class="cost-section">
+        <div class="cost-section-title">On the trail (per day)</div>
+        <div class="cost-row">
+          <div><div class="cost-item">Tea house accommodation</div><div class="cost-note">Budget double room; rises above Chhomrong</div></div>
+          <div class="cost-amount">$8–25/night</div>
+        </div>
+        <div class="cost-row">
+          <div><div class="cost-item">3 meals (dal bhat, noodles, soups)</div><div class="cost-note">Dal bhat is the best value — free refills</div></div>
+          <div class="cost-amount">$15–25/day</div>
+        </div>
+        <div class="cost-row">
+          <div><div class="cost-item">Extras (hot shower, wifi, charging)</div><div class="cost-note">Each item $1–3, adds up quickly</div></div>
+          <div class="cost-amount">$5–15/day</div>
+        </div>
+      </div>
+
+      <div class="cost-section">
+        <div class="cost-section-title">Recommended extras</div>
+        <div class="cost-row">
+          <div><div class="cost-item">Travel insurance (with helicopter evac)</div><div class="cost-note">Non-negotiable for Himalayan trekking</div></div>
+          <div class="cost-amount">$50–100</div>
+        </div>
+        <div class="cost-row">
+          <div><div class="cost-item">Porter (optional, worth it solo)</div><div class="cost-note">$20–25/day — carries your bag, you carry day pack</div></div>
+          <div class="cost-amount">$200–250</div>
+        </div>
+      </div>
+
+      <div class="cost-total">
+        <div>
+          <div class="cost-total-label">Total estimated (10 days, solo, no guide)</div>
+          <div class="cost-sub-note">Flying Pokhara, budget lodging, local food · Excludes porter</div>
+        </div>
+        <div class="cost-total-value">$400–650</div>
+      </div>
+      <p class="cost-sub-note" style="margin-top: 12px;"><strong>With guide + porter:</strong> Add $250–400. Total $650–1,000. <br><strong>Cash note:</strong> No ATMs after Jhinu Danda. Withdraw at least NPR 40,000 (~$300) in Pokhara before starting.</p>
+
+      <div class="alert-box warning" style="margin-top: 20px;">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-text">
+          <strong>Hidden cost: food inflation above 3,000m</strong>
+          A bowl of noodles at Nayapul costs $2. The same bowl at ABC costs $8–10. Everything gets carried up on a porter's back, so prices triple at altitude. Budget an extra $10–15 per day above Deurali.
+        </div>
+      </div>
+    </div>
+
+    <!-- SAFETY TAB -->
+    <div class="tab-panel" id="panel-safety">
+      <h2 class="section-heading">Safety for solo trekkers</h2>
+      <p class="section-intro">ABC is well-trodden and generally safe. But altitude, weather, and solo logistics still carry real risks. Know these before you go.</p>
+
+      <div class="alert-box danger">
+        <span class="alert-icon">🚨</span>
+        <div class="alert-text">
+          <strong>Altitude sickness (AMS) — most serious risk</strong>
+          Symptoms above 3,000m: headache, nausea, dizziness, fatigue. If symptoms worsen — descend immediately. Never ascend with AMS symptoms. Dexamethasone is not a cure, it's an emergency tool. Diamox (125–250mg twice daily) can help prevent AMS — consult a doctor before the trek.
+        </div>
+      </div>
+
+      <div class="alert-box warning">
+        <span class="alert-icon">⚠️</span>
+        <div class="alert-text">
+          <strong>Deurali avalanche zone</strong>
+          The section between Himalaya Hotel and MBC passes through an active avalanche corridor. Move through this section early in the morning, quickly, and never linger. An April 2025 avalanche near Deurali killed a trekker — do not take this lightly.
+        </div>
+      </div>
+
+      <div class="alert-box warning">
+        <span class="alert-icon">🌧️</span>
+        <div class="alert-text">
+          <strong>Sudden weather changes above 3,500m</strong>
+          The Sanctuary can close in within 30 minutes. Always start summit day by 6am. If clouds roll in, stop at MBC and wait — don't push to ABC in a whiteout. Carry emergency layers regardless of the forecast.
+        </div>
+      </div>
+
+      <div class="safety-grid">
+        <div class="safety-card">
+          <div class="safety-card-title">Before you leave</div>
+          <div class="safety-card-body">• Buy travel insurance with helicopter evacuation cover<br>• Share your full itinerary with someone at home<br>• Register at each ACAP checkpoint (they track you)<br>• Download offline maps (Maps.me or Gaia GPS)</div>
+        </div>
+        <div class="safety-card">
+          <div class="safety-card-title">On the trail</div>
+          <div class="safety-card-body">• Start trekking by 7am — afternoons cloud over<br>• Never skip meals or water above 3,000m<br>• Tell your tea house your next day's plan<br>• Carry a basic first aid kit and blister supplies</div>
+        </div>
+        <div class="safety-card">
+          <div class="safety-card-title">Solo-specific</div>
+          <div class="safety-card-body">• Buddy up informally with other trekkers for the Deurali stretch<br>• Leave a note at each tea house with your departure time<br>• Carry a local SIM (Ncell/NTC) — some signal to Chhomrong<br>• No signal above Chhomrong — plan accordingly</div>
+        </div>
+        <div class="safety-card">
+          <div class="safety-card-title">Signs to descend immediately</div>
+          <div class="safety-card-body">• Severe headache that won't respond to ibuprofen<br>• Loss of coordination or balance<br>• Confusion or disorientation<br>• Persistent vomiting at altitude</div>
+        </div>
+      </div>
+
+      <h3 style="font-size:16px; font-weight:600; margin: 28px 0 14px; color: var(--text);">Emergency contacts</h3>
+      <div class="overview-card" style="margin-bottom: 0;">
+        <div class="emergency-row">
+          <span class="em-label">Nepal Police (National)</span>
+          <span class="em-value">100</span>
+        </div>
+        <div class="emergency-row">
+          <span class="em-label">Tourism Emergency Helpline</span>
+          <span class="em-value">1144</span>
+        </div>
+        <div class="emergency-row">
+          <span class="em-label">Himalayan Rescue Association (Pokhara)</span>
+          <span class="em-value">+977-61-440066</span>
+        </div>
+        <div class="emergency-row">
+          <span class="em-label">ACAP Office, Pokhara</span>
+          <span class="em-value">+977-61-466477</span>
+        </div>
+        <div class="emergency-row">
+          <span class="em-label">Fishtail Air (heli rescue)</span>
+          <span class="em-value">+977-61-465111</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKING TAB -->
+    <div class="tab-panel" id="panel-packing">
+      <h2 class="section-heading">Packing list</h2>
+      <p class="section-intro">For a 10-day solo trek to 4,130m. Check items off as you pack. Target total pack weight: under 10kg (lighter is better — the Ulleri staircase will remind you).</p>
+
+      <div class="pack-category">
+        <div class="pack-cat-title">Clothing</div>
+        <div class="pack-items" id="pack-clothing">
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Down jacket (600-fill or higher)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Fleece mid-layer</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Waterproof rain jacket + trousers</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> 3× moisture-wicking base layer tops</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> 2× trekking trousers (zip-off useful)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Warm hat + sun hat</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Gloves (light liner + waterproof shell)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking socks ×4 pairs (wool preferred)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Gaiters (optional but useful in snow)</label>
+        </div>
+      </div>
+
+      <div class="pack-category">
+        <div class="pack-cat-title">Footwear</div>
+        <div class="pack-items">
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking boots (waterproof, ankle support)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Camp sandals / Crocs for evenings</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking poles (strong recommendation)</label>
+        </div>
+      </div>
+
+      <div class="pack-category">
+        <div class="pack-cat-title">Gear &amp; safety</div>
+        <div class="pack-items">
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Headlamp + spare batteries</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sleeping bag liner (tea houses provide blankets but liners add warmth)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Water bottles ×2 (1L each) + purification tablets</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Power bank (20,000mAh minimum)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Universal power adapter</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sunscreen SPF 50+ + lip balm</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sunglasses (UV protection essential)</label>
+        </div>
+      </div>
+
+      <div class="pack-category">
+        <div class="pack-cat-title">First aid &amp; meds</div>
+        <div class="pack-items">
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Diamox (consult doctor — 125–250mg for AMS prevention)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Ibuprofen + Paracetamol</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Blister kit (Compeed + needle)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Rehydration sachets (ORS)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Antidiarrheal (Imodium)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Altitude sickness pulse oximeter (optional, useful)</label>
+        </div>
+      </div>
+
+      <div class="pack-category">
+        <div class="pack-cat-title">Documents &amp; money</div>
+        <div class="pack-items">
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Passport + 2 passport photos (for permits)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Travel insurance docs (printout + phone)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> NPR 40,000+ cash (withdrawn in Pokhara)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Nepal SIM card (Ncell or NTC — buy at airport)</label>
+        </div>
+      </div>
+
+      <div class="alert-box info" style="margin-top: 4px;">
+        <span class="alert-icon">💡</span>
+        <div class="alert-text">
+          <strong>Leave behind at your Pokhara hotel</strong>
+          Anything you don't need on the trail — city clothes, laptop, extra bags. Most hotels offer free luggage storage. Travel light; the mountains reward it.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="guide-cta">
+      <div class="guide-cta-title">Trek with a local guide</div>
+      <div class="guide-cta-desc">Verified Pokhara-based guides. Solo rates, flexible itineraries. Starting from $28/day.</div>
+      <div class="guide-features">
+        <span class="gf">Verified &amp; certified guides only</span>
+        <span class="gf">Solo trekker pricing — no group surcharge</span>
+        <span class="gf">Handles logistics: lodges, permits</span>
+        <span class="gf">First aid trained</span>
+      </div>
+      <button class="btn-primary">Browse guides for ABC</button>
+      <button class="btn-secondary">Plan without a guide →</button>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sc-head">Permits checklist</div>
+      <div class="sc-body">
+        <div class="permit-row">
+          <div>
+            <div class="permit-name">ACAP permit</div>
+            <div class="permit-note">Get in Pokhara (Damside) or Kathmandu</div>
+          </div>
+          <div class="permit-price">$24 / $8*</div>
+        </div>
+        <div class="permit-row">
+          <div>
+            <div class="permit-name">TIMS card</div>
+            <div class="permit-note">Same office as ACAP. Bring 2 photos.</div>
+          </div>
+          <div class="permit-price">$17 / $9*</div>
+        </div>
+        <p style="font-size: 11px; color: var(--text-muted); margin-top: 10px; line-height: 1.5;">* SAARC nationals (India, Sri Lanka, Bangladesh, Pakistan, etc.) pay the lower rate.</p>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sc-head">When to go</div>
+      <div class="sc-body">
+        <div class="weather-row">
+          <span class="wr-season">Oct – Nov</span>
+          <span class="wr-temp">5°C to 15°C</span>
+          <span class="wr-badge wr-best">Best</span>
+        </div>
+        <div class="weather-row">
+          <span class="wr-season">Mar – May</span>
+          <span class="wr-temp">8°C to 18°C</span>
+          <span class="wr-badge wr-best">Best</span>
+        </div>
+        <div class="weather-row">
+          <span class="wr-season">Dec – Feb</span>
+          <span class="wr-temp">-5°C to 10°C</span>
+          <span class="wr-badge wr-ok">Doable</span>
+        </div>
+        <div class="weather-row">
+          <span class="wr-season">Jun – Sep</span>
+          <span class="wr-temp">10°C to 22°C</span>
+          <span class="wr-badge wr-avoid">Monsoon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sc-head">Quick facts</div>
+      <div class="sc-body">
+        <div class="cost-row">
+          <span style="font-size:13px; color:var(--text-mid)">Country</span>
+          <span style="font-size:13px; font-weight:600">Nepal</span>
+        </div>
+        <div class="cost-row">
+          <span style="font-size:13px; color:var(--text-mid)">Max altitude</span>
+          <span style="font-size:13px; font-weight:600">4,130m</span>
+        </div>
+        <div class="cost-row">
+          <span style="font-size:13px; color:var(--text-mid)">Total distance</span>
+          <span style="font-size:13px; font-weight:600">~110 km RT</span>
+        </div>
+        <div class="cost-row">
+          <span style="font-size:13px; color:var(--text-mid)">Duration</span>
+          <span style="font-size:13px; font-weight:600">7–10 days</span>
+        </div>
+        <div class="cost-row">
+          <span style="font-size:13px; color:var(--text-mid)">Trailhead</span>
+          <span style="font-size:13px; font-weight:600">Nayapul</span>
+        </div>
+        <div class="cost-row">
+          <span style="font-size:13px; color:var(--text-mid)">Nearest city</span>
+          <span style="font-size:13px; font-weight:600">Pokhara</span>
+        </div>
+        <div class="cost-row" style="border-bottom: none;">
+          <span style="font-size:13px; color:var(--text-mid)">Guide mandatory</span>
+          <span style="font-size:13px; font-weight:600; color: #2E7D32;">No (2025/26)</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function toggleDay(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('open');
+  }
+
+  function togglePacked(checkbox) {
+    const label = checkbox.parentElement;
+    label.classList.toggle('checked', checkbox.checked);
+  }
+</script>
+</body>
+</html>
