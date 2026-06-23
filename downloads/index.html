@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trail Kits — Offline Downloads — The Solo Trail</title>
+<meta name="description" content="Download offline trail kits for Himalayan treks. PDF guide, GPS waypoints, emergency contacts and permit cards — everything you need when there's no signal.">
+<meta property="og:title" content="Trail Kits — Offline Downloads — The Solo Trail">
+<meta property="og:description" content="PDF guide + GPS waypoints + emergency contacts. Everything offline, yours forever.">
+<meta property="og:url" content="https://thesolotrail.com/downloads/">
+<link rel="canonical" href="https://thesolotrail.com/downloads/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: clip; scroll-behavior: smooth; }
+body { min-width: 0; font-family: 'Inter', sans-serif; background: #F7F4EE; color: #1C1C1C; font-size: 15px; line-height: 1.7; }
+
+:root {
+  --forest: #1A3A2A; --forest-light: #2A5240; --forest-pale: #E8F0EB;
+  --glacier: #4A8FA8; --glacier-light: #EBF4F8;
+  --amber: #D4882A; --amber-light: #FDF3E3;
+  --bg: #F7F4EE; --white: #FFFFFF;
+  --text: #1C1C1C; --text-mid: #4A4A4A; --text-muted: #7A7A7A; --border: #DDD8CE;
+}
+
+/* NAV */
+nav { background: var(--forest); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; letter-spacing: .01em; text-decoration: none; flex-shrink: 0; }
+.nav-logo span { color: #7EC8A0; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: .02em; }
+.nav-links a:hover { color: #fff; }
+.nav-links .nav-cta { background: #7EC8A0; color: var(--forest); padding: 6px 16px; border-radius: 6px; font-weight: 700; }
+.nav-links .nav-cta:hover { background: #9BDAB8; }
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+}
+
+/* HERO */
+.hero { background: var(--forest); padding: 64px 24px 52px; }
+.hero-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+.hero-tag { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #7EC8A0; margin-bottom: 16px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 44px); color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+.hero-sub { font-size: 15px; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 520px; margin: 0 auto; }
+
+/* WHAT'S IN A KIT */
+.kit-explainer { background: var(--white); border-bottom: 1px solid var(--border); padding: 28px 24px; }
+.kit-explainer-inner { max-width: 800px; margin: 0 auto; }
+.kit-explainer-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+.kit-what-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.kit-what-grid > * { min-width: 0; }
+.kit-what-item { display: flex; gap: 10px; align-items: flex-start; }
+.kit-what-icon { width: 32px; height: 32px; background: var(--forest-pale); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.kit-what-title { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.kit-what-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+@media (max-width: 600px) { .kit-what-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* MAIN */
+.main { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+.section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; }
+
+/* PRODUCT CARDS */
+.product-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 16px; display: flex; }
+.product-card.active { border-color: var(--forest); box-shadow: 0 0 0 3px rgba(26,58,42,.08); }
+.pc-visual { width: 180px; flex-shrink: 0; background: var(--forest); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px; gap: 8px; }
+.pc-trail-name { font-family: 'Playfair Display', serif; font-size: 13px; color: rgba(255,255,255,.7); text-align: center; line-height: 1.3; }
+.pc-altitude { font-size: 20px; font-weight: 700; color: #7EC8A0; font-family: 'Playfair Display', serif; }
+.pc-elevation-bar { width: 64px; height: 3px; background: rgba(126,200,160,.3); border-radius: 2px; position: relative; }
+.pc-elevation-bar::after { content: ''; position: absolute; left: 0; top: 0; height: 3px; background: #7EC8A0; border-radius: 2px; width: 60%; }
+.pc-body { flex: 1; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; min-width: 0; }
+.pc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.pc-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; line-height: 1.2; }
+.pc-status-live { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #2E7D32; background: var(--forest-pale); padding: 3px 9px; border-radius: 4px; flex-shrink: 0; }
+.pc-status-soon { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); background: #F0EDE7; padding: 3px 9px; border-radius: 4px; flex-shrink: 0; }
+.pc-desc { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+.pc-includes { display: flex; flex-wrap: wrap; gap: 5px 12px; }
+.pc-tag { font-size: 11px; color: var(--text-muted); }
+.pc-tag::before { content: '✓ '; color: #2E7D32; font-weight: 700; }
+.pc-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.pc-price { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--text); }
+.pc-price-note { font-size: 11px; color: var(--text-muted); }
+.pc-buy-btn { background: var(--forest); color: #fff; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 7px; text-decoration: none; white-space: nowrap; }
+.pc-buy-btn:hover { background: var(--forest-light); }
+.pc-soon-btn { background: #F0EDE7; color: var(--text-muted); font-size: 13px; font-weight: 600; padding: 10px 22px; border-radius: 7px; text-decoration: none; white-space: nowrap; cursor: default; }
+
+/* COMING SOON CARD */
+.product-card.coming-soon { opacity: .75; }
+.pc-visual.coming { background: #C8C0B4; }
+.pc-altitude.coming { color: rgba(255,255,255,.5); }
+
+/* FAQ */
+.faq { margin-top: 52px; }
+.faq-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 20px; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-q { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.faq-a { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
+
+/* FOOTER */
+footer { background: #0F2318; padding: 40px 24px 28px; margin-top: 0; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">the solo <span>trail</span></a>
+  <div class="nav-links">
+    <a href="/trails/">Trails</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about/">About</a>
+    <a href="/downloads/" class="nav-cta">Downloads</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Trail Kits — Offline Downloads</div>
+    <h1>Everything you need<br>when there's no signal.</h1>
+    <p class="hero-sub">The trail guides on this site are free. Trail Kits are the offline version — print-ready PDF, GPS waypoints, emergency contacts, and permit cards. One download before you fly; everything works without internet.</p>
+  </div>
+</header>
+
+<div class="kit-explainer">
+  <div class="kit-explainer-inner">
+    <div class="kit-explainer-label">Every Trail Kit includes</div>
+    <div class="kit-what-grid">
+      <div class="kit-what-item">
+        <div class="kit-what-icon">📄</div>
+        <div>
+          <div class="kit-what-title">Print-ready PDF guide</div>
+          <div class="kit-what-desc">Full day-by-day guide formatted for A4/Letter printing. Works as a physical backup on trail.</div>
+        </div>
+      </div>
+      <div class="kit-what-item">
+        <div class="kit-what-icon">📍</div>
+        <div>
+          <div class="kit-what-title">GPX waypoints file</div>
+          <div class="kit-what-desc">Teahouses, junctions, heli landing zones, water sources. Load into OsmAnd, Gaia GPS, or any Garmin.</div>
+        </div>
+      </div>
+      <div class="kit-what-item">
+        <div class="kit-what-icon">🚨</div>
+        <div>
+          <div class="kit-what-title">Emergency contacts card</div>
+          <div class="kit-what-desc">Rescue services, helicopter numbers, and ACAP office contacts organised by altitude zone.</div>
+        </div>
+      </div>
+      <div class="kit-what-item">
+        <div class="kit-what-icon">📋</div>
+        <div>
+          <div class="kit-what-title">Permit reference card</div>
+          <div class="kit-what-desc">Permit costs, office locations, SAARC rates, and checkpoint list — all on one printable card.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+
+  <div class="section-eyebrow">Available now</div>
+
+  <!-- ABC TRAIL KIT -->
+  <div class="product-card active">
+    <div class="pc-visual">
+      <div class="pc-trail-name">Annapurna<br>Base Camp</div>
+      <div class="pc-altitude">4,130m</div>
+      <div class="pc-elevation-bar"></div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px;">Nepal · 10 days</div>
+    </div>
+    <div class="pc-body">
+      <div>
+        <div class="pc-head">
+          <div class="pc-title">ABC Trail Kit</div>
+          <span class="pc-status-live">● Live</span>
+        </div>
+        <p class="pc-desc" style="margin-top:8px;">The complete offline package for the Annapurna Base Camp trek. Covers the classic 10-day route via Ghorepani and the 7-day direct route via Chhomrong. Teahouse waypoints verified against the current (2025/26) ACAP-registered trail network.</p>
+        <div class="pc-includes" style="margin-top:10px;">
+          <span class="pc-tag">10-day offline PDF guide</span>
+          <span class="pc-tag">GPX waypoints (teahouses, junctions, heli LZs)</span>
+          <span class="pc-tag">Emergency contacts by altitude zone</span>
+          <span class="pc-tag">ACAP + TIMS permit card</span>
+        </div>
+      </div>
+      <div class="pc-footer">
+        <div>
+          <div class="pc-price"><span data-price="5.99">₹499</span></div>
+          <div class="pc-price-note">One-time purchase · Delivered instantly via Gumroad</div>
+        </div>
+        <a href="<!-- REPLACE: Gumroad product link -->" class="pc-buy-btn" target="_blank" rel="noopener">Download the Kit →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-eyebrow" style="margin-top:40px;">Coming soon</div>
+
+  <!-- KEDARKANTHA -->
+  <div class="product-card coming-soon">
+    <div class="pc-visual coming">
+      <div class="pc-trail-name" style="color:rgba(255,255,255,.5)">Kedarkantha<br>Summit Trek</div>
+      <div class="pc-altitude coming">3,810m</div>
+      <div class="pc-elevation-bar"></div>
+      <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px;">India (Uttarakhand) · 5 days</div>
+    </div>
+    <div class="pc-body">
+      <div>
+        <div class="pc-head">
+          <div class="pc-title" style="color:var(--text-mid)">Kedarkantha Trail Kit</div>
+          <span class="pc-status-soon">In progress</span>
+        </div>
+        <p class="pc-desc" style="margin-top:8px;">The best winter summit trek in India. 4–6 days, Uttarakhand, no permits required. Guide in production — join the waitlist to be notified when this kit launches.</p>
+      </div>
+      <div class="pc-footer">
+        <div>
+          <div class="pc-price" style="color:var(--text-muted)"><span data-price="5.99">₹499</span></div>
+          <div class="pc-price-note">Not yet available</div>
+        </div>
+        <a href="mailto:hello@thesolotrail.com?subject=Kedarkantha Trail Kit waitlist" class="pc-soon-btn">Notify me →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- POON HILL -->
+  <div class="product-card coming-soon">
+    <div class="pc-visual coming">
+      <div class="pc-trail-name" style="color:rgba(255,255,255,.5)">Poon Hill<br>Circuit</div>
+      <div class="pc-altitude coming">3,210m</div>
+      <div class="pc-elevation-bar"></div>
+      <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:4px;">Nepal · 4 days</div>
+    </div>
+    <div class="pc-body">
+      <div>
+        <div class="pc-head">
+          <div class="pc-title" style="color:var(--text-mid)">Poon Hill Trail Kit</div>
+          <span class="pc-status-soon">Planned</span>
+        </div>
+        <p class="pc-desc" style="margin-top:8px;">The fastest Himalayan sunrise trek — 4 days from Pokhara, stunning Dhaulagiri views, and an ideal first Nepal trek before attempting ABC. No technical skill required.</p>
+      </div>
+      <div class="pc-footer">
+        <div>
+          <div class="pc-price" style="color:var(--text-muted)"><span data-price="5.99">₹499</span></div>
+          <div class="pc-price-note">Not yet available</div>
+        </div>
+        <a href="mailto:hello@thesolotrail.com?subject=Poon Hill Trail Kit waitlist" class="pc-soon-btn">Notify me →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <div class="faq-title">Questions</div>
+    <div class="faq-item">
+      <div class="faq-q">Which apps does the GPX file work with?</div>
+      <div class="faq-a">OsmAnd (Android/iOS, free), Gaia GPS (iOS/Android, freemium), Maps.me (free), Komoot, and any Garmin GPS device. The file follows the GPX 1.1 standard. A short setup guide is included in the kit.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is the PDF guide different from the free guide on the site?</div>
+      <div class="faq-a">The content is the same — the free online version will always have the full itinerary, permits, and safety information. The PDF is a print-formatted version, designed to be readable offline without a screen. Think of it as the physical guidebook equivalent.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How accurate are the GPS waypoints?</div>
+      <div class="faq-a">The waypoints are compiled from the OpenStreetMap trail network and cross-referenced against the 2025/26 ACAP teahouse register. They mark teahouses, trail junctions, permit checkpoints, helicopter landing zones, and water sources. GPS accuracy is ±15m — sufficient for trail navigation. Always carry the PDF as a backup.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What payment methods are accepted?</div>
+      <div class="faq-a">The kit is delivered through Gumroad, which accepts cards (Visa, Mastercard, Amex), PayPal, and UPI. You don't need a Gumroad account — checkout as a guest.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I get a refund if I'm not satisfied?</div>
+      <div class="faq-a">Yes — email hello@thesolotrail.com within 7 days of purchase and we'll refund in full, no questions asked.</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap;margin-bottom:24px;">
+      <div>
+        <a href="/" style="font-family:'Playfair Display',serif;color:#fff;font-size:18px;text-decoration:none;display:block;margin-bottom:6px;">the solo <span style="color:#7EC8A0;">trail</span></a>
+        <p style="font-size:12px;color:rgba(255,255,255,.4);max-width:220px;line-height:1.6;">Built for independent trekkers who plan their own routes.</p>
+      </div>
+      <div style="display:flex;gap:40px;flex-wrap:wrap;">
+        <div>
+          <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px;">Trails</p>
+          <a href="/trails/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">All Trails</a>
+          <a href="/trails/annapurna-base-camp/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">Annapurna Base Camp</a>
+          <a href="/trails/kedarkantha/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">Kedarkantha</a>
+          <a href="/trails/poon-hill/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">Poon Hill</a>
+        </div>
+        <div>
+          <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px;">Site</p>
+          <a href="/about/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">About</a>
+          <a href="/downloads/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">Downloads</a>
+          <a href="/community/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">Community</a>
+          <a href="/guides/" style="display:block;font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;margin-bottom:8px;">Guides</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span style="font-size:12px;color:rgba(255,255,255,.3);">© 2025 The Solo Trail · Made for independent trekkers</span>
+      <a href="mailto:hello@thesolotrail.com" style="font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;">hello@thesolotrail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/currency.js"></script>
+</body>
+</html>

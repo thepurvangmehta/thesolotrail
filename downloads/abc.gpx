@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="The Solo Trail — thesolotrail.com"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <name>Annapurna Base Camp — The Solo Trail</name>
+    <desc>Complete route waypoints for the classic 10-day ABC trek via Ghorepani and Poon Hill. Includes teahouse stops, permit checkpoints, helicopter landing zones, water sources, and key junctions. For use with OsmAnd, Gaia GPS, Maps.me, or any Garmin device.
+
+IMPORTANT: Verify all waypoints against the current ACAP trail map before your trek. Trail junctions and teahouse locations occasionally change. These coordinates are based on the 2025/26 ACAP-registered trail network and OpenStreetMap data.
+
+© The Solo Trail — thesolotrail.com — Personal use only.</desc>
+    <author><name>The Solo Trail</name></author>
+    <copyright author="The Solo Trail"><year>2025</year></copyright>
+    <link href="https://thesolotrail.com/trails/annapurna-base-camp/"><text>Full online guide — Annapurna Base Camp</text></link>
+    <keywords>annapurna base camp, ABC trek, Nepal, Himalaya, solo trekking, GPX</keywords>
+  </metadata>
+
+  <!-- ============================================================ -->
+  <!-- TRAILHEAD                                                     -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.2017" lon="83.7972">
+    <ele>1070</ele>
+    <name>TST: Nayapul Trailhead (1,070m)</name>
+    <desc>Main trailhead via taxi from Pokhara. TIMS + ACAP permits already needed. 30-min jeep from Pokhara Lakeside.</desc>
+    <sym>Trailhead</sym>
+    <type>Trailhead</type>
+  </wpt>
+
+  <wpt lat="28.2150" lon="83.7791">
+    <ele>1025</ele>
+    <name>TST: Birethanti Checkpoint (1,025m)</name>
+    <desc>TIMS checkpoint — have both permits ready. Office open 6am–6pm. Last ATM before the trek.</desc>
+    <sym>Waypoint</sym>
+    <type>Permit Checkpoint</type>
+  </wpt>
+
+  <!-- ============================================================ -->
+  <!-- DAY 1–2 STOPS                                                -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.2461" lon="83.7614">
+    <ele>1480</ele>
+    <name>TST: Tikhedhunga (1,480m)</name>
+    <desc>Day 1 overnight stop. 3–4 teahouses. Good food. The Ulleri stone staircase starts just above here — save energy for tomorrow morning.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <wpt lat="28.2672" lon="83.7497">
+    <ele>1960</ele>
+    <name>TST: Ulleri (1,960m)</name>
+    <desc>3,000+ stone steps. Take it slow, rest every 200 steps if needed. Teahouses with cold drinks at the top. The hardest single climb on the route.</desc>
+    <sym>Waypoint</sym>
+    <type>Waypoint</type>
+  </wpt>
+
+  <wpt lat="28.3978" lon="83.6978">
+    <ele>2874</ele>
+    <name>TST: Ghorepani (2,874m)</name>
+    <desc>Day 2 overnight. Many teahouses — arrive by 3pm to secure a room. Good phone signal (Ncell). Your first taste of altitude — drink water, avoid alcohol. Poon Hill sunrise viewpoint is 45 min uphill from here.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <!-- ============================================================ -->
+  <!-- POON HILL + DAY 3                                            -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.4011" lon="83.6969">
+    <ele>3210</ele>
+    <name>TST: Poon Hill Viewpoint (3,210m)</name>
+    <desc>Wake at 4:30am from Ghorepani. Sunrise views of Dhaulagiri, Annapurna South, and Machhapuchhre. 45-min hike from Ghorepani. Entry fee: NPR 100. Get here before 6am for the best position.</desc>
+    <sym>Summit</sym>
+    <type>Viewpoint</type>
+  </wpt>
+
+  <wpt lat="28.4100" lon="83.7103">
+    <ele>2630</ele>
+    <name>TST: Tadapani (2,630m)</name>
+    <desc>Day 3 overnight. Small village, 4–5 teahouses. Beautiful rhododendron forest on the descent from Ghorepani. Less crowded than Ghorepani.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <!-- ============================================================ -->
+  <!-- CHHOMRONG + SANCTUARY ENTRY                                  -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.4094" lon="83.7481">
+    <ele>2170</ele>
+    <name>TST: Chhomrong (2,170m) — Last resupply point</name>
+    <desc>Day 4 overnight. CRITICAL STOP: last ATM access (Gurung Bank), last reliable phone signal (Ncell, weak), last point to buy snacks/supplies. Many well-stocked teahouses. Stock up on snacks, top up cash, charge all devices. Tell someone back home your plan from here.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <wpt lat="28.4150" lon="83.7500">
+    <ele>2200</ele>
+    <name>TST: Chhomrong ACAP Checkpoint (2,200m)</name>
+    <desc>ACAP permit check — have your permit card ready. This is where your trek is officially logged. Registration is how rescue services track you if something goes wrong.</desc>
+    <sym>Waypoint</sym>
+    <type>Permit Checkpoint</type>
+  </wpt>
+
+  <wpt lat="28.4333" lon="83.7547">
+    <ele>2340</ele>
+    <name>TST: Sinuwa (2,340m)</name>
+    <desc>Day 5 stop. Small cluster of teahouses. Charging: NPR 200. No signal. JUNCTION NOTE: at the teahouse cluster, stay on the main trail — there's a side path to the right that leads to a private camp, not Bamboo.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <wpt lat="28.4539" lon="83.7553">
+    <ele>2310</ele>
+    <name>TST: Bamboo (2,310m)</name>
+    <desc>Day 5 overnight (or continue to Dovan). Named for the dense bamboo forest. The gorge becomes narrower and wetter here. Last reliable water from a tap — above here, filter all stream water.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <!-- ============================================================ -->
+  <!-- HIGH SANCTUARY                                               -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.4736" lon="83.7683">
+    <ele>2600</ele>
+    <name>TST: Dovan (2,600m)</name>
+    <desc>Day 6 stop. 2–3 teahouses. The trail becomes steeper and the gorge more dramatic from here. Charging: NPR 200.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <wpt lat="28.4933" lon="83.7817">
+    <ele>2900</ele>
+    <name>TST: Himalaya Hotel (2,900m)</name>
+    <desc>Day 6 overnight. 3 teahouses. IMPORTANT: this is your last comfortable altitude acclimatisation stop before the push to ABC. If you have any AMS symptoms (persistent headache, nausea), spend a rest day here. Do NOT push through symptoms above 3,000m. Helicopter landing zone nearby.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <wpt lat="28.4980" lon="83.7880">
+    <ele>2920</ele>
+    <name>TST: Helicopter LZ — Himalaya Hotel area (2,920m)</name>
+    <desc>Helicopter landing zone used for medical evacuations. If you need rescue from this point or below, this is the likely pickup location. Call Fishtail Air: +977-61-465111.</desc>
+    <sym>Waypoint</sym>
+    <type>Emergency - Helicopter LZ</type>
+  </wpt>
+
+  <wpt lat="28.5078" lon="83.7917">
+    <ele>3230</ele>
+    <name>TST: Deurali (3,230m) — Avalanche zone ahead</name>
+    <desc>Day 7 stop. 2 teahouses. WARNING: the section from here to MBC passes through an active avalanche corridor. Move through this section EARLY (before 9am), quickly, and without stopping. An April 2025 avalanche near here was fatal. Take this seriously.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <wpt lat="28.5197" lon="83.8003">
+    <ele>3700</ele>
+    <name>TST: MBC — Machhapuchhre Base Camp (3,700m)</name>
+    <desc>Day 7 overnight. 4–5 teahouses. You're now in the high-altitude zone. AMS risk is real above 3,500m. Check SpO2 at teahouse if they have an oximeter. Eat a full meal even if not hungry — your body needs fuel. ABC is 2.5–3 hours from here.</desc>
+    <sym>Lodging</sym>
+    <type>Teahouse</type>
+  </wpt>
+
+  <!-- ============================================================ -->
+  <!-- SUMMIT                                                       -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.5311" lon="83.8189">
+    <ele>4130</ele>
+    <name>TST: ★ ANNAPURNA BASE CAMP (4,130m)</name>
+    <desc>The amphitheatre. Annapurna I (8,091m), Machhapuchhre (6,993m), and Hiunchuli (6,441m) surround you. Spend 2–3 hours — the morning is clearest before cloud builds. Check SpO2: if below 80%, begin descent immediately. Teahouses open Oct–May; closed Jun–Sep monsoon.
+
+AMS EMERGENCY: If you have severe headache, loss of coordination, confusion, or vomiting at altitude — descend immediately to MBC or Deurali. Do not sleep at 4,130m with these symptoms.
+
+Emergency: call Fishtail Air +977-61-465111. Your teahouse owner has a radio.</desc>
+    <sym>Summit</sym>
+    <type>Summit</type>
+  </wpt>
+
+  <!-- ============================================================ -->
+  <!-- WATER SOURCES                                                -->
+  <!-- ============================================================ -->
+
+  <wpt lat="28.4539" lon="83.7548">
+    <ele>2310</ele>
+    <name>TST: Water tap — Bamboo (2,310m)</name>
+    <desc>Reliable clean water tap. Last confirmed clean tap on the route. Above here, all stream and outdoor water sources should be purified with tablets or a filter.</desc>
+    <sym>Water</sym>
+    <type>Water Source</type>
+  </wpt>
+
+  <wpt lat="28.5078" lon="83.7910">
+    <ele>3225</ele>
+    <name>TST: Water — Deurali stream (3,225m)</name>
+    <desc>Stream water available. Purify before drinking (iodine tablets or filter). Glacier meltwater — cold and clear but carry purification.</desc>
+    <sym>Water</sym>
+    <type>Water Source</type>
+  </wpt>
+
+</gpx>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ABC Trail Kit — Print Guide — The Solo Trail</title>
+<!--
+  INSTRUCTIONS: To generate the PDF for Gumroad upload:
+  1. Open this file in Google Chrome
+  2. Press Cmd+P (Mac) or Ctrl+P (Windows)
+  3. Set: Destination → Save as PDF, Layout → Portrait, Margins → None
+  4. Enable: Background graphics (checkbox in More settings)
+  5. Save as "abc-trail-kit.pdf"
+  6. Upload to Gumroad alongside abc.gpx
+-->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: A4; margin: 0; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: #fff;
+    color: #1C1C1C;
+    font-size: 10pt;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* COVER PAGE */
+  .cover {
+    width: 210mm;
+    height: 297mm;
+    background: #1A3A2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20mm;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-bg-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        180deg,
+        transparent 0px,
+        transparent 28px,
+        rgba(126,200,160,.06) 28px,
+        rgba(126,200,160,.06) 29px
+      );
+  }
+  .cover-badge {
+    display: inline-block;
+    background: #7EC8A0;
+    color: #1A3A2A;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: fit-content;
+  }
+  .cover h1 {
+    font-size: 32pt;
+    font-weight: normal;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    letter-spacing: -.01em;
+  }
+  .cover h1 em { color: #7EC8A0; font-style: normal; }
+  .cover-sub {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9pt;
+    color: rgba(255,255,255,.5);
+    line-height: 1.65;
+    max-width: 100mm;
+    margin-bottom: 24px;
+  }
+  .cover-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding-top: 16px;
+    margin-top: 0;
+  }
+  .cstat { padding-right: 12px; }
+  .cstat-value { font-size: 15pt; font-weight: bold; color: #7EC8A0; }
+  .cstat-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7pt; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .08em; }
+  .cover-logo {
+    position: absolute;
+    top: 20mm;
+    left: 20mm;
+    font-size: 12pt;
+    color: rgba(255,255,255,.6);
+    letter-spacing: .02em;
+  }
+  .cover-logo span { color: #7EC8A0; }
+
+  /* CONTENT PAGES */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 16mm 18mm;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* PAGE HEADER */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #1A3A2A;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+  .page-header-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1A3A2A;
+  }
+  .page-header-logo {
+    font-size: 8pt;
+    color: #7A7A7A;
+    letter-spacing: .03em;
+  }
+
+  /* SECTION HEADING */
+  h2 {
+    font-size: 18pt;
+    font-weight: normal;
+    color: #1A3A2A;
+    letter-spacing: -.01em;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #1A3A2A;
+    margin: 14px 0 6px;
+  }
+  p { font-size: 9.5pt; color: #333; margin-bottom: 8px; line-height: 1.65; }
+
+  /* DAY CARDS */
+  .day-entry { margin-bottom: 14px; border-left: 3px solid #E8F0EB; padding-left: 12px; }
+  .day-entry.summit { border-left-color: #4A8FA8; }
+  .day-num { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 7pt; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #7A7A7A; }
+  .day-title { font-size: 12pt; font-weight: bold; color: #1A3A2A; margin-bottom: 3px; }
+  .day-meta { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8pt; color: #7A7A7A; margin-bottom: 4px; }
+  .day-body { font-size: 9pt; color: #444; line-height: 1.6; }
+
+  /* TEAHOUSE TABLE */
+  table { width: 100%; border-collapse: collapse; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 8.5pt; margin: 10px 0; }
+  th { background: #1A3A2A; color: rgba(255,255,255,.8); font-weight: 700; padding: 6px 8px; text-align: left; font-size: 7.5pt; letter-spacing: .04em; }
+  td { padding: 5px 8px; border-bottom: 1px solid #E8E4DE; color: #333; vertical-align: top; }
+  tr:nth-child(even) td { background: #F9F7F4; }
+  td.alt { color: #4A8FA8; font-weight: 600; }
+  td.price { color: #D4882A; font-weight: 600; }
+
+  /* ALERT BOX */
+  .alert { border-radius: 5px; padding: 8px 12px; margin: 10px 0; display: flex; gap: 8px; }
+  .alert.warn { background: #FFF3E0; border-left: 3px solid #D4882A; }
+  .alert.danger { background: #FDEDEC; border-left: 3px solid #C0392B; }
+  .alert.info { background: #EBF4F8; border-left: 3px solid #4A8FA8; }
+  .alert-icon { font-size: 11pt; flex-shrink: 0; }
+  .alert-text { font-size: 8.5pt; color: #333; line-height: 1.55; }
+  .alert-text strong { display: block; margin-bottom: 2px; font-size: 8.5pt; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li { padding: 3px 0 3px 16px; position: relative; font-size: 9pt; color: #333; border-bottom: .5px solid #EEE; }
+  .checklist li::before { content: '☐'; position: absolute; left: 0; color: #1A3A2A; font-size: 9pt; }
+
+  /* EMERGENCY CARD */
+  .emergency-card { background: #FDEDEC; border: 1.5px solid #F0C0BB; border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+  .emergency-card h3 { color: #C0392B; margin-top: 0; }
+  .em-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: .5px solid #F0C0BB; font-size: 8.5pt; }
+  .em-row:last-child { border-bottom: none; }
+  .em-label { color: #444; }
+  .em-val { font-weight: 700; font-family: 'Helvetica Neue', Arial, sans-serif; color: #C0392B; letter-spacing: .03em; }
+
+  /* PERMIT CARD */
+  .permit-card { background: #EBF4F8; border: 1.5px solid #BDD8E4; border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+  .permit-card h3 { color: #1A5A72; margin-top: 0; }
+  .pm-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: .5px solid #BDD8E4; font-size: 8.5pt; }
+  .pm-row:last-child { border-bottom: none; }
+  .pm-label { color: #333; }
+  .pm-val { font-weight: 700; color: #1A5A72; }
+
+  /* PRINT-ONLY UTILITIES */
+  .print-note { display: none; }
+  @media screen {
+    body { background: #F7F4EE; }
+    .cover { border-radius: 8px; margin: 20px auto; max-width: 794px; }
+    .page { border: 1px solid #DDD; margin: 8px auto; max-width: 794px; background: #fff; }
+    .print-note { display: block; background: #1A3A2A; color: #fff; font-family: sans-serif; font-size: 13px; padding: 12px 24px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-note">📄 To save as PDF: Cmd+P → Save as PDF → Margins: None → Enable Background Graphics</div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-bg-lines"></div>
+  <div class="cover-logo">the solo <span>trail</span></div>
+  <div style="position:relative;z-index:1;">
+    <div class="cover-badge">ABC Trail Kit · 2025/26 Edition</div>
+    <h1>Annapurna<br>Base Camp<br><em>Solo Trek Guide</em></h1>
+    <p class="cover-sub">Complete offline guide for the classic 10-day route. Verified against 2025/26 ACAP trail network. Includes GPX waypoints, emergency contacts, and permit reference.</p>
+    <div class="cover-stats">
+      <div class="cstat">
+        <div class="cstat-value">4,130m</div>
+        <div class="cstat-label">Max altitude</div>
+      </div>
+      <div class="cstat">
+        <div class="cstat-value">10 days</div>
+        <div class="cstat-label">Classic route</div>
+      </div>
+      <div class="cstat">
+        <div class="cstat-value">~110km</div>
+        <div class="cstat-label">Round trip</div>
+      </div>
+      <div class="cstat">
+        <div class="cstat-value">Nepal</div>
+        <div class="cstat-label">Country</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 1: OVERVIEW + PERMITS -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Annapurna Base Camp · Overview</span>
+    <span class="page-header-logo">thesolotrail.com</span>
+  </div>
+
+  <h2>About this trek</h2>
+  <p>The Annapurna Base Camp trek is the rare Himalayan route where the destination lives up to the reputation. You arrive inside a natural amphitheatre — Annapurna I (8,091m), Machhapuchhre (6,993m), and Hiunchuli (6,441m) rising on three sides. The approach through Gurung villages, rhododendron forests, and the Modi Khola gorge is as good as the summit.</p>
+  <p><strong>No mandatory guide required in 2025/26.</strong> The trail is extremely well-marked and busy with other trekkers. The GPX file in this kit covers all major junctions where wrong turns happen.</p>
+
+  <div class="alert info">
+    <span class="alert-icon">💡</span>
+    <div class="alert-text"><strong>Best seasons</strong> Oct–Nov (crisp, clear, busy) and Mar–May (rhododendrons, good visibility). Avoid Jun–Sep (monsoon). Dec–Feb is possible but cold and requires extra gear.</div>
+  </div>
+
+  <h3>Permits required</h3>
+  <div class="permit-card">
+    <h3>Permit reference — 2025/26 rates</h3>
+    <div class="pm-row"><span class="pm-label">ACAP (Annapurna Conservation Area Permit)</span><span class="pm-val">$24 · SAARC: $8</span></div>
+    <div class="pm-row"><span class="pm-label">TIMS card (Trekkers' Information Management System)</span><span class="pm-val">$17 · SAARC: $9</span></div>
+    <div class="pm-row"><span class="pm-label">Total (international)</span><span class="pm-val">$41 USD</span></div>
+    <div class="pm-row"><span class="pm-label">Total (SAARC nationals — India, Sri Lanka, Bangladesh)</span><span class="pm-val">$17 USD</span></div>
+    <div class="pm-row"><span class="pm-label">Where to get</span><span class="pm-val">Pokhara: ACAP office, Damside · Kathmandu: Bhrikuti Mandap</span></div>
+    <div class="pm-row" style="border-bottom:none"><span class="pm-label">Bring</span><span class="pm-val">Passport · 2 passport photos · USD cash or NPR</span></div>
+  </div>
+
+  <h3>Getting there</h3>
+  <p><strong>From India:</strong> Fly to Kathmandu (Tribhuvan International Airport). Take an early morning Yeti/Shree airlines flight to Pokhara (25 min, ~$70–100 one-way). Book domestic flight in Pokhara season — sell out fast.</p>
+  <p><strong>Kathmandu → Pokhara overland:</strong> Tourist bus (~$10, 6–7 hours) or private car (~$80, 5 hours). Scenic but long — consider flying.</p>
+  <p><strong>Pokhara → Trailhead:</strong> Taxi/jeep to Nayapul (~₹800 / $10) or directly to Kande/Phedi (~$12–15). Most solo trekkers take the direct Kande option to save a day.</p>
+
+  <div class="alert warn">
+    <span class="alert-icon">⚠️</span>
+    <div class="alert-text"><strong>Arrive Pokhara the day before you start.</strong> Don't do the full journey in one day. Spend one night, sort permits in the morning, start Day 1 fresh and rested.</div>
+  </div>
+</div>
+
+<!-- PAGE 2: ITINERARY DAYS 1–5 -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Annapurna Base Camp · Itinerary Days 1–5</span>
+    <span class="page-header-logo">thesolotrail.com</span>
+  </div>
+  <h2>10-day itinerary</h2>
+  <p style="font-size:8.5pt;color:#7A7A7A;margin-bottom:12px;">Classic route via Ghorepani and Poon Hill. For the 7-day direct route via Chhomrong, contact us at hello@thesolotrail.com for an updated GPX route file.</p>
+
+  <div class="day-entry">
+    <div class="day-num">Day 1</div>
+    <div class="day-title">Pokhara → Nayapul → Birethanti → Tikhedhunga</div>
+    <div class="day-meta">~4 hours · +850m · Altitude: 1,480m</div>
+    <div class="day-body">Take an early morning taxi to Nayapul (30 min). Collect TIMS check at Birethanti checkpoint — have permits ready. Gentle walk along the Modi Khola river to Tikhedhunga. The famous Ulleri stone staircase begins tomorrow, so rest tonight.</div>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Day 2</div>
+    <div class="day-title">Tikhedhunga → Ulleri → Ghorepani</div>
+    <div class="day-meta">~5 hours · +1,400m · Altitude: 2,874m</div>
+    <div class="day-body">The hardest single-day climb on the route. Ulleri is 3,000+ stone steps — start early, take it slow. The reward is Ghorepani: teahouses with Dhaulagiri views, hot dal bhat, and your first taste of Himalayan altitude. Hydrate aggressively today.</div>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Day 3</div>
+    <div class="day-title">Poon Hill sunrise → Ghorepani → Tadapani</div>
+    <div class="day-meta">4:30am start for sunrise · 5–6 hours · Altitude: 2,630m</div>
+    <div class="day-body">Wake at 4:30am for the 45-minute climb to Poon Hill (3,210m). Clear days give 180° views of Dhaulagiri, Annapurna South, and Machhapuchhre. After breakfast, descend through rhododendron forests to Tadapani. The rhododendrons are spectacular in March–April.</div>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Day 4</div>
+    <div class="day-title">Tadapani → Chomrong (Chhomrong)</div>
+    <div class="day-meta">~4 hours · Altitude: 2,170m</div>
+    <div class="day-body">Steady descent through forest to the Modi Khola valley, then a sharp climb to Chhomrong — the last major village before the sanctuary. Stock up: buy snacks, top up cash, charge devices. There is very limited phone signal after this point.</div>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Day 5</div>
+    <div class="day-title">Chhomrong → Sinuwa → Bamboo</div>
+    <div class="day-meta">~4 hours · Altitude: 2,310m</div>
+    <div class="day-body">Steep descent from Chhomrong, then long climb through dense bamboo forest. This section is beautiful but humid — more like a jungle than the alpine trek you imagined. No signal; the GPX file in this kit covers the Sinuwa/Bamboo junction where trekkers occasionally miss the turn.</div>
+  </div>
+</div>
+
+<!-- PAGE 3: ITINERARY DAYS 6–10 -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Annapurna Base Camp · Itinerary Days 6–10</span>
+    <span class="page-header-logo">thesolotrail.com</span>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Day 6</div>
+    <div class="day-title">Bamboo → Dovan → Himalaya Hotel</div>
+    <div class="day-meta">~4 hours · Altitude: 2,900m</div>
+    <div class="day-body">Enter the Annapurna Sanctuary proper. The gorge narrows dramatically. The Himalaya Hotel area (3 teahouses) is your last comfortable rest before the altitude zone. If you feel any AMS symptoms, stop here — do not push to Deurali tonight.</div>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Day 7</div>
+    <div class="day-title">Himalaya Hotel → Deurali → MBC</div>
+    <div class="day-meta">~4 hours · Altitude: 3,700m</div>
+    <div class="day-body">The Himalaya–Deurali section passes through an active avalanche corridor — move early (leave by 6:30am), move quickly, and do not linger. After Deurali the landscape opens to moraine and you enter the high-altitude zone. Drink water constantly. MBC at 3,700m.</div>
+  </div>
+
+  <div class="day-entry summit">
+    <div class="day-num">Day 8 — Summit day</div>
+    <div class="day-title">MBC → Annapurna Base Camp (4,130m)</div>
+    <div class="day-meta">~3 hours · Altitude: 4,130m · Maximum altitude</div>
+    <div class="day-body">Leave MBC by 6am. The final approach reveals the full amphitheatre. ABC sits in a glacial bowl surrounded by eight peaks over 6,000m. Spend 2–3 hours here — morning is clearest before clouds build. Check your SpO2 at the teahouse. <strong>If below 80%, begin descent immediately.</strong></div>
+  </div>
+
+  <div class="alert danger">
+    <span class="alert-icon">🔴</span>
+    <div class="alert-text"><strong>AMS Warning — 4,130m</strong> At this altitude, headache, nausea, and light-headedness are common. These are manageable. Loss of coordination, confusion, or severe headache that won't respond to ibuprofen means descend immediately — do not sleep at this altitude if these symptoms appear.</div>
+  </div>
+
+  <div class="day-entry">
+    <div class="day-num">Days 9–10</div>
+    <div class="day-title">ABC → MBC → Chhomrong → Nayapul → Pokhara</div>
+    <div class="day-meta">Return route · ~6 hours/day</div>
+    <div class="day-body">Descent is fast — most trekkers return to Pokhara in 2 days. Day 9: descend to Chhomrong. Day 10: push through to Nayapul and taxi back to Pokhara. Your knees will remind you about the Ulleri staircase on the way down. Trekking poles are non-negotiable on descent.</div>
+  </div>
+</div>
+
+<!-- PAGE 4: TEAHOUSE TABLE -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Annapurna Base Camp · Teahouse Reference</span>
+    <span class="page-header-logo">thesolotrail.com</span>
+  </div>
+  <h2>Teahouse reference</h2>
+  <p style="font-size:8.5pt;color:#7A7A7A;margin-bottom:10px;">Prices are 2025/26 estimates. Higher altitude = higher prices. All teahouses are cash-only (Nepali Rupees). ATMs stop at Pokhara — carry NPR 40,000+ for the full trek.</p>
+
+  <table>
+    <tr>
+      <th>Location</th>
+      <th>Alt.</th>
+      <th>Room (NPR)</th>
+      <th>Meal (NPR)</th>
+      <th>Charging</th>
+      <th>Signal</th>
+    </tr>
+    <tr><td>Tikhedhunga</td><td class="alt">1,480m</td><td>300–500</td><td>400–600</td><td>Free</td><td>Ncell</td></tr>
+    <tr><td>Ghorepani</td><td class="alt">2,874m</td><td>300–500</td><td>500–700</td><td>Free/Paid</td><td>Ncell/NTC</td></tr>
+    <tr><td>Tadapani</td><td class="alt">2,630m</td><td>300–500</td><td>450–650</td><td>Free</td><td>Ncell</td></tr>
+    <tr><td>Chhomrong</td><td class="alt">2,170m</td><td>300–600</td><td>500–700</td><td>Free</td><td>Ncell (weak)</td></tr>
+    <tr><td>Sinuwa</td><td class="alt">2,340m</td><td>200–300</td><td>500–700</td><td>NPR 200</td><td>None</td></tr>
+    <tr><td>Bamboo</td><td class="alt">2,310m</td><td>200–300</td><td>500–700</td><td>NPR 200</td><td>None</td></tr>
+    <tr><td>Dovan</td><td class="alt">2,600m</td><td>200–400</td><td>600–800</td><td>NPR 200</td><td>None</td></tr>
+    <tr><td>Himalaya Hotel</td><td class="alt">2,900m</td><td>300–500</td><td>700–900</td><td>NPR 250</td><td>None</td></tr>
+    <tr><td>Deurali</td><td class="alt">3,230m</td><td>300–500</td><td>700–900</td><td>NPR 300</td><td>None</td></tr>
+    <tr><td>MBC (Machhapuchhre Base Camp)</td><td class="alt">3,700m</td><td>500–800</td><td>800–1,100</td><td>NPR 400</td><td>None</td></tr>
+    <tr><td><strong>ABC (Annapurna Base Camp)</strong></td><td class="alt"><strong>4,130m</strong></td><td><strong>600–1,000</strong></td><td><strong>900–1,200</strong></td><td>NPR 500</td><td>None</td></tr>
+  </table>
+
+  <div class="alert info" style="margin-top:14px;">
+    <span class="alert-icon">💡</span>
+    <div class="alert-text"><strong>Teahouse booking tip:</strong> No advance booking — walk-in only. In peak season (Oct, Nov, Apr) arrive by 3pm to get a room. Share a room or sleep in the dining area if teahouses are full — this is normal and safe. Never sleep outside above 3,000m.</div>
+  </div>
+
+  <h3>Budget reference (full 10-day trek)</h3>
+  <table>
+    <tr><th>Category</th><th>Low estimate (NPR)</th><th>Comfortable (NPR)</th></tr>
+    <tr><td>Permits (ACAP + TIMS, SAARC rate)</td><td>~NPR 2,200</td><td>~NPR 2,200</td></tr>
+    <tr><td>Accommodation (10 nights)</td><td>~NPR 3,000</td><td>~NPR 6,000</td></tr>
+    <tr><td>Food (3 meals × 10 days)</td><td>~NPR 12,000</td><td>~NPR 20,000</td></tr>
+    <tr><td>Charging + extras</td><td>~NPR 2,500</td><td>~NPR 4,000</td></tr>
+    <tr><td>Pokhara–Nayapul taxi</td><td>~NPR 800</td><td>~NPR 1,200</td></tr>
+    <tr><td><strong>Total (approx.)</strong></td><td><strong>~NPR 20,500</strong></td><td><strong>~NPR 33,400</strong></td></tr>
+  </table>
+</div>
+
+<!-- PAGE 5: EMERGENCY CONTACTS + PACKING -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Annapurna Base Camp · Emergency Contacts + Packing</span>
+    <span class="page-header-logo">thesolotrail.com</span>
+  </div>
+
+  <h2>Emergency contacts</h2>
+  <p style="font-size:8.5pt;color:#7A7A7A;margin-bottom:10px;"><strong>Print this page and carry it in your top pocket.</strong> No signal above Chhomrong. Give this page to your teahouse owner on arrival each night — they know who to call.</p>
+
+  <div class="emergency-card">
+    <h3>Emergency numbers — Nepal</h3>
+    <div class="em-row"><span class="em-label">Nepal Police (National Emergency)</span><span class="em-val">100</span></div>
+    <div class="em-row"><span class="em-label">Tourism Emergency Helpline</span><span class="em-val">1144</span></div>
+    <div class="em-row"><span class="em-label">Himalayan Rescue Association (Pokhara)</span><span class="em-val">+977-61-440066</span></div>
+    <div class="em-row"><span class="em-label">ACAP Office, Pokhara</span><span class="em-val">+977-61-466477</span></div>
+    <div class="em-row"><span class="em-label">Fishtail Air — helicopter rescue</span><span class="em-val">+977-61-465111</span></div>
+    <div class="em-row"><span class="em-label">Simrik Airlines — helicopter rescue</span><span class="em-val">+977-1-4499299</span></div>
+    <div class="em-row" style="border-bottom:none"><span class="em-label">Nearest hospital (Pokhara Western Regional)</span><span class="em-val">+977-61-520066</span></div>
+  </div>
+
+  <div class="alert danger" style="margin-top:10px;">
+    <span class="alert-icon">🚁</span>
+    <div class="alert-text"><strong>Helicopter rescue cost: $3,000–5,000 USD</strong> — you must have travel insurance with evacuation cover or guarantee payment on the spot. Your teahouse owner can help radio for rescue; carry your insurance policy number and insurer hotline number here: _______________</div>
+  </div>
+
+  <h2 style="margin-top:18px;">Packing essentials</h2>
+  <p style="font-size:8.5pt;color:#7A7A7A;margin-bottom:8px;">Target total pack weight: under 10kg. Leave city clothes in your Pokhara hotel (most offer free storage).</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 16px;">
+    <div>
+      <h3>Clothing &amp; footwear</h3>
+      <ul class="checklist">
+        <li>Down jacket (600-fill+)</li>
+        <li>Fleece mid-layer</li>
+        <li>Waterproof rain jacket + trousers</li>
+        <li>3× moisture-wicking base layers</li>
+        <li>2× trekking trousers</li>
+        <li>Warm hat + sun hat</li>
+        <li>Gloves (liner + waterproof shell)</li>
+        <li>Wool trekking socks ×4 pairs</li>
+        <li>Trekking boots (waterproof, ankle)</li>
+        <li>Camp sandals for evenings</li>
+        <li>Trekking poles (strongly recommend)</li>
+      </ul>
+      <h3 style="margin-top:10px;">Documents &amp; money</h3>
+      <ul class="checklist">
+        <li>Passport + 2 passport photos</li>
+        <li>Travel insurance docs (printout)</li>
+        <li>NPR 40,000+ cash</li>
+        <li>Nepal SIM (Ncell — airport or Pokhara)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Gear &amp; safety</h3>
+      <ul class="checklist">
+        <li>Headlamp + spare batteries</li>
+        <li>Sleeping bag liner</li>
+        <li>Water bottles ×2 (1L) + purification tabs</li>
+        <li>Power bank (20,000mAh min.)</li>
+        <li>Sunscreen SPF 50+ + lip balm</li>
+        <li>Sunglasses (UV protection)</li>
+        <li>Universal adapter</li>
+        <li>Pulse oximeter (recommended)</li>
+      </ul>
+      <h3 style="margin-top:10px;">First aid &amp; meds</h3>
+      <ul class="checklist">
+        <li>Diamox (consult doctor first)</li>
+        <li>Ibuprofen + Paracetamol</li>
+        <li>Blister kit (Compeed)</li>
+        <li>Rehydration sachets (ORS)</li>
+        <li>Antidiarrheal (Imodium)</li>
+        <li>Basic first aid kit</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:18px;border-top:1px solid #DDD;padding-top:10px;font-size:7.5pt;color:#999;text-align:center;">
+    ABC Trail Kit · thesolotrail.com · hello@thesolotrail.com · Content is free to read online at thesolotrail.com/trails/annapurna-base-camp/ · This PDF is for personal use only.
+  </div>
+</div>
+
+</body>
+</html>

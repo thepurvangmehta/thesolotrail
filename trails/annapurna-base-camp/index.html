@@ -720,6 +720,51 @@
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
   }
+
+  /* --- TRAIL KIT CTA --- */
+  .kit-cta { background: var(--forest); padding: 52px 24px; }
+  .kit-cta-inner { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .kit-cta-badge { display: inline-block; background: #7EC8A0; color: var(--forest); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; margin-bottom: 12px; }
+  .kit-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px,3vw,30px); color: #fff; font-weight: 700; margin-bottom: 8px; line-height: 1.25; }
+  .kit-cta-sub { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.65; max-width: 460px; margin-bottom: 16px; }
+  .kit-contents { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .kit-item { font-size: 12px; color: rgba(255,255,255,.7); }
+  .kit-item::before { content: '✓ '; color: #7EC8A0; font-weight: 700; }
+  .kit-price-box { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 24px 28px; text-align: center; min-width: 196px; flex-shrink: 0; }
+  .kit-price-label { font-size: 11px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+  .kit-price-amount { font-family: 'Playfair Display', serif; font-size: 34px; color: #fff; font-weight: 700; line-height: 1; margin-bottom: 3px; }
+  .kit-price-usd { font-size: 12px; color: rgba(255,255,255,.35); margin-bottom: 16px; }
+  .kit-buy-btn { display: block; background: #7EC8A0; color: var(--forest); font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 7px; text-decoration: none; text-align: center; }
+  .kit-buy-btn:hover { background: #9BDAB8; }
+  .kit-buy-sub { font-size: 10px; color: rgba(255,255,255,.3); margin-top: 8px; }
+
+  /* --- INSURANCE CALLOUT --- */
+  .insurance-callout { background: #FFF8F7; border: 1.5px solid #F0C0BB; border-radius: 10px; padding: 20px 22px; margin-top: 24px; display: flex; gap: 14px; align-items: flex-start; }
+  .ins-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .ins-body h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+  .ins-body p { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 10px; }
+  .ins-cta { display: inline-block; background: var(--danger); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 14px; border-radius: 5px; text-decoration: none; }
+  .ins-cta:hover { background: #A93226; }
+  .ins-disclosure { font-size: 10px; color: var(--text-muted); margin-top: 6px; margin-bottom: 0; }
+
+  /* --- PACKING BUY LINKS --- */
+  .buy-link { display: inline-block; font-size: 10px; font-weight: 600; color: var(--amber); text-decoration: none; margin-left: 6px; padding: 1px 5px; border: 1px solid var(--amber); border-radius: 3px; vertical-align: middle; white-space: nowrap; }
+  .buy-link:hover { background: var(--amber); color: #fff; }
+
+  /* --- POKHARA ACTIVITIES --- */
+  .pk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 8px; }
+  .pk-grid > * { min-width: 0; }
+  .pk-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 13px 15px; text-decoration: none; color: inherit; display: block; transition: border-color .15s; }
+  .pk-card:hover { border-color: var(--glacier); }
+  .pk-card-title { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+  .pk-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .pk-card-price { font-size: 12px; color: var(--glacier); font-weight: 600; margin-top: 5px; }
+
+  @media (max-width: 520px) {
+    .pk-grid { grid-template-columns: 1fr; }
+    .kit-cta-inner { grid-template-columns: 1fr; }
+    .kit-price-box { min-width: unset; }
+  }
 </style>
 </head>
 <body>
@@ -878,15 +923,15 @@
       </div>
 
       <div class="pro-teaser">
-        <div class="pro-teaser-label">Solo Trail Pro</div>
-        <div class="pro-teaser-title">Download the full offline guide</div>
-        <div class="pro-teaser-desc">Take everything — itinerary, maps, emergency contacts, packing list — with you. No signal needed above Chhomrong.</div>
+        <div class="pro-teaser-label">ABC Trail Kit</div>
+        <div class="pro-teaser-title">Take the whole guide offline</div>
+        <div class="pro-teaser-desc">No signal above Chhomrong. Download once before you fly — the print-ready PDF, GPS waypoints, permit card, and emergency contacts are yours forever.</div>
         <div class="pro-features-mini">
-          <span class="pfm">Full offline trail guide PDF</span>
-          <span class="pfm">GPS waypoints file (.gpx)</span>
-          <span class="pfm">Emergency contact sheet by altitude zone</span>
+          <span class="pfm">Offline PDF guide (print-ready, all 10 days)</span>
+          <span class="pfm">GPX waypoints for OsmAnd / Gaia GPS</span>
+          <span class="pfm">Emergency contacts by altitude zone</span>
         </div>
-        <a href="/pricing/" class="btn-pro">Get Pro — <span data-price="7" data-price-suffix="/month">$7/month</span></a>
+        <a href="/downloads/" class="btn-pro">Get the ABC Trail Kit — <span data-price="5.99">₹499</span></a>
       </div>
     </div>
 
@@ -1241,6 +1286,34 @@
           Don't do the Kathmandu→Pokhara→trailhead journey in a single day. Spend one night in Pokhara, sort permits in the morning, and start Day 1 fresh.
         </div>
       </div>
+
+      <div style="margin-top: 28px;">
+        <h3 style="font-size:16px;font-weight:600;margin-bottom:6px;color:var(--text)">While you're in Pokhara</h3>
+        <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:0;">Most trekkers spend 1–2 nights in Pokhara before hitting the trail. These are worth your time — book through GetYourGuide, confirmed instantly.</p>
+        <div class="pk-grid">
+          <a href="<!-- REPLACE: GetYourGuide Pokhara paragliding affiliate link -->" class="pk-card" target="_blank" rel="noopener sponsored">
+            <div class="pk-card-title">Paragliding over Phewa Lake</div>
+            <div class="pk-card-desc">30-min tandem flight with Annapurna views. The classic pre-trek experience.</div>
+            <div class="pk-card-price">from <span data-price="80">$80</span></div>
+          </a>
+          <a href="<!-- REPLACE: GetYourGuide Sarangkot sunrise affiliate link -->" class="pk-card" target="_blank" rel="noopener sponsored">
+            <div class="pk-card-title">Sarangkot sunrise</div>
+            <div class="pk-card-desc">Jeep + short hike to the best Annapurna viewpoint. Do this the morning you leave for the trail.</div>
+            <div class="pk-card-price">from <span data-price="25">$25</span></div>
+          </a>
+          <a href="<!-- REPLACE: GetYourGuide Phewa Lake boat affiliate link -->" class="pk-card" target="_blank" rel="noopener sponsored">
+            <div class="pk-card-title">Phewa Lake boat + island temple</div>
+            <div class="pk-card-desc">Hire a rowing boat and visit Tal Barahi temple. 2 hours, deeply relaxing after a flight day.</div>
+            <div class="pk-card-price">from <span data-price="8">$8</span></div>
+          </a>
+          <a href="<!-- REPLACE: GetYourGuide Pokhara city tour affiliate link -->" class="pk-card" target="_blank" rel="noopener sponsored">
+            <div class="pk-card-title">Pokhara old market walking tour</div>
+            <div class="pk-card-desc">Half-day walk through Lakeside and Old Bazar. Also useful for gear shopping orientation.</div>
+            <div class="pk-card-price">from <span data-price="20">$20</span></div>
+          </a>
+        </div>
+        <p style="font-size:11px;color:var(--text-muted);">Affiliate disclosure: booking links earn us a small commission at no cost to you. We only list activities we'd genuinely recommend.</p>
+      </div>
     </div>
 
     <!-- COSTS -->
@@ -1381,45 +1454,56 @@
         <div class="emergency-row"><span class="em-label">ACAP Office, Pokhara</span><span class="em-value">+977-61-466477</span></div>
         <div class="emergency-row"><span class="em-label">Fishtail Air (heli rescue)</span><span class="em-value">+977-61-465111</span></div>
       </div>
+
+      <div class="insurance-callout">
+        <div class="ins-icon">🚁</div>
+        <div class="ins-body">
+          <h4>Helicopter evacuation from ABC costs $3,000–5,000. Get covered before you go.</h4>
+          <p>Travel insurance with helicopter rescue isn't optional above 3,000m — it's the one thing you cannot improvise on the trail. We recommend SafetyWing Nomad: covers emergency evacuation, hospitalisation, and trip interruption. Starts from ~$50/month. Get it before you book your flights.</p>
+          <a href="<!-- REPLACE: SafetyWing affiliate link from safetywing.com/affiliates -->" class="ins-cta" target="_blank" rel="noopener sponsored">Get insured with SafetyWing →</a>
+          <p class="ins-disclosure">Affiliate disclosure: we earn a 10% commission if you subscribe through this link, at no extra cost to you. We recommend SafetyWing because it genuinely covers Himalayan helicopter rescue — not because of the commission.</p>
+        </div>
+      </div>
     </div>
 
     <!-- PACKING -->
     <div class="tab-panel" id="panel-packing">
       <h2 class="section-heading">Packing list</h2>
       <p class="section-intro">For a 10-day solo trek to 4,130m. Check items off as you pack. Target total pack weight: under 10kg — the Ulleri staircase will remind you why.</p>
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;margin-top:-4px;">Amazon links on gear items are affiliate — we earn a small commission at no extra cost to you.</p>
 
       <div class="pack-category">
         <div class="pack-cat-title">Clothing</div>
         <div class="pack-items">
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Down jacket (600-fill or higher)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Down jacket (600-fill or higher) <a href="<!-- REPLACE: Amazon India down jacket affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Fleece mid-layer</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Waterproof rain jacket + trousers</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Waterproof rain jacket + trousers <a href="<!-- REPLACE: Amazon India rain jacket affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> 3× moisture-wicking base layer tops</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> 2× trekking trousers (zip-off useful)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Warm hat + sun hat</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Gloves (light liner + waterproof shell)</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking socks ×4 pairs (wool preferred)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking socks ×4 pairs (wool preferred) <a href="<!-- REPLACE: Amazon India wool trekking socks affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Gaiters (optional but useful in snow)</label>
         </div>
       </div>
       <div class="pack-category">
         <div class="pack-cat-title">Footwear</div>
         <div class="pack-items">
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking boots (waterproof, ankle support)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking boots (waterproof, ankle support) <a href="<!-- REPLACE: Amazon India trekking boots affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Camp sandals / Crocs for evenings</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking poles (strong recommendation)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Trekking poles (strong recommendation) <a href="<!-- REPLACE: Amazon India trekking poles affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
         </div>
       </div>
       <div class="pack-category">
         <div class="pack-cat-title">Gear &amp; safety</div>
         <div class="pack-items">
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Headlamp + spare batteries</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sleeping bag liner (tea houses provide blankets)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Headlamp + spare batteries <a href="<!-- REPLACE: Amazon India headlamp affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sleeping bag liner (tea houses provide blankets) <a href="<!-- REPLACE: Amazon India sleeping bag liner affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Water bottles ×2 (1L each) + purification tablets</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Power bank (20,000mAh minimum)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Power bank (20,000mAh minimum) <a href="<!-- REPLACE: Amazon India power bank affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Universal power adapter</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sunscreen SPF 50+ + lip balm</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sunglasses (UV protection essential)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Sunglasses (UV protection essential) <a href="<!-- REPLACE: Amazon India UV sunglasses affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
         </div>
       </div>
       <div class="pack-category">
@@ -1430,7 +1514,7 @@
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Blister kit (Compeed + needle)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Rehydration sachets (ORS)</label>
           <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Antidiarrheal (Imodium)</label>
-          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Pulse oximeter (optional, useful at altitude)</label>
+          <label class="pack-item"><input type="checkbox" onchange="togglePacked(this)"> Pulse oximeter (optional, useful at altitude) <a href="<!-- REPLACE: Amazon India pulse oximeter affiliate link -->" class="buy-link" target="_blank" rel="noopener sponsored">Amazon ↗</a></label>
         </div>
       </div>
       <div class="pack-category">
@@ -1465,7 +1549,7 @@
         <span class="gf">First aid trained</span>
       </div>
       <a href="/guides/" class="btn-primary" style="display:block;text-align:center;text-decoration:none;">Browse guides for ABC</a>
-      <a href="/pricing/" class="btn-secondary" style="display:block;text-align:center;text-decoration:none;">Go Pro — plan without a guide →</a>
+      <a href="/downloads/" class="btn-secondary" style="display:block;text-align:center;text-decoration:none;">Get the ABC Trail Kit →</a>
     </div>
 
     <div class="sidebar-card">
@@ -1512,6 +1596,30 @@
       </div>
     </div>
   </aside>
+</div>
+
+<!-- TRAIL KIT CTA -->
+<div class="kit-cta">
+  <div class="kit-cta-inner">
+    <div>
+      <div class="kit-cta-badge">ABC Trail Kit — One-time download</div>
+      <h2>No signal above Chhomrong.<br>Download before you fly.</h2>
+      <p class="kit-cta-sub">The guide stays free to read online forever. The Trail Kit is everything in a single offline download — for the days when there's no internet and you need to know if you've taken the right fork.</p>
+      <div class="kit-contents">
+        <span class="kit-item">Print-ready PDF guide (all 10 days)</span>
+        <span class="kit-item">GPX waypoints for OsmAnd &amp; Gaia GPS</span>
+        <span class="kit-item">Emergency contacts by altitude zone</span>
+        <span class="kit-item">ACAP + TIMS permit reference card</span>
+      </div>
+    </div>
+    <div class="kit-price-box">
+      <div class="kit-price-label">One-time · yours forever</div>
+      <div class="kit-price-amount"><span data-price="5.99">₹499</span></div>
+      <div class="kit-price-usd">Instant delivery · works worldwide</div>
+      <a href="<!-- REPLACE: Gumroad product link after you create the product at gumroad.com -->" class="kit-buy-btn" target="_blank" rel="noopener">Download the Trail Kit →</a>
+      <p class="kit-buy-sub">Delivered by Gumroad. No account required.</p>
+    </div>
+  </div>
 </div>
 
 <footer style="background:#0F2318;padding:40px 24px 28px;margin-top:0;">
