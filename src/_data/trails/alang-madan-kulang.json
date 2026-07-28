@@ -13,54 +13,143 @@
   "maxAltitudeM": 1450,
   "totalDistanceKm": 20,
   "elevationGainM": 1200,
-  "duration": { "min": 2, "max": 3 },
+  "duration": {
+    "min": 2,
+    "max": 3
+  },
   "trailhead": "Ghatghar, Ambewadi, or Kurungwadi",
   "nearestCity": "Nashik",
   "guideRequired": true,
-  "heroImage": "https://picsum.photos/seed/alang-madan-kulang/1600/900",
-  "cardImage": "https://picsum.photos/seed/alang-madan-kulang/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Alang_Madan_Kulang_from_Kalsubai_Maharashtra.JPG?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Alang_Madan_Kulang_from_Kalsubai_Maharashtra.JPG?width=800",
   "seoTitle": "Alang-Madan-Kulang (AMK) Trek Guide — The Solo Trail",
   "seoDescription": "Honest guide to the AMK range trek near Nashik — Maharashtra's most technical fort trek. Why this is not a solo beginner trek, and what real preparation looks like.",
   "seasons": [
-    { "label": "Oct – Mar", "sub": "Cool, dry — the only season this trek should be attempted", "badge": "best" },
-    { "label": "Jun – Sep", "sub": "Monsoon — explicitly not recommended, too dangerous on exposed/technical sections", "badge": "avoid" },
-    { "label": "Apr – May", "sub": "Hot, water scarce on the range", "badge": "avoid" }
+    {
+      "label": "Oct – Mar",
+      "sub": "Cool, dry — the only season this trek should be attempted",
+      "badge": "best"
+    },
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — explicitly not recommended, too dangerous on exposed/technical sections",
+      "badge": "avoid"
+    },
+    {
+      "label": "Apr – May",
+      "sub": "Hot, water scarce on the range",
+      "badge": "avoid"
+    }
   ],
   "seasonNote": "AMK is a clear exception to the general Sahyadri rule that monsoon is best — the exposed ledge traverses and rappel at Alang peak become genuinely dangerous when wet.",
   "routeOptions": [
-    { "name": "Full AMK range traverse", "difficulty": "expert", "distanceKm": 20, "duration": "2–3 days", "notes": "Technical terrain including exposed ledge traverses and a rappel section at Alang peak. Mountaineering/rope-handling experience and proper gear are expected, not optional. We do not recommend attempting this solo regardless of experience level — go with an experienced, equipped group." }
+    {
+      "name": "Full AMK range traverse",
+      "difficulty": "expert",
+      "distanceKm": 20,
+      "duration": "2–3 days",
+      "notes": "Technical terrain including exposed ledge traverses and a rappel section at Alang peak. Mountaineering/rope-handling experience and proper gear are expected, not optional. We do not recommend attempting this solo regardless of experience level — go with an experienced, equipped group."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "AMK is consistently described by experienced Sahyadri trekkers as the hardest trek in the state. This is not a trek to attempt without technical rope/rappelling experience and a properly equipped group.",
     "alerts": [
-      { "type": "danger", "title": "Technical terrain — rope and rappelling skills required", "body": "Exposed ledge traverses and a rappel at Alang peak mean this trek carries real fall risk for anyone without mountaineering-level experience. Do not attempt without proper gear (harness, rope, helmet) and an experienced group leader." },
-      { "type": "danger", "title": "Do not attempt solo", "body": "Unlike most treks on this list, we're not just flagging solo-specific precautions — we recommend against attempting AMK solo at any experience level. Join an established trekking group with technical experience." }
+      {
+        "type": "danger",
+        "title": "Technical terrain — rope and rappelling skills required",
+        "body": "Exposed ledge traverses and a rappel at Alang peak mean this trek carries real fall risk for anyone without mountaineering-level experience. Do not attempt without proper gear (harness, rope, helmet) and an experienced group leader."
+      },
+      {
+        "type": "danger",
+        "title": "Do not attempt solo",
+        "body": "Unlike most treks on this list, we're not just flagging solo-specific precautions — we recommend against attempting AMK solo at any experience level. Join an established trekking group with technical experience."
+      }
     ],
     "cards": [
-      { "title": "Before you go", "items": ["Confirm technical rope-handling experience honestly before committing", "Book with an established group that provides safety gear and an experienced leader", "Plan for 2–3 days — this is not a single-day outing"] },
-      { "title": "On the trail", "items": ["Follow your group leader's pacing on exposed sections without exception", "Test all rope/harness gear before committing weight to it", "Carry more water than a standard day trek — no reliable sources on the range"] },
-      { "title": "Signs to turn back", "items": ["Any rain or fog forecast during your window", "Uncertainty about gear condition or fit", "Fatigue on Day 1 that would compromise Day 2's technical sections"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Confirm technical rope-handling experience honestly before committing",
+          "Book with an established group that provides safety gear and an experienced leader",
+          "Plan for 2–3 days — this is not a single-day outing"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Follow your group leader's pacing on exposed sections without exception",
+          "Test all rope/harness gear before committing weight to it",
+          "Carry more water than a standard day trek — no reliable sources on the range"
+        ]
+      },
+      {
+        "title": "Signs to turn back",
+        "items": [
+          "Any rain or fog forecast during your window",
+          "Uncertainty about gear condition or fit",
+          "Fatigue on Day 1 that would compromise Day 2's technical sections"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Igatpuri Police Station", "number": "02553-244033" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Igatpuri Police Station",
+        "number": "02553-244033"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Technical gear", "items": [
-      { "name": "Climbing harness + helmet (via your trekking group operator)", "amazonLink": null },
-      { "name": "Gloves for rope sections", "amazonLink": null },
-      { "name": "Sturdy trekking boots with ankle support", "amazonLink": null }
-    ]},
-    { "category": "Multi-day camping", "items": [
-      { "name": "Lightweight tent/sleeping bag for the overnight(s)", "amazonLink": null },
-      { "name": "4L+ water capacity/filtration for multi-day", "amazonLink": null },
-      { "name": "Headlamp + spare batteries", "amazonLink": null }
-    ]}
+    {
+      "category": "Technical gear",
+      "items": [
+        {
+          "name": "Climbing harness + helmet (via your trekking group operator)",
+          "amazonLink": null
+        },
+        {
+          "name": "Gloves for rope sections",
+          "amazonLink": null
+        },
+        {
+          "name": "Sturdy trekking boots with ankle support",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Multi-day camping",
+      "items": [
+        {
+          "name": "Lightweight tent/sleeping bag for the overnight(s)",
+          "amazonLink": null
+        },
+        {
+          "name": "4L+ water capacity/filtration for multi-day",
+          "amazonLink": null
+        },
+        {
+          "name": "Headlamp + spare batteries",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo: Kul Patil · CC BY-SA 3.0 · Wikimedia Commons"
 }

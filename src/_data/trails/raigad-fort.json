@@ -13,54 +13,142 @@
   "maxAltitudeM": 820,
   "totalDistanceKm": 3,
   "elevationGainM": 600,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Pachad",
   "nearestCity": "Mahad / Mumbai / Pune",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/raigad-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/raigad-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Takmak_Tok,_Raigad_Fort_in_Raigad,_India.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Takmak_Tok,_Raigad_Fort_in_Raigad,_India.jpg?width=800",
   "seoTitle": "Raigad Fort Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo guide to Raigad Fort, Shivaji Maharaj's former capital — ropeway vs. the 1,737-step climb, season, safety, and packing.",
   "dataNote": "Altitude is cited inconsistently across sources — commonly ~2,700 ft (~820m), though one source cites ~4,350 ft. Treat the higher figure as unverified; confirm locally before publishing a precise number.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — greenest views, crowded and slippery on the steps", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Clear, comfortable, ropeway makes it accessible year-round", "badge": "best" },
-    { "label": "Mar – May", "sub": "Hot on the exposed steps", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — greenest views, crowded and slippery on the steps",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Clear, comfortable, ropeway makes it accessible year-round",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot on the exposed steps",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Ropeway", "difficulty": "easy", "distanceKm": 1, "duration": "4–5 min", "notes": "Covers most of the ascent; a short walk remains to the main fort area. Best option if traveling solo without trekking gear." },
-    { "name": "Steps from Pachad (Maha Darwaja climb)", "difficulty": "moderate", "distanceKm": 3, "duration": "2–3 hrs", "notes": "~1,737 steps — the classic approach, popular with fitness-focused solo trekkers." }
+    {
+      "name": "Ropeway",
+      "difficulty": "easy",
+      "distanceKm": 1,
+      "duration": "4–5 min",
+      "notes": "Covers most of the ascent; a short walk remains to the main fort area. Best option if traveling solo without trekking gear."
+    },
+    {
+      "name": "Steps from Pachad (Maha Darwaja climb)",
+      "difficulty": "moderate",
+      "distanceKm": 3,
+      "duration": "2–3 hrs",
+      "notes": "~1,737 steps — the classic approach, popular with fitness-focused solo trekkers."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Raigad is one of the more accessible forts on this list thanks to the ropeway, but the step climb and the Takmak Tok viewpoint both carry real risk if rushed.",
     "alerts": [
-      { "type": "warning", "title": "Takmak Tok cliff point has no barriers", "body": "This lookout point is a genuine sheer drop with no railing. Keep well back, especially with a crowd or on wet stone." }
+      {
+        "type": "warning",
+        "title": "Takmak Tok cliff point has no barriers",
+        "body": "This lookout point is a genuine sheer drop with no railing. Keep well back, especially with a crowd or on wet stone."
+      }
     ],
     "cards": [
-      { "title": "Before you go", "items": ["Book ropeway tickets online in peak season to skip queues", "Check ropeway operating hours before planning your day"] },
-      { "title": "On the trail", "items": ["The stone steps get slick and crowded on monsoon weekends — go on a weekday if solo", "Carry water — limited vendors once past the ropeway station"] },
-      { "title": "Solo-specific", "items": ["Very family/tourist-friendly — easy to find people around if you need help", "Still respect the unfenced viewpoints even with crowds present"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Book ropeway tickets online in peak season to skip queues",
+          "Check ropeway operating hours before planning your day"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "The stone steps get slick and crowded on monsoon weekends — go on a weekday if solo",
+          "Carry water — limited vendors once past the ropeway station"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Very family/tourist-friendly — easy to find people around if you need help",
+          "Still respect the unfenced viewpoints even with crowds present"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Raigad Police Station, Mahad", "number": "02145-222033" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Raigad Police Station, Mahad",
+        "number": "02145-222033"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Comfortable walking/trekking shoes", "amazonLink": null },
-      { "name": "Sun hat and sunscreen", "amazonLink": null },
-      { "name": "Light rain jacket in monsoon", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "2L water", "amazonLink": null },
-      { "name": "Snacks — limited vendors on top", "amazonLink": null },
-      { "name": "Camera — the fort complex and views are extensive", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Comfortable walking/trekking shoes",
+          "amazonLink": null
+        },
+        {
+          "name": "Sun hat and sunscreen",
+          "amazonLink": null
+        },
+        {
+          "name": "Light rain jacket in monsoon",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "2L water",
+          "amazonLink": null
+        },
+        {
+          "name": "Snacks — limited vendors on top",
+          "amazonLink": null
+        },
+        {
+          "name": "Camera — the fort complex and views are extensive",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo: CC BY-SA 4.0 · Wikimedia Commons"
 }

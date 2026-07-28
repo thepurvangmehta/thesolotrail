@@ -2,6 +2,7 @@
 
 /* — HERO — */
 .hero { position: relative; height: 520px; overflow: hidden; display: flex; align-items: flex-end; }
+.hero-credit { position: absolute; z-index: 2; right: 12px; bottom: 8px; font-size: 10px; color: rgba(255,255,255,.55); background: rgba(0,0,0,.35); padding: 2px 8px; border-radius: 4px; }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
 .hero-bg::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,25,16,.92) 0%, rgba(10,25,16,.4) 50%, rgba(10,25,16,.2) 100%); }
 .hero-content { position: relative; z-index: 1; padding: 40px 48px; max-width: 860px; }

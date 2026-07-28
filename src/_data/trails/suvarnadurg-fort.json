@@ -13,46 +13,112 @@
   "maxAltitudeM": 0,
   "totalDistanceKm": 1,
   "elevationGainM": 0,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Harnai jetty, near Murud Beach (Ratnagiri)",
   "nearestCity": "Ratnagiri",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/suvarnadurg-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/suvarnadurg-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Suvarnadurg_fort.JPG?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Suvarnadurg_fort.JPG?width=800",
   "seoTitle": "Suvarnadurg Fort Solo Guide — The Solo Trail",
   "seoDescription": "Solo traveler's guide to Suvarnadurg, a Konkan coast island sea fort near Ratnagiri's Murud Beach — boat access and safety notes.",
   "dataNote": "Boat-access island fort, not a hiking trek — part of Maharashtra's lighter-weight coastal/Konkan sea fort circuit.",
   "seasons": [
-    { "label": "Oct – Feb", "sub": "Calmest seas for the boat crossing", "badge": "best" },
-    { "label": "Jun – Sep", "sub": "Monsoon — rough seas can suspend crossings", "badge": "avoid" },
-    { "label": "Mar – May", "sub": "Generally calm, hot", "badge": "ok" }
+    {
+      "label": "Oct – Feb",
+      "sub": "Calmest seas for the boat crossing",
+      "badge": "best"
+    },
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — rough seas can suspend crossings",
+      "badge": "avoid"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Generally calm, hot",
+      "badge": "ok"
+    }
   ],
   "routeOptions": [
-    { "name": "Boat from Harnai jetty", "difficulty": "easy", "distanceKm": 1, "duration": "Short crossing + 1–2 hrs on the fort", "notes": "Captured by Shivaji Maharaj in the 1660s; a straightforward boat-and-walk visit, not a trek." }
+    {
+      "name": "Boat from Harnai jetty",
+      "difficulty": "easy",
+      "distanceKm": 1,
+      "duration": "Short crossing + 1–2 hrs on the fort",
+      "notes": "Captured by Shivaji Maharaj in the 1660s; a straightforward boat-and-walk visit, not a trek."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Same profile as Maharashtra's other island sea forts — sea conditions matter more than any walking difficulty.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Check with local boat operators about sea conditions before traveling", "This fort is less touristed than Janjira — confirm boat availability in advance"] },
-      { "title": "On the trail", "items": ["Uneven weathered stone inside the fort — mind your footing", "Limited facilities — carry water and snacks"] },
-      { "title": "Solo-specific", "items": ["Quieter than Janjira — confirm you'll have a boat operator willing to make the crossing for a solo traveler, or coordinate with others", "Safe destination overall, mainly a logistics consideration"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Check with local boat operators about sea conditions before traveling",
+          "This fort is less touristed than Janjira — confirm boat availability in advance"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Uneven weathered stone inside the fort — mind your footing",
+          "Limited facilities — carry water and snacks"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Quieter than Janjira — confirm you'll have a boat operator willing to make the crossing for a solo traveler, or coordinate with others",
+          "Safe destination overall, mainly a logistics consideration"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Dapoli Police Station", "number": "02358-282033" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Dapoli Police Station",
+        "number": "02358-282033"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Essentials", "items": [
-      { "name": "Sun hat and sunscreen", "amazonLink": null },
-      { "name": "Comfortable walking shoes/sandals", "amazonLink": null },
-      { "name": "1L water", "amazonLink": null }
-    ]}
+    {
+      "category": "Essentials",
+      "items": [
+        {
+          "name": "Sun hat and sunscreen",
+          "amazonLink": null
+        },
+        {
+          "name": "Comfortable walking shoes/sandals",
+          "amazonLink": null
+        },
+        {
+          "name": "1L water",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

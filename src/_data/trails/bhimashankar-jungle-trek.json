@@ -13,55 +13,150 @@
   "maxAltitudeM": 1100,
   "totalDistanceKm": 7,
   "elevationGainM": 500,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Khandas",
   "nearestCity": "Pune / Mumbai (via Karjat)",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/bhimashankar/1600/900",
-  "cardImage": "https://picsum.photos/seed/bhimashankar/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhimashankar_temple,_Maharashtra.JPG?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhimashankar_temple,_Maharashtra.JPG?width=800",
   "seoTitle": "Bhimashankar Jungle Trek Solo Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to the Bhimashankar jungle trek via Ganesh Ghat and Shidi Ghat — wildlife sanctuary notes, leopard sightings, and route choice.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — waterfalls and greenery at their best; Shidi Ghat especially risky wet", "badge": "ok" },
-    { "label": "Oct – Feb", "sub": "Drier, safer footing especially on Shidi Ghat", "badge": "best" },
-    { "label": "Mar – May", "sub": "Hot, less wildlife activity visible", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — waterfalls and greenery at their best; Shidi Ghat especially risky wet",
+      "badge": "ok"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Drier, safer footing especially on Shidi Ghat",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot, less wildlife activity visible",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Ganesh Ghat (from Khandas)", "difficulty": "easy", "distanceKm": 7, "duration": "3–4 hrs", "notes": "Gradual, beginner-friendly ascent through sanctuary forest." },
-    { "name": "Shidi Ghat", "difficulty": "expert", "distanceKm": 6, "duration": "3–4 hrs", "notes": "Three ladder-like rock steps ('shidi' = ladder) — treacherous when wet. Experienced trekkers only; not recommended in monsoon." }
+    {
+      "name": "Ganesh Ghat (from Khandas)",
+      "difficulty": "easy",
+      "distanceKm": 7,
+      "duration": "3–4 hrs",
+      "notes": "Gradual, beginner-friendly ascent through sanctuary forest."
+    },
+    {
+      "name": "Shidi Ghat",
+      "difficulty": "expert",
+      "distanceKm": 6,
+      "duration": "3–4 hrs",
+      "notes": "Three ladder-like rock steps ('shidi' = ladder) — treacherous when wet. Experienced trekkers only; not recommended in monsoon."
+    }
   ],
   "permits": [
-    { "name": "Sanctuary entry", "fullName": "Bhimashankar Wildlife Sanctuary entry (~131 sq km)", "priceUSD": 0, "where": "Sanctuary checkpoint", "notes": "Standard wildlife sanctuary entry rules and a modest fee apply." }
+    {
+      "name": "Sanctuary entry",
+      "fullName": "Bhimashankar Wildlife Sanctuary entry (~131 sq km)",
+      "priceUSD": 0,
+      "where": "Sanctuary checkpoint",
+      "notes": "Standard wildlife sanctuary entry rules and a modest fee apply."
+    }
   ],
   "safety": {
     "intro": "This trek passes through a wildlife sanctuary with reported leopard activity, and the Shidi Ghat route adds real technical/fall risk on top of that.",
     "alerts": [
-      { "type": "warning", "title": "Leopard sightings reported in the sanctuary", "body": "Bhimashankar Wildlife Sanctuary protects the Indian giant squirrel and has occasional leopard sightings. Local trail dogs often signal an animal's presence before trekkers spot it — take that seriously if it happens." },
-      { "type": "warning", "title": "Shidi Ghat's ladder-like rock steps are treacherous wet", "body": "This route has three step-like rock sections that become genuinely dangerous in rain. Take Ganesh Ghat instead if conditions are wet or you're not experienced with technical scrambling." }
+      {
+        "type": "warning",
+        "title": "Leopard sightings reported in the sanctuary",
+        "body": "Bhimashankar Wildlife Sanctuary protects the Indian giant squirrel and has occasional leopard sightings. Local trail dogs often signal an animal's presence before trekkers spot it — take that seriously if it happens."
+      },
+      {
+        "type": "warning",
+        "title": "Shidi Ghat's ladder-like rock steps are treacherous wet",
+        "body": "This route has three step-like rock sections that become genuinely dangerous in rain. Take Ganesh Ghat instead if conditions are wet or you're not experienced with technical scrambling."
+      }
     ],
     "cards": [
-      { "title": "Before you go", "items": ["Choose Ganesh Ghat if solo or inexperienced — save Shidi Ghat for a dry-season, experienced-group attempt", "Check current sanctuary entry rules and timings"] },
-      { "title": "On the trail", "items": ["Make noise on forest sections at dawn/dusk given wildlife activity", "Carry a whistle in case you need to signal for help in dense forest"] },
-      { "title": "Solo-specific", "items": ["Prefer Ganesh Ghat solo — it's the more traveled and less technical route", "Tell someone your exact route choice given the two options differ so much in risk"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Choose Ganesh Ghat if solo or inexperienced — save Shidi Ghat for a dry-season, experienced-group attempt",
+          "Check current sanctuary entry rules and timings"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Make noise on forest sections at dawn/dusk given wildlife activity",
+          "Carry a whistle in case you need to signal for help in dense forest"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Prefer Ganesh Ghat solo — it's the more traveled and less technical route",
+          "Tell someone your exact route choice given the two options differ so much in risk"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Khed Police Station", "number": "02135-222033" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Khed Police Station",
+        "number": "02135-222033"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Grippy trekking shoes (essential, especially for Shidi Ghat)", "amazonLink": null },
-      { "name": "Quick-dry clothing", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "2.5L water", "amazonLink": null },
-      { "name": "Whistle", "amazonLink": null },
-      { "name": "Trekking pole", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Grippy trekking shoes (essential, especially for Shidi Ghat)",
+          "amazonLink": null
+        },
+        {
+          "name": "Quick-dry clothing",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "2.5L water",
+          "amazonLink": null
+        },
+        {
+          "name": "Whistle",
+          "amazonLink": null
+        },
+        {
+          "name": "Trekking pole",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

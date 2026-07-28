@@ -13,48 +13,120 @@
   "maxAltitudeM": 945,
   "totalDistanceKm": 4,
   "elevationGainM": 300,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Peth Shahapur, ~18 km from Lonavala",
   "nearestCity": "Lonavala / Pune / Mumbai",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/korigad-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/korigad-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Korigad_Fort_in_Monsoon.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Korigad_Fort_in_Monsoon.jpg?width=800",
   "seoTitle": "Korigad Fort Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Korigad Fort near Lonavala — short beginner-friendly climb, monsoon wildflowers, safety, and packing.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — known for wildflower blooms on the approach", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Comfortable and clear", "badge": "ok" },
-    { "label": "Mar – May", "sub": "Hot and exposed", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — known for wildflower blooms on the approach",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Comfortable and clear",
+      "badge": "ok"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot and exposed",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "From Peth Shahapur", "difficulty": "easy", "distanceKm": 2, "duration": "45 min – 1 hr one-way", "notes": "Short, steady climb — one of the easiest fort treks on this list, good for a first Sahyadri outing." }
+    {
+      "name": "From Peth Shahapur",
+      "difficulty": "easy",
+      "distanceKm": 2,
+      "duration": "45 min – 1 hr one-way",
+      "notes": "Short, steady climb — one of the easiest fort treks on this list, good for a first Sahyadri outing."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Korigad is low-risk and well-trodden — a good confidence-building trek for new solo trekkers.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Good option if you're new to Sahyadri trekking and want a low-commitment first outing", "Check for lake-level warnings — Korigad Lake on the plateau can flood in heavy rain"] },
-      { "title": "On the trail", "items": ["Path is well-marked and short — easy to self-navigate", "Ramparts walk around the fort is worthwhile but mind the edges"] },
-      { "title": "Solo-specific", "items": ["Popular enough that you'll usually have company on the trail", "Still tell someone your plan as a baseline habit"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Good option if you're new to Sahyadri trekking and want a low-commitment first outing",
+          "Check for lake-level warnings — Korigad Lake on the plateau can flood in heavy rain"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Path is well-marked and short — easy to self-navigate",
+          "Ramparts walk around the fort is worthwhile but mind the edges"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Popular enough that you'll usually have company on the trail",
+          "Still tell someone your plan as a baseline habit"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Lonavala Police Station", "number": "02114-273233" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Lonavala Police Station",
+        "number": "02114-273233"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Comfortable trekking shoes", "amazonLink": null },
-      { "name": "Rain jacket in monsoon", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "1.5L water", "amazonLink": null },
-      { "name": "Camera for the wildflower season", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Comfortable trekking shoes",
+          "amazonLink": null
+        },
+        {
+          "name": "Rain jacket in monsoon",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "1.5L water",
+          "amazonLink": null
+        },
+        {
+          "name": "Camera for the wildflower season",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

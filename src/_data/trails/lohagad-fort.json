@@ -13,50 +13,128 @@
   "maxAltitudeM": 1033,
   "totalDistanceKm": 3,
   "elevationGainM": 300,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Lohagadwadi",
   "nearestCity": "Lonavala / Pune / Mumbai",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/lohagad-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/lohagad-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Vinchukata_or_Scorpion_Sting_at_the_Lohagad_Fort.JPG?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Vinchukata_or_Scorpion_Sting_at_the_Lohagad_Fort.JPG?width=800",
   "seoTitle": "Lohagad Fort Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Lohagad Fort near Lonavala — the easiest classic Sahyadri trek, ASI rules, season, and packing.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — the classic season, but very crowded weekends", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Quieter, clear views over Pawna Lake", "badge": "best" },
-    { "label": "Mar – May", "sub": "Hot, less scenic", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — the classic season, but very crowded weekends",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Quieter, clear views over Pawna Lake",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot, less scenic",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "From Lohagadwadi", "difficulty": "easy", "distanceKm": 3, "duration": "45 min – 1 hr", "notes": "Well-worn path, doable in sandals by fit trekkers, but proper shoes recommended in monsoon." }
+    {
+      "name": "From Lohagadwadi",
+      "difficulty": "easy",
+      "distanceKm": 3,
+      "duration": "45 min – 1 hr",
+      "notes": "Well-worn path, doable in sandals by fit trekkers, but proper shoes recommended in monsoon."
+    }
   ],
   "permits": [
-    { "name": "ASI site rules", "fullName": "Archaeological Survey of India — protected monument", "priceUSD": 0, "where": "N/A — no entry fee, but rules apply on site", "notes": "No cooking/open fires allowed on the fort." }
+    {
+      "name": "ASI site rules",
+      "fullName": "Archaeological Survey of India — protected monument",
+      "priceUSD": 0,
+      "where": "N/A — no entry fee, but rules apply on site",
+      "notes": "No cooking/open fires allowed on the fort."
+    }
   ],
   "safety": {
     "intro": "Lohagad is about as low-risk as Sahyadri treks get — the main hazards are crowding and slippery stone on monsoon weekends.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Go early on monsoon weekends — this is one of the most crowded treks near Mumbai/Pune", "Carry cash for parking/local food stalls at the base"] },
-      { "title": "On the trail", "items": ["The connecting ridge (naagin) to twin fort Visapur is narrow and exposed — take care in wind/rain", "No cooking fires allowed on the fort (ASI rule) — carry ready-to-eat food"] },
-      { "title": "Solo-specific", "items": ["Very beginner and solo-friendly — always crowded enough to not feel isolated", "Still keep footing careful on the exposed ridge sections regardless of crowd"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Go early on monsoon weekends — this is one of the most crowded treks near Mumbai/Pune",
+          "Carry cash for parking/local food stalls at the base"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "The connecting ridge (naagin) to twin fort Visapur is narrow and exposed — take care in wind/rain",
+          "No cooking fires allowed on the fort (ASI rule) — carry ready-to-eat food"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Very beginner and solo-friendly — always crowded enough to not feel isolated",
+          "Still keep footing careful on the exposed ridge sections regardless of crowd"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Lonavala Police Station", "number": "02114-273233" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Lonavala Police Station",
+        "number": "02114-273233"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Grippy shoes for the monsoon steps", "amazonLink": null },
-      { "name": "Light rain jacket", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "1.5L water", "amazonLink": null },
-      { "name": "Ready-to-eat snacks (no fires allowed on fort)", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Grippy shoes for the monsoon steps",
+          "amazonLink": null
+        },
+        {
+          "name": "Light rain jacket",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "1.5L water",
+          "amazonLink": null
+        },
+        {
+          "name": "Ready-to-eat snacks (no fires allowed on fort)",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo: Varun Patil · CC BY-SA 3.0 · Wikimedia Commons"
 }

@@ -13,51 +13,132 @@
   "maxAltitudeM": 1106,
   "totalDistanceKm": 50,
   "elevationGainM": 1500,
-  "duration": { "min": 1, "max": 3 },
+  "duration": {
+    "min": 1,
+    "max": 3
+  },
   "trailhead": "Panhala (day visit) or full range trek start",
   "nearestCity": "Kolhapur",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/panhala-vishalgad/1600/900",
-  "cardImage": "https://picsum.photos/seed/panhala-vishalgad/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Panhala_Fort.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Panhala_Fort.jpg?width=800",
   "seoTitle": "Panhala to Vishalgad Trek Solo Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Panhala Fort and the Panhala-Pawankhind-Vishalgad range trek near Kolhapur — Maharashtra's southern trek cluster.",
   "dataNote": "This is Maharashtra's main trekking cluster outside the Pune/Mumbai/Nashik belt — logistics and support infrastructure differ, so treat this entry as two options: an easy Panhala-only day visit, and a much more committing multi-day range trek.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — green hills, the annual commemorative trek season", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Drier, easier multi-day trekking conditions", "badge": "best" },
-    { "label": "Mar – May", "sub": "Hot for the full range trek", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — green hills, the annual commemorative trek season",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Drier, easier multi-day trekking conditions",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot for the full range trek",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Panhala Fort only", "difficulty": "easy", "distanceKm": 3, "duration": "Half-day", "notes": "A well-preserved, low-effort fort visit near Kolhapur — good standalone outing." },
-    { "name": "Full Panhala–Pawankhind–Vishalgad range trek", "difficulty": "challenging", "distanceKm": 50, "duration": "Multi-day (often run as an annual commemorative trek)", "notes": "Commemorates Shivaji Maharaj's 1660 escape from Panhala and Baji Prabhu Deshpande's last stand at Pawankhind. A genuinely multi-day commitment — plan camping/village stays." }
+    {
+      "name": "Panhala Fort only",
+      "difficulty": "easy",
+      "distanceKm": 3,
+      "duration": "Half-day",
+      "notes": "A well-preserved, low-effort fort visit near Kolhapur — good standalone outing."
+    },
+    {
+      "name": "Full Panhala–Pawankhind–Vishalgad range trek",
+      "difficulty": "challenging",
+      "distanceKm": 50,
+      "duration": "Multi-day (often run as an annual commemorative trek)",
+      "notes": "Commemorates Shivaji Maharaj's 1660 escape from Panhala and Baji Prabhu Deshpande's last stand at Pawankhind. A genuinely multi-day commitment — plan camping/village stays."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Panhala itself is low-risk; the full range trek to Vishalgad is a different proposition entirely and needs multi-day planning.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Decide upfront whether you're doing the easy Panhala visit or the full multi-day range trek — they have very different requirements", "For the full range trek, arrange village stays/camping and water resupply points in advance"] },
-      { "title": "On the trail", "items": ["This region has less trekking-tourism infrastructure than Pune/Mumbai — carry more self-sufficiency buffer", "Confirm trail markings with local trekking groups before a solo multi-day attempt"] },
-      { "title": "Solo-specific", "items": ["The full range trek is much more remote than Sahyadri treks near Pune/Mumbai — consider joining an organized group, especially for a first attempt", "Panhala alone is comfortably solo-friendly"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Decide upfront whether you're doing the easy Panhala visit or the full multi-day range trek — they have very different requirements",
+          "For the full range trek, arrange village stays/camping and water resupply points in advance"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "This region has less trekking-tourism infrastructure than Pune/Mumbai — carry more self-sufficiency buffer",
+          "Confirm trail markings with local trekking groups before a solo multi-day attempt"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "The full range trek is much more remote than Sahyadri treks near Pune/Mumbai — consider joining an organized group, especially for a first attempt",
+          "Panhala alone is comfortably solo-friendly"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Kolhapur Police Control Room", "number": "0231-2650100" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Kolhapur Police Control Room",
+        "number": "0231-2650100"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Trekking shoes with grip", "amazonLink": null },
-      { "name": "Rain gear for monsoon range trek", "amazonLink": null }
-    ]},
-    { "category": "Multi-day gear (range trek only)", "items": [
-      { "name": "Lightweight tent/sleeping bag", "amazonLink": null },
-      { "name": "Water filtration/purification for multi-day self-sufficiency", "amazonLink": null },
-      { "name": "Headlamp + spare batteries", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Trekking shoes with grip",
+          "amazonLink": null
+        },
+        {
+          "name": "Rain gear for monsoon range trek",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Multi-day gear (range trek only)",
+      "items": [
+        {
+          "name": "Lightweight tent/sleeping bag",
+          "amazonLink": null
+        },
+        {
+          "name": "Water filtration/purification for multi-day self-sufficiency",
+          "amazonLink": null
+        },
+        {
+          "name": "Headlamp + spare batteries",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

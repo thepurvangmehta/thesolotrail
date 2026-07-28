@@ -13,49 +13,127 @@
   "maxAltitudeM": 1084,
   "totalDistanceKm": 6,
   "elevationGainM": 400,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Bhaje village",
   "nearestCity": "Lonavala / Pune",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/visapur-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/visapur-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortified_Wall_Visapur_Fort_Pune_Maharashtra.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortified_Wall_Visapur_Fort_Pune_Maharashtra.jpg?width=800",
   "seoTitle": "Visapur Fort Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Visapur Fort near Lonavala — the Lohagad-Visapur combined circuit, season, safety, and packing.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — lush plateau, fewer crowds than Lohagad", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Clear and comfortable", "badge": "ok" },
-    { "label": "Mar – May", "sub": "Hot and dry", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — lush plateau, fewer crowds than Lohagad",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Clear and comfortable",
+      "badge": "ok"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot and dry",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Combined Lohagad–Visapur circuit from Bhaje", "difficulty": "moderate", "distanceKm": 8, "duration": "6–7 hrs total", "notes": "The popular way to do Visapur — pairs it with Lohagad via the connecting ridge." },
-    { "name": "Direct Visapur ascent from Bhaje", "difficulty": "moderate", "distanceKm": 6, "duration": "2–3 hrs", "notes": "Steeper and less traveled than Lohagad's path — better if you want quiet." }
+    {
+      "name": "Combined Lohagad–Visapur circuit from Bhaje",
+      "difficulty": "moderate",
+      "distanceKm": 8,
+      "duration": "6–7 hrs total",
+      "notes": "The popular way to do Visapur — pairs it with Lohagad via the connecting ridge."
+    },
+    {
+      "name": "Direct Visapur ascent from Bhaje",
+      "difficulty": "moderate",
+      "distanceKm": 6,
+      "duration": "2–3 hrs",
+      "notes": "Steeper and less traveled than Lohagad's path — better if you want quiet."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Visapur is quieter than its famous twin, which is a double-edged sword solo — more solitude, less help nearby.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Fewer vendors/water points than Lohagad — carry enough water and food", "Tell someone your plan since this side sees fewer trekkers"] },
-      { "title": "On the trail", "items": ["Trail is less marked in places than Lohagad's — download an offline GPX/track if possible", "Rocky ascent sections are slippery when wet"] },
-      { "title": "Solo-specific", "items": ["Quieter than Lohagad — good if you want solitude, but plan accordingly for a solo emergency", "Combine with Lohagad if you'd prefer more people around"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Fewer vendors/water points than Lohagad — carry enough water and food",
+          "Tell someone your plan since this side sees fewer trekkers"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Trail is less marked in places than Lohagad's — download an offline GPX/track if possible",
+          "Rocky ascent sections are slippery when wet"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Quieter than Lohagad — good if you want solitude, but plan accordingly for a solo emergency",
+          "Combine with Lohagad if you'd prefer more people around"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Lonavala Police Station", "number": "02114-273233" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Lonavala Police Station",
+        "number": "02114-273233"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Trekking shoes with grip", "amazonLink": null },
-      { "name": "Rain jacket in monsoon", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "2L water — fewer vendors than Lohagad side", "amazonLink": null },
-      { "name": "Offline map/GPX of the route", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Trekking shoes with grip",
+          "amazonLink": null
+        },
+        {
+          "name": "Rain jacket in monsoon",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "2L water — fewer vendors than Lohagad side",
+          "amazonLink": null
+        },
+        {
+          "name": "Offline map/GPX of the route",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

@@ -13,60 +13,166 @@
   "maxAltitudeM": 825,
   "totalDistanceKm": 10,
   "elevationGainM": 400,
-  "duration": { "min": 1, "max": 2 },
+  "duration": {
+    "min": 1,
+    "max": 2
+  },
   "trailhead": "Rajmachi village (via Lonavala) or Udhewadi (via Karjat)",
   "nearestCity": "Lonavala / Karjat",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/rajmachi-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/rajmachi-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rajmachi_-_Shrivardhan_Fort_(18617223699).jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rajmachi_-_Shrivardhan_Fort_(18617223699).jpg?width=800",
   "seoTitle": "Rajmachi Fort Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Rajmachi's twin forts near Lonavala — routes, season, safety, and packing for this beginner-friendly Sahyadri classic.",
   "dataNote": "Figures reflect the easier Lonavala-side approach. The Karjat/Kondhane side is steeper and not beginner-friendly — see route options.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — waterfalls and green hills, but slippery steps", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Drier, easier footing, cooler", "badge": "ok" },
-    { "label": "Mar – May", "sub": "Hot and dry, less scenic", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — waterfalls and green hills, but slippery steps",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Drier, easier footing, cooler",
+      "badge": "ok"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot and dry, less scenic",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Lonavala side (via Rajmachi village)", "difficulty": "easy", "distanceKm": 10, "duration": "4–5 hrs", "notes": "Gentle, well-marked jeep track most of the way — the standard beginner and family route." },
-    { "name": "Karjat side (via Kondhane / Udhewadi)", "difficulty": "moderate", "distanceKm": 12, "duration": "5–6 hrs", "notes": "Steeper, more technical in patches, and genuinely slippery in monsoon — for trekkers with some prior experience." }
+    {
+      "name": "Lonavala side (via Rajmachi village)",
+      "difficulty": "easy",
+      "distanceKm": 10,
+      "duration": "4–5 hrs",
+      "notes": "Gentle, well-marked jeep track most of the way — the standard beginner and family route."
+    },
+    {
+      "name": "Karjat side (via Kondhane / Udhewadi)",
+      "difficulty": "moderate",
+      "distanceKm": 12,
+      "duration": "5–6 hrs",
+      "notes": "Steeper, more technical in patches, and genuinely slippery in monsoon — for trekkers with some prior experience."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Rajmachi is one of the friendliest Sahyadri treks, but the Karjat-side approach and monsoon crowds still deserve respect.",
     "alerts": [
-      { "type": "warning", "title": "Karjat-side steps get dangerously slick in monsoon", "body": "The Kondhane/Udhewadi approach has steep, water-worn rock sections. If you're new to Sahyadri treks, take the Lonavala side instead, especially in July–August." }
+      {
+        "type": "warning",
+        "title": "Karjat-side steps get dangerously slick in monsoon",
+        "body": "The Kondhane/Udhewadi approach has steep, water-worn rock sections. If you're new to Sahyadri treks, take the Lonavala side instead, especially in July–August."
+      }
     ],
     "cards": [
-      { "title": "Before you go", "items": ["Check weather — heavy rain closes some stream crossings", "Tell someone your route and expected return time", "Carry cash — no ATMs near either trailhead"] },
-      { "title": "On the trail", "items": ["Start early to avoid afternoon crowds on weekends", "Grip footwear matters more than speed on wet rock", "Camping on the fort plateau is popular — carry your own tent/permission is informal"] },
-      { "title": "Solo-specific", "items": ["Weekends draw large groups — you're rarely alone here, which helps", "Weekdays are quiet — let someone know your plan if going alone", "Local guides/porters are easy to hire at the Lonavala trailhead if you want company"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Check weather — heavy rain closes some stream crossings",
+          "Tell someone your route and expected return time",
+          "Carry cash — no ATMs near either trailhead"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Start early to avoid afternoon crowds on weekends",
+          "Grip footwear matters more than speed on wet rock",
+          "Camping on the fort plateau is popular — carry your own tent/permission is informal"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Weekends draw large groups — you're rarely alone here, which helps",
+          "Weekdays are quiet — let someone know your plan if going alone",
+          "Local guides/porters are easy to hire at the Lonavala trailhead if you want company"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Lonavala Police Station", "number": "02114-273233" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Lonavala Police Station",
+        "number": "02114-273233"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Trekking/hiking shoes with grip soles", "amazonLink": null },
-      { "name": "Quick-dry t-shirt and shorts/trousers", "amazonLink": null },
-      { "name": "Light rain poncho or jacket", "amazonLink": null },
-      { "name": "Cap or hat", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "Daypack with rain cover", "amazonLink": null },
-      { "name": "2L water + electrolyte sachets", "amazonLink": null },
-      { "name": "Headlamp/torch (for overnight stays)", "amazonLink": null },
-      { "name": "Power bank", "amazonLink": null }
-    ]},
-    { "category": "First aid", "items": [
-      { "name": "Basic first aid kit", "amazonLink": null },
-      { "name": "Anti-chafe/blister plasters", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Trekking/hiking shoes with grip soles",
+          "amazonLink": null
+        },
+        {
+          "name": "Quick-dry t-shirt and shorts/trousers",
+          "amazonLink": null
+        },
+        {
+          "name": "Light rain poncho or jacket",
+          "amazonLink": null
+        },
+        {
+          "name": "Cap or hat",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "Daypack with rain cover",
+          "amazonLink": null
+        },
+        {
+          "name": "2L water + electrolyte sachets",
+          "amazonLink": null
+        },
+        {
+          "name": "Headlamp/torch (for overnight stays)",
+          "amazonLink": null
+        },
+        {
+          "name": "Power bank",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "First aid",
+      "items": [
+        {
+          "name": "Basic first aid kit",
+          "amazonLink": null
+        },
+        {
+          "name": "Anti-chafe/blister plasters",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo: Elroy Serrao · CC BY-SA 2.0 · Wikimedia Commons"
 }

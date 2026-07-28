@@ -13,53 +13,139 @@
   "maxAltitudeM": 900,
   "totalDistanceKm": 14,
   "elevationGainM": -700,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Pimpri village (descends to Bhira Dam)",
   "nearestCity": "Pune",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/andharban-jungle/1600/900",
-  "cardImage": "https://picsum.photos/seed/andharban-jungle/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamhini_Ghat_in_Rainy_season_15.JPG?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamhini_Ghat_in_Rainy_season_15.JPG?width=800",
   "seoTitle": "Andharban Jungle Trail Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to the Andharban Jungle Trail near Pune — one of India's best-rated jungle treks. Logistics note: this is point-to-point, not a loop.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — canopy lushest, waterfalls at full force", "badge": "best" },
-    { "label": "Oct – Jan", "sub": "Drier alternative, easier stream crossings", "badge": "ok" },
-    { "label": "Feb – May", "sub": "Dry, less scenic, water sources reduced", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — canopy lushest, waterfalls at full force",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Jan",
+      "sub": "Drier alternative, easier stream crossings",
+      "badge": "ok"
+    },
+    {
+      "label": "Feb – May",
+      "sub": "Dry, less scenic, water sources reduced",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Pimpri to Bhira Dam (standard descent)", "difficulty": "moderate", "distanceKm": 14, "duration": "5–7 hrs", "notes": "A gentle net descent, but includes stream crossings and slippery rocky sections that require reasonable fitness. This is point-to-point — you'll need return transport arranged at the Bhira end, since it does not loop back to the start." }
+    {
+      "name": "Pimpri to Bhira Dam (standard descent)",
+      "difficulty": "moderate",
+      "distanceKm": 14,
+      "duration": "5–7 hrs",
+      "notes": "A gentle net descent, but includes stream crossings and slippery rocky sections that require reasonable fitness. This is point-to-point — you'll need return transport arranged at the Bhira end, since it does not loop back to the start."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Andharban's main technical hazard is stream crossings that can become genuinely hazardous when water is running high in heavy monsoon.",
     "alerts": [
-      { "type": "warning", "title": "Stream crossings can become hazardous in high water", "body": "This is a jungle descent with multiple stream crossings. In heavy monsoon downpours, water levels can rise quickly — do not attempt a crossing if the water looks fast or thigh-deep. Wait it out or turn back." }
+      {
+        "type": "warning",
+        "title": "Stream crossings can become hazardous in high water",
+        "body": "This is a jungle descent with multiple stream crossings. In heavy monsoon downpours, water levels can rise quickly — do not attempt a crossing if the water looks fast or thigh-deep. Wait it out or turn back."
+      }
     ],
     "cards": [
-      { "title": "Before you go", "items": ["This is point-to-point, not a loop — arrange a vehicle/driver to meet you at Bhira Dam before you start", "Check recent rainfall — heavy rain can raise stream levels significantly"] },
-      { "title": "On the trail", "items": ["Rocky sections get very slippery — grippy footwear matters more than speed", "No mobile signal for long stretches — download offline maps beforehand"] },
-      { "title": "Solo-specific", "items": ["Popular enough on weekends that you'll likely have other trekkers around", "Weekday solo attempts should ideally still coordinate a pickup contact who knows your timeline", "Leech socks recommended for monsoon — this is genuine jungle terrain"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "This is point-to-point, not a loop — arrange a vehicle/driver to meet you at Bhira Dam before you start",
+          "Check recent rainfall — heavy rain can raise stream levels significantly"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Rocky sections get very slippery — grippy footwear matters more than speed",
+          "No mobile signal for long stretches — download offline maps beforehand"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Popular enough on weekends that you'll likely have other trekkers around",
+          "Weekday solo attempts should ideally still coordinate a pickup contact who knows your timeline",
+          "Leech socks recommended for monsoon — this is genuine jungle terrain"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Mulshi Police Station", "number": "020-25923333" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Mulshi Police Station",
+        "number": "020-25923333"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Grippy trekking shoes (essential for wet rock and stream crossings)", "amazonLink": null },
-      { "name": "Quick-dry clothing — you will get wet", "amazonLink": null },
-      { "name": "Leech socks for monsoon jungle sections", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "Dry bag for phone/electronics", "amazonLink": null },
-      { "name": "3L water", "amazonLink": null },
-      { "name": "Trekking pole for stream crossings", "amazonLink": null },
-      { "name": "Offline map/GPX — no signal for long stretches", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Grippy trekking shoes (essential for wet rock and stream crossings)",
+          "amazonLink": null
+        },
+        {
+          "name": "Quick-dry clothing — you will get wet",
+          "amazonLink": null
+        },
+        {
+          "name": "Leech socks for monsoon jungle sections",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "Dry bag for phone/electronics",
+          "amazonLink": null
+        },
+        {
+          "name": "3L water",
+          "amazonLink": null
+        },
+        {
+          "name": "Trekking pole for stream crossings",
+          "amazonLink": null
+        },
+        {
+          "name": "Offline map/GPX — no signal for long stretches",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons (Tamhini Ghat, the Andharban trail's setting)"
 }

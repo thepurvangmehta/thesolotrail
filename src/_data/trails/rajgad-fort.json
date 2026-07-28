@@ -13,52 +13,139 @@
   "maxAltitudeM": 1295,
   "totalDistanceKm": 11,
   "elevationGainM": 700,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Gunjavane or Pali/Bhutonde",
   "nearestCity": "Pune",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/rajgad-fort/1600/900",
-  "cardImage": "https://picsum.photos/seed/rajgad-fort/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/An_aerial_view_of_Rajgad_fort_Maharashtra_India.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/An_aerial_view_of_Rajgad_fort_Maharashtra_India.jpg?width=800",
   "seoTitle": "Rajgad Fort Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Rajgad Fort near Pune — route options, the Rajgad-Torna range trek, safety, and packing.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — lush but steps get slippery", "badge": "best" },
-    { "label": "Oct – Feb", "sub": "Clear views, cooler climbing conditions", "badge": "best" },
-    { "label": "Mar – May", "sub": "Hot and exposed on the ridge", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — lush but steps get slippery",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – Feb",
+      "sub": "Clear views, cooler climbing conditions",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "Hot and exposed on the ridge",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "Via Gunjavane", "difficulty": "moderate", "distanceKm": 11, "duration": "3.5 hrs", "notes": "The longer but gentler approach." },
-    { "name": "Via Pali", "difficulty": "moderate", "distanceKm": 7, "duration": "2.5 hrs", "notes": "Shorter and steeper — the more popular day-trip route from Pune." }
+    {
+      "name": "Via Gunjavane",
+      "difficulty": "moderate",
+      "distanceKm": 11,
+      "duration": "3.5 hrs",
+      "notes": "The longer but gentler approach."
+    },
+    {
+      "name": "Via Pali",
+      "difficulty": "moderate",
+      "distanceKm": 7,
+      "duration": "2.5 hrs",
+      "notes": "Shorter and steeper — the more popular day-trip route from Pune."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Rajgad is a large fort complex with several sub-peaks (Padmavati Machi, Sanjeevani Machi, Suvela Machi) — it's easy to underestimate how much walking is involved once inside.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Plan for a full day — the fort complex is large and easy to under-time", "Carry more water than you think you'll need; little shade on the ridge"] },
-      { "title": "On the trail", "items": ["Some rock-cut steps near the Padmavati Machi gate are narrow and slippery when wet", "Turn back before dark — descent in low light is genuinely harder than the climb"] },
-      { "title": "Solo-specific", "items": ["Popular weekend trek — you'll usually find other trekkers around", "If continuing to Torna as a 2-day range trek, tell someone your full plan, not just day one"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Plan for a full day — the fort complex is large and easy to under-time",
+          "Carry more water than you think you'll need; little shade on the ridge"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Some rock-cut steps near the Padmavati Machi gate are narrow and slippery when wet",
+          "Turn back before dark — descent in low light is genuinely harder than the climb"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Popular weekend trek — you'll usually find other trekkers around",
+          "If continuing to Torna as a 2-day range trek, tell someone your full plan, not just day one"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Pune Rural Police", "number": "020-26127001" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Pune Rural Police",
+        "number": "020-26127001"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Trekking shoes with ankle support", "amazonLink": null },
-      { "name": "Quick-dry clothing layers", "amazonLink": null },
-      { "name": "Rain jacket in monsoon", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "2.5–3L water — limited refill points on the fort", "amazonLink": null },
-      { "name": "Energy snacks for the full-day exploration", "amazonLink": null },
-      { "name": "Trekking pole for the steeper Pali approach", "amazonLink": null },
-      { "name": "Headlamp as a backup in case descent runs late", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Trekking shoes with ankle support",
+          "amazonLink": null
+        },
+        {
+          "name": "Quick-dry clothing layers",
+          "amazonLink": null
+        },
+        {
+          "name": "Rain jacket in monsoon",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "2.5–3L water — limited refill points on the fort",
+          "amazonLink": null
+        },
+        {
+          "name": "Energy snacks for the full-day exploration",
+          "amazonLink": null
+        },
+        {
+          "name": "Trekking pole for the steeper Pali approach",
+          "amazonLink": null
+        },
+        {
+          "name": "Headlamp as a backup in case descent runs late",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo: CC BY-SA 2.0 · Wikimedia Commons"
 }

@@ -13,46 +13,111 @@
   "maxAltitudeM": 200,
   "totalDistanceKm": 2,
   "elevationGainM": 50,
-  "duration": { "min": 1, "max": 1 },
+  "duration": {
+    "min": 1,
+    "max": 1
+  },
   "trailhead": "Bhivpuri Road railway station",
   "nearestCity": "Mumbai (via Karjat)",
   "guideRequired": false,
-  "heroImage": "https://picsum.photos/seed/bhivpuri-waterfall/1600/900",
-  "cardImage": "https://picsum.photos/seed/bhivpuri-waterfall/800/600",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhivpuri-Waterfall.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bhivpuri-Waterfall.jpg?width=800",
   "seoTitle": "Bhivpuri Waterfall Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Bhivpuri Waterfall near Karjat — the easiest, most train-accessible monsoon waterfall near Mumbai.",
   "seasons": [
-    { "label": "Jun – Sep", "sub": "Monsoon — full cascade", "badge": "best" },
-    { "label": "Oct – May", "sub": "Reduced to minimal flow outside monsoon", "badge": "avoid" }
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon — full cascade",
+      "badge": "best"
+    },
+    {
+      "label": "Oct – May",
+      "sub": "Reduced to minimal flow outside monsoon",
+      "badge": "avoid"
+    }
   ],
   "routeOptions": [
-    { "name": "From Bhivpuri Road station", "difficulty": "easy", "distanceKm": 2, "duration": "30–45 min", "notes": "Short, easy walk — good beginner outing, directly reachable by Mumbai's suburban rail line." }
+    {
+      "name": "From Bhivpuri Road station",
+      "difficulty": "easy",
+      "distanceKm": 2,
+      "duration": "30–45 min",
+      "notes": "Short, easy walk — good beginner outing, directly reachable by Mumbai's suburban rail line."
+    }
   ],
   "permits": [],
   "safety": {
     "intro": "Bhivpuri is about as low-effort as this list gets, but it still draws heavy monsoon crowds and has the usual plunge-pool caution.",
     "alerts": [],
     "cards": [
-      { "title": "Before you go", "items": ["Very accessible by train from Mumbai — check the local train timetable", "Expect crowds on monsoon weekends"] },
-      { "title": "On the trail", "items": ["Rocks near the base are slippery", "Avoid swimming close to the falling water's direct impact zone"] },
-      { "title": "Solo-specific", "items": ["Easy, well-trafficked, good beginner solo outing", "Still keep basic water-safety caution near the pool"] }
+      {
+        "title": "Before you go",
+        "items": [
+          "Very accessible by train from Mumbai — check the local train timetable",
+          "Expect crowds on monsoon weekends"
+        ]
+      },
+      {
+        "title": "On the trail",
+        "items": [
+          "Rocks near the base are slippery",
+          "Avoid swimming close to the falling water's direct impact zone"
+        ]
+      },
+      {
+        "title": "Solo-specific",
+        "items": [
+          "Easy, well-trafficked, good beginner solo outing",
+          "Still keep basic water-safety caution near the pool"
+        ]
+      }
     ],
     "emergencyContacts": [
-      { "label": "Karjat Police Station", "number": "02148-222033" },
-      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+      {
+        "label": "Karjat Police Station",
+        "number": "02148-222033"
+      },
+      {
+        "label": "Maharashtra Tourism Helpline",
+        "number": "1800-22-1363"
+      }
     ]
   },
   "packing": [
-    { "category": "Footwear & clothing", "items": [
-      { "name": "Grippy sandals or trekking shoes", "amazonLink": null }
-    ]},
-    { "category": "Gear", "items": [
-      { "name": "1L water", "amazonLink": null },
-      { "name": "Dry bag for phone", "amazonLink": null }
-    ]}
+    {
+      "category": "Footwear & clothing",
+      "items": [
+        {
+          "name": "Grippy sandals or trekking shoes",
+          "amazonLink": null
+        }
+      ]
+    },
+    {
+      "category": "Gear",
+      "items": [
+        {
+          "name": "1L water",
+          "amazonLink": null
+        },
+        {
+          "name": "Dry bag for phone",
+          "amazonLink": null
+        }
+      ]
+    }
   ],
   "gettingThere": {},
   "costs": {},
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }
