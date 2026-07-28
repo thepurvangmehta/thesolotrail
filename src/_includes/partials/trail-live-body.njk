@@ -1,0 +1,258 @@
+<div class="hero">
+  <div class="hero-bg" style="background-image:url('{{ trek.heroImage }}')"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-flag">{{ trek.country | countryFlag }} {{ trek.country }}</span>
+      <span class="eyebrow-sep">·</span>
+      <span class="eyebrow-region">{{ trek.region }}</span>
+    </div>
+    <h1>{{ trek.name }}</h1>
+    <p class="hero-sub">{{ trek.tagline }}</p>
+    <div class="hero-tags">
+      <span class="htag green">Solo-friendly</span>
+      {% if trek.maxAltitudeM %}<span class="htag">{{ trek.maxAltitudeM | commaNum }}m</span>{% endif %}
+      <span class="htag">{{ trek.duration.min }}{% if trek.duration.max != trek.duration.min %}–{{ trek.duration.max }}{% endif %} day{% if trek.duration.max > 1 %}s{% endif %}</span>
+      <span class="htag amber">{{ trek.difficulty | capitalize }}</span>
+      {% if trek.category %}<span class="htag">{{ trek.category | replace("-", " ") | capitalize }} trek</span>{% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  {% if trek.maxAltitudeM %}<div class="stat-item"><span class="stat-label">Max Altitude</span><span class="stat-value">{{ trek.maxAltitudeM | commaNum }}m</span><span class="stat-sub">{{ trek.name }}</span></div>{% endif %}
+  <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">{{ trek.duration.min }}{% if trek.duration.max != trek.duration.min %}–{{ trek.duration.max }}{% endif %} day{% if trek.duration.max > 1 %}s{% endif %}</span><span class="stat-sub">From {{ trek.nearestCity }}</span></div>
+  {% if trek.totalDistanceKm %}<div class="stat-item"><span class="stat-label">Distance</span><span class="stat-value">~{{ trek.totalDistanceKm }} km</span><span class="stat-sub">{% if trek.itinerary and trek.itinerary.length %}Round trip{% else %}One-way{% endif %}</span></div>{% endif %}
+  <div class="stat-item"><span class="stat-label">Difficulty</span><span class="stat-value">{{ trek.difficulty | capitalize }}</span><span class="stat-sub">&nbsp;</span></div>
+  <div class="stat-item"><span class="stat-label">Guide Required</span><span class="stat-value">{{ "Yes" if trek.guideRequired else "No" }}</span><span class="stat-sub">&nbsp;</span></div>
+  <div class="stat-item"><span class="stat-label">Trailhead</span><span class="stat-value">{{ trek.trailhead }}</span><span class="stat-sub">&nbsp;</span></div>
+</div>
+
+<div class="page-body">
+  <main>
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="breadcrumb-sep">›</span>
+      <a href="/trails/">Trails</a><span class="breadcrumb-sep">›</span>
+      <a href="/trails/#{{ trek.region | lower | replace(' ', '-') }}">{{ trek.region }}</a><span class="breadcrumb-sep">›</span>
+      <span>{{ trek.name }}</span>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" onclick="switchTab('overview', this)" role="tab">Overview</button>
+      <button class="tab" onclick="switchTab('route', this)" role="tab">{% if trek.itinerary and trek.itinerary.length %}Itinerary{% else %}Route{% endif %}</button>
+      <button class="tab" onclick="switchTab('reach', this)" role="tab">How to Reach</button>
+      <button class="tab" onclick="switchTab('costs', this)" role="tab">Costs</button>
+      <button class="tab" onclick="switchTab('safety', this)" role="tab">Safety</button>
+      <button class="tab" onclick="switchTab('packing', this)" role="tab">Packing</button>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="tab-panel active" id="panel-overview">
+      <h2 class="section-heading">About this trek</h2>
+      <p class="section-intro">{{ trek.tagline }}</p>
+      <div class="overview-grid">
+        <div class="overview-card">
+          <div class="oc-label">Trailhead</div>
+          <div class="oc-value"><strong>{{ trek.trailhead }}</strong><br>Nearest city: {{ trek.nearestCity }}</div>
+        </div>
+        <div class="overview-card">
+          <div class="oc-label">Stats</div>
+          <div class="oc-value">
+            {% if trek.totalDistanceKm %}{{ trek.totalDistanceKm }} km{% endif %}{% if trek.elevationGainM %} · {{ trek.elevationGainM | commaNum }}m elevation gain{% endif %}<br>
+            {{ trek.duration.min }}{% if trek.duration.max != trek.duration.min %}–{{ trek.duration.max }}{% endif %} day{% if trek.duration.max > 1 %}s{% endif %} · {{ trek.difficulty | capitalize }}
+          </div>
+        </div>
+        <div class="overview-card full">
+          <div class="oc-label">Best time to go</div>
+          <div class="best-time-grid">
+            {% for s in trek.seasons %}
+            <div class="bts">{{ s.label }}<span>{{ s.sub }}</span></div>
+            {% endfor %}
+          </div>
+          {% if trek.seasonNote %}<p class="data-note">{{ trek.seasonNote }}</p>{% endif %}
+        </div>
+      </div>
+      {% if trek.dataNote %}<p class="data-note">Note: {{ trek.dataNote }}</p>{% endif %}
+    </div>
+
+    <!-- ROUTE / ITINERARY -->
+    <div class="tab-panel" id="panel-route">
+      {% if trek.itinerary and trek.itinerary.length %}
+        <h2 class="section-heading">Itinerary</h2>
+        <p class="section-intro">Day-by-day route. Tap a day to expand.</p>
+        {% for d in trek.itinerary %}
+        <div class="day-card" onclick="toggleDay(this)">
+          <div class="day-header">
+            <div class="day-num{% if loop.last %} summit{% endif %}">{{ d.day }}</div>
+            <div class="day-info">
+              <div class="day-title">{{ d.from }} → {{ d.to }}</div>
+              <div class="day-meta">{{ d.summary }}</div>
+            </div>
+            <div class="day-stats">
+              {% if d.distanceKm %}<span class="dst dist">{{ d.distanceKm }} km</span>{% endif %}
+              {% if d.altitudeM %}<span class="dst elev">{{ d.altitudeM | commaNum }}m</span>{% endif %}
+            </div>
+            <span class="day-chevron">⌄</span>
+          </div>
+          <div class="day-body">
+            <p class="day-desc">{{ d.body }}</p>
+            {% if d.tips and d.tips.length %}<div class="day-highlights">{% for t in d.tips %}<span class="dh">{{ t }}</span>{% endfor %}</div>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      {% elif trek.routeOptions and trek.routeOptions.length %}
+        <h2 class="section-heading">Route options</h2>
+        <p class="section-intro">Most of these treks have more than one approach — pick the one that matches your fitness and experience.</p>
+        {% for r in trek.routeOptions %}
+        <div class="route-option">
+          <div class="route-option-head">
+            <span class="route-option-name">{{ r.name }}</span>
+            <div class="route-option-stats">
+              <span class="dst diff-{{ r.difficulty | diffClass }}">{{ r.difficulty | capitalize }}</span>
+              {% if r.distanceKm %}<span class="dst dist">{{ r.distanceKm }} km</span>{% endif %}
+              {% if r.duration %}<span class="dst elev">{{ r.duration }}</span>{% endif %}
+            </div>
+          </div>
+          {% if r.notes %}<p class="route-option-notes">{{ r.notes }}</p>{% endif %}
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="placeholder-box"><strong>Route detail coming soon</strong>We're still documenting the exact route for this trek.</div>
+      {% endif %}
+    </div>
+
+    <!-- HOW TO REACH -->
+    <div class="tab-panel" id="panel-reach">
+      <h2 class="section-heading">How to reach {{ trek.trailhead }}</h2>
+      {% if trek.gettingThere and trek.gettingThere.steps and trek.gettingThere.steps.length %}
+        {% if trek.gettingThere.intro %}<p class="section-intro">{{ trek.gettingThere.intro }}</p>{% endif %}
+        {% for step in trek.gettingThere.steps %}
+        <div class="reach-step">
+          <div class="reach-step-num">{{ loop.index }}</div>
+          <div class="reach-content"><div class="reach-title">{{ step.title }}</div><div class="reach-desc">{{ step.body }}</div></div>
+        </div>
+        {% endfor %}
+        {% if trek.gettingThere.permitNote %}<div class="alert-box info"><span class="alert-icon">ℹ️</span><span class="alert-text">{{ trek.gettingThere.permitNote }}</span></div>{% endif %}
+      {% else %}
+        <div class="placeholder-box"><strong>Logistics guide coming soon</strong>Transport options, routes, and booking details for reaching {{ trek.trailhead }} are still being written.</div>
+      {% endif %}
+    </div>
+
+    <!-- COSTS -->
+    <div class="tab-panel" id="panel-costs">
+      <h2 class="section-heading">What it costs</h2>
+      {% if trek.costs and (trek.costs.permits or trek.costs.transport or trek.costs.onTrail or trek.costs.extras) %}
+        {% for section in [{k:"permits", t:"Permits"}, {k:"transport", t:"Transport"}, {k:"onTrail", t:"On the trail"}, {k:"extras", t:"Extras"}] %}
+          {% set rows = trek.costs[section.k] %}
+          {% if rows and rows.length %}
+          <div class="cost-section">
+            <div class="cost-section-title">{{ section.t }}</div>
+            {% for row in rows %}
+            <div class="cost-row"><div><div class="cost-item">{{ row.item }}</div>{% if row.note %}<div class="cost-note">{{ row.note }}</div>{% endif %}</div><div class="cost-amount"><span data-price="{{ row.amountUSD }}">${{ row.amountUSD }}</span></div></div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <div class="placeholder-box"><strong>Cost breakdown coming soon</strong>Real permit, transport, and on-trail costs for this trek are still being researched.</div>
+      {% endif %}
+    </div>
+
+    <!-- SAFETY -->
+    <div class="tab-panel" id="panel-safety">
+      <h2 class="section-heading">Safety</h2>
+      {% if trek.safety and trek.safety.intro %}<p class="section-intro">{{ trek.safety.intro }}</p>{% endif %}
+      {% if trek.safety and trek.safety.alerts %}
+        {% for a in trek.safety.alerts %}
+        <div class="alert-box {{ a.type }}"><span class="alert-icon">{% if a.type == 'danger' %}⚠️{% elif a.type == 'warning' %}⚡{% else %}ℹ️{% endif %}</span><span class="alert-text"><strong>{{ a.title }}</strong>{{ a.body }}</span></div>
+        {% endfor %}
+      {% endif %}
+      {% if trek.safety and trek.safety.cards %}
+      <div class="safety-grid">
+        {% for c in trek.safety.cards %}
+        <div class="safety-card"><div class="safety-card-title">{{ c.title }}</div><div class="safety-card-body"><ul style="padding-left:16px;">{% for it in c.items %}<li>{{ it }}</li>{% endfor %}</ul></div></div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if trek.safety and trek.safety.emergencyContacts and trek.safety.emergencyContacts.length %}
+      <h3 class="section-heading" style="font-size:18px;margin-top:32px;">Emergency contacts</h3>
+      {% for ec in trek.safety.emergencyContacts %}
+      <div class="emergency-row"><span class="em-label">{{ ec.label }}</span><span class="em-value">{{ ec.number }}</span></div>
+      {% endfor %}
+      {% endif %}
+      {% if not trek.safety or not trek.safety.intro %}
+      <div class="placeholder-box"><strong>Detailed safety notes coming soon</strong></div>
+      {% endif %}
+    </div>
+
+    <!-- PACKING -->
+    <div class="tab-panel" id="panel-packing">
+      <h2 class="section-heading">Packing list</h2>
+      {% if trek.packing and trek.packing.length %}
+        {% for cat in trek.packing %}
+        <div class="pack-category">
+          <div class="pack-cat-title">{{ cat.category }}</div>
+          {% for item in cat.items %}
+          <label class="pack-item"><input type="checkbox">{{ item.name }}{% if item.amazonLink %}<a href="{{ item.amazonLink }}" class="buy-link" onclick="event.stopPropagation()">Buy</a>{% endif %}</label>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="placeholder-box"><strong>Packing list coming soon</strong></div>
+      {% endif %}
+    </div>
+  </main>
+
+  <aside class="sidebar">
+    {% if trek.permits and trek.permits.length %}
+    <div class="sidebar-card">
+      <div class="sc-head">Permits &amp; fees</div>
+      <div class="sc-body">
+        {% for p in trek.permits %}
+        <div class="permit-row"><div><div class="permit-name">{{ p.name }}</div>{% if p.fullName %}<div class="permit-note">{{ p.fullName }}</div>{% endif %}{% if p.notes %}<div class="permit-note">{{ p.notes }}</div>{% endif %}</div><div class="permit-price">{% if p.priceUSD %}<span data-price="{{ p.priceUSD }}">${{ p.priceUSD }}</span>{% else %}—{% endif %}</div></div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="sidebar-card">
+      <div class="sc-head">Best time to visit</div>
+      <div class="sc-body">
+        {% for s in trek.seasons %}
+        <div class="weather-row"><span class="wr-season">{{ s.label }}</span><span class="wr-badge wr-{{ s.badge }}">{{ s.badge | upper }}</span></div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if trek.affiliates and trek.affiliates.insurance %}
+    <div class="insurance-callout">
+      <span class="ins-icon">🛟</span>
+      <div class="ins-body">
+        <h4>{{ trek.affiliates.insurance.calloutHeading }}</h4>
+        <p>{{ trek.affiliates.insurance.calloutBody }}</p>
+        <a href="{{ trek.affiliates.insurance.link }}" class="ins-cta">Get covered →</a>
+        <p class="ins-disclosure">{{ trek.affiliates.insurance.disclosure }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if trek.trailKit and trek.trailKit.available %}
+    <div class="sidebar-card">
+      <div class="guide-cta">
+        <div class="guide-cta-title">Trail Kit</div>
+        <div class="guide-cta-desc">Offline PDF + GPX waypoints for this trek.</div>
+        <div class="guide-features">
+          {% for it in trek.trailKit.items %}<div class="gf">{{ it }}</div>{% endfor %}
+        </div>
+        <a href="{{ trek.trailKit.gumroadLink }}" class="btn-primary">Get the kit — ${{ trek.trailKit.priceUSD }}</a>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="pro-teaser">
+      <div class="pro-teaser-label">The Solo Trail Pro</div>
+      <div class="pro-teaser-title">Every guide, every kit</div>
+      <div class="pro-teaser-desc">Offline PDFs and GPS waypoints for every trail we cover — the moment a new one drops.</div>
+      <a href="/downloads/" class="btn-pro">See Pro →</a>
+    </div>
+  </aside>
+</div>

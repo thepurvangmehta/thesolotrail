@@ -1,0 +1,76 @@
+{
+  "id": "harishchandragad",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Harishchandragad (Konkan Kada)",
+  "shortName": "Harishchandragad",
+  "tagline": "The Sahyadri's most dramatic cliff edge — and an overnight at 1,424m",
+  "difficulty": "challenging",
+  "maxAltitudeM": 1424,
+  "totalDistanceKm": 12,
+  "elevationGainM": 900,
+  "duration": { "min": 1, "max": 2 },
+  "trailhead": "Pachnai (easiest) / Khireshwar (moderate) / Belpada-Nalichi Vaat (hardest)",
+  "nearestCity": "Pune / Nashik / Mumbai (tri-district border)",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/harishchandragad/1600/900",
+  "cardImage": "https://picsum.photos/seed/harishchandragad/800/600",
+  "seoTitle": "Harishchandragad Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Harishchandragad and Konkan Kada — route options by difficulty, cliff-edge safety, leopard-sighting notes, and packing.",
+  "dataNote": "Altitude cited as 1,424m / ~4,650–4,671 ft across sources — treated as approximate; verify locally before publishing exact figures.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — famous Konkan Kada cloud/rainbow effect, but worst visibility and slip risk", "badge": "ok" },
+    { "label": "Oct – Feb", "sub": "Clear skies for cliff photography, safer footing", "badge": "best" },
+    { "label": "Mar – May", "sub": "Hot, water sources scarce", "badge": "avoid" }
+  ],
+  "seasonNote": "Unlike most Sahyadri treks, Harishchandragad is arguably safer to visit outside peak monsoon — the Konkan Kada cliff edge and Nalichi Vaat's rock-cut steps are genuinely dangerous when wet or fogged in.",
+  "routeOptions": [
+    { "name": "Pachnai route", "difficulty": "easy", "distanceKm": 3, "duration": "3 hrs", "notes": "The easiest and most popular approach — good for a first attempt at this trek." },
+    { "name": "Khireshwar route", "difficulty": "moderate", "distanceKm": 6, "duration": "4–5 hrs", "notes": "Passes through forest and the Khireshwar plateau — a good middle option." },
+    { "name": "Nalichi Vaat (via Belpada)", "difficulty": "expert", "distanceKm": 10, "duration": "6–7 hrs", "notes": "Technical, rope-assisted sections — for experienced trekkers with scrambling/rock experience only. Not recommended solo without a knowledgeable group." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Harishchandragad combines two real hazards: an unfenced, sheer cliff edge at Konkan Kada, and reported leopard activity near the base villages. Neither should be taken lightly, especially trekking alone.",
+    "alerts": [
+      { "type": "danger", "title": "Konkan Kada is an unfenced, sheer drop", "body": "Multiple falls have been reported from trekkers taking photos too close to the edge. Stay well back from the lip, especially in wind, fog, or when the rock is wet. Never approach the edge for a selfie." },
+      { "type": "warning", "title": "Leopard sightings reported near the base village", "body": "A viral 2025 sighting near Harishchandragad's base raised safety concerns among trekkers. Avoid walking alone after dark near the villages, and make noise on forest sections at dawn/dusk." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Choose your route by experience level — do not attempt Nalichi Vaat solo without scrambling experience", "Tell someone your exact route and expected return", "Check recent trek-group reports for trail/water conditions"] },
+      { "title": "On the trail", "items": ["Stay several metres back from any cliff edge, always", "Fill water at Pachnai/Khireshwar — sources on top are seasonal", "If overnighting, use the cave shelters near the temple, not the open plateau in storms"] },
+      { "title": "Solo-specific", "items": ["Prefer the Pachnai route if trekking solo — it's the most traveled and easiest to get help on", "Avoid Nalichi Vaat entirely solo", "Carry a whistle and let base-village contacts know your plan"] },
+      { "title": "Signs to turn back", "items": ["Fog reducing visibility near Konkan Kada", "Wet, slick rock on the Nalichi Vaat steps", "Any sign of large wildlife on the approach trail"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Ahmednagar Police Control Room", "number": "0241-2323704" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Grippy trekking shoes (essential — rock scrambling involved)", "amazonLink": null },
+      { "name": "Warm layer for the overnight (cold at 1,400m)", "amazonLink": null },
+      { "name": "Rain jacket", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "Headlamp + spare batteries (essential for overnight/cave stay)", "amazonLink": null },
+      { "name": "3L water capacity — refill only at known sources", "amazonLink": null },
+      { "name": "Lightweight sleeping bag or blanket (if overnighting in the caves)", "amazonLink": null },
+      { "name": "Power bank", "amazonLink": null }
+    ]},
+    { "category": "Safety", "items": [
+      { "name": "Whistle", "amazonLink": null },
+      { "name": "Basic first aid + any personal medication", "amazonLink": null },
+      { "name": "Fully charged phone with offline map of the route saved", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "kalsubai-peak",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "peak-plateau",
+  "name": "Kalsubai Peak",
+  "shortName": "Kalsubai",
+  "tagline": "The 'Everest of Maharashtra' — the state's highest point, iron ladders included",
+  "difficulty": "moderate",
+  "maxAltitudeM": 1646,
+  "totalDistanceKm": 13,
+  "elevationGainM": 900,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Bari village",
+  "nearestCity": "Mumbai / Pune / Nashik (roughly equidistant)",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/kalsubai-peak/1600/900",
+  "cardImage": "https://picsum.photos/seed/kalsubai-peak/800/600",
+  "seoTitle": "Kalsubai Peak Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Kalsubai, Maharashtra's highest peak — iron ladder sections, night-trek sunrise option, crowds, and safety.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — clouds and mist for atmosphere, but lower visibility and slicker ladders", "badge": "ok" },
+    { "label": "Oct – Mar", "sub": "Clearer views, safer footing on the iron ladder sections", "badge": "best" },
+    { "label": "Apr – May", "sub": "Hot, less scenic", "badge": "avoid" }
+  ],
+  "seasonNote": "Sources split on 'best' season here: monsoon gives the most dramatic cloud experience, but winter is safer and gives clearer summit views. Prioritize whichever matters more to you — atmosphere or visibility/safety.",
+  "routeOptions": [
+    { "name": "From Bari village", "difficulty": "moderate", "distanceKm": 6.6, "duration": "3–4 hrs up, 2–3 hrs down", "notes": "The standard route, with iron ladders bolted to rock near the summit. Also popular as a night trek timed for sunrise." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Kalsubai is Maharashtra's most-visited peak trek, and its popularity is itself a factor — expect serious crowding on the iron ladder sections on weekends.",
+    "alerts": [
+      { "type": "warning", "title": "Iron ladder sections get crowded and slippery on weekends", "body": "The summit approach uses several iron ladder/step sections. On busy weekends these become bottlenecks — wet rock plus queueing crowds is a real slip risk. Go on a weekday if possible." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Decide on a day trek vs. night trek for sunrise — the night option needs a headlamp and warmer layers", "Expect heavy crowds on weekends/holidays — plan patience into your timing"] },
+      { "title": "On the trail", "items": ["Use the iron ladders one at a time — don't rush past others queueing", "Carry a headlamp even for day treks in case descent runs later than planned"] },
+      { "title": "Solo-specific", "items": ["One of the safest solo options given how heavily trafficked it is", "If night-trekking for sunrise, stick close to other groups on the trail for safety and route-finding"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Akole Police Station", "number": "02424-241333" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with good grip for the ladder sections", "amazonLink": null },
+      { "name": "Warm layer if night-trekking for sunrise", "amazonLink": null },
+      { "name": "Gloves for the iron ladders", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "Headlamp + spare batteries (essential for night treks)", "amazonLink": null },
+      { "name": "2.5–3L water", "amazonLink": null },
+      { "name": "Trekking pole", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

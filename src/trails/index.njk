@@ -1,0 +1,124 @@
+---
+seoTitle: All Trails — The Solo Trail
+seoDescription: Solo trekking guides for Nepal and India. Filter by region and difficulty. Full offline kits for Pro members.
+navActive: trails
+---
+{% extends "layouts/base.njk" %}
+{% from "partials/macros.njk" import trailCard %}
+
+{% block pagecss %}<link rel="stylesheet" href="/assets/css/trails-index.css">{% endblock %}
+
+{% block content %}
+
+<section class="trails-hero">
+  <h1>Find your solo trail</h1>
+  <p>{{ trailsList.length }} trails across Nepal and India — more added monthly</p>
+</section>
+
+<div class="filters-bar">
+  <div class="filters-inner">
+    <div class="filter-group">
+      <span class="filter-label">Region</span>
+      <button class="chip active" data-filter="region" data-val="all" onclick="setFilter('region','all',this)">All</button>
+      <button class="chip" data-filter="region" data-val="nepal" onclick="setFilter('region','nepal',this)">🇳🇵 Nepal</button>
+      <button class="chip" data-filter="region" data-val="india" onclick="setFilter('region','india',this)">🇮🇳 India</button>
+    </div>
+    <div class="filter-sep"></div>
+    <div class="filter-group">
+      <span class="filter-label">Difficulty</span>
+      <button class="chip active" data-filter="diff" data-val="all" onclick="setFilter('diff','all',this)">All</button>
+      <button class="chip" data-filter="diff" data-val="easy" onclick="setFilter('diff','easy',this)">Easy</button>
+      <button class="chip" data-filter="diff" data-val="moderate" onclick="setFilter('diff','moderate',this)">Moderate</button>
+      <button class="chip" data-filter="diff" data-val="challenging" onclick="setFilter('diff','challenging',this)">Challenging</button>
+      <button class="chip" data-filter="diff" data-val="expert" onclick="setFilter('diff','expert',this)">Expert</button>
+    </div>
+    <span class="trail-count" id="trail-count">{{ trailsList.length }} trails</span>
+  </div>
+</div>
+
+<div class="trails-wrap" id="trails-wrap">
+
+  <h2 class="trails-section-title" id="nepal">🇳🇵 Nepal</h2>
+  <p class="trails-section-sub">The Himalayan classics.</p>
+  <div class="trails-grid">
+    {% for t in collections.trailsNepal %}{{ trailCard(t) }}{% endfor %}
+  </div>
+
+  {% for group in indiaByState %}
+    {% if group.state == "Maharashtra" %}
+      <h2 class="trails-section-title" id="maharashtra">🇮🇳 India — Maharashtra</h2>
+      <p class="trails-section-sub">The Sahyadri range: forts, jungle trails, peaks, waterfalls, and Konkan sea forts. Our first fully-mapped Indian state.</p>
+      {% for cat in maharashtraByCategory %}
+      <h3 class="trails-section-title" style="font-size:17px;margin-top:28px;" id="mh-{{ cat.key }}">{{ cat.label }}</h3>
+      <p class="trails-section-sub" style="margin-bottom:14px;">{{ cat.sub }}</p>
+      <div class="trails-grid">
+        {% for t in cat.treks %}{{ trailCard(t) }}{% endfor %}
+      </div>
+      {% endfor %}
+    {% else %}
+      <h2 class="trails-section-title" id="{{ group.state | lower | replace(' ', '-') }}">🇮🇳 India — {{ group.state }}</h2>
+      <div class="trails-grid">
+        {% for t in group.treks %}{{ trailCard(t) }}{% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <h2 class="trails-section-title" id="more-states">More of India — coming soon</h2>
+  <p class="trails-section-sub">On the roadmap. We research and build one state at a time — Maharashtra is live now.</p>
+  <div class="trails-grid">
+    {% for s in stateStubs %}
+    <div class="trail-card trail-card-soon state-tile" data-region="india" data-diff="">
+      <span class="state-tile-badge">Coming soon</span>
+      <h3>{{ s.name }}</h3>
+      <p>{{ s.blurb }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="empty-state" id="empty-state" style="display:none">
+    <div style="font-size:32px">🏔️</div>
+    <p>No trails match those filters — try broadening your search.</p>
+  </div>
+
+</div>
+
+<div class="pro-strip">
+  <h2>New trail added every month</h2>
+  <p>Pro members get offline PDFs and GPS waypoints for every guide — the moment it drops.</p>
+  <a href="/downloads/" class="btn-pro-strip">Get Trail Kits →</a>
+</div>
+
+{% endblock %}
+
+{% block pagejs %}
+<script>
+  var filters = { region: 'all', diff: 'all' };
+
+  function setFilter(key, val, btn) {
+    filters[key] = val;
+    document.querySelectorAll('[data-filter="' + key + '"]').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.val === val);
+    });
+    applyFilters();
+  }
+
+  function applyFilters() {
+    var cards = document.querySelectorAll('#trails-wrap .trail-card');
+    var count = 0;
+    cards.forEach(function(c) {
+      var show =
+        (filters.region === 'all' || c.dataset.region === filters.region) &&
+        (filters.diff   === 'all' || c.dataset.diff   === filters.diff);
+      c.style.display = show ? '' : 'none';
+      if (show) count++;
+    });
+    document.querySelectorAll('.trails-section-title, .trails-section-sub').forEach(function(h) {
+      h.style.display = (filters.region === 'all' && filters.diff === 'all') ? '' : 'none';
+    });
+    var el = document.getElementById('trail-count');
+    if (el) el.textContent = count + ' trail' + (count !== 1 ? 's' : '');
+    var empty = document.getElementById('empty-state');
+    if (empty) empty.style.display = count === 0 ? '' : 'none';
+  }
+</script>
+{% endblock %}

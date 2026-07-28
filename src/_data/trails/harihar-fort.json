@@ -1,0 +1,64 @@
+{
+  "id": "harihar-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Harihar Fort (Harihargad)",
+  "shortName": "Harihar",
+  "tagline": "117 near-vertical steps carved into the rock face, 700+ years old",
+  "difficulty": "challenging",
+  "maxAltitudeM": 1120,
+  "totalDistanceKm": 3,
+  "elevationGainM": 500,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Nirgudpada",
+  "nearestCity": "Nashik",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/harihar-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/harihar-fort/800/600",
+  "seoTitle": "Harihar Fort Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Harihar Fort near Nashik — the famous near-vertical rock-cut staircase, documented accidents, and when to go.",
+  "seasons": [
+    { "label": "Mid Sep – early Nov", "sub": "Recommended window for first-timers — steps drying out, less fog", "badge": "best" },
+    { "label": "Jun – Sep (peak monsoon)", "sub": "Steps get treacherously slippery in fog and rain", "badge": "avoid" },
+    { "label": "Dec – Feb", "sub": "Dry and clear, good visibility", "badge": "ok" }
+  ],
+  "seasonNote": "Unlike most Sahyadri treks, peak monsoon is explicitly the most dangerous time here — the 117 rock-cut steps are steep enough (75–80°) that fog and wet rock turn this into a genuinely high-risk climb.",
+  "routeOptions": [
+    { "name": "From Nirgudpada", "difficulty": "challenging", "distanceKm": 1.5, "duration": "1.5–2 hrs", "notes": "Short distance but the final 117 steps are the defining (and dangerous) feature — carved at roughly 75–80° into the rock, dating to the Yadava dynasty." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Harihar's short distance is misleading — the final rock-cut staircase is one of the steepest, most exposed sections on any popular Sahyadri trek, and fatal accidents have been documented.",
+    "alerts": [
+      { "type": "danger", "title": "117 near-vertical steps — fatal accidents documented", "body": "The carved staircase sits at roughly 75–80° with limited handholds. It becomes especially treacherous in monsoon fog and rain. Attempt this only in dry conditions and preferably not alone." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Check the weather specifically for fog at altitude, not just rain in the valley", "Prefer mid-September to early November if this is your first attempt", "Avoid weekday off-hours when fewer trekkers are around to help if needed"] },
+      { "title": "On the trail", "items": ["Use both hands and go slow on the carved steps — do not rush even if others are waiting behind you", "Descending is harder than climbing here — pace yourself accordingly"] },
+      { "title": "Solo-specific", "items": ["Strongly consider timing your visit for a weekend when other trekkers will be on the steps with you", "This is one of the treks where going with even one companion meaningfully reduces risk"] },
+      { "title": "Signs to turn back", "items": ["Any fog reducing visibility on the staircase", "Wet or slick rock on the steps", "Crowding that forces rushed movement"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Trimbakeshwar Police Station", "number": "02594-233233" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Grippy trekking shoes — essential, not optional here", "amazonLink": null },
+      { "name": "Gloves for the rock-cut steps", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "2L water", "amazonLink": null },
+      { "name": "Fully charged phone for emergencies", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

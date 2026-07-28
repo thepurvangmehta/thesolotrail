@@ -1,0 +1,60 @@
+{
+  "id": "sinhagad-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Sinhagad Fort",
+  "shortName": "Sinhagad",
+  "tagline": "Pune's closest fort trek — site of Tanaji Malusare's famous 1670 battle",
+  "difficulty": "easy",
+  "maxAltitudeM": 1312,
+  "totalDistanceKm": 5,
+  "elevationGainM": 600,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Sinhagad base village/parking",
+  "nearestCity": "Pune",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/sinhagad-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/sinhagad-fort/800/600",
+  "seoTitle": "Sinhagad Fort Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Sinhagad Fort — Pune's most accessible fort trek, history, season, safety, and packing.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — busiest season, misty ramparts", "badge": "ok" },
+    { "label": "Oct – Feb", "sub": "Clear views over Pune, comfortable climbing weather", "badge": "best" },
+    { "label": "Mar – May", "sub": "Hot, best done very early morning", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Standard trekking path", "difficulty": "easy", "distanceKm": 2.7, "duration": "45 min – 1.5 hrs up, 30 min – 1 hr down", "notes": "Well-trodden, popular with Pune locals as a regular fitness climb, not just a one-off trek." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Sinhagad is Pune's default fort trek — heavily used, well-marked, and low-risk, though the road up also carries vehicle traffic to be aware of near the top.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["A road also runs to the top — you'll share some paths with vehicles near the summit", "Very crowded on weekends; go on a weekday for a quieter solo trek"] },
+      { "title": "On the trail", "items": ["Trail is well-marked and heavily trafficked — easy to self-navigate", "Famous for kanda bhaji (onion fritters) stalls at the top — carry small cash"] },
+      { "title": "Solo-specific", "items": ["One of the safest solo options on this list — busy year-round, close to Pune", "Good starter trek before attempting more remote Sahyadri forts"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Pune City Police", "number": "020-26123346" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Comfortable trekking/walking shoes", "amazonLink": null },
+      { "name": "Light layer — cooler at the top than in Pune city", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "1.5–2L water", "amazonLink": null },
+      { "name": "Small cash for food stalls at the summit", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

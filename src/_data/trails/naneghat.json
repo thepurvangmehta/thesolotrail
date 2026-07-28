@@ -1,0 +1,63 @@
+{
+  "id": "naneghat",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Naneghat & Jivdhan Fort",
+  "shortName": "Naneghat",
+  "tagline": "A 2,000-year-old trade route, ancient inscriptions, and a wind-driven 'reverse waterfall'",
+  "difficulty": "moderate",
+  "maxAltitudeM": 800,
+  "totalDistanceKm": 10,
+  "elevationGainM": 500,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Junnar (Malshej Ghat area)",
+  "nearestCity": "Pune / Mumbai",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/naneghat/1600/900",
+  "cardImage": "https://picsum.photos/seed/naneghat/800/600",
+  "seoTitle": "Naneghat Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Naneghat and Jivdhan Fort near Junnar — the ancient Satavahana trade route, monsoon 'reverse waterfall', safety, and packing.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — the famous reverse-waterfall wind effect", "badge": "best" },
+    { "label": "Oct – Feb", "sub": "Clear, good for the historical cave inscriptions", "badge": "ok" },
+    { "label": "Mar – May", "sub": "Hot and dry", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Naneghat pass only", "difficulty": "moderate", "distanceKm": 9, "duration": "9–10 km round trip", "notes": "Visits the ancient toll-collection cave and Brahmi inscriptions; a straightforward moderate day trek." },
+    { "name": "Naneghat + Jivdhan Fort", "difficulty": "challenging", "distanceKm": 14, "duration": "Full day", "notes": "Adds the Jivdhan Fort climb as a range extension — more committing, better for experienced trekkers." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Naneghat's main hazard is the strong monsoon wind at the pass itself — genuinely strong enough to affect footing near edges.",
+    "alerts": [
+      { "type": "warning", "title": "Strong gusting wind at the pass in monsoon", "body": "The 'reverse waterfall' effect exists because wind is genuinely powerful here. Keep back from ledges when gusts pick up." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Check monsoon road conditions to the Junnar-side trailhead — can get muddy", "This is a historically significant site — respect the ancient inscriptions and toll-pot structure"] },
+      { "title": "On the trail", "items": ["Wind at the pass can be strong enough to unbalance you near edges", "The stone steps near the caves get slippery in rain"] },
+      { "title": "Solo-specific", "items": ["Less trafficked than Lonavala-area forts — let someone know your plan", "Combine with a group day-trip if possible given the more remote trailhead"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Junnar Police Station", "number": "02132-222033" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with grip", "amazonLink": null },
+      { "name": "Windproof layer — the pass is genuinely windy", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "2–3L water", "amazonLink": null },
+      { "name": "Camera for the inscriptions and toll-pot cave", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

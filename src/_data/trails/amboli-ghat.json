@@ -1,0 +1,63 @@
+{
+  "id": "amboli-ghat",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "waterfall-valley",
+  "name": "Amboli Ghat & Waterfalls",
+  "shortName": "Amboli",
+  "tagline": "The 'Cherrapunji of Maharashtra' — a Biodiversity Heritage Site with rare amphibians",
+  "difficulty": "easy",
+  "maxAltitudeM": 690,
+  "totalDistanceKm": 5,
+  "elevationGainM": 150,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Amboli town",
+  "nearestCity": "Kolhapur / Belgaum",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/amboli-ghat/1600/900",
+  "cardImage": "https://picsum.photos/seed/amboli-ghat/800/600",
+  "seoTitle": "Amboli Ghat Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo traveler's guide to Amboli Ghat — Maharashtra's wettest hill station and a declared Biodiversity Heritage Site, near Kolhapur/Belgaum.",
+  "dataNote": "This is Maharashtra's southernmost hill-station cluster, accessed via Kolhapur/Belgaum rather than the Pune/Mumbai/Nashik belt that covers most of this list.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — ~7,500mm annual rainfall, waterfalls at their fullest", "badge": "best" },
+    { "label": "Nov – Feb", "sub": "Milder weather, easier ghat road conditions", "badge": "ok" },
+    { "label": "Mar – May", "sub": "Hot and dry", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Amboli Falls & Nangartas Falls viewpoint walks", "difficulty": "easy", "distanceKm": 3, "duration": "2–3 hrs for both", "notes": "Mostly short viewpoint walks rather than a strenuous trek — the region's ecology is the main draw, including endemic species like the Amboli bush frog and Amboli tiger toad." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Amboli's extreme rainfall (among the highest in Maharashtra) means genuine landslide and slippery-road risk in the ghat sections during monsoon.",
+    "alerts": [
+      { "type": "warning", "title": "Landslide and slippery-road risk in the ghat during heavy monsoon", "body": "With roughly 7,500mm of annual rainfall, the Amboli ghat road and surrounding slopes see real landslide risk in peak monsoon. Check local conditions before driving/traveling through in July–August specifically." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Check road/landslide advisories for the ghat before traveling in peak monsoon", "This is a Biodiversity Heritage Site — respect protected flora/fauna, especially the endemic amphibians"] },
+      { "title": "On the trail", "items": ["Waterfall viewpoints get slippery — stay on marked areas", "Night walks can reveal the region's famous endemic frogs/toads, but go with a local guide for this"] },
+      { "title": "Solo-specific", "items": ["A relatively easy, low-technical-risk destination — good for solo travelers new to trekking", "The main solo consideration is road/weather conditions given the extreme rainfall, not the walking itself"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Sawantwadi Police Station", "number": "02363-272033" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Clothing", "items": [
+      { "name": "Full rain gear — this is one of the wettest places in the state", "amazonLink": null },
+      { "name": "Quick-dry clothing", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "Waterproof bag for electronics", "amazonLink": null },
+      { "name": "Torch for spotting endemic amphibians at night (with a local guide)", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

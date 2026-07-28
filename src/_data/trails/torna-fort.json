@@ -1,0 +1,61 @@
+{
+  "id": "torna-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Torna Fort (Prachandagad)",
+  "shortName": "Torna",
+  "tagline": "The first fort Shivaji Maharaj ever captured — and Pune district's tallest",
+  "difficulty": "moderate",
+  "maxAltitudeM": 1400,
+  "totalDistanceKm": 10,
+  "elevationGainM": 700,
+  "duration": { "min": 1, "max": 2 },
+  "trailhead": "Velhe",
+  "nearestCity": "Pune",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/torna-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/torna-fort/800/600",
+  "seoTitle": "Torna Fort Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Torna Fort near Pune — the tallest fort in Pune district, the Rajgad-Torna range trek, safety, and packing.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — green ridgeline, watch footing on wet rock", "badge": "best" },
+    { "label": "Oct – Feb", "sub": "Clear, cooler, good visibility", "badge": "best" },
+    { "label": "Mar – May", "sub": "Hot and exposed", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Via Velhe", "difficulty": "moderate", "distanceKm": 5, "duration": "2.5–3 hrs one-way", "notes": "The standard approach — Velhe itself sits at ~700m so the net gain is manageable, but the trail is steep in patches." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Torna is often paired with Rajgad as a 2-day range trek — a genuinely committing outing, not a casual add-on.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["If attempting the Rajgad-Torna range trek, arrange camping/stay logistics before you start — this isn't a same-day there-and-back", "Confirm water source status with recent trekker reports"] },
+      { "title": "On the trail", "items": ["Steep sections near the fort entrance need careful footing, especially wet", "Fort complex is large — pace yourself if also planning the range trek to Rajgad"] },
+      { "title": "Solo-specific", "items": ["Less crowded than Rajgad/Sinhagad — tell someone your plan since you may be more alone here", "Carry extra water — fewer trekkers means fewer people to flag down if needed"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Pune Rural Police", "number": "020-26127001" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with grip", "amazonLink": null },
+      { "name": "Layered clothing — Velhe base to summit has a noticeable temperature drop", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "3L water for a full range-trek day", "amazonLink": null },
+      { "name": "Camping gear if doing the Rajgad-Torna overnight range trek", "amazonLink": null },
+      { "name": "Trekking pole", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

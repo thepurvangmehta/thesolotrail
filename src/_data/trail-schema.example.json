@@ -1,0 +1,71 @@
+{
+  "_comment": "TEMPLATE — copy this into _data/trails/<id>.json and fill in. Delete fields you don't have data for rather than guessing; the template renders sections conditionally and skips anything empty/missing. This file is not a trek record itself — the loader only reads _data/trails/*.json.",
+
+  "id": "kebab-case-slug-matches-filename-and-url",
+  "status": "live",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "_category_options": "fort | jungle | peak-plateau | waterfall-valley | coastal | himalayan (omit category for Nepal/Himalaya treks)",
+
+  "name": "Full Trek Name",
+  "shortName": "Short Name",
+  "tagline": "One line that sells it",
+  "difficulty": "moderate",
+  "_difficulty_options": "easy | moderate | challenging | expert",
+
+  "maxAltitudeM": 0,
+  "totalDistanceKm": 0,
+  "elevationGainM": 0,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Base village/town",
+  "nearestCity": "Nearest major city",
+  "guideRequired": false,
+
+  "heroImage": "https://images.unsplash.com/...",
+  "cardImage": "https://images.unsplash.com/...",
+  "seoTitle": "Trek Name Solo Trek Guide — The Solo Trail",
+  "seoDescription": "One or two sentences for search results.",
+
+  "dataNote": "Optional — flag conflicting/unverified figures here, e.g. 'Altitude cited 2,700–4,350 ft across sources; using the more consistently reported figure.'",
+
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — waterfalls, green hills", "badge": "best" },
+    { "label": "Oct – Feb", "sub": "Drier, safer footing", "badge": "ok" }
+  ],
+  "seasonNote": "Optional — only needed when the prettiest season and the safest season genuinely differ, e.g. 'Prettiest in monsoon, but AMK's technical sections are safest Oct–Mar — see Safety tab.'",
+
+  "routeOptions": [
+    { "name": "Route via X village", "difficulty": "easy", "distanceKm": 0, "duration": "0 hrs", "notes": "One-line description of this variant" }
+  ],
+  "_routeOptions_note": "Use for single/day treks with multiple approach variants. Use 'itinerary' (same shape as the Nepal treks) instead for genuine multi-day treks.",
+
+  "permits": [
+    { "name": "Permit/fee name", "fullName": "Full name", "priceUSD": 0, "where": "Where obtained", "notes": "Any conditions" }
+  ],
+
+  "safety": {
+    "intro": "One or two sentences framing the real risk profile of this specific trek.",
+    "alerts": [
+      { "type": "danger", "title": "Named hazard", "body": "Specifics — where, why, what to actually do about it." }
+    ],
+    "cards": [
+      { "title": "Before you go / On the trail / Solo-specific / Signs to turn back", "items": ["...", "..."] }
+    ],
+    "emergencyContacts": [{ "label": "Local police/forest office", "number": "..." }]
+  },
+
+  "packing": [
+    { "category": "Category name", "items": [{ "name": "Item", "amazonLink": null }] }
+  ],
+
+  "gettingThere": {},
+  "costs": {},
+  "_logistics_note": "Leave gettingThere/costs as empty objects until logistics content is ready — the template renders a 'coming soon' placeholder for empty sections instead of hiding the tab.",
+
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] },
+
+  "lastVerified": null,
+  "publishedDate": null
+}

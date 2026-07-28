@@ -1,0 +1,26 @@
+{% macro trailCard(t) %}
+<article class="trail-card{% if t.status != 'live' %} trail-card-soon{% endif %}" data-region="{{ t.country | lower }}" data-diff="{{ t.difficulty }}" data-category="{{ t.category or 'himalayan' }}">
+  <a href="/trails/{{ t.id }}/">
+    <div class="card-img">
+      <img src="{{ t.cardImage or t.heroImage }}" alt="{{ t.name }}">
+      <div class="card-badges">
+        <span class="badge-country">{{ t.country | countryFlag }} {{ t.region }}</span>
+        <span class="badge-status {{ 'badge-full' if t.status == 'live' else 'badge-soon' }}">{{ t.status | statusLabel }}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">{{ t.name }}</div>
+      <p class="card-desc">{{ t.tagline }}</p>
+      <div class="card-stats">
+        {% if t.maxAltitudeM %}<span class="cs cs-alt">{{ t.maxAltitudeM | commaNum }}m</span>{% endif %}
+        <span class="cs cs-days">{{ t.duration.min }}{% if t.duration.max != t.duration.min %}–{{ t.duration.max }}{% endif %} day{% if t.duration.max > 1 %}s{% endif %}</span>
+        <span class="cs cs-diff-{{ t.difficulty | diffClass }}">{{ t.difficulty | capitalize }}</span>
+      </div>
+      <div class="card-cta">
+        <span class="card-cta-link">{{ "Read full guide" if t.status == "live" else "Preview trail" }}</span>
+        <span class="cta-arrow">→</span>
+      </div>
+    </div>
+  </a>
+</article>
+{% endmacro %}

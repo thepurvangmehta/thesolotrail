@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">the solo <span>trail</span></a>
+        <p>Built for independent trekkers who plan their own routes.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Nepal</h4>
+          {% for t in collections.trailsNepal %}<a href="/trails/{{ t.id }}/">{{ t.name }}</a>{% endfor %}
+        </div>
+        <div class="footer-col">
+          <h4>India — Maharashtra</h4>
+          {% for t in collections.trailsMaharashtra | slice(0, 6) %}<a href="/trails/{{ t.id }}/">{{ t.name }}</a>{% endfor %}
+          <a href="/trails/#maharashtra">All Maharashtra treks →</a>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="/about/">About</a>
+          <a href="/downloads/">Downloads</a>
+          <a href="/community/">Community</a>
+          <a href="/guides/">Guides</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 The Solo Trail · Made for independent trekkers</span>
+      <a href="mailto:hello@thesolotrail.com" class="footer-email">hello@thesolotrail.com</a>
+    </div>
+  </div>
+</footer>

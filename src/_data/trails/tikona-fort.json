@@ -1,0 +1,59 @@
+{
+  "id": "tikona-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Tikona Fort",
+  "shortName": "Tikona",
+  "tagline": "A pyramid-shaped fort with sweeping views over Pawna Lake",
+  "difficulty": "easy",
+  "maxAltitudeM": 1067,
+  "totalDistanceKm": 4,
+  "elevationGainM": 400,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Tikona Peth",
+  "nearestCity": "Pune / Lonavala",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/tikona-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/tikona-fort/800/600",
+  "seoTitle": "Tikona Fort Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Tikona Fort near Pawna Lake — an easy pyramid-shaped fort climb, season, safety, and packing.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — Pawna Lake and surrounding hills at their greenest", "badge": "best" },
+    { "label": "Oct – Feb", "sub": "Clear and comfortable", "badge": "ok" },
+    { "label": "Mar – May", "sub": "Hot, exposed climb", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "From Tikona Peth", "difficulty": "easy", "distanceKm": 2, "duration": "1.5–2 hrs round trip", "notes": "Short, steady ascent to the fort's distinctive pyramid-shaped summit." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Tikona is a low-risk, popular short trek, often combined with a stop at Pawna Lake for camping.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["Often combined with Pawna Lake camping — plan gear accordingly if staying over", "Weekend crowds are common near the lake"] },
+      { "title": "On the trail", "items": ["Some rocky sections near the summit need careful footing when wet", "Short enough to combine with a half-day plan"] },
+      { "title": "Solo-specific", "items": ["Popular and easy to find company on the trail", "Lake-side camping areas can get crowded/noisy on weekends if seeking solitude"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Pune Rural Police", "number": "020-26127001" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with grip", "amazonLink": null },
+      { "name": "Rain jacket in monsoon", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "1.5–2L water", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

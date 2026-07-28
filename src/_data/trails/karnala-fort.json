@@ -1,0 +1,62 @@
+{
+  "id": "karnala-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Karnala Fort",
+  "shortName": "Karnala",
+  "tagline": "A fort trek through a bird sanctuary — 200+ species along the trail",
+  "difficulty": "easy",
+  "maxAltitudeM": 445,
+  "totalDistanceKm": 5,
+  "elevationGainM": 350,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Karnala Bird Sanctuary entrance, near Panvel",
+  "nearestCity": "Mumbai",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/karnala-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/karnala-fort/800/600",
+  "seoTitle": "Karnala Fort Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Karnala Fort near Mumbai — a short, easy climb through a 200+ species bird sanctuary. Entry fees, season, and safety.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — greenest, but the fort's stone gets slippery", "badge": "best" },
+    { "label": "Oct – Feb", "sub": "Best birdwatching season, comfortable climbing weather", "badge": "best" },
+    { "label": "Mar – May", "sub": "Hot, less birdlife activity", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Sanctuary trail to fort", "difficulty": "easy", "distanceKm": 2.5, "duration": "~2 hrs to the main point", "notes": "A gentle, well-maintained trail through the sanctuary; the final approach to the pinnacle/fort has some rock scrambling." }
+  ],
+  "permits": [
+    { "name": "Sanctuary entry fee", "fullName": "Karnala Bird Sanctuary entry", "priceUSD": 0, "where": "Sanctuary gate", "notes": "Modest entry fee applies since this trek passes through a protected bird sanctuary." }
+  ],
+  "safety": {
+    "intro": "Karnala is one of the easiest and most accessible treks near Mumbai — the main risk is slippery stone near the fort itself in monsoon.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["Check sanctuary opening hours before planning your visit", "Bring binoculars if birdwatching is part of your interest"] },
+      { "title": "On the trail", "items": ["The final scramble to the fort/pinnacle is slippery in rain — take care", "Stay on marked trails within the sanctuary"] },
+      { "title": "Solo-specific", "items": ["Very accessible and safe for solo trekkers, close to Mumbai", "Popular enough on weekends that you'll usually have company"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Panvel Police Station", "number": "022-27451857" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with grip", "amazonLink": null },
+      { "name": "Rain jacket in monsoon", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "1.5L water", "amazonLink": null },
+      { "name": "Binoculars for birdwatching", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

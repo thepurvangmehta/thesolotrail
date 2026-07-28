@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+{% include "partials/gtm-head.njk" %}
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ seoTitle or title }}</title>
+<meta name="description" content="{{ seoDescription or description }}">
+<meta property="og:title" content="{{ seoTitle or title }}">
+<meta property="og:description" content="{{ seoDescription or description }}">
+{% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
+<meta property="og:url" content="https://thesolotrail.com{{ page.url }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<link rel="canonical" href="https://thesolotrail.com{{ page.url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+{% block pagecss %}{% endblock %}
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKH7834H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{% include "partials/nav.njk" %}
+
+{% block content %}{% endblock %}
+
+{% include "partials/footer.njk" %}
+
+<script>
+  document.getElementById('nav-hamburger').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open');
+  });
+</script>
+{% block pagejs %}{% endblock %}
+<script src="/assets/currency.js"></script>
+</body>
+</html>

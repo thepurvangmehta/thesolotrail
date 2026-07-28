@@ -1,0 +1,74 @@
+{
+  "id": "vasota-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "jungle",
+  "name": "Vasota Fort Jungle Trek",
+  "shortName": "Vasota",
+  "tagline": "A boat crossing on Koyna Lake, then a Tiger Reserve jungle trek to ruined fort walls",
+  "difficulty": "moderate",
+  "maxAltitudeM": 1100,
+  "totalDistanceKm": 8,
+  "elevationGainM": 500,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Bamnoli (Koyna backwaters)",
+  "nearestCity": "Satara",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/vasota-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/vasota-fort/800/600",
+  "seoTitle": "Vasota Fort Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Vasota Fort inside Koyna Wildlife Sanctuary — mandatory forest permission, boat crossing, seasonal closure, and safety.",
+  "seasons": [
+    { "label": "Nov – May", "sub": "The only season this trek is open — sanctuary closed in monsoon", "badge": "best" },
+    { "label": "Jun – Oct", "sub": "Closed — Koyna Wildlife Sanctuary shuts for tiger-reserve protection during monsoon", "badge": "avoid" }
+  ],
+  "seasonNote": "Vasota is a clear exception to the Sahyadri monsoon-is-best rule: the trek is officially closed June through October because it sits inside the Koyna Wildlife Sanctuary (part of the Sahyadri Tiger Reserve landscape), reopening after Diwali through end of May.",
+  "routeOptions": [
+    { "name": "Boat + forest trail from Bamnoli", "difficulty": "moderate", "distanceKm": 8, "duration": "Full day (boat + trek + return)", "notes": "Requires hiring a boat across Koyna Lake from Bamnoli (~₹2,000/boat — a group of 8+ makes this economical) before the forest trail to the fort ruins begins." }
+  ],
+  "permits": [
+    { "name": "Forest Department permission", "fullName": "Mandatory prior permission at Bamnoli forest office", "priceUSD": 0, "where": "Bamnoli forest office", "notes": "ID proof required; group must sign an indemnity bond. This is not optional — arrange before you travel." },
+    { "name": "Sanctuary entry fee", "fullName": "Koyna Wildlife Sanctuary entry", "priceUSD": 0.35, "where": "Bamnoli", "notes": "Approx ₹30 per person." },
+    { "name": "Boat parking fee", "fullName": "Boat parking at Bamnoli jetty", "priceUSD": 1.8, "where": "Bamnoli jetty", "notes": "Approx ₹150 per group." },
+    { "name": "Guide fee", "fullName": "Local guide (recommended/required in practice)", "priceUSD": 2.4, "where": "Bamnoli", "notes": "Approx ₹200 per group." },
+    { "name": "Tiger conservation fee", "fullName": "\"Tiger fee\" — sanctuary conservation charge", "priceUSD": 1.2, "where": "Bamnoli", "notes": "Approx ₹100 per group." }
+  ],
+  "safety": {
+    "intro": "Vasota's defining feature is bureaucratic, not physical: this trek requires advance Forest Department permission and only runs outside monsoon by law, since it sits inside a tiger reserve landscape.",
+    "alerts": [
+      { "type": "info", "title": "Mandatory forest permission — arrange before you travel", "body": "You cannot simply show up and trek Vasota. ID proof and a signed indemnity bond are required at the Bamnoli forest office. Build this into your itinerary, not as an afterthought." },
+      { "type": "info", "title": "Closed June–October", "body": "The sanctuary shuts for the monsoon period to protect the tiger reserve. Plan your visit for the Nov–May window only." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Confirm the sanctuary is open for your travel dates (Nov–May window)", "Bring photo ID — mandatory for the forest permission paperwork", "Try to join or form a group of 8+ to make the boat cost economical"] },
+      { "title": "On the trail", "items": ["Bison/gaur sightings are reported — no tigers currently confirmed present per local operators, but stay alert and quiet in dense sections", "Boat timing matters — confirm your return crossing time with the boatman before starting the trek"] },
+      { "title": "Solo-specific", "items": ["A local guide is effectively required/strongly recommended here given the sanctuary rules — factor the cost in", "Coordinate with other trekkers at Bamnoli to share the boat cost if going alone"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Koyna Wildlife Sanctuary Office, Bamnoli", "number": "02372-226601" },
+      { "label": "Satara Police Control Room", "number": "02162-234833" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Documents", "items": [
+      { "name": "Photo ID (mandatory for forest permission)", "amazonLink": null }
+    ]},
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with grip", "amazonLink": null },
+      { "name": "Quick-dry clothing", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "Life jacket (usually provided with the boat, confirm beforehand)", "amazonLink": null },
+      { "name": "2.5L water", "amazonLink": null },
+      { "name": "Cash in small denominations for the various sanctuary fees", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

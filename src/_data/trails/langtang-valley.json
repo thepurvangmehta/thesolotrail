@@ -1,0 +1,35 @@
+{
+  "id": "langtang-valley",
+  "status": "planned",
+  "lastVerified": null,
+  "publishedDate": null,
+  "country": "Nepal",
+  "region": "Bagmati Province",
+  "name": "Langtang Valley",
+  "shortName": "Langtang",
+  "tagline": "The valley of glaciers — a week from Kathmandu",
+  "difficulty": "moderate",
+  "maxAltitudeM": 3870,
+  "totalDistanceKm": 65,
+  "elevationGainM": 1870,
+  "duration": { "min": 7, "max": 9 },
+  "trailhead": "Syabrubesi",
+  "nearestCity": "Kathmandu",
+  "guideRequired": false,
+  "heroImage": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600&q=90",
+  "cardImage": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200&q=90",
+  "seoTitle": "Langtang Valley Trek Solo Guide — The Solo Trail",
+  "seoDescription": "Complete solo trekker's guide to Langtang Valley, Nepal. 7–9 day trek from Kathmandu.",
+  "seasons": [
+    { "label": "Oct – Nov", "sub": "5°C to 18°C", "badge": "best" },
+    { "label": "Mar – May", "sub": "8°C to 20°C", "badge": "best" },
+    { "label": "Dec – Feb", "sub": "-5°C to 10°C", "badge": "ok" },
+    { "label": "Jun – Sep", "sub": "Monsoon", "badge": "avoid" }
+  ],
+  "permits": [
+    { "name": "Langtang NP", "fullName": "Langtang National Park Entry", "priceUSD": 30, "where": "Dhunche or Syabrubesi", "notes": "SAARC nationals pay $10." },
+    { "name": "TIMS", "fullName": "Trekkers' Information Management System", "priceUSD": 17, "where": "Kathmandu (TAAN office)", "notes": "SAARC nationals pay $9." }
+  ],
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

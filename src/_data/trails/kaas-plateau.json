@@ -1,0 +1,63 @@
+{
+  "id": "kaas-plateau",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "peak-plateau",
+  "name": "Kaas Plateau (Kaas Pathar)",
+  "shortName": "Kaas Plateau",
+  "tagline": "A UNESCO World Natural Heritage wildflower plateau — easy walking, timed entry",
+  "difficulty": "easy",
+  "maxAltitudeM": 1200,
+  "totalDistanceKm": 4,
+  "elevationGainM": 50,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Kaas Plateau entrance",
+  "nearestCity": "Satara",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/kaas-plateau/1600/900",
+  "cardImage": "https://picsum.photos/seed/kaas-plateau/800/600",
+  "seoTitle": "Kaas Plateau Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Kaas Plateau near Satara — UNESCO wildflower season, timed entry booking, and what makes this different from a real trek.",
+  "dataNote": "This is a walking/nature destination rather than a technical trek — flat, easy terrain. Species counts for the plateau vary widely across sources (175 vs. 850+) depending on whether flowering plants specifically or all flora broadly is being counted; we haven't resolved this discrepancy.",
+  "seasons": [
+    { "label": "Late Aug – Oct", "sub": "Wildflower bloom window — peak is usually September", "badge": "best" },
+    { "label": "Rest of year", "sub": "Plateau is far less scenic outside bloom season", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Plateau walking trails", "difficulty": "easy", "distanceKm": 3, "duration": "1.5–2 hrs", "notes": "Flat, marked walking paths — not a strenuous trek. The main effort is getting the timed entry slot right during bloom season." }
+  ],
+  "permits": [
+    { "name": "Timed entry ticket", "fullName": "Kaas Plateau regulated entry (bloom season)", "priceUSD": 0, "where": "Online booking recommended, especially for weekends", "notes": "Entry is regulated with timed slots and vehicle restrictions during flowering season to protect the endemic ecosystem." }
+  ],
+  "safety": {
+    "intro": "Kaas is low-risk by trekking standards — the main practical issue is securing an entry slot, not physical difficulty.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["Book your timed entry slot online in advance during September weekends — it sells out", "Check current bloom status before traveling — the peak window is short and weather-dependent"] },
+      { "title": "On the trail", "items": ["Stay strictly on marked paths — many species here are endemic and protected", "Don't pick flowers or step off boardwalks/paths"] },
+      { "title": "Solo-specific", "items": ["Very safe and accessible solo — a nature walk more than a trek", "Combine with a Satara-area day trip for a fuller itinerary"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Satara Police Control Room", "number": "02162-234833" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Clothing", "items": [
+      { "name": "Comfortable walking shoes", "amazonLink": null },
+      { "name": "Sun hat and sunscreen", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "Camera for the wildflower bloom", "amazonLink": null },
+      { "name": "1–1.5L water", "amazonLink": null },
+      { "name": "Printed/digital copy of your timed-entry booking", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "thesolotrail",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Solo Trail — solo trekking guides for Nepal and India, built with Eleventy.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

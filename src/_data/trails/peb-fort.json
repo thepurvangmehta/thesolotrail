@@ -1,0 +1,60 @@
+{
+  "id": "peb-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Peb Fort (Vikatgad)",
+  "shortName": "Peb Fort",
+  "tagline": "A quiet fort trek from Neral — Matheran's less-crowded neighbor",
+  "difficulty": "moderate",
+  "maxAltitudeM": 636,
+  "totalDistanceKm": 8,
+  "elevationGainM": 500,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Neral",
+  "nearestCity": "Mumbai / Pune",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/peb-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/peb-fort/800/600",
+  "seoTitle": "Peb Fort (Vikatgad) Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Solo trekker's guide to Peb Fort near Neral and Matheran — a quieter alternative fort trek, season, safety, and packing.",
+  "seasons": [
+    { "label": "Jun – Sep", "sub": "Monsoon — lush forest approach", "badge": "best" },
+    { "label": "Oct – Feb", "sub": "Comfortable and clear", "badge": "ok" },
+    { "label": "Mar – May", "sub": "Hot and dry", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "From Neral", "difficulty": "moderate", "distanceKm": 7, "duration": "1.5–2 hrs to the main point", "notes": "Reached easily by train to Neral — good option if traveling from Mumbai without a car." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Peb Fort is quieter than nearby Matheran and Prabalgad, which means less foot traffic to rely on if something goes wrong.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["Less crowded than neighboring treks — tell someone your plan", "Combine with a Matheran day trip if you want a fuller day out"] },
+      { "title": "On the trail", "items": ["Forest sections can be overgrown post-monsoon — watch the path markers", "Some rocky scrambling near the fort itself"] },
+      { "title": "Solo-specific", "items": ["Quieter trail than most on this list — extra caution warranted going alone", "Easily reached by train from Mumbai, useful if you don't have your own vehicle"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Karjat Police Station", "number": "02148-222033" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Trekking shoes with grip", "amazonLink": null },
+      { "name": "Rain jacket in monsoon", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "2L water", "amazonLink": null },
+      { "name": "Offline map of the route — less signage than popular forts", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

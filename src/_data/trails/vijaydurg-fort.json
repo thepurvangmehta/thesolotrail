@@ -1,0 +1,57 @@
+{
+  "id": "vijaydurg-fort",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "coastal",
+  "name": "Vijaydurg Fort",
+  "shortName": "Vijaydurg",
+  "tagline": "A 12th-century sea fort surrounded by water on three sides — land-accessible",
+  "difficulty": "easy",
+  "maxAltitudeM": 20,
+  "totalDistanceKm": 2,
+  "elevationGainM": 20,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Vijaydurg town, near Devgad",
+  "nearestCity": "Sindhudurg / Kolhapur",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/vijaydurg-fort/1600/900",
+  "cardImage": "https://picsum.photos/seed/vijaydurg-fort/800/600",
+  "seoTitle": "Vijaydurg Fort Solo Guide — The Solo Trail",
+  "seoDescription": "Solo traveler's guide to Vijaydurg, a 17-acre Konkan coast fort near Devgad — history, land access, and safety notes.",
+  "seasons": [
+    { "label": "Oct – Feb", "sub": "Pleasant coastal weather", "badge": "best" },
+    { "label": "Jun – Sep", "sub": "Monsoon — dramatic sea views but rain and wind exposure", "badge": "ok" },
+    { "label": "Mar – May", "sub": "Hot and humid", "badge": "avoid" }
+  ],
+  "routeOptions": [
+    { "name": "Walking tour of the fort complex", "difficulty": "easy", "distanceKm": 2, "duration": "1.5–2 hrs", "notes": "Originally a 12th-century Shilahara-era fort, expanded by Shivaji Maharaj. Unlike Janjira and Suvarnadurg, this one is land-accessible — no boat needed — despite being surrounded by sea on three sides." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "Vijaydurg is a straightforward, land-accessible coastal fort — low risk, mainly weathered-stone footing and sea-cliff edges to respect.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["No boat required — plan this as a standard day visit", "Combine with nearby Devgad beach for a fuller day"] },
+      { "title": "On the trail", "items": ["Some sections sit close to the sea edge — take care in wind or rain", "Weathered stone paths can be uneven"] },
+      { "title": "Solo-specific", "items": ["Land access and easy walking make this comfortably solo-friendly", "Less touristed than Mumbai-area sites — allow extra time for transport logistics"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Devgad Police Station", "number": "02364-262033" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Essentials", "items": [
+      { "name": "Comfortable walking shoes", "amazonLink": null },
+      { "name": "Sun hat and sunscreen", "amazonLink": null },
+      { "name": "1–1.5L water", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

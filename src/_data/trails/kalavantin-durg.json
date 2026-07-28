@@ -1,0 +1,67 @@
+{
+  "id": "kalavantin-durg",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "fort",
+  "name": "Prabalgad & Kalavantin Durg",
+  "shortName": "Kalavantin Durg",
+  "tagline": "One of the Sahyadri's most photographed — and most dangerous — pinnacles",
+  "difficulty": "expert",
+  "maxAltitudeM": 2300,
+  "totalDistanceKm": 8,
+  "elevationGainM": 600,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Thakurwadi / Panvel (via Neral)",
+  "nearestCity": "Mumbai / Pune (via Panvel)",
+  "guideRequired": true,
+  "heroImage": "https://picsum.photos/seed/kalavantin-durg/1600/900",
+  "cardImage": "https://picsum.photos/seed/kalavantin-durg/800/600",
+  "seoTitle": "Kalavantin Durg Solo Trek Guide — The Solo Trail",
+  "seoDescription": "Honest safety-first guide to Prabalgad and Kalavantin Durg near Panvel — documented fatalities, when to skip the pinnacle, and what solo trekkers need to know.",
+  "dataNote": "Altitude figure is approximate/composite for the Prabalgad-Kalavantin ridge; treat as indicative, not precise.",
+  "seasons": [
+    { "label": "Oct – Feb", "sub": "Dry rock — the only season we'd recommend the final pinnacle climb", "badge": "best" },
+    { "label": "Jun – Sep", "sub": "Monsoon — the rock-cut steps become dangerously slick", "badge": "avoid" },
+    { "label": "Mar – May", "sub": "Hot, exposed, no shade on the pinnacle", "badge": "avoid" }
+  ],
+  "seasonNote": "This is one of the few Sahyadri treks where monsoon is explicitly the worst, not the best, time to attempt the summit pinnacle.",
+  "routeOptions": [
+    { "name": "Prabalgad plateau (via Thakurwadi)", "difficulty": "moderate", "distanceKm": 8, "duration": "3–4 hrs", "notes": "The fort plateau itself is a reasonable moderate trek — many solo trekkers do this part and skip the final Kalavantin pinnacle entirely." },
+    { "name": "Kalavantin Durg final pinnacle", "difficulty": "expert", "distanceKm": 1, "duration": "45–60 min extra", "notes": "~60° rock-cut steps, roughly 2 ft wide, no railings. We do not recommend this solo or in monsoon under any circumstances." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "This is the one trek on our list where the honest, safety-first advice is: consider skipping the final climb. Multiple documented deaths (including named 2016 and 2018 cases in Indian press) have occurred on Kalavantin Durg's summit steps.",
+    "alerts": [
+      { "type": "danger", "title": "Documented fatalities on the summit pinnacle", "body": "The final ~60° rock-cut steps to Kalavantin Durg are narrow (~2 ft), unrailed, and have caused multiple confirmed deaths from falls. If you have any doubt about your comfort with exposure and scrambling, do the Prabalgad plateau only and skip the pinnacle." },
+      { "type": "danger", "title": "Never attempt the pinnacle solo or in wet conditions", "body": "Go with an experienced group, in dry season only, and turn back immediately if the steps are wet, crowded, or you feel unsteady. This is not a trek to push through discomfort on." }
+    ],
+    "cards": [
+      { "title": "Before you go", "items": ["Be honest with yourself about scrambling/exposure comfort before committing to the pinnacle", "Go with an experienced group — this is one trek where solo is a real added risk", "Check recent trip reports for step conditions"] },
+      { "title": "On the trail", "items": ["Descend the pinnacle facing the rock, using both hands", "Never attempt in rain, high wind, or after dark", "Let queueing crowds pass rather than rushing on the narrow steps"] },
+      { "title": "Solo-specific", "items": ["Strongly consider joining an organized group for this specific trek rather than going alone", "If solo, stop at the Prabalgad plateau — the views are still excellent without the pinnacle risk"] },
+      { "title": "Signs to turn back", "items": ["Any moisture on the summit steps", "Crowding that forces rushed movement on the narrow section", "Fatigue or unsteadiness of any kind"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Raigad Police Control Room", "number": "02141-222032" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Footwear & clothing", "items": [
+      { "name": "Grippy trekking shoes with real tread — non-negotiable here", "amazonLink": null },
+      { "name": "Full-fingered gloves for the rock-cut steps", "amazonLink": null }
+    ]},
+    { "category": "Gear", "items": [
+      { "name": "2L water", "amazonLink": null },
+      { "name": "Fully charged phone", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

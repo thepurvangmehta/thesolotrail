@@ -1,0 +1,58 @@
+{
+  "id": "murud-janjira",
+  "status": "live",
+  "lastVerified": "2026-07-01",
+  "publishedDate": "2026-07-01",
+  "country": "India",
+  "region": "Maharashtra",
+  "category": "coastal",
+  "name": "Murud-Janjira Fort",
+  "shortName": "Janjira",
+  "tagline": "An island sea fort that was never conquered — boat access only, no elevation gain",
+  "difficulty": "easy",
+  "maxAltitudeM": 0,
+  "totalDistanceKm": 1,
+  "elevationGainM": 0,
+  "duration": { "min": 1, "max": 1 },
+  "trailhead": "Rajapuri jetty, ~5 km from Murud town",
+  "nearestCity": "Mumbai",
+  "guideRequired": false,
+  "heroImage": "https://picsum.photos/seed/murud-janjira/1600/900",
+  "cardImage": "https://picsum.photos/seed/murud-janjira/800/600",
+  "seoTitle": "Murud-Janjira Fort Solo Guide — The Solo Trail",
+  "seoDescription": "Solo traveler's guide to Murud-Janjira, Maharashtra's famous unconquered island sea fort — boat access, safety, and what to expect.",
+  "dataNote": "This is a boat-access island fort visit, not a hiking trek — included here as part of Maharashtra's coastal/Konkan sea fort circuit, which is lighter-weight and different in character from the Sahyadri categories above.",
+  "seasons": [
+    { "label": "Oct – Feb", "sub": "Calmest seas, most reliable boat crossings", "badge": "best" },
+    { "label": "Jun – Sep", "sub": "Monsoon — rough seas can suspend boat services", "badge": "avoid" },
+    { "label": "Mar – May", "sub": "Hot but generally calm seas", "badge": "ok" }
+  ],
+  "routeOptions": [
+    { "name": "Sailboat from Rajapuri jetty", "difficulty": "easy", "distanceKm": 1, "duration": "15–20 min crossing + 1–2 hrs on the fort", "notes": "Built by the Siddis, this island fort was never successfully conquered historically. Purely a boat trip and walk — no trekking involved." }
+  ],
+  "permits": [],
+  "safety": {
+    "intro": "The main safety factor here is sea conditions for the boat crossing, not any physical trekking risk.",
+    "alerts": [],
+    "cards": [
+      { "title": "Before you go", "items": ["Check sea conditions — boat services can be suspended in rough monsoon weather", "Confirm the last return boat time before you disembark"] },
+      { "title": "On the trail", "items": ["Fort interior has uneven, weathered stone — watch your footing", "Limited shade — carry water and sun protection"] },
+      { "title": "Solo-specific", "items": ["Very tourist-friendly and safe for solo travelers", "Boats generally only run with enough passengers — you'll rarely be alone"] }
+    ],
+    "emergencyContacts": [
+      { "label": "Murud Police Station", "number": "02144-274033" },
+      { "label": "Maharashtra Tourism Helpline", "number": "1800-22-1363" }
+    ]
+  },
+  "packing": [
+    { "category": "Essentials", "items": [
+      { "name": "Sun hat and sunscreen", "amazonLink": null },
+      { "name": "Comfortable walking shoes/sandals", "amazonLink": null },
+      { "name": "1L water", "amazonLink": null }
+    ]}
+  ],
+  "gettingThere": {},
+  "costs": {},
+  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
+  "affiliates": { "insurance": null, "activities": [] }
+}

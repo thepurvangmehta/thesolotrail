@@ -1,0 +1,52 @@
+<section class="stub-hero">
+  <img src="{{ trek.heroImage }}" alt="{{ trek.name }}">
+  <div class="stub-hero-overlay"></div>
+  <div class="stub-hero-text">
+    <span class="stub-badge">{{ "Guide in progress" if trek.status == "coming-soon" else "Planned" }}</span>
+    <h1>{{ trek.name }}</h1>
+    <div class="trail-stats-row">
+      <span class="ts ts-country">{{ trek.country | countryFlag }} {{ trek.region }}</span>
+      {% if trek.maxAltitudeM %}<span class="ts ts-alt">{{ trek.maxAltitudeM | commaNum }}m</span>{% endif %}
+      <span class="ts ts-days">{{ trek.duration.min }}{% if trek.duration.max != trek.duration.min %}–{{ trek.duration.max }}{% endif %} day{% if trek.duration.max > 1 %}s{% endif %}</span>
+      <span class="ts ts-diff">{{ trek.difficulty | capitalize }}</span>
+    </div>
+  </div>
+</section>
+
+<div class="stub-body">
+  <h2>{{ trek.tagline }}</h2>
+  <p>We're researching this trek now — full itinerary, permits, safety notes, and packing list are on the way.</p>
+  <p>Get notified when the guide goes live.</p>
+
+  <div class="waitlist-row">
+    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
+  </div>
+
+  <div class="while-waiting">
+    <h3>While you wait</h3>
+    <div class="action-cards">
+      {% for t in collections.trailsNepal %}{% if t.status == "live" %}
+      <a href="/trails/{{ t.id }}/" class="action-card">
+        <div class="icon">🏔️</div>
+        <strong>Try {{ t.shortName }} first</strong>
+        <span>Our full solo guide — {{ t.maxAltitudeM | commaNum }}m, {{ t.country }}</span>
+      </a>
+      {% endif %}{% endfor %}
+      <a href="/trails/" class="action-card">
+        <div class="icon">🗺️</div>
+        <strong>All trails</strong>
+        <span>Browse every trek we cover</span>
+      </a>
+      <a href="/community/" class="action-card">
+        <div class="icon">💬</div>
+        <strong>Community</strong>
+        <span>Talk to other solo trekkers</span>
+      </a>
+      <a href="/downloads/" class="action-card">
+        <div class="icon">⚡</div>
+        <strong>Go Pro</strong>
+        <span>Get every guide on launch day</span>
+      </a>
+    </div>
+  </div>
+</div>
