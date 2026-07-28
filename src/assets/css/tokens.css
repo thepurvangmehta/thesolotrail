@@ -14,6 +14,11 @@ body { min-width: 0; font-family: 'Inter', sans-serif; background: var(--bg); co
   --danger: #C0392B; --danger-light: #FDEDEC;
 }
 
+/* — ACCESSIBILITY — */
+.skip-link { position: absolute; top: -100px; left: 8px; background: var(--forest); color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; z-index: 1000; transition: top .15s; }
+.skip-link:focus { top: 8px; }
+#main-content:focus { outline: none; }
+
 /* — NAV — */
 nav { background: var(--forest); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
 .nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; flex-shrink: 0; }

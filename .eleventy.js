@@ -9,23 +9,14 @@ module.exports = function (eleventyConfig) {
   // Legacy static pages — untouched, shipped as flat files, no templating.
   // Only src/trails/** goes through the Nunjucks pipeline.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/index.html": "index.html" });
-  eleventyConfig.addPassthroughCopy({ "src/404.html": "404.html" });
-  eleventyConfig.addPassthroughCopy({ "src/about": "about" });
-  eleventyConfig.addPassthroughCopy({ "src/community": "community" });
-  eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
-  eleventyConfig.addPassthroughCopy({ "src/guides": "guides" });
-  eleventyConfig.addPassthroughCopy({ "src/pricing": "pricing" });
+  eleventyConfig.addPassthroughCopy({ "src/downloads/abc-trail-kit-print.html": "downloads/abc-trail-kit-print.html" });
+  eleventyConfig.addPassthroughCopy({ "src/downloads/abc.gpx": "downloads/abc.gpx" });
+  eleventyConfig.addPassthroughCopy({ "src/pricing/index.html": "pricing/index.html" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
 
-  eleventyConfig.ignores.add("src/index.html");
-  eleventyConfig.ignores.add("src/404.html");
-  eleventyConfig.ignores.add("src/about/**");
-  eleventyConfig.ignores.add("src/community/**");
-  eleventyConfig.ignores.add("src/downloads/**");
-  eleventyConfig.ignores.add("src/guides/**");
-  eleventyConfig.ignores.add("src/pricing/**");
+  eleventyConfig.ignores.add("src/downloads/abc-trail-kit-print.html");
+  eleventyConfig.ignores.add("src/pricing/index.html");
 
   eleventyConfig.addFilter("commaNum", (n) => (typeof n === "number" ? n.toLocaleString("en-US") : n));
 
@@ -46,6 +37,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("statusLabel", (status) => {
     return { live: "Full guide", "coming-soon": "Coming soon", planned: "Coming soon" }[status] || "Coming soon";
   });
+
+  eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
+  eleventyConfig.addFilter("firstN", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : arr));
 
   return {
     dir: {

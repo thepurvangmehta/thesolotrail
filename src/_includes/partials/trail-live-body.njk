@@ -37,17 +37,17 @@
       <span>{{ trek.name }}</span>
     </div>
 
-    <div class="tabs" role="tablist">
-      <button class="tab active" onclick="switchTab('overview', this)" role="tab">Overview</button>
-      <button class="tab" onclick="switchTab('route', this)" role="tab">{% if trek.itinerary and trek.itinerary.length %}Itinerary{% else %}Route{% endif %}</button>
-      <button class="tab" onclick="switchTab('reach', this)" role="tab">How to Reach</button>
-      <button class="tab" onclick="switchTab('costs', this)" role="tab">Costs</button>
-      <button class="tab" onclick="switchTab('safety', this)" role="tab">Safety</button>
-      <button class="tab" onclick="switchTab('packing', this)" role="tab">Packing</button>
+    <div class="tabs" role="tablist" aria-label="Trek information">
+      <button class="tab active" onclick="switchTab('overview', this)" onkeydown="tabKeydown(event, this)" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" tabindex="0">Overview</button>
+      <button class="tab" onclick="switchTab('route', this)" onkeydown="tabKeydown(event, this)" role="tab" id="tab-route" aria-controls="panel-route" aria-selected="false" tabindex="-1">{% if trek.itinerary and trek.itinerary.length %}Itinerary{% else %}Route{% endif %}</button>
+      <button class="tab" onclick="switchTab('reach', this)" onkeydown="tabKeydown(event, this)" role="tab" id="tab-reach" aria-controls="panel-reach" aria-selected="false" tabindex="-1">How to Reach</button>
+      <button class="tab" onclick="switchTab('costs', this)" onkeydown="tabKeydown(event, this)" role="tab" id="tab-costs" aria-controls="panel-costs" aria-selected="false" tabindex="-1">Costs</button>
+      <button class="tab" onclick="switchTab('safety', this)" onkeydown="tabKeydown(event, this)" role="tab" id="tab-safety" aria-controls="panel-safety" aria-selected="false" tabindex="-1">Safety</button>
+      <button class="tab" onclick="switchTab('packing', this)" onkeydown="tabKeydown(event, this)" role="tab" id="tab-packing" aria-controls="panel-packing" aria-selected="false" tabindex="-1">Packing</button>
     </div>
 
     <!-- OVERVIEW -->
-    <div class="tab-panel active" id="panel-overview">
+    <div class="tab-panel active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
       <h2 class="section-heading">About this trek</h2>
       <p class="section-intro">{{ trek.tagline }}</p>
       <div class="overview-grid">
@@ -76,7 +76,7 @@
     </div>
 
     <!-- ROUTE / ITINERARY -->
-    <div class="tab-panel" id="panel-route">
+    <div class="tab-panel" id="panel-route" role="tabpanel" aria-labelledby="tab-route" tabindex="0">
       {% if trek.itinerary and trek.itinerary.length %}
         <h2 class="section-heading">Itinerary</h2>
         <p class="section-intro">Day-by-day route. Tap a day to expand.</p>
@@ -122,7 +122,7 @@
     </div>
 
     <!-- HOW TO REACH -->
-    <div class="tab-panel" id="panel-reach">
+    <div class="tab-panel" id="panel-reach" role="tabpanel" aria-labelledby="tab-reach" tabindex="0">
       <h2 class="section-heading">How to reach {{ trek.trailhead }}</h2>
       {% if trek.gettingThere and trek.gettingThere.steps and trek.gettingThere.steps.length %}
         {% if trek.gettingThere.intro %}<p class="section-intro">{{ trek.gettingThere.intro }}</p>{% endif %}
@@ -139,7 +139,7 @@
     </div>
 
     <!-- COSTS -->
-    <div class="tab-panel" id="panel-costs">
+    <div class="tab-panel" id="panel-costs" role="tabpanel" aria-labelledby="tab-costs" tabindex="0">
       <h2 class="section-heading">What it costs</h2>
       {% if trek.costs and (trek.costs.permits or trek.costs.transport or trek.costs.onTrail or trek.costs.extras) %}
         {% for section in [{k:"permits", t:"Permits"}, {k:"transport", t:"Transport"}, {k:"onTrail", t:"On the trail"}, {k:"extras", t:"Extras"}] %}
@@ -159,7 +159,7 @@
     </div>
 
     <!-- SAFETY -->
-    <div class="tab-panel" id="panel-safety">
+    <div class="tab-panel" id="panel-safety" role="tabpanel" aria-labelledby="tab-safety" tabindex="0">
       <h2 class="section-heading">Safety</h2>
       {% if trek.safety and trek.safety.intro %}<p class="section-intro">{{ trek.safety.intro }}</p>{% endif %}
       {% if trek.safety and trek.safety.alerts %}
@@ -186,7 +186,7 @@
     </div>
 
     <!-- PACKING -->
-    <div class="tab-panel" id="panel-packing">
+    <div class="tab-panel" id="panel-packing" role="tabpanel" aria-labelledby="tab-packing" tabindex="0">
       <h2 class="section-heading">Packing list</h2>
       {% if trek.packing and trek.packing.length %}
         {% for cat in trek.packing %}

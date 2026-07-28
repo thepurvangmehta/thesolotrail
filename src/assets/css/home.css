@@ -1,0 +1,94 @@
+/* THE SOLO TRAIL — homepage. Loads after tokens.css. */
+
+/* — HERO — */
+.hero { position: relative; padding: 88px 48px 80px; overflow: hidden; }
+#topo-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero-content { position: relative; z-index: 1; max-width: 780px; }
+.hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--glacier); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+.hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--glacier); flex-shrink: 0; }
+.hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 80px); font-weight: 700; font-style: italic; color: var(--forest); line-height: 1.08; margin-bottom: 28px; letter-spacing: -0.015em; }
+.hero-sub { font-size: 17px; color: var(--text-mid); max-width: 540px; line-height: 1.75; }
+.hero-divider { width: 100%; height: 1px; background: var(--border); }
+
+/* — SECTION CHROME — */
+.section-wrap { max-width: 1100px; margin: 0 auto; padding: 56px 24px; }
+.section-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px; display: flex; align-items: center; gap: 14px; }
+.section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* — MAHARASHTRA BANNER — */
+.mh-banner { background: var(--forest); border-radius: 14px; padding: 40px 44px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; text-decoration: none; transition: box-shadow .25s; }
+.mh-banner:hover { box-shadow: 0 10px 40px rgba(26,58,42,.25); }
+.mh-banner-text { max-width: 560px; }
+.mh-banner-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #7EC8A0; margin-bottom: 10px; }
+.mh-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 3vw, 32px); color: #fff; font-weight: 700; line-height: 1.25; margin-bottom: 10px; }
+.mh-banner p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.65; }
+.mh-banner-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #7EC8A0; white-space: nowrap; transition: gap .2s; }
+.mh-banner:hover .mh-banner-cta { gap: 14px; }
+.mh-banner-stats { display: flex; gap: 20px; flex-shrink: 0; }
+.mh-stat { text-align: center; }
+.mh-stat-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: #fff; line-height: 1; }
+.mh-stat-label { font-size: 10px; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
+
+/* — FEATURED TRAIL CARD — */
+.featured-card { display: grid; grid-template-columns: 1fr 1fr; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--white); text-decoration: none; transition: box-shadow 0.25s; }
+.featured-card:hover { box-shadow: 0 10px 40px rgba(26,58,42,0.12); }
+.fc-image { position: relative; min-height: 440px; overflow: hidden; }
+.fc-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.featured-card:hover .fc-image img { transform: scale(1.04); }
+.fc-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(26,58,42,0.18) 0%, transparent 70%); }
+.fc-region-badge { position: absolute; top: 20px; left: 20px; background: rgba(26,58,42,0.88); color: #7EC8A0; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 4px; }
+.fc-body { padding: 44px 48px; display: flex; flex-direction: column; justify-content: center; }
+.fc-country { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.fc-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 700; color: var(--forest); line-height: 1.12; margin-bottom: 18px; }
+.fc-desc { font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 28px; }
+.fc-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+.fcs { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; background: var(--forest-pale); color: var(--forest); border: 1px solid rgba(26,58,42,0.1); }
+.fcs.hl { background: var(--glacier-light); color: #2A6A82; border-color: rgba(74,143,168,0.18); }
+.fc-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--glacier); transition: gap 0.2s; }
+.featured-card:hover .fc-cta { gap: 14px; }
+
+/* — COMING SOON — */
+.coming-section { border-top: 1px solid var(--border); }
+.coming-section .section-wrap { padding-top: 48px; }
+.coming-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.coming-grid > * { min-width: 0; }
+.coming-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 26px; position: relative; overflow: hidden; text-decoration: none; display: block; transition: border-color .2s; }
+.coming-card:hover { border-color: var(--glacier); }
+.coming-card::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 9px, rgba(221,216,206,0.28) 9px, rgba(221,216,206,0.28) 10px); pointer-events: none; }
+.coming-badge { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); background: var(--amber-light); border: 1px solid rgba(212,136,42,0.2); padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 14px; position: relative; }
+.coming-region { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; position: relative; }
+.coming-title { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 600; color: var(--text-mid); line-height: 1.2; margin-bottom: 10px; position: relative; }
+.coming-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; position: relative; }
+
+/* — MANIFESTO — */
+.manifesto { background: var(--forest); padding: 72px 24px; text-align: center; }
+.manifesto-inner { max-width: 660px; margin: 0 auto; }
+.manifesto-quote { font-family: 'Playfair Display', serif; font-size: clamp(20px, 3vw, 34px); font-style: italic; font-weight: 600; color: var(--white); line-height: 1.45; margin-bottom: 22px; }
+.manifesto-attr { font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* — RESPONSIVE — */
+@media (max-width: 860px) {
+  .featured-card { grid-template-columns: 1fr; }
+  .fc-image { min-height: 300px; }
+  .fc-body { padding: 28px 28px; }
+  .coming-grid { grid-template-columns: 1fr 1fr; }
+  .mh-banner { padding: 28px; }
+  .mh-banner-stats { width: 100%; justify-content: space-around; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 52px 20px 56px; }
+  .hero-eyebrow { margin-bottom: 14px; }
+  .hero-sub { font-size: 15px; }
+  .section-wrap { padding: 40px 16px; }
+  .coming-section .section-wrap { padding-top: 40px; }
+  .coming-grid { grid-template-columns: 1fr; }
+  .fc-body { padding: 24px 20px; }
+  .fc-stats { gap: 6px; }
+  .manifesto { padding: 52px 20px; }
+}
+
+@media (max-width: 400px) {
+  .hero-headline { font-size: 36px; }
+  .fc-image { min-height: 240px; }
+}

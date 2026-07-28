@@ -1,0 +1,80 @@
+---
+seoTitle: Guides — The Solo Trail
+seoDescription: Verified local guides for solo trekkers who want expert support without a full tour package. Register your interest.
+navActive: guides
+---
+{% extends "layouts/base.njk" %}
+
+{% block pagecss %}<link rel="stylesheet" href="/assets/css/guides.css">{% endblock %}
+
+{% block content %}
+
+<section class="guides-hero">
+  <div class="eyebrow">Guide marketplace — coming soon</div>
+  <h1>Expert support, on your terms</h1>
+  <p>Sometimes you want a guide for a tricky section, not for the whole trek. We're building a marketplace for exactly that.</p>
+</section>
+
+<div class="guides-main">
+
+  <div class="value-grid">
+    <div class="value-card">
+      <div class="value-icon">✅</div>
+      <h3>Verified locals</h3>
+      <p>Every guide is vetted — licensed, English-speaking, and reviewed by solo trekkers like you.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">📅</div>
+      <h3>Hire by the day</h3>
+      <p>You don't need a guide for the whole trek. Book for a tough section — a high pass, a technical fort climb — and go solo the rest.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💰</div>
+      <h3>Transparent rates</h3>
+      <p>Published day rates in local currency. No negotiation, no commission surprises.</p>
+    </div>
+  </div>
+
+  <div class="cta-split">
+    <div class="cta-card cta-trekker">
+      <h2>I'm a solo trekker</h2>
+      <p>Get notified when the guide marketplace goes live. Priority access for early waitlist members on Annapurna, Everest, and Maharashtra's technical treks (Kalavantin Durg, AMK, Sandhan Valley).</p>
+      <a href="mailto:hello@thesolotrail.com?subject=Guide Marketplace – Trekker Interest&body=I'd like to be notified when the guide marketplace launches." class="btn-trekker">Join trekker waitlist →</a>
+    </div>
+    <div class="cta-card cta-guide-reg">
+      <h2>I'm a local guide</h2>
+      <p>Register your interest to be listed. We're onboarding verified guides for ABC, EBC, and Maharashtra's most technical treks first.</p>
+      <a href="mailto:hello@thesolotrail.com?subject=Guide Registration Interest&body=I'd like to register as a guide on The Solo Trail." class="btn-guide-reg">Register as a guide →</a>
+    </div>
+  </div>
+
+  <div class="how-section">
+    <h2>How it'll work</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Browse verified guides by trail and section</strong>
+          <span>Filter by language, specialty (altitude sickness, technical scrambling, navigation), and availability.</span>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Book by day or section <span class="step-badge">Not group tours</span></strong>
+          <span>Hire a guide for day 3 over Thorong La, or just the Nalichi Vaat scramble on Harishchandragad — you decide the scope.</span>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Pay securely, leave a verified review</strong>
+          <span>Payment held in escrow until your trek day confirms. Review goes back to the community.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

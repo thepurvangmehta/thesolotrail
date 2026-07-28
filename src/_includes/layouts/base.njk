@@ -13,12 +13,24 @@
 {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
 <meta property="og:url" content="https://thesolotrail.com{{ page.url }}">
 <meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:site_name" content="The Solo Trail">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seoTitle or title }}">
+<meta name="twitter:description" content="{{ seoDescription or description }}">
+{% if ogImage %}<meta name="twitter:image" content="{{ ogImage }}">{% endif %}
 <link rel="canonical" href="https://thesolotrail.com{{ page.url }}">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="theme-color" content="#1A3A2A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/tokens.css">
 {% block pagecss %}{% endblock %}
+{% block jsonld %}{% endblock %}
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -26,20 +38,32 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-{% include "partials/nav.njk" %}
+<a href="#main-content" class="skip-link">Skip to content</a>
 
+{% if not hideNav %}{% include "partials/nav.njk" %}{% endif %}
+
+<div id="main-content" tabindex="-1">
 {% block content %}{% endblock %}
+</div>
 
-{% include "partials/footer.njk" %}
+{% if not hideFooter %}{% include "partials/footer.njk" %}{% endif %}
 
+{% if not hideNav %}
 <script>
-  document.getElementById('nav-hamburger').addEventListener('click', function() {
-    document.getElementById('nav-links').classList.toggle('open');
+  var navHamburger = document.getElementById('nav-hamburger');
+  var navLinks = document.getElementById('nav-links');
+  navHamburger.addEventListener('click', function() {
+    var open = navLinks.classList.toggle('open');
+    navHamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('nav')) document.getElementById('nav-links').classList.remove('open');
+    if (!e.target.closest('nav')) {
+      navLinks.classList.remove('open');
+      navHamburger.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>
+{% endif %}
 {% block pagejs %}{% endblock %}
 <script src="/assets/currency.js"></script>
 </body>
