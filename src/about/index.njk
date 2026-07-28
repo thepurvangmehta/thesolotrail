@@ -6,7 +6,39 @@ navActive: about
 ---
 {% extends "layouts/base.njk" %}
 
+{% block headExtras %}
+<link rel="preload" as="image" href="https://commons.wikimedia.org/wiki/Special:FilePath/Hiker_in_the_top_of_mountain.JPG?width=1200" fetchpriority="high">
+{% endblock %}
+
 {% block pagecss %}<link rel="stylesheet" href="/assets/css/about.css">{% endblock %}
+
+{% block jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ editor.name }}",
+  "jobTitle": "{{ editor.role }}",
+  "description": "{{ editor.bio }}",
+  "url": "https://thesolotrail.com/about/",
+  "sameAs": {{ editor.sameAs | dump | safe }}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Solo Trail",
+  "url": "https://thesolotrail.com/",
+  "logo": "https://thesolotrail.com/assets/favicon.svg",
+  "founder": {
+    "@type": "Person",
+    "name": "{{ editor.name }}"
+  },
+  "sameAs": {{ editor.sameAs | dump | safe }}
+}
+</script>
+{% endblock %}
 
 {% block content %}
 
@@ -72,6 +104,32 @@ navActive: about
         </div>
       </li>
     </ul>
+  </section>
+
+  <section class="about-section editor-section">
+    <h2>About the editor</h2>
+    <div class="editor-card">
+      {% if editor.photo %}
+      <img class="editor-photo" src="{{ editor.photo }}" alt="{{ editor.name }}" width="96" height="96" loading="lazy">
+      {% else %}
+      <div class="editor-avatar" aria-hidden="true">{{ editor.initials }}</div>
+      {% endif %}
+      <div class="editor-body">
+        <div class="editor-name">{{ editor.name }}</div>
+        <div class="editor-role">{{ editor.role }}</div>
+        <p class="editor-bio">{{ editor.bio }}</p>
+        <div class="editor-links">
+          {% for link in editor.sameAs %}
+          <a href="{{ link }}" class="editor-link" rel="me noopener"{% if link.startsWith('http') %} target="_blank"{% endif %}>
+            {%- if 'github' in link %}GitHub
+            {%- elif link.startsWith('mailto:') %}Email
+            {%- else %}{{ link }}
+            {%- endif %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="about-section">

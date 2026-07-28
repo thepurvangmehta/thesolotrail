@@ -22,6 +22,30 @@
   "guideRequired": true,
   "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Welcome_to_Vally_of_Shadow...!.jpg?width=1600",
   "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Welcome_to_Vally_of_Shadow...!.jpg?width=800",
+  "highlights": [
+    "Narrow, deep Sahyadri canyon — the 'Valley of Shadows' lives up to its name in person.",
+    "Rappelling is mandatory, not optional — at least one significant rope section on the standard route.",
+    "Flash-flood risk in monsoon — water can rise fast inside the gorge even when it's clear overhead.",
+    "Short distance (~2 km traverse) but high technical demand — this is expert-grade, not a beginner canyon walk.",
+    "We do not recommend attempting this solo under any circumstances — book with a qualified local operator."
+  ],
+  "gallery": [
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandhan_Vally..!.jpg?width=800",
+      "alt": "Inside the Sandhan Valley canyon",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandhanvalley-2023.jpg?width=800",
+      "alt": "Sandhan Valley canyon walls",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Welcome_to_Vally_of_Shadow...!.jpg?width=800",
+      "alt": "Welcome sign at the entrance to the Valley of Shadow",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    }
+  ],
   "seoTitle": "Sandhan Valley Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Sandhan Valley near Samrad — the narrow Sahyadri canyon trek with rappelling, flash-flood risk, and why you shouldn't attempt it alone.",
   "dataNote": "Sources disagree on the rappel height (~45 ft vs. up to ~120 ft cited) — likely reflects different sections/route variants. Confirm exact figures with your chosen operator's route notes rather than treating either number as fixed. The 'Grand Canyon of Maharashtra' comparison used in some marketing copy is colorful description, not a geological classification.",

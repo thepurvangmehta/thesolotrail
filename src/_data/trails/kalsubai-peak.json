@@ -22,6 +22,30 @@
   "guideRequired": false,
   "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalasubai.jpg?width=1600",
   "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalasubai.jpg?width=800",
+  "highlights": [
+    "Maharashtra's highest peak at 1,646m — nicknamed the 'Everest of Maharashtra'.",
+    "Iron ladders bolted into the rock face for the final 200m vertical climb — only moderately technical.",
+    "Crowded on weekends and during the navratri night-trek season; weekdays are quiet.",
+    "Best July–September for lush green Sahyadri; October–February for clear sunrise panoramas.",
+    "No permit required. Bari village (the trailhead) has dhabas, parking, and basic homestays."
+  ],
+  "gallery": [
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalasubai_from_base.jpg?width=800",
+      "alt": "Kalsubai peak seen from the base village",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise_from_Kalsubai_peak_1.jpg?width=800",
+      "alt": "Sunrise from the Kalsubai summit",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalsubai,_Western_Ghats.jpg?width=800",
+      "alt": "Kalsubai in the Western Ghats landscape",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    }
+  ],
   "seoTitle": "Kalsubai Peak Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Kalsubai, Maharashtra's highest peak — iron ladder sections, night-trek sunrise option, crowds, and safety.",
   "seasons": [

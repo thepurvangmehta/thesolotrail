@@ -5,6 +5,7 @@
   <div class="stub-hero-text">
     <span class="stub-badge">{{ "Guide in progress" if trek.status == "coming-soon" else "Planned" }}</span>
     <h1>{{ trek.name }}</h1>
+    {% if trek.lastVerified %}<p class="last-updated">Guide status: <time datetime="{{ trek.lastVerified }}">{{ trek.status | statusLabel }} (updated {{ trek.lastVerified }})</time></p>{% endif %}
     <div class="trail-stats-row">
       <span class="ts ts-country">{{ trek.country | countryFlag }} {{ trek.region }}</span>
       {% if trek.maxAltitudeM %}<span class="ts ts-alt">{{ trek.maxAltitudeM | commaNum }}m</span>{% endif %}

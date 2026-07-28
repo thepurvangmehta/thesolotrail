@@ -50,6 +50,14 @@
 .trail-card-soon .card-cta-link { color: var(--text-muted); }
 .cta-arrow { font-size: 14px; }
 
+/* COMING-SOON CARDS — desaturated, no hover lift, amber badge */
+.trail-card-soon .card-img img { opacity: .62; filter: grayscale(.35); }
+.trail-card-soon { opacity: .95; }
+.trail-card-soon:hover { transform: none; box-shadow: 0 2px 6px rgba(0,0,0,.05); }
+.trail-card-soon:hover .card-img img { transform: none; }
+.trail-card-soon .badge-status { background: var(--amber-light); color: #8B5A00; }
+.trail-card-soon .badge-status::before { content: "⏳ "; }
+
 /* STATE STUB TILES */
 .state-tile { background: var(--forest-pale); border: 1px dashed #B9CCC0; border-radius: 12px; padding: 22px 20px; display: flex; flex-direction: column; justify-content: center; min-height: 180px; }
 .state-tile-badge { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--forest); background: rgba(255,255,255,.6); padding: 3px 9px; border-radius: 10px; align-self: flex-start; margin-bottom: 10px; }

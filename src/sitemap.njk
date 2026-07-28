@@ -7,7 +7,12 @@ eleventyExcludeFromCollections: true
   <url><loc>https://thesolotrail.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://thesolotrail.com/trails/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 {%- for t in trailsList %}
-  <url><loc>https://thesolotrail.com/trails/{{ t.id }}/</loc><changefreq>monthly</changefreq><priority>{{ "0.9" if t.status == "live" else "0.6" }}</priority></url>
+  <url>
+    <loc>https://thesolotrail.com/trails/{{ t.id }}/</loc>
+    {% if t.lastVerified %}<lastmod>{{ t.lastVerified }}</lastmod>{% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>{{ "0.9" if t.status == "live" else "0.6" }}</priority>
+  </url>
 {%- endfor %}
   <url><loc>https://thesolotrail.com/downloads/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thesolotrail.com/pricing/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

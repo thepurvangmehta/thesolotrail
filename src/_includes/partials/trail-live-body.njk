@@ -9,6 +9,7 @@
     </div>
     <h1>{{ trek.name }}</h1>
     <p class="hero-sub">{{ trek.tagline }}</p>
+    {% if trek.lastVerified %}<p class="last-updated">Last verified: <time datetime="{{ trek.lastVerified }}">{{ trek.lastVerified }}</time></p>{% endif %}
     <div class="hero-tags">
       <span class="htag green">Solo-friendly</span>
       {% if trek.maxAltitudeM %}<span class="htag">{{ trek.maxAltitudeM | commaNum }}m</span>{% endif %}
@@ -28,8 +29,24 @@
   <div class="stat-item"><span class="stat-label">Trailhead</span><span class="stat-value">{{ trek.trailhead }}</span><span class="stat-sub">&nbsp;</span></div>
 </div>
 
+{% if trek.gallery and trek.gallery.length %}
+<div class="gallery-strip">
+  {% for g in trek.gallery %}
+  <figure class="gallery-img">
+    <img src="{{ g.image }}" alt="{{ g.alt }}" loading="lazy" width="800" height="450">
+    {% if g.credit %}<figcaption class="gallery-credit">{{ g.credit }}</figcaption>{% endif %}
+  </figure>
+  {% endfor %}
+</div>
+{% endif %}
+
+{# Two-column layout: left main content + 320px sidebar.
+   `<main id="main-content">` is opened in base.njk — DO NOT open another <main> here.
+   The `.page-body` grid must contain exactly two children:
+   `.page-body-inner` (left column) and `<aside class="sidebar">` (right column).
+   A stray </main> here will silently break the grid (was a real bug). #}
 <div class="page-body">
-  <main>
+  <div class="page-body-inner">
     <div class="breadcrumb">
       <a href="/">Home</a><span class="breadcrumb-sep">›</span>
       <a href="/trails/">Trails</a><span class="breadcrumb-sep">›</span>
@@ -49,6 +66,14 @@
     <!-- OVERVIEW -->
     <div class="tab-panel active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
       <h2 class="section-heading">About this trek</h2>
+      {% if trek.highlights and trek.highlights.length %}
+      <div class="highlights-box">
+        <div class="highlights-title">Quick read</div>
+        <ul class="highlights-list">
+          {% for h in trek.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
       <p class="section-intro">{{ trek.tagline }}</p>
       <div class="overview-grid">
         <div class="overview-card">
@@ -201,7 +226,26 @@
         <div class="placeholder-box"><strong>Packing list coming soon</strong></div>
       {% endif %}
     </div>
-  </main>
+
+    {% set related = relatedTrails(trek) %}
+    {% if related and related.length %}
+    <section class="related-trails">
+      <h2 class="section-heading">Similar solo treks</h2>
+      <p class="section-intro">Other routes solo trekkers tend to compare with {{ trek.name }}.</p>
+      <div class="related-grid">
+        {% for r in related %}
+        <a href="/trails/{{ r.id }}/" class="related-card">
+          <img src="{{ r.cardImage or r.heroImage }}" alt="{{ r.name }}" loading="lazy" width="400" height="140">
+          <div class="related-body">
+            <div class="related-name">{{ r.name }}</div>
+            <div class="related-meta">{{ r.country | countryFlag }} {{ r.region }} · {{ r.difficulty | capitalize }}</div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
 
   <aside class="sidebar">
     {% if trek.permits and trek.permits.length %}

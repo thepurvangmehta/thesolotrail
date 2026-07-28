@@ -27,6 +27,17 @@
   "seoTitle": "Trek Name Solo Trek Guide — The Solo Trail",
   "seoDescription": "One or two sentences for search results.",
 
+  "highlights": [
+    "Optional — 3–4 short bullets shown at the top of the Overview tab",
+    "E.g. 'Solo-friendly teahouses along the route'",
+    "E.g. 'Permits can be arranged at the trailhead'"
+  ],
+  "gallery": [
+    { "image": "https://...same-as-hero.jpg?width=800", "alt": "Short alt text", "credit": "Wikimedia Commons · CC BY-SA" },
+    { "image": "https://...second-shot.jpg?width=800", "alt": "Short alt text", "credit": "Photo: name" }
+  ],
+  "_highlights_gallery_note": "Both fields are optional. The trail page renders the highlights box and gallery strip only if these are present. Other trails will simply skip the sections — no fallback needed.",
+
   "dataNote": "Optional — flag conflicting/unverified figures here, e.g. 'Altitude cited 2,700–4,350 ft across sources; using the more consistently reported figure.'",
 
   "seasons": [

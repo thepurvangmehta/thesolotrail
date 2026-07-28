@@ -1,10 +1,14 @@
 const getTrails = require("./src/_data/trailsList.js");
+const relatedTrails = require("./src/_data/relatedTrails.js");
 
 module.exports = function (eleventyConfig) {
   const trails = getTrails();
   eleventyConfig.addCollection("trailsNepal", () => trails.filter((t) => t.country === "Nepal"));
   eleventyConfig.addCollection("trailsIndia", () => trails.filter((t) => t.country === "India"));
   eleventyConfig.addCollection("trailsMaharashtra", () => trails.filter((t) => t.region === "Maharashtra"));
+
+  // Expose relatedTrails() as a global template function so Nunjucks can call it
+  eleventyConfig.addGlobalData("relatedTrails", () => relatedTrails);
 
   // Legacy static pages — untouched, shipped as flat files, no templating.
   // Only src/trails/** goes through the Nunjucks pipeline.

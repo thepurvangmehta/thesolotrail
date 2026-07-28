@@ -21,6 +21,30 @@
   "guideRequired": false,
   "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=1600",
   "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=800",
+  "_gallery_highlights_note": "Example data — replace with curated photos when available. Other trails opt in by adding the same shape.",
+  "highlights": [
+    "Solo-friendly teahouses at every overnight stop — no group-booking required.",
+    "ACAP permit (~₨3,000) and TIMS card (~₨2,000) arranged independently at Birethanti or Kathmandu.",
+    "Helicopter rescue is registered and affordable (~USD 4,500 insured) — buy travel insurance that explicitly covers it.",
+    "Macchapuchhare base camp at 4,130m is the visual reward — mornings are clearer than afternoons."
+  ],
+  "gallery": [
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Annapurna_Base_Camp_with_snow.jpg?width=800",
+      "alt": "Annapurna Base Camp sanctuary with snow",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Machapuchare.jpg?width=800",
+      "alt": "Machapuchare fishtail peak above the clouds",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_from_poonhill-2019-BJ.jpg?width=800",
+      "alt": "Himalayan panorama from Poon Hill viewpoint",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    }
+  ],
   "seoTitle": "Annapurna Base Camp Solo Trek Guide — The Solo Trail",
   "seoDescription": "Complete solo trekker's guide to Annapurna Base Camp. 10-day itinerary, permits, costs, safety and packing list. No guide required.",
   "seasons": [

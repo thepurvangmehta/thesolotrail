@@ -22,6 +22,30 @@
   "guideRequired": false,
   "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_the_Konkan_Kada_(51373052026).jpg?width=1600",
   "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_the_Konkan_Kada_(51373052026).jpg?width=800",
+  "highlights": [
+    "Konkan Kada — a ~1,000m sheer cliff edge with no fence, the trek's signature feature.",
+    "Three route options from easy (Pachnai) to expert (Nalichi Vaat with rope sections).",
+    "Overnight stays possible in ancient cave shelters near the Harishchandreshwar temple.",
+    "Leopard sightings reported near the base villages — trek loudly at dawn/dusk.",
+    "Best October–February for clear skies and safer footing; monsoon gives dramatic cloud effects but worse visibility."
+  ],
+  "gallery": [
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Harishchandragad.jpg?width=800",
+      "alt": "Panoramic view from Harishchandragad summit",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalbhairav_pinnacle_Scj.jpg?width=800",
+      "alt": "Kalbhairav pinnacle near Harishchandragad",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    },
+    {
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/At_top_of_Harishchandragad_(51374011530).jpg?width=800",
+      "alt": "Trekkers at the top of Harishchandragad",
+      "credit": "Wikimedia Commons · CC BY-SA"
+    }
+  ],
   "seoTitle": "Harishchandragad Solo Trek Guide — The Solo Trail",
   "seoDescription": "Solo trekker's guide to Harishchandragad and Konkan Kada — route options by difficulty, cliff-edge safety, leopard-sighting notes, and packing.",
   "dataNote": "Altitude cited as 1,424m / ~4,650–4,671 ft across sources — treated as approximate; verify locally before publishing exact figures.",

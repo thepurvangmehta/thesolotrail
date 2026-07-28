@@ -48,6 +48,10 @@ eleventyComputed:
 <script type="application/ld+json">{{ breadcrumbLd | dump | safe }}</script>
 {% endblock %}
 
+{% block headExtras %}
+<link rel="preload" as="image" href="{{ trek.heroImage }}" fetchpriority="high">
+{% endblock %}
+
 {% block content %}
 {% if trek.status == 'live' %}
   {% include "partials/trail-live-body.njk" %}
