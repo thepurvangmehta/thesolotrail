@@ -5,7 +5,7 @@ const DEFS = [
     key: "himalayan",
     label: "Himalayan Classics",
     sub: "Nepal & the high Himalaya",
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Annapurna_Sanctuary_(48729169061).jpg?width=900",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=900",
     match: (t) => !t.category,
   },
   {
