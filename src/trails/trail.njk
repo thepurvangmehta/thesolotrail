@@ -44,8 +44,19 @@ eleventyComputed:
     { "@type": "ListItem", "position": 3, "name": trek.name, "item": trekUrl }
   ]
 } %}
+{# FAQPage schema only on live trails: the visible FAQ block lives in
+   trail-live-body.njk, and Google requires the answers be on-page. Stub pages
+   render trail-stub-body.njk with no FAQ, so they must not claim the schema. #}
+{% set faqs = (trek | trekFaqs) if trek.status == 'live' else [] %}
+{% if faqs.length %}
+{% set faqLd = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [] } %}
+{% for f in faqs %}
+  {% set _ = faqLd.mainEntity.push({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }) %}
+{% endfor %}
+{% endif %}
 <script type="application/ld+json">{{ trekLd | dump | safe }}</script>
 <script type="application/ld+json">{{ breadcrumbLd | dump | safe }}</script>
+{% if faqs.length %}<script type="application/ld+json">{{ faqLd | dump | safe }}</script>{% endif %}
 {% endblock %}
 
 {% block headExtras %}

@@ -186,8 +186,64 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Lonavala is the easy gateway — a direct train from Mumbai or Pune, then a shared jeep to the base village.",
+    "steps": [
+      {
+        "title": "Reach Lonavala (primary route)",
+        "body": "Local or express train from Mumbai CSMT/Dadar/Thane or Pune to Lonavala station — frequent, ~1.5–2.5 hrs from Mumbai, ~1 hr from Pune."
+      },
+      {
+        "title": "Lonavala to Udhewadi (base village)",
+        "body": "Shared jeep or six-seater from Lonavala station toward Aambivali/Tungarli-Udhewadi (~15–20 km). ST buses on this stretch are infrequent; shared jeeps are the practical option and run more reliably at weekends. Journey ~1–1.5 hrs depending on road conditions."
+      },
+      {
+        "title": "Alternative: via Karjat and Kondhane",
+        "body": "A longer, steeper route starts from Karjat station (local train from Mumbai CSMT). From Karjat, take an auto-rickshaw or local bus to Kondhane village near the Kondane Buddhist caves, then trek 3–4 hrs to Rajmachi."
+      },
+      {
+        "title": "Trek and return",
+        "body": "From Udhewadi it's a gentle 30–40 min walk to the fort. Shared jeeps back to Lonavala thin out by early evening (~5–6pm) — start descending by mid-afternoon, especially on weekdays when transport is sparser."
+      }
+    ],
+    "permitNote": "No entry fee or permit required — the fort sits on forest-department land. The trail gets slippery in monsoon; take care on the exposed ridge sections."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Pune → Lonavala",
+        "note": "Local 2nd class or express",
+        "amountINR": "15–100"
+      },
+      {
+        "item": "Shared jeep: Lonavala → Udhewadi",
+        "note": "Per person one-way; less frequent on weekdays",
+        "amountINR": "100–150"
+      },
+      {
+        "item": "Karjat route: train + auto to Kondhane",
+        "note": "Alternative longer approach",
+        "amountINR": "150–300"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Optional — the trail is fairly well-marked",
+        "amountINR": "500–800 per group"
+      },
+      {
+        "item": "Food at Udhewadi",
+        "note": "Basic thali, parathas, tea",
+        "amountINR": "150–250"
+      },
+      {
+        "item": "Homestay (if staying overnight)",
+        "note": "Per person, basic village stay",
+        "amountINR": "300–500"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

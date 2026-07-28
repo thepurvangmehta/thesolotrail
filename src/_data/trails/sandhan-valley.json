@@ -167,8 +167,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Samrad village is the base. This is a guided, gear-dependent canyon descent — arrange it through the local guide association.",
+    "steps": [
+      {
+        "title": "Reach Kasara (or Igatpuri)",
+        "body": "Local train from Mumbai, about 2–2.5 hours to Kasara."
+      },
+      {
+        "title": "Kasara to Samrad village",
+        "body": "Shared jeeps run on a fill-and-go basis from Kasara to Samrad — the base village for both Sandhan Valley and the Alang-Madan-Kulang range — roughly 1.5–2 hours."
+      },
+      {
+        "title": "The canyon descent",
+        "body": "The valley walk itself is about 3 km but includes rock-hopping, wading and rappelling sections, totalling roughly 5 hours including safety stops."
+      },
+      {
+        "title": "Plan to stay overnight",
+        "body": "Jeep connections out of Samrad thin out by evening, so an overnight homestay in Samrad before or after the trek is the norm rather than attempting a rushed day trip from Mumbai or Pune."
+      }
+    ],
+    "permitNote": "Sandhan Valley falls within the Kalsubai-Harishchandragad Wildlife Sanctuary boundary, and permission requirements have tightened in recent years — confirm current rules with the local forest or guide office at Samrad. A local guide is effectively mandatory given the rappelling sections; do not attempt this solo. Flash-flood risk in monsoon is real."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Kasara",
+        "note": "One-way",
+        "amountINR": "20–40"
+      },
+      {
+        "item": "Shared jeep: Kasara → Samrad",
+        "note": "Per person one-way",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide plus rope and safety gear",
+        "note": "Per person; mandatory for the rappelling stretch",
+        "amountINR": "500–1,000"
+      },
+      {
+        "item": "Homestay in Samrad (incl. meals)",
+        "note": "Per night",
+        "amountINR": "500–800"
+      },
+      {
+        "item": "Additional food",
+        "note": "Per day",
+        "amountINR": "200–400"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

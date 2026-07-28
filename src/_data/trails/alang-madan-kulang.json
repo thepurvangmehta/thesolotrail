@@ -139,8 +139,64 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "This is a 2–3 day technical expedition, not a day trek. Logistics must be arranged in advance through Ambewadi village.",
+    "steps": [
+      {
+        "title": "Reach Kasara",
+        "body": "Train from Mumbai or Nashik to Kasara station on the Central Railway — well connected. From Pune, travel via Igatpuri/Ghoti first."
+      },
+      {
+        "title": "Kasara to Ambewadi or Kulangwadi",
+        "body": "There is essentially no scheduled bus service to these remote base villages — a shared or private jeep must be hired from Kasara, taking 2–3 hrs depending on road and monsoon conditions."
+      },
+      {
+        "title": "Arrange guide and logistics in advance",
+        "body": "AMK involves rock-climbing sections that require fixed ropes and an experienced local guide. Guide, porter and homestay arrangements are made through contacts at Ambewadi village — book ahead by phone rather than showing up unannounced."
+      },
+      {
+        "title": "Plan the ascent timing",
+        "body": "Start from the base by 7am to summit Alang before noon and reach the Madan campsite before dark."
+      }
+    ],
+    "permitNote": "We strongly recommend against attempting AMK solo without a professional local guide and proper gear. It is widely regarded as the toughest and most dangerous trek in the Sahyadris, with several fatal incidents on record. Treat this as a guided, multi-day, technical-gear expedition — not a solo day trip."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Nashik → Kasara",
+        "note": "Local train",
+        "amountINR": "30–80"
+      },
+      {
+        "item": "Jeep: Kasara → Ambewadi",
+        "note": "Full vehicle; ₹200–400 per person if shared",
+        "amountINR": "1,500–2,500"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide (effectively mandatory)",
+        "note": "Not optional on this trek given the technical difficulty",
+        "amountINR": "1,500–2,500 per day"
+      },
+      {
+        "item": "Porter / rope-fixing assistance",
+        "note": "Arranged via the guide",
+        "amountINR": "500–1,000 per day"
+      },
+      {
+        "item": "Gear and rope-use assistance",
+        "note": "Via guide — there are no formal rental shops here",
+        "amountINR": "200–500"
+      },
+      {
+        "item": "Food and homestay at Ambewadi",
+        "note": "Per meal or night across a multi-day trek",
+        "amountINR": "200–400"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

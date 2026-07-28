@@ -108,8 +108,64 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "A boat from Rajapuri jetty is the only way in — and the service shuts down for the monsoon.",
+    "steps": [
+      {
+        "title": "Reach Murud town",
+        "body": "From Mumbai, direct ST buses or private vehicles run via Alibag–Revdanda, about 165 km / 4–5 hours. There's no railway station close to Murud itself."
+      },
+      {
+        "title": "Alternative via rail",
+        "body": "Take a local or express train to Panvel or Roha, then an ST bus or shared taxi onward to Murud (roughly 2–3 additional hours)."
+      },
+      {
+        "title": "Murud to Rajapuri jetty",
+        "body": "Auto-rickshaw or a short walk (~5 km) from Murud town to the Rajapuri jetty, the boat departure point."
+      },
+      {
+        "title": "Boat to the fort",
+        "body": "Boats run more or less continuously from about 7:00am to 4:45pm, weather permitting, taking roughly 20 minutes each way. Service is closed during the monsoon period (roughly June–September)."
+      }
+    ],
+    "permitNote": "Fort entry itself is free; the boat crossing is mandatory paid transport — there's no walking route. Confirm the monsoon closure dates before planning a visit in that window, and check the last return boat time before you disembark on the island."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "ST bus / private vehicle: Mumbai → Murud",
+        "note": "One-way",
+        "amountINR": "200–400"
+      },
+      {
+        "item": "Auto: Murud town → Rajapuri jetty",
+        "note": "One-way",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Boat round trip",
+        "note": "Per person on a shared boat",
+        "amountINR": "50–100"
+      },
+      {
+        "item": "Speedboat",
+        "note": "Alternative, weather-dependent",
+        "amountINR": "200–300"
+      },
+      {
+        "item": "Parking at the jetty",
+        "note": "Per vehicle · approximate",
+        "amountINR": "30"
+      },
+      {
+        "item": "Food",
+        "note": "Stalls near Murud beach and the jetty",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

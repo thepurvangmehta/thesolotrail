@@ -146,8 +146,68 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Khandas is the base village, reached via Karjat or Neral. You can exit down the other side to Pune by bus.",
+    "steps": [
+      {
+        "title": "Reach Karjat or Neral",
+        "body": "Local train from Mumbai CSMT/Dadar/Thane/Kalyan on the Central line, about 1.5–2 hrs."
+      },
+      {
+        "title": "Onward to Kashele",
+        "body": "From Karjat or Neral, take a shared tum-tum or van to Kashele (about 20–40 minutes)."
+      },
+      {
+        "title": "Kashele to Khandas (base village)",
+        "body": "From Kashele, a shared jeep, van or occasional ST bus covers the final stretch to Khandas (about 30–40 minutes)."
+      },
+      {
+        "title": "The climb",
+        "body": "From Khandas, two options — Ganesh Ghat (more technical, with ladders and rock patches) or Shidi Ghat — lead up to the Bhimashankar plateau and temple, roughly 4–5 hours."
+      },
+      {
+        "title": "Return, or exit toward Pune",
+        "body": "Same-day return to Mumbai is tight; many solo trekkers overnight in Khandas or near the temple. Alternatively, direct ST buses run from Bhimashankar down to Pune (about 3 hrs) if you'd rather exit that side."
+      }
+    ],
+    "permitNote": "Bhimashankar is a wildlife sanctuary. A nominal entry fee applies mainly to vehicles entering the plateau by road — walking trekkers usually pay little or nothing, but this varies by season and forest-post staffing. Leopard sightings are reported here; trail dogs often signal an animal's presence before you spot it."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Karjat/Neral",
+        "note": "One-way",
+        "amountINR": "20–40"
+      },
+      {
+        "item": "Shared van: Karjat/Neral → Khandas (via Kashele)",
+        "note": "Combined, per person",
+        "amountINR": "40–70"
+      },
+      {
+        "item": "ST bus: Bhimashankar → Pune",
+        "note": "If exiting that side",
+        "amountINR": "150–200"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Optional; useful on the Ganesh Ghat route",
+        "amountINR": "500–800 per group"
+      },
+      {
+        "item": "Sanctuary / vehicle entry fee",
+        "note": "Mainly applies if entering by road vehicle",
+        "amountINR": "10–50"
+      },
+      {
+        "item": "Food",
+        "note": "Basic dhabas at Khandas and near the temple",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

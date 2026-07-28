@@ -122,8 +122,54 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "A monsoon-only waterfall off the Rajmachi trail — genuinely needs a guide to find.",
+    "steps": [
+      {
+        "title": "Reach Lonavala",
+        "body": "Local train from Mumbai or Pune to Lonavala."
+      },
+      {
+        "title": "Lonavala to Udhewadi / Fanasrai village",
+        "body": "Bus service to this base area is sparse, so most solo travellers hire a taxi or shared vehicle from Lonavala — roughly 1.5–2 hours on a rough road."
+      },
+      {
+        "title": "Trek to the waterfall",
+        "body": "Kataldhar sits off the main Rajmachi trail; reaching it means a descent of about 4–5 km through dense jungle, roughly 2 hours one way from the trailhead."
+      },
+      {
+        "title": "Don't attempt this one without local knowledge",
+        "body": "The forest is thick, the path is unmarked, and it's a monsoon-only waterfall — conditions change fast. This is the trek on our list where going without a guide is genuinely risky rather than just harder."
+      }
+    ],
+    "permitNote": "No formal permit, but a local guide is a practical necessity here, not a nicety. Monsoon season only — the falls are dry outside the rains. Slippery rocks near the plunge pool; keep well back when the flow is heavy."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Pune → Lonavala",
+        "note": "One-way",
+        "amountINR": "40–100"
+      },
+      {
+        "item": "Shared taxi: Lonavala → Udhewadi/Fanasrai",
+        "note": "Per person one-way",
+        "amountINR": "150–300"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Essentially mandatory on this route",
+        "amountINR": "800–1,500 per group/day"
+      },
+      {
+        "item": "Village homestay and food",
+        "note": "If overnighting",
+        "amountINR": "300–500"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

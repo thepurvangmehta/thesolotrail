@@ -207,8 +207,60 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Two very different approaches: Khireshwar from the Mumbai/Kalyan side, or the much easier Pachnai from the Nashik/Ahmednagar side.",
+    "steps": [
+      {
+        "title": "Via Khireshwar (from Mumbai/Kalyan)",
+        "body": "Local train to Kalyan station. From the ST depot beside the station, board a bus toward Alephata via Malshej Ghat and get off at Khubi Phata. From there it's a 6 km walk along a dam road followed by a 3–4 hr climb to the plateau via Khireshwar."
+      },
+      {
+        "title": "Via Pachnai (easiest route)",
+        "body": "Reach Ghoti (via Nashik Road), then a bus toward Sangamner/Akole, alighting at Rajur. From Rajur, a local bus or shared jeep covers the final stretch to Pachnai village where the road ends. This route is only a 2-hr climb and is the easiest way up."
+      },
+      {
+        "title": "Check return transport before you start",
+        "body": "ST buses on the Rajur–Pachnai and Kalyan–Khubi Phata stretches run only a few times a day. Confirm the last bus or jeep back before beginning the climb — trekkers get stranded overnight on this route more often than you'd expect."
+      }
+    ],
+    "permitNote": "No formal permit. The Nalichi Vaat route is technically difficult and not advisable solo — stick to Khireshwar or Pachnai if you're trekking alone."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Kalyan",
+        "note": "Local train",
+        "amountINR": "15–30"
+      },
+      {
+        "item": "ST bus: Kalyan → Khubi Phata",
+        "note": "Via Malshej Ghat, ~3 hrs",
+        "amountINR": "150–200"
+      },
+      {
+        "item": "Shared jeep: Rajur → Pachnai",
+        "note": "Per person; ₹800–1,200 for a full jeep",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Recommended, especially for a first attempt",
+        "amountINR": "800–1,500 per group/day"
+      },
+      {
+        "item": "Food at Pachnai/Khireshwar",
+        "note": "Village homestay meals",
+        "amountINR": "150–300 per meal"
+      },
+      {
+        "item": "Homestay or camping on the plateau",
+        "note": "Per person, overnight",
+        "amountINR": "200–400"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

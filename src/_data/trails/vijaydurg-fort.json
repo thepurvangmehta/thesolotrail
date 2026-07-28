@@ -107,8 +107,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "The most straightforward of the sea forts — land-connected, so no boat needed.",
+    "steps": [
+      {
+        "title": "Reach Kankavli",
+        "body": "The nearest railway station is Kankavli on the Konkan Railway, about 52 km from Vijaydurg, with trains from Mumbai, Pune and Goa."
+      },
+      {
+        "title": "Kankavli to Vijaydurg",
+        "body": "ST buses or shared taxis cover this stretch, roughly 1.5–2 hours."
+      },
+      {
+        "title": "Alternative direct buses",
+        "body": "Direct but infrequent ST buses also run to Vijaydurg from Ratnagiri, Malvan and Devgad — check timings locally, since frequency is limited."
+      },
+      {
+        "title": "No boat required",
+        "body": "Unlike Janjira or Suvarnadurg, Vijaydurg is land-connected — you simply walk in from the road, which makes it much easier to plan around."
+      }
+    ],
+    "permitNote": "A protected monument; any entry fee is nominal — confirm the current rate locally, as it isn't consistently documented. Some sections sit close to the sea edge, so take care in wind or rain."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Sleeper train: Mumbai/Pune → Kankavli",
+        "note": "One-way",
+        "amountINR": "300–600"
+      },
+      {
+        "item": "Local bus/shared taxi: Kankavli → Vijaydurg",
+        "note": "One-way",
+        "amountINR": "100–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Entry fee",
+        "note": "Nominal or free — verify locally",
+        "amountINR": "0–25"
+      },
+      {
+        "item": "Parking",
+        "note": "Per vehicle",
+        "amountINR": "20–30"
+      },
+      {
+        "item": "Food",
+        "note": "Basic",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

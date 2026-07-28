@@ -123,8 +123,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Maharashtra's southernmost hill station — reached via Sawantwadi on the Konkan Railway, not the Pune/Mumbai belt.",
+    "steps": [
+      {
+        "title": "Reach Sawantwadi Road station",
+        "body": "The nearest railhead, on the Konkan Railway, roughly 37 km from Amboli and served by long-distance trains from Mumbai, Pune and Goa."
+      },
+      {
+        "title": "From Sawantwadi Road station",
+        "body": "Shared taxi or auto onward to Amboli town."
+      },
+      {
+        "title": "From Kolhapur (via the interior)",
+        "body": "There's no direct Kolhapur–Amboli bus. Take an ST bus from Kolhapur's Rankala stand to Sawantwadi (roughly 3.5–4 hours), then a local ST bus onward to Amboli (about 31 km, ~1 hour)."
+      },
+      {
+        "title": "By private vehicle",
+        "body": "Kolhapur–Kagal–Nipani–Ajara–Gavse–Amboli is a workable direct road route, though not practical if you're relying on buses."
+      }
+    ],
+    "permitNote": "No general entry permit for the ghat itself, though some viewpoints and waterfalls charge a small local fee. Best — and correspondingly most crowded and slippery — in monsoon, July to September. With around 7,500mm of annual rainfall, landslide and slippery-road risk in the ghat sections is real; check conditions before travelling in July–August."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "ST bus: Kolhapur → Sawantwadi",
+        "note": "One-way",
+        "amountINR": "150–250"
+      },
+      {
+        "item": "Local ST bus: Sawantwadi → Amboli",
+        "note": "One-way",
+        "amountINR": "40–60"
+      },
+      {
+        "item": "Shared taxi: Sawantwadi Road station → Amboli",
+        "note": "Per person, alternative",
+        "amountINR": "100–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local viewpoint / waterfall entry fees",
+        "note": "Per site",
+        "amountINR": "20–50"
+      },
+      {
+        "item": "Food",
+        "note": "Basic",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

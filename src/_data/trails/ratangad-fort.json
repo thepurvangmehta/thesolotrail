@@ -126,8 +126,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Reached via the Bhandardara lake region — by road, or across the backwaters by boat.",
+    "steps": [
+      {
+        "title": "Reach the Bhandardara area",
+        "body": "ST buses run from Mumbai, Nashik and Pune toward Igatpuri/Ghoti and on to Bhandardara/Shendi. Alternatively take a train to Igatpuri or Kasara and continue by shared jeep."
+      },
+      {
+        "title": "Bhandardara to Ratanwadi",
+        "body": "Two options: a shared jeep along the lake-side road (~1–1.5 hrs), or an informal boat crossing of the Bhandardara backwaters (Arthur Lake) followed by a ~4 km walk. Boat operators are informal, don't always run, and fares are negotiated on the spot — confirm availability locally rather than counting on it."
+      },
+      {
+        "title": "Trek to Ratangad",
+        "body": "From Ratanwadi (passing the ancient Amruteshwar Temple), the climb takes 3–4 hrs via the 'Nedhe' needle-eye rock route. The trail forks in places, so a guide or a clear GPS track is genuinely useful."
+      },
+      {
+        "title": "Return timing",
+        "body": "ST bus frequency to Ratanwadi is low; shared jeeps are the practical option both ways, and the last vehicle back typically leaves in the early evening."
+      }
+    ],
+    "permitNote": "No formal entry fee. If you cross by boat, explicitly ask for and wear a life jacket — these are informal operations without standardised safety equipment."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "ST bus or train to Igatpuri / Bhandardara",
+        "note": "From Mumbai, Pune or Nashik",
+        "amountINR": "100–250"
+      },
+      {
+        "item": "Shared jeep: Bhandardara → Ratanwadi",
+        "note": "Per person; ₹1,000–1,500 for a full jeep",
+        "amountINR": "100–200"
+      },
+      {
+        "item": "Boat crossing (when operating)",
+        "note": "Informal, negotiated; not guaranteed to run",
+        "amountINR": "50–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Recommended — the trail forks and the Nedhe section needs care",
+        "amountINR": "700–1,000 per group"
+      },
+      {
+        "item": "Food and homestay at Ratanwadi",
+        "note": "Basic village meals and stay",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

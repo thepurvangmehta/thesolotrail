@@ -173,7 +173,11 @@
           <div class="cost-section">
             <div class="cost-section-title">{{ section.t }}</div>
             {% for row in rows %}
-            <div class="cost-row"><div><div class="cost-item">{{ row.item }}</div>{% if row.note %}<div class="cost-note">{{ row.note }}</div>{% endif %}</div><div class="cost-amount"><span data-price="{{ row.amountUSD }}">${{ row.amountUSD }}</span></div></div>
+            {# Indian treks carry researched INR ranges (e.g. "150-250"); these render as-is
+               because they're rough local ranges — pushing them through the USD currency
+               switcher would invent precision that isn't in the source data.
+               Nepal treks carry numeric amountUSD and stay on the data-price path. #}
+            <div class="cost-row"><div><div class="cost-item">{{ row.item }}</div>{% if row.note %}<div class="cost-note">{{ row.note }}</div>{% endif %}</div><div class="cost-amount">{% if row.amountINR %}{% if row.amountINR | first in "0123456789~" %}₹{% endif %}{{ row.amountINR }}{% else %}<span data-price="{{ row.amountUSD }}">${{ row.amountUSD }}</span>{% endif %}</div></div>
             {% endfor %}
           </div>
           {% endif %}
@@ -226,6 +230,22 @@
         <div class="placeholder-box"><strong>Packing list coming soon</strong></div>
       {% endif %}
     </div>
+
+    {# Visible FAQ block. Must stay in sync with the FAQPage JSON-LD in trail.njk —
+       both render from the same `trek | trekFaqs` filter, so editing one edits both.
+       Google requires FAQ answers to be visible on the page, not schema-only. #}
+    {% set trekFaqList = trek | trekFaqs %}
+    {% if trekFaqList.length %}
+    <section class="trek-faq">
+      <h2 class="section-heading">{{ trek.shortName or trek.name }} — common questions</h2>
+      {% for f in trekFaqList %}
+      <details class="trek-faq-item"{% if loop.first %} open{% endif %}>
+        <summary>{{ f.q }}</summary>
+        <p>{{ f.a }}</p>
+      </details>
+      {% endfor %}
+    </section>
+    {% endif %}
 
     {% set related = relatedTrails(trek) %}
     {% if related and related.length %}

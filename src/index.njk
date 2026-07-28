@@ -2,6 +2,7 @@
 seoTitle: The Solo Trail — Independent Trek Guides for Nepal and India
 seoDescription: Practical, honest trek guides for solo travellers across Nepal and Maharashtra, India. Browse by category, search by name, or filter by difficulty.
 ogImage: https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=1200
+pageType: home
 ---
 {% extends "layouts/base.njk" %}
 
@@ -63,7 +64,9 @@ ogImage: https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view
   </div>
   <div class="category-grid">
     {% for c in categoryTiles %}
-    <a href="/trails/#{{ 'nepal' if c.key == 'himalayan' else 'mh-' + c.key }}" class="category-card">
+    {# Point at the region hub pages rather than #anchors — real indexable pages
+       targeting "solo trekking in X", which anchors on /trails/ can't rank for. #}
+    <a href="{{ '/solo-trekking-nepal/' if c.key == 'himalayan' else '/solo-trekking-maharashtra/#' + c.key }}" class="category-card">
       <img src="{{ c.image }}" alt="{{ c.label }}" loading="lazy" width="900" height="200">
       <div class="category-card-overlay"></div>
       <div class="category-card-body">

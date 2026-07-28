@@ -43,7 +43,9 @@
 {% block jsonld %}{% endblock %}
 {% block headExtras %}{% endblock %}
 </head>
-<body>
+{# Page context for analytics — read by assets/analytics.js and attached to every
+   event, so GA4 can segment by trek/region without extra configuration. #}
+<body data-page-type="{{ pageType or ('trail' if trek else 'other') }}"{% if trek %} data-trek-id="{{ trek.id }}" data-trek-region="{{ trek.region }}" data-trek-country="{{ trek.country }}"{% endif %}>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKH7834H"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -79,5 +81,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% endif %}
 {% block pagejs %}{% endblock %}
 <script src="/assets/currency.js"></script>
+<script src="/assets/analytics.js" defer></script>
 </body>
 </html>

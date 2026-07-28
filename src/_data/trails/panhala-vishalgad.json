@@ -128,8 +128,63 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Kolhapur is the gateway. Panhala alone is a half-day visit; the full ridge trek to Vishalgad is a 2–3 day commitment.",
+    "steps": [
+      {
+        "title": "Reach Kolhapur",
+        "body": "Kolhapur is the nearest railhead and has direct trains and ST buses from Mumbai, Pune and Konkan towns."
+      },
+      {
+        "title": "Kolhapur to Panhala",
+        "body": "ST buses run frequently (roughly every 20–30 minutes) from Kolhapur's central bus stand to Panhala, about 45 min–1 hr. Shared six-seater jeeps also cover this route."
+      },
+      {
+        "title": "Panhala to Vishalgad — the ridge trek",
+        "body": "The full historical Pawankhind route is roughly 60–65 km, typically done over 2–3 days through villages like Masai Plateau, Gajapur and Mendhoshi. Bus connectivity beyond Panhala is thin to nonexistent — this is walking country, with occasional lifts on village roads."
+      },
+      {
+        "title": "Overnight logistics",
+        "body": "Solo trekkers rely on village homestays or the occasional PWD rest house along the route. Carry cash — most villages have no ATM."
+      },
+      {
+        "title": "Return from Vishalgad",
+        "body": "ST buses from Vishalgad back to Kolhapur (via Gargoti/Bhudargad) run only a few times a day. Missing the last one means another night out or arranging a jeep to a bigger junction town."
+      }
+    ],
+    "permitNote": "No formal permit for either fort. The multi-day ridge route has no official waymarking — going with someone who has done it before, or hiring a local guide, is strongly advisable if you're solo."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train/ST bus: Mumbai/Pune → Kolhapur",
+        "note": "Sleeper train or ST one-way",
+        "amountINR": "300–600"
+      },
+      {
+        "item": "ST bus: Kolhapur → Panhala",
+        "note": "Per person",
+        "amountINR": "30–40"
+      },
+      {
+        "item": "ST bus: Vishalgad → Kolhapur",
+        "note": "Limited daily frequency",
+        "amountINR": "100–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide for the ridge route",
+        "note": "Recommended for the multi-day Panhala–Vishalgad stretch",
+        "amountINR": "800–1,500 per day"
+      },
+      {
+        "item": "Village homestay and meals",
+        "note": "Per night, if doing the multi-day version",
+        "amountINR": "400–700"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

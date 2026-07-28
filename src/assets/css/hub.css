@@ -1,0 +1,60 @@
+/* THE SOLO TRAIL — region hub pages ("Solo Trekking in X"). Loads after tokens.css + trails-index.css. */
+
+.hub-hero { background: var(--forest); padding: 44px 24px 40px; }
+.hub-hero-inner { max-width: 1100px; margin: 0 auto; }
+.hub-crumb { color: rgba(255,255,255,.5); margin-bottom: 16px; }
+.hub-crumb a { color: rgba(255,255,255,.6); }
+.hub-crumb a:hover { color: #fff; }
+.hub-crumb .breadcrumb-sep { color: rgba(255,255,255,.28); }
+.hub-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4.6vw, 44px);
+  color: #fff; font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px; text-wrap: balance;
+}
+.hub-lede { font-size: 16px; color: rgba(255,255,255,.72); line-height: 1.72; max-width: 62ch; }
+.hub-stats { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 22px; }
+.hub-stat { font-size: 13px; color: rgba(255,255,255,.55); }
+.hub-stat strong {
+  font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700;
+  color: #7EC8A0; margin-right: 5px;
+}
+
+.hub-note-wrap { background: var(--white); border-bottom: 1px solid var(--border); padding: 20px 24px; }
+.hub-note {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.hub-note-icon { font-size: 20px; flex-shrink: 0; line-height: 1.4; }
+.hub-note p { font-size: 14.5px; color: var(--text-mid); line-height: 1.7; max-width: 74ch; margin: 0; }
+
+.hub-faq { background: var(--white); border-top: 1px solid var(--border); padding: 52px 24px 56px; }
+.hub-faq-inner { max-width: 760px; margin: 0 auto; }
+.hub-faq h2 {
+  font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700;
+  color: var(--forest); margin-bottom: 22px;
+}
+.hub-faq-item { border-bottom: 1px solid var(--border); padding: 4px 0; }
+.hub-faq-item summary {
+  font-size: 15.5px; font-weight: 600; color: var(--text);
+  cursor: pointer; padding: 14px 28px 14px 0; position: relative; list-style: none;
+}
+.hub-faq-item summary::-webkit-details-marker { display: none; }
+.hub-faq-item summary::after {
+  content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  font-size: 20px; color: var(--glacier); font-weight: 400; line-height: 1;
+}
+.hub-faq-item[open] summary::after { content: '–'; }
+.hub-faq-item summary:hover { color: var(--forest); }
+.hub-faq-item p {
+  font-size: 14.5px; color: var(--text-mid); line-height: 1.75;
+  margin: 0 0 18px; padding-right: 28px;
+}
+
+@media (max-width: 640px) {
+  .hub-hero { padding: 30px 16px 30px; }
+  .hub-lede { font-size: 15px; }
+  .hub-stats { gap: 18px; margin-top: 18px; }
+  .hub-note-wrap { padding: 16px; }
+  .hub-faq { padding: 40px 16px 44px; }
+}

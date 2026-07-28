@@ -9,11 +9,12 @@
         <div class="footer-col">
           <h4>Nepal</h4>
           {% for t in collections.trailsNepal %}<a href="/trails/{{ t.id }}/">{{ t.name }}</a>{% endfor %}
+          <a href="/solo-trekking-nepal/">Solo trekking in Nepal →</a>
         </div>
         <div class="footer-col">
           <h4>India — Maharashtra</h4>
           {% for t in collections.trailsMaharashtra | firstN(6) %}<a href="/trails/{{ t.id }}/">{{ t.name }}</a>{% endfor %}
-          <a href="/trails/#maharashtra">All Maharashtra treks →</a>
+          <a href="/solo-trekking-maharashtra/">Solo trekking in Maharashtra →</a>
         </div>
         <div class="footer-col">
           <h4>Site</h4>

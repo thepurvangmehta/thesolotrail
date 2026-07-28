@@ -120,8 +120,55 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Direct ST buses from Pune's Swargate depot reach Velhe, the base town, in under two hours.",
+    "steps": [
+      {
+        "title": "Pune Swargate to Velhe",
+        "body": "Direct ST buses run from Swargate to Velhe several times a day (first departures from around 6:15am), taking roughly 1 hr 45 min."
+      },
+      {
+        "title": "Velhe to the trek base",
+        "body": "From Velhe, a shared jeep or six-seater covers the final stretch to the base of Torna or Budhla Machi (~20–30 min) — arranged locally rather than as a scheduled service."
+      },
+      {
+        "title": "Trek and return",
+        "body": "The climb from the base is steep and takes 2.5–3 hrs; Torna is generally tougher and less clearly marked than Rajgad. Last buses from Velhe back to Pune are infrequent after early evening (roughly 5–6pm) — confirm locally before you start up."
+      }
+    ],
+    "permitNote": "No formal permit. The trail is less trafficked than Rajgad or Sinhagad, so solo trekkers should double-check route markers, particularly near the top."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "ST bus: Pune → Velhe",
+        "note": "~1 hr 45 min",
+        "amountINR": "70–100"
+      },
+      {
+        "item": "Shared jeep: Velhe → trek base",
+        "note": "Per person",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Recommended given the tougher, less-marked trail",
+        "amountINR": "700–1,000 per group"
+      },
+      {
+        "item": "Camping on the fort",
+        "note": "Per person, if staying overnight",
+        "amountINR": "200–400"
+      },
+      {
+        "item": "Food at Velhe",
+        "note": "Basic meals",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

@@ -116,8 +116,58 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Reached by train to Neral, then a walk along the narrow-gauge Matheran railway track.",
+    "steps": [
+      {
+        "title": "Reach Neral",
+        "body": "Karjat/Khopoli-line local train from Mumbai CSMT/Dadar/Thane/Kalyan to Neral station (roughly 1.5–2 hrs from CSMT). Neral is the access point, not Matheran itself."
+      },
+      {
+        "title": "Shared taxi to the trailhead",
+        "body": "Outside Neral station, shared taxis running toward Matheran will drop you at the '134 NM' railway marker on request — mention 'Peb trek' or 'Kadyavarcha Ganpati'. Roughly a 15–20 minute ride."
+      },
+      {
+        "title": "Walk the tracks to the diversion",
+        "body": "From 134 NM, walk along the Neral–Matheran narrow-gauge railway track for about 40 minutes to the 155 NM marker, where the trail diverges from the tracks."
+      },
+      {
+        "title": "Ascend to the fort",
+        "body": "From the diversion it's roughly 2.5–3 hrs to the summit through forest and rock patches."
+      },
+      {
+        "title": "Return",
+        "body": "Retrace to 134 NM for a shared taxi back to Neral, then a local train. Services run fairly late, but confirm the timetable at Neral station rather than assuming — they thin out after peak hours."
+      }
+    ],
+    "permitNote": "No entry fee or forest permit — this is an open, unregulated hill climb. Carry your own water; there's nothing reliable on the trail itself."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Neral",
+        "note": "Local train, 2nd class one-way",
+        "amountINR": "15–40"
+      },
+      {
+        "item": "Shared taxi: Neral → 134 NM marker",
+        "note": "Per person one-way",
+        "amountINR": "80–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Not compulsory — the path is well-trodden; optional for first-timers",
+        "amountINR": "500–800 per group"
+      },
+      {
+        "item": "Food and water",
+        "note": "Carry your own; stalls only near the Matheran side",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

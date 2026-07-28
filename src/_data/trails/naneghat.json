@@ -129,8 +129,54 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "The ancient trade pass is reached via Junnar from Pune, or Kalyan from Mumbai.",
+    "steps": [
+      {
+        "title": "From Pune",
+        "body": "ST or private bus to Junnar (~3–4 hrs), then a local bus or jeep onward to Ghatghar (base for Jivdhan) or toward the Naneghat trailhead."
+      },
+      {
+        "title": "From Mumbai/Kalyan",
+        "body": "Local train to Kalyan, then an ST bus toward Malshej Ghat or Alephata, alighting at Tokawade or Vaishakhare village. From there a shared jeep or rickshaw covers the final stretch to the trailhead, marked by a signboard reading 'Naneghat Gumfa Marg'."
+      },
+      {
+        "title": "Trek",
+        "body": "Naneghat itself is a gentle 1–1.5 hr walk to the rock-cut trade pass and caves. The Jivdhan Fort climb is steeper and more technical (~2–3 hrs), including an exposed col section."
+      },
+      {
+        "title": "Transport frequency",
+        "body": "ST buses on the Junnar–Ghatghar and Kalyan–Tokawade stretches run only a handful of times daily — shared jeeps are more dependable. Confirm return timing before you set off."
+      }
+    ],
+    "permitNote": "No formal permit. Jivdhan's summit push has an exposed rock-step section — solo trekkers should be cautious and avoid being first on the trail when it's completely empty."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Bus/train: Mumbai/Pune → Junnar or Kalyan",
+        "note": "ST or local train",
+        "amountINR": "100–200"
+      },
+      {
+        "item": "Local ST or shared jeep to base village",
+        "note": "Per person",
+        "amountINR": "50–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Recommended for Jivdhan's trickier sections",
+        "amountINR": "700–1,000 per group"
+      },
+      {
+        "item": "Food at the base village",
+        "note": "Basic meals",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

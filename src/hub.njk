@@ -1,0 +1,117 @@
+---
+pagination:
+  data: regionHubs
+  size: 1
+  alias: hub
+permalink: "/{{ hub.slug }}/"
+eleventyComputed:
+  seoTitle: "{{ hub.seoTitle }}"
+  seoDescription: "{{ hub.seoDescription }}"
+  ogImage: "{{ hub.heroImage }}"
+  navActive: trails
+pageType: region_hub
+---
+{% extends "layouts/base.njk" %}
+{% from "partials/macros.njk" import trailCard %}
+
+{% block pagecss %}
+<link rel="stylesheet" href="/assets/css/trails-index.css">
+<link rel="stylesheet" href="/assets/css/hub.css">
+{% endblock %}
+
+{% block jsonld %}
+{% set itemListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": hub.h1,
+  "description": hub.seoDescription,
+  "numberOfItems": hub.count,
+  "itemListElement": []
+} %}
+{% for t in hub.trails %}
+  {% set _ = itemListLd.itemListElement.push({
+    "@type": "ListItem",
+    "position": loop.index,
+    "name": t.name,
+    "url": "https://thesolotrail.com/trails/" ~ t.id ~ "/"
+  }) %}
+{% endfor %}
+{% set faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": []
+} %}
+{% for f in hub.faqs %}
+  {% set _ = faqLd.mainEntity.push({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }) %}
+{% endfor %}
+<script type="application/ld+json">{{ itemListLd | dump | safe }}</script>
+<script type="application/ld+json">{{ faqLd | dump | safe }}</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="hub-hero">
+  <div class="hub-hero-inner">
+    <div class="breadcrumb hub-crumb">
+      <a href="/">Home</a><span class="breadcrumb-sep">›</span>
+      <a href="/trails/">Trails</a><span class="breadcrumb-sep">›</span>
+      <span>{{ hub.h1 }}</span>
+    </div>
+    <h1>{{ hub.h1 }}</h1>
+    <p class="hub-lede">{{ hub.intro }}</p>
+    <div class="hub-stats">
+      <span class="hub-stat"><strong>{{ hub.count }}</strong> treks mapped</span>
+      <span class="hub-stat"><strong>{{ hub.liveCount }}</strong> full guides</span>
+    </div>
+  </div>
+</section>
+
+{% if hub.seasonNote %}
+<div class="hub-note-wrap">
+  <div class="hub-note">
+    <span class="hub-note-icon" aria-hidden="true">☔</span>
+    <p>{{ hub.seasonNote }}</p>
+  </div>
+</div>
+{% endif %}
+
+<div class="trails-wrap">
+  {% if hub.slug == "solo-trekking-maharashtra" %}
+    {% for cat in maharashtraByCategory %}
+    <h2 class="trails-section-title" id="{{ cat.key }}">{{ cat.label }}</h2>
+    <p class="trails-section-sub">{{ cat.sub }}</p>
+    <div class="trails-grid">
+      {% for t in cat.treks %}{{ trailCard(t) }}{% endfor %}
+    </div>
+    {% endfor %}
+  {% else %}
+    <h2 class="trails-section-title">All {{ hub.count }} treks</h2>
+    <div class="trails-grid">
+      {% for t in hub.trails %}{{ trailCard(t) }}{% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<section class="hub-faq">
+  <div class="hub-faq-inner">
+    <h2>Common questions</h2>
+    {% for f in hub.faqs %}
+    <details class="hub-faq-item"{% if loop.first %} open{% endif %}>
+      <summary>{{ f.q }}</summary>
+      <p>{{ f.a }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="pro-strip">
+  <h2>Planning one of these?</h2>
+  <p>Trail Kits give you the guide offline — print-ready PDF, GPX waypoints and emergency contacts, for when there's no signal.</p>
+  <a href="/downloads/" class="btn-pro-strip">Get Trail Kits →</a>
+</div>
+
+{% endblock %}

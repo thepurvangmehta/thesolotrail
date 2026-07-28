@@ -116,8 +116,50 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "The most accessible trek here — a direct city bus from Pune's Swargate stand runs all day.",
+    "steps": [
+      {
+        "title": "Pune Swargate to Sinhagad Paytha",
+        "body": "PMPML bus route 50 (and variants 50A/50B/50K) runs directly from Swargate's Natraj stand to Sinhagad Paytha at the base, roughly 1.5 hrs, with fairly regular service through the day."
+      },
+      {
+        "title": "Faster alternative",
+        "body": "Shared six-seaters or autos from Swargate or Vadgaon reach the base in about 45 min for a bit more money."
+      },
+      {
+        "title": "Trek",
+        "body": "A well-paved 1-hour climb from Sinhagad Paytha to the top — one of the most popular treks near Pune and comfortable to do solo any day of the week."
+      }
+    ],
+    "permitNote": "No entry fee for pedestrians; a vehicle parking fee applies at the top if you drive up. Well-connected enough that there's no real return-time pressure compared to the remoter treks."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "PMPML bus: Swargate → Sinhagad Paytha",
+        "note": "Route 50 and variants",
+        "amountINR": "30–50"
+      },
+      {
+        "item": "Shared jeep or auto",
+        "note": "Faster alternative",
+        "amountINR": "100–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Vehicle parking at the top",
+        "note": "Only if you drive up",
+        "amountINR": "20–50"
+      },
+      {
+        "item": "Food at the top",
+        "note": "The famous kanda bhaji, dahi and buttermilk stalls",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

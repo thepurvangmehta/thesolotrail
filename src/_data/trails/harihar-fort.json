@@ -132,8 +132,64 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Nirgudpada is the base village — easiest reached via Trimbakeshwar from Nashik.",
+    "steps": [
+      {
+        "title": "From Mumbai via Kasara",
+        "body": "Train to Kasara station, then a shared jeep to Khodala, changing vehicles there for the final leg to Nirgudpada. Jeeps here are infrequent outside weekends and peak trekking season."
+      },
+      {
+        "title": "From Nashik",
+        "body": "ST bus or shared taxi from Nashik CBS to Trimbakeshwar (~1 hr, regular service), then a local taxi or auto onward to Nirgudpada (~45 min–1 hr, ~20 km). Direct buses on that last stretch are limited."
+      },
+      {
+        "title": "Trek",
+        "body": "From Nirgudpada, roughly 1–1.5 hrs to the base of the famous rock-cut steps, then a steep, near-vertical 15–20 min climb up carved steps with minimal railing. Go slow, and don't attempt it in wet conditions."
+      },
+      {
+        "title": "Return timing",
+        "body": "Transport out of Nirgudpada and nearby Harshewadi drops off sharply after roughly 3–5pm — plan to be back at the base village well before then."
+      }
+    ],
+    "permitNote": "No formal permit. The carved-step climb is exposed and gets slippery when wet — avoid heavy monsoon days and descend before dusk."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Kasara",
+        "note": "Local train",
+        "amountINR": "30–50"
+      },
+      {
+        "item": "Jeep: Kasara → Khodala → Nirgudpada",
+        "note": "Per person, two-leg journey",
+        "amountINR": "100–200"
+      },
+      {
+        "item": "ST bus/cab: Nashik CBS → Trimbakeshwar",
+        "note": "Regular service",
+        "amountINR": "40–100"
+      },
+      {
+        "item": "Taxi/auto: Trimbakeshwar → Nirgudpada",
+        "note": "Share if possible",
+        "amountINR": "300–500"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Optional, but useful on the steep step section",
+        "amountINR": "500–800 per group"
+      },
+      {
+        "item": "Food at Nirgudpada/Harshewadi",
+        "note": "Basic meals",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

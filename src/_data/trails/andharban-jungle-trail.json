@@ -159,8 +159,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "This is a one-way descent — the exit transport at Bhira is the single most important thing to arrange in advance.",
+    "steps": [
+      {
+        "title": "Reach Pune, then Mulshi/Pirangut",
+        "body": "From Pune's Shivajinagar ST stand, take a bus or shared jeep toward Paud–Mulshi–Tamhini. Frequency is moderate, so shared jeeps from Pirangut are the more reliable option."
+      },
+      {
+        "title": "Trailhead near Pimpri / Mulshi dam",
+        "body": "The Andharban start point is off the main road; most solo trekkers pre-arrange a shared jeep from Pune (about 1.5–2 hrs) since buses don't reach the exact trailhead."
+      },
+      {
+        "title": "The trek itself",
+        "body": "A point-to-point descent of roughly 13–15 km through dense forest, ending at Bhira dam — typically 5–6 hours."
+      },
+      {
+        "title": "Exit at Bhira — arrange your return before you start",
+        "body": "This is the critical logistics point. From Bhira dam, shared autos run to the highway junction near Vile Bhagad, but onward buses toward Pune or Mumbai are infrequent and may stop by early evening. Pre-book a jeep or taxi pickup at Bhira through a local operator, or coordinate with another group finishing the same day. Do not plan to find transport on the spot."
+      }
+    ],
+    "permitNote": "No formal permit, but the trail is unmarked and easy to lose in monsoon fog and rain — a local guide is effectively necessary rather than optional for solo trekkers. Remember this is one-way: you cannot walk back out the way you came in a single day."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Shared jeep: Pune → trailhead",
+        "note": "Per person",
+        "amountINR": "150–300"
+      },
+      {
+        "item": "Shared auto: Bhira dam → highway",
+        "note": "Per person",
+        "amountINR": "50–70"
+      },
+      {
+        "item": "Return bus/taxi: highway junction → Pune",
+        "note": "Pre-arrange if possible",
+        "amountINR": "150–300"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Near-mandatory given the unmarked trail",
+        "amountINR": "800–1,500 per group"
+      },
+      {
+        "item": "Food and water",
+        "note": "Carry enough for the full one-way trek — nothing reliable en route",
+        "amountINR": "150–250"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

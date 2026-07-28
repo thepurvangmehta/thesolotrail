@@ -138,8 +138,62 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "The one fort on this list with a ropeway — you can skip the 1,700-step climb entirely if you want.",
+    "steps": [
+      {
+        "title": "Reach Mahad or Pachad by ST bus",
+        "body": "ST buses run from Mumbai (Parel/Dadar depots) and Pune (Swargate) to Mahad, roughly 3–4 hrs. From Mahad ST depot, a local bus or shared taxi covers the ~25 km to Pachad village at the base (~30 min). A direct night bus from Mumbai's Parel depot to Pachad also runs on some schedules."
+      },
+      {
+        "title": "Ascend by ropeway or on foot",
+        "body": "From Pachad, the Raigad ropeway covers the climb in 5–10 minutes (roughly 9am–5pm, weather-dependent — it pauses in heavy rain or wind during monsoon). On foot it's around 1,400–1,700 stone steps, taking 2–3 hrs."
+      },
+      {
+        "title": "Book ahead and watch the last trip",
+        "body": "Book ropeway tickets online in advance if you can — mobile network at the Pachad base station is unreliable. Last ropeway trips run close to dusk, and buses back to Mahad and onward to Mumbai/Pune thin out in the evening."
+      }
+    ],
+    "permitNote": "Raigad is a ticketed protected monument, so an entry fee applies on top of the ropeway fare. Verify the current ropeway price before you travel — it changes periodically, and the figure below was accurate at time of research, not necessarily today."
+  },
+  "costs": {
+    "permits": [
+      {
+        "item": "Monument entry fee",
+        "note": "Protected-monument ticket; foreign nationals pay more",
+        "amountINR": "10–30"
+      }
+    ],
+    "transport": [
+      {
+        "item": "ST bus: Mumbai/Pune → Mahad",
+        "note": "~3–4 hrs",
+        "amountINR": "150–250"
+      },
+      {
+        "item": "Shared taxi/local bus: Mahad → Pachad",
+        "note": "~25 km, 30 min",
+        "amountINR": "30–60"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Ropeway round trip",
+        "note": "Adult rate — reconfirm before travelling, this figure moves · approximate",
+        "amountINR": "375"
+      },
+      {
+        "item": "Parking at Pachad",
+        "note": "Two-wheeler or car",
+        "amountINR": "50–100"
+      },
+      {
+        "item": "Food at Pachad base village",
+        "note": "Basic meals, tea",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

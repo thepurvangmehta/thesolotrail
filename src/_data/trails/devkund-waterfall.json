@@ -122,8 +122,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Patnus village near Bhira is the trailhead, with a village checkpost collecting a small entry fee.",
+    "steps": [
+      {
+        "title": "Reach the Bhira area (Raigad)",
+        "body": "From Mumbai: train to Panvel or Karjat then onward ST bus or shared transport toward Kolad–Bhira; or train to Mangaon followed by a cab. The full journey runs about 4.5–5 hours by public transport."
+      },
+      {
+        "title": "Panvel–Pali–Bhira route",
+        "body": "A direct ST bus runs from Panvel depot toward Pali. Alternatively get off at Vakan and take a shared auto to Pali (about 30 minutes), then continue toward Bhira and Patnus village."
+      },
+      {
+        "title": "Trailhead at Patnus village",
+        "body": "The trek starts here and runs about 6 km one way with a couple of stream crossings, taking roughly 2–3 hours each way through forest."
+      },
+      {
+        "title": "Village checkpost",
+        "body": "A Gram Panchayat-run checkpost near the trail start collects a small entry fee."
+      }
+    ],
+    "permitNote": "No government forest permit required, but a customary village Gram Panchayat entry fee applies at the trailhead. This is one of the most crowded monsoon spots near Pune/Mumbai — rocks near the plunge pool are slippery even when they look dry, and there are no lifeguards. Don't jump or dive; depth and underwater rocks are unpredictable."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train plus bus/cab: Mumbai → Bhira",
+        "note": "Combination, one-way",
+        "amountINR": "150–400"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Village entry fee (Gram Panchayat)",
+        "note": "Per person · approximate",
+        "amountINR": "100"
+      },
+      {
+        "item": "Parking",
+        "note": "Per vehicle · approximate",
+        "amountINR": "50"
+      },
+      {
+        "item": "Local guide",
+        "note": "Per head, informal · approximate",
+        "amountINR": "50"
+      },
+      {
+        "item": "Food",
+        "note": "Basic stalls near the trailhead",
+        "amountINR": "150–250"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

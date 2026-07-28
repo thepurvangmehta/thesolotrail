@@ -124,8 +124,66 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Inside a bird sanctuary on the Mumbai–Goa highway — the closest of these treks to Mumbai.",
+    "steps": [
+      {
+        "title": "Reach Panvel",
+        "body": "Mumbai local (Harbour line) or a Pune–Panvel train or bus — well connected, ~1–3 hrs depending on origin."
+      },
+      {
+        "title": "Panvel to the sanctuary gate",
+        "body": "Local bus or shared auto along NH66 (the Mumbai–Goa highway) to the Karnala Bird Sanctuary entrance, roughly 12 km, 20–30 min."
+      },
+      {
+        "title": "Trek within the sanctuary",
+        "body": "Entry is through the forest department gate (roughly 7:30am–6pm). The walk to the base of the fort's pinnacle takes about 1–1.5 hrs. A short but exposed rock section with iron rungs leads to the very top — many visitors stop at the base of the pinnacle rather than attempting the final scramble."
+      },
+      {
+        "title": "Timing",
+        "body": "Being close to Mumbai and well connected all day, there's less return-time pressure than on the remoter treks — but note the sanctuary gate closing time."
+      }
+    ],
+    "permitNote": "A forest department sanctuary entry ticket is required. The final pinnacle climb is an exposed rock scramble — solo trekkers should consider stopping at its base."
+  },
+  "costs": {
+    "permits": [
+      {
+        "item": "Sanctuary entry fee",
+        "note": "Indian adult; foreign visitors pay more",
+        "amountINR": "30–60"
+      }
+    ],
+    "transport": [
+      {
+        "item": "Train/bus: Mumbai/Pune → Panvel",
+        "note": "Local train or ST",
+        "amountINR": "15–100"
+      },
+      {
+        "item": "Local bus/shared auto: Panvel → sanctuary gate",
+        "note": "~12 km",
+        "amountINR": "30–60"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Camera fee",
+        "note": "If carrying a DSLR or large camera",
+        "amountINR": "100–250"
+      },
+      {
+        "item": "Vehicle parking",
+        "note": "Varies by vehicle type",
+        "amountINR": "25–150"
+      },
+      {
+        "item": "Food and snacks near the gate",
+        "note": "Basic stalls",
+        "amountINR": "50–150"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

@@ -1,5 +1,6 @@
 const getTrails = require("./src/_data/trailsList.js");
 const relatedTrails = require("./src/_data/relatedTrails.js");
+const buildTrekFaqs = require("./src/_data/trekFaqBuilder.js");
 
 module.exports = function (eleventyConfig) {
   const trails = getTrails();
@@ -45,6 +46,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
   eleventyConfig.addFilter("firstN", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : arr));
   eleventyConfig.addFilter("pickByIds", (list, ids) => ids.map((id) => list.find((x) => x.id === id)).filter(Boolean));
+
+  // Per-trek FAQ list, derived from the trek's own data. Used twice on each
+  // trail page — once as a visible block, once as FAQPage JSON-LD — so the
+  // schema always matches what a reader can actually see.
+  eleventyConfig.addFilter("trekFaqs", (trek) => buildTrekFaqs(trek));
 
   return {
     dir: {

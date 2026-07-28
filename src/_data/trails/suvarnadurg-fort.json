@@ -108,8 +108,54 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "There is no ferry service here — the crossing is an informal arrangement with Harnai's fishermen.",
+    "steps": [
+      {
+        "title": "Reach Ratnagiri or Dapoli",
+        "body": "These have far better train and bus connectivity than Khed, the technically-nearest Konkan Railway station (still about 43 km from Harnai)."
+      },
+      {
+        "title": "Onward to Harnai",
+        "body": "ST buses or shared vehicles run from Ratnagiri or Dapoli to Harnai fishing harbour, roughly 1–1.5 hours."
+      },
+      {
+        "title": "Arrange a boat with local fishermen at Harnai",
+        "body": "There is no scheduled ferry and no ticket counter — this is entirely a word-of-mouth arrangement with fishermen at the harbour. Go in the morning, be flexible on timing, and expect to negotiate."
+      },
+      {
+        "title": "The crossing",
+        "body": "About 10–15 minutes each way, depending on tide, weather and the operator's willingness. Avoid monsoon season (roughly June–September) — seas are rough and fishermen generally won't take visitors out."
+      }
+    ],
+    "permitNote": "No formal booking system exists for this crossing; it depends entirely on finding a willing local fisherman and calm seas. Build slack into your schedule and don't count on a same-day guarantee. Of all the treks on this site, this is the one most likely to simply not happen on the day you planned it."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Overnight bus/train: Mumbai/Pune → Ratnagiri or Dapoli",
+        "note": "One-way",
+        "amountINR": "400–800"
+      },
+      {
+        "item": "Local bus: Ratnagiri/Dapoli → Harnai",
+        "note": "One-way",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Boat, negotiated with local fishermen",
+        "note": "Per person if joining others; ₹1,500–2,500 for a full small boat solo",
+        "amountINR": "150–300"
+      },
+      {
+        "item": "Food at Harnai",
+        "note": "Basic",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

@@ -146,8 +146,58 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Reached from Panvel via Thakurwadi. Read the safety notes before committing to the final pinnacle.",
+    "steps": [
+      {
+        "title": "Reach Panvel",
+        "body": "Mumbai local train (Harbour or Karjat line) or a Pune–Panvel express, roughly 1–3 hrs depending on where you start."
+      },
+      {
+        "title": "Panvel to Thakurwadi",
+        "body": "From Panvel station or bus stand, shared six-seater autos ('tum-tum') run to Thakurwadi village (~15 km, 25–30 min) via the Mumbai–Pune highway and Shedung Phata. ST buses toward Chowk or Matheran also pass this route."
+      },
+      {
+        "title": "Trek to the Prabalgad plateau",
+        "body": "From Thakurwadi, roughly 2–3 hrs up to the Prabalgad plateau. Many solo trekkers stop here — the views are excellent without the pinnacle risk."
+      },
+      {
+        "title": "The final pinnacle (assess honestly)",
+        "body": "The last ascent to Kalavantin Durg is a steep, exposed rock-cut staircase with no railings in sections (~30–45 min). Judge your own comfort with exposure, and don't attempt it in wet or monsoon conditions or when the trail is empty of other people."
+      },
+      {
+        "title": "Return",
+        "body": "Shared autos from Thakurwadi back to Panvel typically run until early evening (~6–7pm) but thin out fast after dark — confirm locally before you descend."
+      }
+    ],
+    "permitNote": "No fee or permit, but this is the most hazard-prone trek on our Maharashtra list because of the exposed pinnacle climb. We recommend against attempting the final Kalavantin ascent solo in poor weather, or when there are no other trekkers on the trail."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Pune → Panvel",
+        "note": "Local or express train",
+        "amountINR": "15–100"
+      },
+      {
+        "item": "Shared auto: Panvel → Thakurwadi",
+        "note": "Per person; ₹600–700 for a full 6–7 seater",
+        "amountINR": "200–250"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide or escort",
+        "note": "Recommended for the Kalavantin pinnacle section",
+        "amountINR": "500–800 per group"
+      },
+      {
+        "item": "Food at Thakurwadi",
+        "note": "Basic meals before or after",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

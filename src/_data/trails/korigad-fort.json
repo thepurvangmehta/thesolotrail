@@ -116,8 +116,50 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "A short climb near Pawna Lake — reached from Lonavala by shared jeep.",
+    "steps": [
+      {
+        "title": "Train or bus to Lonavala",
+        "body": "Local train or ST bus from Mumbai or Pune to Lonavala (~1.5–2.5 hrs)."
+      },
+      {
+        "title": "Lonavala to Peth Shahapur (base village)",
+        "body": "Shared jeep or taxi from Lonavala station toward Peth Shahapur and the Korigad–Pawna Lake area (~40 min–1 hr). Public transport here is thin — shared jeeps run more reliably at weekends when tourist footfall to Pawna Lake is higher; on weekdays expect to negotiate a private taxi."
+      },
+      {
+        "title": "Trek",
+        "body": "An easy 1–1.5 hr climb from the base, known for its remarkably intact fortification walls."
+      }
+    ],
+    "permitNote": "A small informal entry or parking fee is sometimes collected at the base; no formal ticketing."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train/bus: Mumbai/Pune → Lonavala",
+        "note": "Local train or ST",
+        "amountINR": "20–80"
+      },
+      {
+        "item": "Shared jeep/taxi: Lonavala → Peth Shahapur",
+        "note": "Per person; ₹800–1,200 for a full vehicle if not shared",
+        "amountINR": "100–200"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Entry or parking fee",
+        "note": "Informal, collected at the base",
+        "amountINR": "20–50"
+      },
+      {
+        "item": "Food at the base village",
+        "note": "Basic meals",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

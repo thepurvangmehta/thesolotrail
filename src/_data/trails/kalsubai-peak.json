@@ -155,8 +155,54 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Bari village is the base for Maharashtra's highest peak — reached by shared jeep from Kasara.",
+    "steps": [
+      {
+        "title": "Reach Kasara (preferred) or Igatpuri",
+        "body": "Kasara is on the Mumbai suburban/Central line (about 2–2.5 hrs from CSMT) and is the more commonly used access point. Igatpuri, on the Mumbai–Nashik line, also works but is further from Bari."
+      },
+      {
+        "title": "Kasara to Bari village",
+        "body": "Shared jeeps run from Kasara station to Bari, about 1–1.5 hours on a hilly road. Jeeps leave when full and are far more frequent at weekends than on weekdays."
+      },
+      {
+        "title": "From Igatpuri instead",
+        "body": "ST buses and shared jeeps also connect Igatpuri to Bari, roughly an hour's ride, at lower frequency than the Kasara route."
+      },
+      {
+        "title": "The climb",
+        "body": "From Bari, the trail up Maharashtra's highest peak follows a series of installed iron ladders on the steep rock sections, roughly 3–4 hours one way. Same-day return is standard, and night treks timed for sunrise are very popular."
+      }
+    ],
+    "permitNote": "No formal forest ticket, though checking in with the village is customary. Expect heavy crowding and jeep queues at weekends — this is one of the most trafficked treks in the state, and the ladder sections become bottlenecks."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Kasara",
+        "note": "Local train one-way",
+        "amountINR": "15–40"
+      },
+      {
+        "item": "Shared jeep: Kasara → Bari",
+        "note": "Per person one-way",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Not needed — the path is well-marked and busy",
+        "amountINR": "not needed"
+      },
+      {
+        "item": "Food at Bari stalls",
+        "note": "Before or after the climb",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

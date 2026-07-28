@@ -112,8 +112,54 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "A short pyramid-shaped fort near Pawna Lake, reached from Kamshet station.",
+    "steps": [
+      {
+        "title": "Train to Kamshet or Lonavala",
+        "body": "Local train from Mumbai or Pune to Kamshet station (closer to Tikona, ~20 km) or Lonavala (~25 km)."
+      },
+      {
+        "title": "Kamshet to Tikona Peth",
+        "body": "Shared jeep, auto-rickshaw or taxi from Kamshet to Tikona Peth village at the base (~30–40 min). ST bus service here is infrequent — shared jeeps are more common, especially at weekends."
+      },
+      {
+        "title": "Trek",
+        "body": "A moderate 1–1.5 hr climb from Tikona Peth, with some rock-cut steps near the summit."
+      },
+      {
+        "title": "Return",
+        "body": "Arrange the return jeep or taxi in advance where possible — the last shared vehicles back to Kamshet typically run by early evening."
+      }
+    ],
+    "permitNote": "No formal entry fee. Popular as a combined day trip with nearby Pawna Lake."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Pune → Kamshet",
+        "note": "Local train",
+        "amountINR": "20–70"
+      },
+      {
+        "item": "Shared jeep/auto: Kamshet → Tikona Peth",
+        "note": "Per person; ₹400–600 for a full vehicle",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Guide",
+        "note": "Not customary — short and well-marked",
+        "amountINR": "not needed"
+      },
+      {
+        "item": "Food at Tikona Peth",
+        "note": "Basic meals",
+        "amountINR": "100–150"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

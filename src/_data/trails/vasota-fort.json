@@ -177,8 +177,79 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "The only trek here that needs a boat and advance Forest Department permission. Plan it properly or you won't get in.",
+    "steps": [
+      {
+        "title": "Reach Satara",
+        "body": "Satara is on the Pune–Kolhapur/Miraj railway line and well served by ST buses from Pune, Mumbai and Kolhapur."
+      },
+      {
+        "title": "Satara to Bamnoli",
+        "body": "From Satara ST stand, buses run to Bamnoli village (about 40 km, 1.5–2 hrs) but only a handful of times a day — confirm the return bus timing before you leave Satara."
+      },
+      {
+        "title": "Register and arrange a boat at Bamnoli",
+        "body": "At the Bamnoli forest/tourism counter, register your group and book a boat. Boats are priced per boat (not per seat) with a capacity of roughly 10–12 people, so operators generally wait for a fuller boat before departing. Solo travellers should expect to wait and combine with other visitors; weekends fill faster than weekdays."
+      },
+      {
+        "title": "Boat crossing",
+        "body": "The ride across the Shivsagar/Koyna backwater takes about 1–1.5 hours to the Vasota base at Metgutad."
+      },
+      {
+        "title": "Trek to the fort and back",
+        "body": "Roughly 3–4 hours round trip through Koyna Wildlife Sanctuary forest to the fort ruins and back to the boat landing."
+      },
+      {
+        "title": "Return",
+        "body": "Boat back to Bamnoli, then bus to Satara. Plan to leave Bamnoli by early-to-mid afternoon — both the last boat and the last bus are limited, and this is not a place to be stranded after dark."
+      }
+    ],
+    "permitNote": "Forest Department permission is compulsory — Vasota sits inside Koyna Wildlife Sanctuary. Carry photo ID for every group member; names are registered and an indemnity bond is signed. The sanctuary closes to visitors during the monsoon/breeding season (roughly June–September); confirm current closure dates and fees with the Bamnoli forest office before planning, as these change periodically."
+  },
+  "costs": {
+    "permits": [
+      {
+        "item": "Sanctuary entry fee",
+        "note": "Per person; verify current rate at Bamnoli",
+        "amountINR": "30–50"
+      },
+      {
+        "item": "Boat parking and camera fee",
+        "note": "Per group / per camera",
+        "amountINR": "150–200"
+      }
+    ],
+    "transport": [
+      {
+        "item": "Train/bus: Pune/Mumbai → Satara",
+        "note": "One-way",
+        "amountINR": "200–500"
+      },
+      {
+        "item": "ST bus: Satara → Bamnoli",
+        "note": "One-way; limited daily buses",
+        "amountINR": "60–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Boat hire",
+        "note": "Priced per boat (up to ~10–12 people) — roughly ₹350–500/person on a full boat, considerably more if fewer people share",
+        "amountINR": "3,500–4,500 per boat"
+      },
+      {
+        "item": "Guide fee",
+        "note": "The boatman often doubles as guide",
+        "amountINR": "150–250 per group"
+      },
+      {
+        "item": "Food",
+        "note": "Carry your own — very limited options at Bamnoli",
+        "amountINR": "150–300"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

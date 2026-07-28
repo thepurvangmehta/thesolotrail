@@ -124,8 +124,62 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Book your entry slot online before you travel — in bloom season, walk-ins are turned away at weekends.",
+    "steps": [
+      {
+        "title": "Reach Satara",
+        "body": "By train (Satara station, on the Pune–Kolhapur line) or ST bus from Pune, Mumbai or Kolhapur."
+      },
+      {
+        "title": "Satara to Kaas",
+        "body": "ST buses toward Bamnoli/Tetali pass Kaas (about 25 km, 1–1.5 hrs); early buses start around 6am. Bus frequency is limited during peak bloom season, so many visitors hire a shared jeep or taxi from Satara instead."
+      },
+      {
+        "title": "Book your entry slot online in advance",
+        "body": "During bloom season (roughly mid-September to mid-October, peaking late September), weekend and holiday entry requires an online-booked time slot via the official Kaas booking site. These sell out 10–14 days ahead for weekends. Weekdays may allow walk-in entry, but booking ahead is safer."
+      }
+    ],
+    "permitNote": "Mandatory online slot booking for weekends and holidays in bloom season; visitor numbers are capped (around 3,000/day across three slots). Book everyone in one transaction to keep your group in the same slot. Stay strictly on marked paths — many species here are endemic and protected."
+  },
+  "costs": {
+    "permits": [
+      {
+        "item": "Entry fee",
+        "note": "Weekday vs weekend/holiday rate",
+        "amountINR": "50–100"
+      }
+    ],
+    "transport": [
+      {
+        "item": "Train/bus: Pune/Mumbai → Satara",
+        "note": "One-way",
+        "amountINR": "150–400"
+      },
+      {
+        "item": "ST bus: Satara → Kaas",
+        "note": "Per person one-way",
+        "amountINR": "40–60"
+      },
+      {
+        "item": "Shared jeep/taxi: Satara → Kaas",
+        "note": "Alternative when buses are full",
+        "amountINR": "100–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Parking",
+        "note": "Per vehicle",
+        "amountINR": "20–50"
+      },
+      {
+        "item": "Food at Kaas stalls",
+        "note": "Basic",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

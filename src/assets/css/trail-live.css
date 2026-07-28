@@ -28,7 +28,14 @@
 
 /* — MAIN LAYOUT — */
 .page-body { max-width: 1100px; margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: start; }
-.page-body > main, .page-body > aside { min-width: 0; }
+/* CSS Grid items default to min-content width, so a long unbreakable string
+   (e.g. a trailhead name in an h2) expands the track past the viewport and the
+   overflow gets clipped by `html { overflow-x: clip }`.
+   Targeting `> *` rather than specific element names deliberately: this rule was
+   written as `> main, > aside` and silently stopped applying when the inner
+   <main> was renamed to .page-body-inner, which reintroduced the clipping bug.
+   Keep it element-agnostic so a future rename can't break it again. */
+.page-body > * { min-width: 0; }
 
 /* — BREADCRUMB — */
 .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); margin-bottom: 24px; flex-wrap: wrap; }
@@ -290,3 +297,22 @@
 .alert-box.danger { border-left-color: var(--danger); }
 .alert-icon { font-size: 18px; }
 @media (max-width: 520px) { .pk-grid { grid-template-columns: 1fr; } .kit-cta-inner { grid-template-columns: 1fr; } .kit-price-box { min-width: unset; } }
+
+/* — PER-TREK FAQ (visible block backing the FAQPage schema) — */
+.trek-faq { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+.trek-faq-item { border-bottom: 1px solid var(--border); }
+.trek-faq-item summary {
+  font-size: 15px; font-weight: 600; color: var(--text);
+  cursor: pointer; padding: 14px 30px 14px 0; position: relative; list-style: none;
+}
+.trek-faq-item summary::-webkit-details-marker { display: none; }
+.trek-faq-item summary::after {
+  content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  font-size: 19px; font-weight: 400; color: var(--glacier); line-height: 1;
+}
+.trek-faq-item[open] summary::after { content: '–'; }
+.trek-faq-item summary:hover { color: var(--forest); }
+.trek-faq-item p {
+  font-size: 14px; color: var(--text-mid); line-height: 1.75;
+  margin: 0 0 16px; padding-right: 30px;
+}

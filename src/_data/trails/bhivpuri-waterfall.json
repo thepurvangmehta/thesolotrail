@@ -107,8 +107,49 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "The easiest outing on this entire list — a train to Bhivpuri Road and a twenty-minute walk.",
+    "steps": [
+      {
+        "title": "Take a Karjat-bound local train",
+        "body": "Board a Central line local from Mumbai CSMT/Dadar/Thane/Kalyan toward Karjat or Khopoli and get off at Bhivpuri Road station, roughly 1.5–2 hours from CSMT."
+      },
+      {
+        "title": "Walk to the falls",
+        "body": "From Bhivpuri Road station it's about a 20-minute walk to the waterfall."
+      },
+      {
+        "title": "Alternative via Karjat",
+        "body": "If you've travelled to Karjat instead, an auto-rickshaw to Bhivpuri takes about 20 minutes."
+      },
+      {
+        "title": "Check your return train",
+        "body": "Not every Karjat-line local stops at Bhivpuri Road — check the timetable rather than assuming. Evening services are sparser, so head back well before dusk, especially in monsoon when the area gets crowded and slippery."
+      }
+    ],
+    "permitNote": "No fee or permit. This is a popular and sometimes crowded monsoon spot with no lifeguards — take care on the rocks near the base."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai → Bhivpuri Road",
+        "note": "Local train, 2nd class one-way",
+        "amountINR": "15–30"
+      },
+      {
+        "item": "Auto-rickshaw: Karjat → Bhivpuri",
+        "note": "Alternative approach",
+        "amountINR": "100–150"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Food from local stalls",
+        "note": "Basic",
+        "amountINR": "50–150"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

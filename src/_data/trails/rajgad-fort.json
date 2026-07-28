@@ -135,8 +135,59 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Reached via Nasrapur on the Pune–Satara road, then a shared jeep to Gunjavane.",
+    "steps": [
+      {
+        "title": "Pune to Nasrapur",
+        "body": "From Swargate depot in Pune, board any ST bus heading toward Satara or Kolhapur and alight at the Nasrapur bypass (~1.5 hrs)."
+      },
+      {
+        "title": "Nasrapur to Gunjavane",
+        "body": "Shared jeeps and tempos ply from Nasrapur to Gunjavane village (~40 min), the most popular base for the Chor Darwaza route. Direct Swargate–Gunjavane buses exist on paper but run very infrequently — don't plan around them."
+      },
+      {
+        "title": "Alternative: via Pali village",
+        "body": "For the Pali Darwaza route, take an ST bus to Velhe and continue by shared taxi or on foot via Pabe village, crossing the Kanad river to reach Pali."
+      },
+      {
+        "title": "Trek and return timing",
+        "body": "The climb from Gunjavane takes roughly 2.5–3 hrs. Shared vehicles from these base villages become scarce after about 4pm — plan your descent to reach the village well before then."
+      }
+    ],
+    "permitNote": "No formal entry fee — this is forest-department land, not a ticketed monument. Occasional small parking charge at the village."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "ST bus: Pune → Nasrapur",
+        "note": "Any Satara/Kolhapur-bound bus",
+        "amountINR": "60–100"
+      },
+      {
+        "item": "Shared jeep: Nasrapur → Gunjavane",
+        "note": "Per person; ₹500–800 for a full jeep",
+        "amountINR": "50–100"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Local guide",
+        "note": "Optional — the trail is reasonably well-marked",
+        "amountINR": "500–800 per group"
+      },
+      {
+        "item": "Parking / informal village fee",
+        "note": "At the base",
+        "amountINR": "20–50"
+      },
+      {
+        "item": "Food at Gunjavane",
+        "note": "Basic meals before or after the trek",
+        "amountINR": "100–200"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

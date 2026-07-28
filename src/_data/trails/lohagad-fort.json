@@ -124,8 +124,50 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Probably the easiest trek on this whole list to reach — a train to Malavli and a short rickshaw ride.",
+    "steps": [
+      {
+        "title": "Train to Malavli or Lonavala",
+        "body": "Frequent local trains from Mumbai and Pune reach Malavli station (closest to Lohagad and Visapur) or Lonavala — roughly 2 hrs from Mumbai, 1 hr from Pune."
+      },
+      {
+        "title": "Malavli to Bhaje village",
+        "body": "From Malavli station, a shared auto or rickshaw covers the ~4–5 km to Bhaje village, roughly 15–20 min. More frequent at weekends; on weekdays you may need to negotiate a dedicated rickshaw."
+      },
+      {
+        "title": "Trek",
+        "body": "An easy, popular 1–1.5 hr climb from Bhaje along a well-defined path and the famous 'Vinchu Kata' (scorpion's tail) approach."
+      }
+    ],
+    "permitNote": "No entry fee. This is one of the most accessible and well-marked treks in the Sahyadris — a good first solo outing. Note the ASI rule against cooking or open fires on the fort."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Pune → Malavli or Lonavala",
+        "note": "Local train",
+        "amountINR": "15–60"
+      },
+      {
+        "item": "Shared auto: Malavli → Bhaje",
+        "note": "Per person",
+        "amountINR": "30–50"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Guide",
+        "note": "Not customary — the trail is well-marked and busy",
+        "amountINR": "not needed"
+      },
+      {
+        "item": "Food and tea at Bhaje or on the fort",
+        "note": "Snacks, tea stalls",
+        "amountINR": "50–150"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,

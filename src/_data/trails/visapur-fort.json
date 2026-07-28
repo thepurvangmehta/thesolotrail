@@ -123,8 +123,50 @@
       ]
     }
   ],
-  "gettingThere": {},
-  "costs": {},
+  "gettingThere": {
+    "intro": "Same trailhead as Lohagad — most solo trekkers combine both forts in one day.",
+    "steps": [
+      {
+        "title": "Train to Malavli station",
+        "body": "Same access point as Lohagad — frequent local trains from Mumbai and Pune."
+      },
+      {
+        "title": "Malavli to Bhaje village",
+        "body": "Shared auto or rickshaw from Malavli station to Bhaje village (~15–20 min), the base for both forts."
+      },
+      {
+        "title": "Trek",
+        "body": "Climb the ridge opposite Lohagad — steeper and much less crowded, roughly 1.5–2 hrs. Combining both forts from the same base is a common full-day plan."
+      }
+    ],
+    "permitNote": "No entry fee. Fewer facilities and less signage than Lohagad — carry water, and check the weather since the plateau is exposed."
+  },
+  "costs": {
+    "transport": [
+      {
+        "item": "Train: Mumbai/Pune → Malavli",
+        "note": "Local train",
+        "amountINR": "15–60"
+      },
+      {
+        "item": "Shared auto: Malavli → Bhaje",
+        "note": "Per person",
+        "amountINR": "30–50"
+      }
+    ],
+    "onTrail": [
+      {
+        "item": "Guide",
+        "note": "Not customary, but useful if combining both forts in a day",
+        "amountINR": "0–500"
+      },
+      {
+        "item": "Food at Bhaje",
+        "note": "Basic snacks and tea",
+        "amountINR": "50–150"
+      }
+    ]
+  },
   "trailKit": {
     "available": false,
     "gumroadLink": null,
