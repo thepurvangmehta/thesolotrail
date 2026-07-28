@@ -120,5 +120,15 @@ navActive: trails
     var empty = document.getElementById('empty-state');
     if (empty) empty.style.display = count === 0 ? '' : 'none';
   }
+
+  (function applyParamsOnLoad() {
+    var params = new URLSearchParams(window.location.search);
+    ['region', 'diff'].forEach(function(key) {
+      var val = params.get(key);
+      if (!val) return;
+      var btn = document.querySelector('[data-filter="' + key + '"][data-val="' + val + '"]');
+      if (btn) setFilter(key, val, btn);
+    });
+  })();
 </script>
 {% endblock %}

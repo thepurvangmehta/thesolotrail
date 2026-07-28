@@ -12,22 +12,52 @@
   "maxAltitudeM": 4270,
   "totalDistanceKm": 35,
   "elevationGainM": 2050,
-  "duration": { "min": 5, "max": 6 },
+  "duration": {
+    "min": 5,
+    "max": 6
+  },
   "trailhead": "Jobra (near Manali)",
   "nearestCity": "Manali",
   "guideRequired": false,
-  "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=90",
-  "cardImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=90",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamta_Pass_1.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hamta_Pass_1.jpg?width=800",
   "seoTitle": "Hampta Pass Trek Solo Guide — The Solo Trail",
   "seoDescription": "Complete solo trekker's guide to Hampta Pass, Himachal Pradesh. 5-day crossover trek from Kullu to Spiti.",
   "seasons": [
-    { "label": "Jun – Jul", "sub": "10°C to 22°C", "badge": "best" },
-    { "label": "Aug – Sep", "sub": "8°C to 20°C", "badge": "ok" },
-    { "label": "Oct +", "sub": "Snow closes pass", "badge": "avoid" }
+    {
+      "label": "Jun – Jul",
+      "sub": "10°C to 22°C",
+      "badge": "best"
+    },
+    {
+      "label": "Aug – Sep",
+      "sub": "8°C to 20°C",
+      "badge": "ok"
+    },
+    {
+      "label": "Oct +",
+      "sub": "Snow closes pass",
+      "badge": "avoid"
+    }
   ],
   "permits": [
-    { "name": "Forest permit", "fullName": "Kullu Forest Division permit", "priceUSD": 1.2, "where": "Jobra trailhead check post", "notes": "INR 100 per person." }
+    {
+      "name": "Forest permit",
+      "fullName": "Kullu Forest Division permit",
+      "priceUSD": 1.2,
+      "where": "Jobra trailhead check post",
+      "notes": "INR 100 per person."
+    }
   ],
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

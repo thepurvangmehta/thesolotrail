@@ -12,23 +12,57 @@
   "maxAltitudeM": 3810,
   "totalDistanceKm": 20,
   "elevationGainM": 1460,
-  "duration": { "min": 4, "max": 6 },
+  "duration": {
+    "min": 4,
+    "max": 6
+  },
   "trailhead": "Sankri",
   "nearestCity": "Dehradun",
   "guideRequired": false,
-  "heroImage": "https://images.unsplash.com/photo-1626016752307-2e56aa5fdad0?w=1600&q=90",
-  "cardImage": "https://images.unsplash.com/photo-1626016752307-2e56aa5fdad0?w=1200&q=90",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas_from_Kedarkantha_Summit.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Himalayas_from_Kedarkantha_Summit.jpg?width=800",
   "seoTitle": "Kedarkantha Trek Solo Guide — The Solo Trail",
   "seoDescription": "Complete solo trekker's guide to Kedarkantha, Uttarakhand. 4–6 day winter summit trek, permits, costs, packing list. India's best beginner summit.",
   "seasons": [
-    { "label": "Dec – Feb", "sub": "-5°C to 10°C", "badge": "best" },
-    { "label": "Mar – Apr", "sub": "5°C to 18°C", "badge": "best" },
-    { "label": "May – Jun", "sub": "10°C to 25°C", "badge": "ok" },
-    { "label": "Jul – Sep", "sub": "Rain", "badge": "avoid" }
+    {
+      "label": "Dec – Feb",
+      "sub": "-5°C to 10°C",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – Apr",
+      "sub": "5°C to 18°C",
+      "badge": "best"
+    },
+    {
+      "label": "May – Jun",
+      "sub": "10°C to 25°C",
+      "badge": "ok"
+    },
+    {
+      "label": "Jul – Sep",
+      "sub": "Rain",
+      "badge": "avoid"
+    }
   ],
   "permits": [
-    { "name": "Forest permit", "fullName": "Govind Pashu Vihar National Park entry", "priceUSD": 2.5, "where": "Sankri check post, on arrival", "notes": "INR 200 per person per day. Paid at the trailhead." }
+    {
+      "name": "Forest permit",
+      "fullName": "Govind Pashu Vihar National Park entry",
+      "priceUSD": 2.5,
+      "where": "Sankri check post, on arrival",
+      "notes": "INR 200 per person per day. Paid at the trailhead."
+    }
   ],
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

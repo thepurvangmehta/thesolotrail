@@ -1,7 +1,7 @@
 ---
 seoTitle: The Solo Trail — Independent Trek Guides for Nepal and India
-seoDescription: Practical, honest trek guides for solo travellers across Nepal and Maharashtra, India. Real costs, real safety notes, no group-tour assumptions.
-ogImage: https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80
+seoDescription: Practical, honest trek guides for solo travellers across Nepal and Maharashtra, India. Browse by category, search by name, or filter by difficulty.
+ogImage: https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=1200
 ---
 {% extends "layouts/base.njk" %}
 
@@ -14,89 +14,123 @@ ogImage: https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80
   "@type": "WebSite",
   "name": "The Solo Trail",
   "url": "https://thesolotrail.com/",
-  "description": "Independent trek guides for solo travellers — Nepal and India."
+  "description": "Independent trek guides for solo travellers — Nepal and India.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://thesolotrail.com/trails/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
 </script>
 {% endblock %}
 
 {% block content %}
 
+{% set picks = trailsList | pickByIds(["annapurna-base-camp", "kalsubai-peak", "andharban-jungle-trail", "rajmachi"]) %}
+
 <section class="hero">
   <canvas id="topo-canvas" aria-hidden="true"></canvas>
   <div class="hero-content">
     <div class="hero-eyebrow">Independent trek guides</div>
     <h1 class="hero-headline">Written for the<br>person going alone.</h1>
-    <p class="hero-sub">No group itineraries. No upsells. Detailed, practical guides for solo trekkers — the information you need to do it properly on your own. {{ trailsList.length }} trails and counting, across Nepal and India.</p>
+    <p class="hero-sub">No group itineraries. No upsells. Detailed, practical guides for solo trekkers across Nepal and India — real costs, real safety notes, no tour-group assumptions.</p>
+
+    <div class="search-wrap">
+      <form class="search-box" id="search-form" role="search" autocomplete="off">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="text" class="search-input" id="search-input" placeholder="Search a trek, region, or terrain — e.g. Kalsubai, jungle, Nepal" aria-label="Search treks">
+        <button type="submit" class="search-go">Search</button>
+      </form>
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-stat"><div class="trust-num">{{ trailsList.length }}</div><div class="trust-label">Trek guides</div></div>
+      <div class="trust-stat"><div class="trust-num">{{ liveStats.liveCountries }}</div><div class="trust-label">Countries</div></div>
+      <div class="trust-stat"><div class="trust-num">{{ categoryTiles.length }}</div><div class="trust-label">Categories</div></div>
+      <div class="trust-stat"><div class="trust-num">{{ stateStubs.length }}</div><div class="trust-label">States queued next</div></div>
+    </div>
   </div>
 </section>
-<div class="hero-divider"></div>
 
-<!-- MAHARASHTRA LAUNCH -->
-<div class="section-wrap" style="padding-bottom:0;">
-  <a href="/trails/#maharashtra" class="mh-banner">
-    <div class="mh-banner-text">
-      <div class="mh-banner-eyebrow">Just launched</div>
-      <h2>Maharashtra is live — {{ collections.trailsMaharashtra.length }} treks, fully mapped</h2>
-      <p>Sahyadri hill forts, jungle trails, the state's highest peak, monsoon waterfalls, and Konkan sea forts. Our first fully-covered Indian state.</p>
+<!-- BROWSE BY CATEGORY -->
+<div class="section-wrap" style="padding-bottom:16px;">
+  <div class="section-head">
+    <div>
+      <h2>Browse by category</h2>
+      <p>From Himalayan classics to Sahyadri hill forts — pick a terrain, not just a country.</p>
     </div>
-    <div class="mh-banner-stats">
-      <div class="mh-stat"><div class="mh-stat-num">{{ collections.trailsMaharashtra.length }}</div><div class="mh-stat-label">Treks</div></div>
-      <div class="mh-stat"><div class="mh-stat-num">5</div><div class="mh-stat-label">Categories</div></div>
-    </div>
-  </a>
-</div>
-
-<!-- FEATURED TRAIL -->
-<div class="section-wrap">
-  <div class="section-eyebrow">Featured trail</div>
-  <a href="/trails/annapurna-base-camp/" class="featured-card">
-    <div class="fc-image">
-      <img
-        src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1600&q=90"
-        alt="Annapurna Base Camp — Himalayan mountain amphitheatre"
-        loading="eager"
-        fetchpriority="high"
-        width="800" height="440"
-      >
-      <div class="fc-image-overlay"></div>
-      <div class="fc-region-badge">🇳🇵 Nepal</div>
-    </div>
-    <div class="fc-body">
-      <div class="fc-country">Annapurna Region</div>
-      <h2 class="fc-title">Annapurna<br>Base Camp</h2>
-      <p class="fc-desc">A high-altitude amphitheatre at 4,130m, ringed by eight-thousanders. Solo-doable, deeply rewarding — and one of the few Himalayan classics with no mandatory guide requirement.</p>
-      <div class="fc-stats">
-        <span class="fcs hl"><span data-price="400-800">$400–$800</span> all-in</span>
-        <span class="fcs">7–10 days</span>
-        <span class="fcs">~110 km round trip</span>
-        <span class="fcs">No guide required</span>
+  </div>
+  <div class="category-grid">
+    {% for c in categoryTiles %}
+    <a href="/trails/#{{ 'nepal' if c.key == 'himalayan' else 'mh-' + c.key }}" class="category-card">
+      <img src="{{ c.image }}" alt="{{ c.label }}" loading="lazy" width="900" height="200">
+      <div class="category-card-overlay"></div>
+      <div class="category-card-body">
+        <div class="category-card-count">{{ c.count }} trek{{ "s" if c.count != 1 }}</div>
+        <div class="category-card-title">{{ c.label }}</div>
+        <div class="category-card-sub">{{ c.sub }}</div>
       </div>
-      <span class="fc-cta">Read the full guide →</span>
-    </div>
-  </a>
+    </a>
+    {% endfor %}
+  </div>
 </div>
 
-<!-- COMING SOON -->
-<div class="coming-section">
-  <div class="section-wrap">
-    <div class="section-eyebrow">On the list</div>
-    <div class="coming-grid">
-      {% for t in trailsList %}{% if t.status == "planned" %}
-      <a href="/trails/{{ t.id }}/" class="coming-card">
-        <div class="coming-badge">Coming soon</div>
-        <div class="coming-region">{{ t.country | countryFlag }} {{ t.region }}</div>
-        <div class="coming-title">{{ t.name }}</div>
-        <p class="coming-desc">{{ t.tagline }}</p>
-      </a>
-      {% endif %}{% endfor %}
-      {% set nextState = stateStubs[0] %}
-      <a href="/trails/#more-states" class="coming-card">
-        <div class="coming-badge">Coming soon</div>
-        <div class="coming-region">🇮🇳 India</div>
-        <div class="coming-title">{{ nextState.name }}</div>
-        <p class="coming-desc">{{ nextState.blurb }}</p>
-      </a>
+<!-- EDITOR'S PICKS -->
+<div class="section-wrap" style="padding-top:16px;">
+  <div class="section-head">
+    <div>
+      <h2>Editor's picks</h2>
+      <p>Four different kinds of solo trek — pick the one that matches what you're actually looking for.</p>
     </div>
+    <a href="/trails/" class="section-link">Browse all {{ trailsList.length }} →</a>
+  </div>
+  <div class="picks-grid">
+    {% set whyTags = {
+      "annapurna-base-camp": "Himalayan classic",
+      "kalsubai-peak": "Highest peak in Maharashtra",
+      "andharban-jungle-trail": "Best jungle trek",
+      "rajmachi": "Best for first-timers"
+    } %}
+    {% for t in picks %}
+    <a href="/trails/{{ t.id }}/" class="pick-card">
+      <div class="pick-img">
+        <img src="{{ t.cardImage or t.heroImage }}" alt="{{ t.name }}" loading="lazy" width="400" height="130">
+        <span class="pick-why">{{ whyTags[t.id] }}</span>
+      </div>
+      <div class="pick-body">
+        <div class="pick-region">{{ t.country | countryFlag }} {{ t.region }}</div>
+        <div class="pick-name">{{ t.name }}</div>
+        <div class="pick-stats">
+          {% if t.maxAltitudeM %}<span class="pick-tag">{{ t.maxAltitudeM | commaNum }}m</span>{% endif %}
+          <span class="pick-tag">{{ t.duration.min }}{% if t.duration.max != t.duration.min %}–{{ t.duration.max }}{% endif %}d</span>
+          <span class="pick-tag">{{ t.difficulty | capitalize }}</span>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- DIFFICULTY QUICK FILTER -->
+<div class="diff-section">
+  <div class="diff-strip">
+    <span class="diff-strip-label">Jump straight to</span>
+    <a href="/trails/?diff=easy" class="diff-pill easy">Easy treks</a>
+    <a href="/trails/?diff=moderate" class="diff-pill">Moderate treks</a>
+    <a href="/trails/?diff=challenging" class="diff-pill">Challenging treks</a>
+    <a href="/trails/?diff=expert" class="diff-pill expert">Expert-only treks</a>
+  </div>
+</div>
+
+<!-- TRAIL KIT BANNER -->
+<div class="section-wrap">
+  <div class="kit-banner">
+    <div class="kit-banner-text">
+      <h2>Offline Trail Kits for when there's no signal</h2>
+      <p>Print-ready PDF guide, GPX waypoints, emergency contacts, and permit cards — one download before you fly.</p>
+    </div>
+    <a href="/downloads/" class="kit-banner-cta">Get Trail Kits →</a>
   </div>
 </div>
 
@@ -113,29 +147,29 @@ ogImage: https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80
 {% block pagejs %}
 <script>
   (function () {
-    const canvas  = document.getElementById('topo-canvas');
-    const section = canvas.parentElement;
+    var canvas  = document.getElementById('topo-canvas');
+    var section = canvas.parentElement;
 
     function draw() {
-      const W = section.offsetWidth;
-      const H = section.offsetHeight;
+      var W = section.offsetWidth;
+      var H = section.offsetHeight;
       canvas.width  = W;
       canvas.height = H;
-      const ctx = canvas.getContext('2d');
+      var ctx = canvas.getContext('2d');
       ctx.clearRect(0, 0, W, H);
-      ctx.strokeStyle = 'rgba(26,58,42,0.055)';
+      ctx.strokeStyle = 'rgba(26,58,42,0.05)';
       ctx.lineWidth   = 1;
-      const cx = W * 0.78;
-      const cy = H * 0.48;
-      for (let i = 0; i < 20; i++) {
-        const rx = 70 + i * 54;
-        const ry = 36 + i * 26;
+      var cx = W * 0.5;
+      var cy = H * 0.5;
+      for (var i = 0; i < 16; i++) {
+        var rx = 60 + i * 48;
+        var ry = 30 + i * 22;
         ctx.beginPath();
-        for (let s = 0; s <= 64; s++) {
-          const a = (s / 64) * Math.PI * 2;
-          const j = 1 + 0.045 * Math.sin(a * 3 + i * 0.8) + 0.022 * Math.cos(a * 7 + i * 1.3);
-          const x = cx + i * 3 + Math.cos(a) * rx * j;
-          const y = cy + i * 1.5 + Math.sin(a) * ry * j;
+        for (var s = 0; s <= 64; s++) {
+          var a = (s / 64) * Math.PI * 2;
+          var j = 1 + 0.045 * Math.sin(a * 3 + i * 0.8) + 0.022 * Math.cos(a * 7 + i * 1.3);
+          var x = cx + Math.cos(a) * rx * j;
+          var y = cy + Math.sin(a) * ry * j;
           s === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
         ctx.closePath();
@@ -147,6 +181,81 @@ ogImage: https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       new ResizeObserver(draw).observe(section);
     }
+  })();
+
+  (function () {
+    var input    = document.getElementById('search-input');
+    var results  = document.getElementById('search-results');
+    var form     = document.getElementById('search-form');
+    var index    = null;
+    var activeIdx = -1;
+
+    function loadIndex() {
+      if (index) return Promise.resolve(index);
+      return fetch('/search-index.json').then(function(r) { return r.json(); }).then(function(data) {
+        index = data;
+        return index;
+      });
+    }
+
+    function render(matches, query) {
+      activeIdx = -1;
+      if (!query) { results.classList.remove('open'); results.innerHTML = ''; return; }
+      if (!matches.length) {
+        results.innerHTML = '<div class="search-empty">No treks match "' + query.replace(/</g, '') + '" — try a category like "jungle" or "fort".</div>';
+        results.classList.add('open');
+        return;
+      }
+      results.innerHTML = matches.slice(0, 7).map(function(t) {
+        return '<a href="' + t.url + '" class="search-result-item">' +
+          '<span><span class="sr-name">' + t.name + '</span>' +
+          '<span class="sr-meta">' + t.region + ' · ' + (t.difficulty.charAt(0).toUpperCase() + t.difficulty.slice(1)) + '</span></span>' +
+          '<span class="sr-arrow">→</span></a>';
+      }).join('');
+      results.classList.add('open');
+    }
+
+    function search(query) {
+      var q = query.trim().toLowerCase();
+      if (!q) { render([], ''); return; }
+      loadIndex().then(function(list) {
+        var matches = list.filter(function(t) {
+          return (t.name + ' ' + t.tagline + ' ' + t.region + ' ' + t.country + ' ' + t.category).toLowerCase().indexOf(q) !== -1;
+        });
+        render(matches, q);
+      });
+    }
+
+    input.addEventListener('input', function() { search(input.value); });
+    input.addEventListener('focus', function() { if (input.value) search(input.value); });
+
+    input.addEventListener('keydown', function(e) {
+      var items = results.querySelectorAll('.search-result-item');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        items.forEach(function(it, i) { it.classList.toggle('active-result', i === activeIdx); });
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, 0);
+        items.forEach(function(it, i) { it.classList.toggle('active-result', i === activeIdx); });
+      } else if (e.key === 'Enter' && activeIdx >= 0) {
+        e.preventDefault();
+        window.location.href = items[activeIdx].getAttribute('href');
+      }
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var active = results.querySelector('.active-result') || results.querySelector('.search-result-item');
+      if (active) { window.location.href = active.getAttribute('href'); }
+      else { window.location.href = '/trails/'; }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.search-wrap')) { results.classList.remove('open'); }
+    });
   })();
 </script>
 {% endblock %}

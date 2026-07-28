@@ -40,6 +40,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
   eleventyConfig.addFilter("firstN", (arr, n) => (Array.isArray(arr) ? arr.slice(0, n) : arr));
+  eleventyConfig.addFilter("pickByIds", (list, ids) => ids.map((id) => list.find((x) => x.id === id)).filter(Boolean));
 
   return {
     dir: {

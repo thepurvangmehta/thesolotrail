@@ -12,24 +12,64 @@
   "maxAltitudeM": 3210,
   "totalDistanceKm": 42,
   "elevationGainM": 1490,
-  "duration": { "min": 4, "max": 5 },
+  "duration": {
+    "min": 4,
+    "max": 5
+  },
   "trailhead": "Nayapul",
   "nearestCity": "Pokhara",
   "guideRequired": false,
-  "heroImage": "https://images.unsplash.com/photo-1469521669194-babb45599def?w=1600&q=90",
-  "cardImage": "https://images.unsplash.com/photo-1469521669194-babb45599def?w=1200&q=90",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Poohill_Sunrise.jpg?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Poohill_Sunrise.jpg?width=800",
   "seoTitle": "Poon Hill Trek Solo Guide — The Solo Trail",
   "seoDescription": "Complete solo trekker's guide to Poon Hill, Nepal. 4-day circuit from Pokhara. Best first Himalayan trek.",
   "seasons": [
-    { "label": "Oct – Nov", "sub": "5°C to 20°C", "badge": "best" },
-    { "label": "Mar – May", "sub": "8°C to 22°C", "badge": "best" },
-    { "label": "Dec – Feb", "sub": "0°C to 15°C", "badge": "ok" },
-    { "label": "Jun – Sep", "sub": "Monsoon", "badge": "avoid" }
+    {
+      "label": "Oct – Nov",
+      "sub": "5°C to 20°C",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "8°C to 22°C",
+      "badge": "best"
+    },
+    {
+      "label": "Dec – Feb",
+      "sub": "0°C to 15°C",
+      "badge": "ok"
+    },
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon",
+      "badge": "avoid"
+    }
   ],
   "permits": [
-    { "name": "ACAP", "fullName": "Annapurna Conservation Area Permit", "priceUSD": 24, "where": "Pokhara (Damside)", "notes": "SAARC nationals pay $8." },
-    { "name": "TIMS", "fullName": "Trekkers' Information Management System", "priceUSD": 17, "where": "Same office as ACAP", "notes": "SAARC nationals pay $9." }
+    {
+      "name": "ACAP",
+      "fullName": "Annapurna Conservation Area Permit",
+      "priceUSD": 24,
+      "where": "Pokhara (Damside)",
+      "notes": "SAARC nationals pay $8."
+    },
+    {
+      "name": "TIMS",
+      "fullName": "Trekkers' Information Management System",
+      "priceUSD": 17,
+      "where": "Same office as ACAP",
+      "notes": "SAARC nationals pay $9."
+    }
   ],
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 5.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo via Wikimedia Commons"
 }

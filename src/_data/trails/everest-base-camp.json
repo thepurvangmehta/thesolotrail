@@ -12,25 +12,71 @@
   "maxAltitudeM": 5364,
   "totalDistanceKm": 130,
   "elevationGainM": 3800,
-  "duration": { "min": 12, "max": 14 },
+  "duration": {
+    "min": 12,
+    "max": 14
+  },
   "trailhead": "Lukla",
   "nearestCity": "Kathmandu",
   "guideRequired": false,
-  "heroImage": "https://images.unsplash.com/photo-1724341754508-f19ee59541bd?w=1600&q=90",
-  "cardImage": "https://images.unsplash.com/photo-1724341754508-f19ee59541bd?w=1200&q=90",
+  "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Way_to_Everest_Base_Camp.JPG?width=1600",
+  "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Way_to_Everest_Base_Camp.JPG?width=800",
   "seoTitle": "Everest Base Camp Trek — Solo Guide Coming Soon · The Solo Trail",
   "seoDescription": "A solo trekking guide for Everest Base Camp is coming to The Solo Trail. 5,364m, 12–14 days, Nepal.",
   "seasons": [
-    { "label": "Oct – Nov", "sub": "0°C to 15°C", "badge": "best" },
-    { "label": "Mar – May", "sub": "5°C to 18°C", "badge": "best" },
-    { "label": "Dec – Feb", "sub": "-15°C to 5°C", "badge": "ok" },
-    { "label": "Jun – Sep", "sub": "Monsoon", "badge": "avoid" }
+    {
+      "label": "Oct – Nov",
+      "sub": "0°C to 15°C",
+      "badge": "best"
+    },
+    {
+      "label": "Mar – May",
+      "sub": "5°C to 18°C",
+      "badge": "best"
+    },
+    {
+      "label": "Dec – Feb",
+      "sub": "-15°C to 5°C",
+      "badge": "ok"
+    },
+    {
+      "label": "Jun – Sep",
+      "sub": "Monsoon",
+      "badge": "avoid"
+    }
   ],
   "permits": [
-    { "name": "Sagarmatha NP", "fullName": "Sagarmatha National Park Entry", "priceUSD": 30, "where": "Monjo checkpoint", "notes": "SAARC nationals pay $10." },
-    { "name": "TIMS", "fullName": "Trekkers' Information Management System", "priceUSD": 17, "where": "Kathmandu (TAAN office)", "notes": "SAARC nationals pay $9." },
-    { "name": "Khumbu Rural Municipality", "fullName": "Local municipality fee", "priceUSD": 6, "where": "Lukla or Phakding", "notes": null }
+    {
+      "name": "Sagarmatha NP",
+      "fullName": "Sagarmatha National Park Entry",
+      "priceUSD": 30,
+      "where": "Monjo checkpoint",
+      "notes": "SAARC nationals pay $10."
+    },
+    {
+      "name": "TIMS",
+      "fullName": "Trekkers' Information Management System",
+      "priceUSD": 17,
+      "where": "Kathmandu (TAAN office)",
+      "notes": "SAARC nationals pay $9."
+    },
+    {
+      "name": "Khumbu Rural Municipality",
+      "fullName": "Local municipality fee",
+      "priceUSD": 6,
+      "where": "Lukla or Phakding",
+      "notes": null
+    }
   ],
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 9.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] }
+  "trailKit": {
+    "available": false,
+    "gumroadLink": null,
+    "priceUSD": 9.99,
+    "items": []
+  },
+  "affiliates": {
+    "insurance": null,
+    "activities": []
+  },
+  "imageCredit": "Photo: CC BY-SA 3.0 · Wikimedia Commons"
 }
