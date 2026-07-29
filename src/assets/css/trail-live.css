@@ -157,6 +157,12 @@
 
 .permit-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
 .permit-row:last-child { border-bottom: none; }
+
+/* — GUIDE-INTEREST CARD (demand test, not a live product) — */
+.guide-interest-card { background: var(--ink-pale); border-color: var(--border); }
+.guide-interest-copy { font-size: 13px; color: var(--ink); line-height: 1.6; margin-bottom: 10px; }
+.guide-interest-note { font-size: 12.5px; font-weight: 600; color: var(--ink); line-height: 1.5; margin-bottom: 12px; }
+.guide-interest-card .waitlist-row { max-width: 100%; margin: 0; justify-content: flex-start; }
 .permit-name { font-weight: 600; color: var(--text); }
 .permit-note { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
 .permit-price { font-weight: 600; color: var(--accent); text-align: right; max-width: 55%; }

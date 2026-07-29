@@ -288,5 +288,20 @@
       </div>
     </div>
 
+    {# Demand-signal test for a future local-guide booking feature — not a
+       real product yet. Same visitors, same trek page, but the copy asks a
+       specific question ("would you use a guide for THIS trek") instead of
+       a generic notify-me, so clicks here are a read on that idea specifically. #}
+    <div class="sidebar-card guide-interest-card">
+      <div class="sc-head">Solo, but not alone</div>
+      <div class="sc-body">
+        <p class="guide-interest-copy">We're exploring connecting solo trekkers with a vetted local guide — for a full trek, or just its hardest section.</p>
+        <p class="guide-interest-note">Want a guide for {{ trek.shortName or trek.name }}? Join the list and we'll reach out first.</p>
+        <div class="waitlist-row">
+          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="873d1fa4-f97d-445f-917c-6df807bbc186"></script>
+        </div>
+      </div>
+    </div>
+
   </aside>
 </div>
