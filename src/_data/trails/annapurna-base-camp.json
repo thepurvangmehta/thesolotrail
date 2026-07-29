@@ -20,6 +20,7 @@
   "nearestCity": "Pokhara",
   "guideRequired": true,
   "guideProgramActive": true,
+  "guideFormSheetUrl": "https://script.google.com/macros/s/AKfycbz9fh1kBMIQm4r5c8bwL1P9cKct_29wRiUJ2rmXWAm7cEB37FPJv1eqFY1_9zea7PIK/exec",
   "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=1600",
   "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=800",
   "_gallery_highlights_note": "Example data — replace with curated photos when available. Other trails opt in by adding the same shape.",
