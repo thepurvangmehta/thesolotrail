@@ -104,13 +104,20 @@ eleventyComputed:
     item.addEventListener('click', function() { item.classList.toggle('checked'); });
   });
 
-  {# Stage 0 of the guide-marketplace plan: submits via Web3Forms (a
-     no-account, no-backend form API — see docs/analytics.md-style note in
-     the guide-request card) rather than a mailto: link, so the trekker
-     never has to leave the page or open their own email client. The
-     access_key lives in the trek's own data file (guideFormAccessKey) —
-     until that's set to a real key, submission fails gracefully into the
-     mailto fallback below rather than silently losing the request. #}
+  {# Stage 0 of the guide-marketplace plan: submits to a Google Apps Script
+     Web App backed by a Sheet the team owns, so every request lands as one
+     row in a list to review on our own schedule — not one email per
+     submission, and no trekker ever leaves the page. The URL lives in the
+     trek's own data file (guideFormSheetUrl); until that's a real deployed
+     Apps Script URL, submission fails gracefully into the mailto fallback
+     below rather than silently losing the request.
+
+     Content-Type is deliberately 'text/plain' rather than 'application/json':
+     Apps Script Web Apps don't answer CORS preflight (OPTIONS) requests, so a
+     'application/json' fetch — which triggers a preflight — would be blocked
+     by the browser before it ever reached the script. text/plain keeps this a
+     CORS-exempt "simple request"; Apps Script still parses the body as JSON
+     on the server side via JSON.parse(e.postData.contents). #}
   var guideForm = document.getElementById('guide-request-form');
   var guideResult = document.getElementById('guide-request-result');
   if (guideForm && guideResult) {
@@ -127,29 +134,27 @@ eleventyComputed:
       e.preventDefault();
       var f = guideForm;
       if (f.botcheck.checked) return; // honeypot tripped — silently drop, likely a bot
-      var accessKey = f.access_key.value;
+      var sheetUrl = guideForm.dataset.sheetUrl;
       guideResult.hidden = true;
       guideResult.className = 'guide-request-result';
-      if (!accessKey || accessKey === 'PENDING_ACCESS_KEY') {
-        // Form isn't wired to a real access key yet — fail open to mailto
+      if (!sheetUrl || sheetUrl === 'PENDING_SHEET_URL') {
+        // Form isn't wired to a real deployment yet — fail open to mailto
         // rather than pretend the request went somewhere it didn't.
         window.location.href = fallbackMailto(f);
         return;
       }
       submitBtn.disabled = true;
       submitLabel.textContent = 'Sending…';
-      fetch('https://api.web3forms.com/submit', {
+      fetch(sheetUrl, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
-          access_key: accessKey,
-          subject: f.subject.value,
+          trek: '{{ trek.name }}',
           name: f.name.value,
           email: f.email.value,
           dates: f.dates.value || 'Not specified',
           group_size: f.groupSize.value,
-          message: f.message.value || '(none)',
-          trek: '{{ trek.name }}'
+          message: f.message.value || '(none)'
         })
       }).then(function(r) { return r.json(); }).then(function(data) {
         if (data.success) {
@@ -159,7 +164,7 @@ eleventyComputed:
           guideResult.hidden = false;
           if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
         } else {
-          throw new Error(data.message || 'submission failed');
+          throw new Error(data.error || 'submission failed');
         }
       }).catch(function() {
         submitBtn.disabled = false;

@@ -289,18 +289,16 @@
     </div>
 
     {% if trek.guideProgramActive %}
-    {# Stage 0 of the guide-marketplace plan: a real request, routed to email
-       since the site is static (no backend, no third-party form account set
-       up yet). Honest framing on purpose — this is a manual introduction
-       service being piloted with one real contact, not a live booking system
-       with a vetted roster. Don't imply more than that's true. #}
+    {# Stage 0 of the guide-marketplace plan: a real request, logged as a row
+       in a Google Sheet the team owns (see trail.njk pagejs) rather than one
+       email per submission. Honest framing on purpose — this is a manual
+       introduction service being piloted with one real contact, not a live
+       booking system with a vetted roster. Don't imply more than that's true. #}
     <div class="sidebar-card guide-request-card" id="guide-request">
       <div class="sc-head">Guide for this trek</div>
       <div class="sc-body">
         <p class="guide-request-copy">{{ trek.guideProgramIntro or ("We're piloting a direct introduction to a local guide for " + (trek.shortName or trek.name) + ". This is early — a real person reads every request and replies personally, not an instant booking system." ) }}</p>
-        <form class="guide-request-form" id="guide-request-form">
-          <input type="hidden" name="access_key" value="{{ trek.guideFormAccessKey or 'PENDING_ACCESS_KEY' }}">
-          <input type="hidden" name="subject" value="Guide request — {{ trek.name }}">
+        <form class="guide-request-form" id="guide-request-form" data-sheet-url="{{ trek.guideFormSheetUrl or 'PENDING_SHEET_URL' }}">
           <input type="checkbox" name="botcheck" class="guide-request-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <label>Your name<input type="text" name="name" required></label>
           <label>Your email<input type="email" name="email" required></label>
