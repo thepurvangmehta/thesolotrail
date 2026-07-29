@@ -120,7 +120,7 @@ eleventyComputed:
         'Planned dates: ' + (f.dates.value || 'Not specified') + '\n' +
         'Group size: ' + f.groupSize.value + '\n\n' +
         'Message:\n' + (f.message.value || '(none)');
-      window.location.href = 'mailto:hello@thesolotrail.com?subject=' +
+      window.location.href = 'mailto:thepurvangmehta@gmail.com?subject=' +
         encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
     });
