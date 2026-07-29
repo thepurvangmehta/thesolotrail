@@ -2,8 +2,8 @@
    Every page loads this first, then a page-type stylesheet on top. */
 
 /* — SELF-HOSTED FONTS — */
-/* Inter (variable: weight 100–900) and Playfair Display (variable: weight 400–900 + italic)
-   Self-hosted from Google Fonts (Latin subset, OFL). One woff2 per family covers all weights. */
+/* Inter (variable: weight 100–900) for UI/body, Instrument Serif (400 + italic) for display.
+   Self-hosted from Google Fonts (Latin subset, both OFL-1.1). */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -12,38 +12,79 @@
   src: url('/assets/fonts/Inter-latin.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Instrument Serif';
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/PlayfairDisplay-latin.woff2') format('woff2');
+  src: url('/assets/fonts/InstrumentSerif-latin.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Instrument Serif';
   font-style: italic;
-  font-weight: 400 900;
+  font-weight: 400;
   font-display: swap;
-  src: url('/assets/fonts/PlayfairDisplay-latin.woff2') format('woff2');
+  src: url('/assets/fonts/InstrumentSerif-latin-italic.woff2') format('woff2');
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { overflow-x: clip; scroll-behavior: smooth; }
-body { min-width: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+body { min-width: 0; font-family: var(--font-ui); background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
 
+/* — DESIGN TOKENS —
+   "Ink & Paper": near-black ink on warm paper, with a single terracotta accent.
+   Colours are named by ROLE, never by hue — so a future palette change happens
+   here and nowhere else. Do not hardcode hex values in page stylesheets.
+
+   Contrast: every text/surface pair below clears WCAG AA (4.5:1). If you retune
+   a value, re-check it — the pale surfaces have the least headroom. */
 :root {
-  --forest: #1A3A2A; --forest-light: #2A5240; --forest-pale: #E8F0EB;
-  --glacier: #4A8FA8; --glacier-light: #EBF4F8;
-  --amber: #D4882A; --amber-light: #FDF3E3;
-  --bg: #F7F4EE; --white: #FFFFFF;
-  --text: #1C1C1C; --text-mid: #4A4A4A; --text-muted: #7A7A7A; --border: #DDD8CE;
-  --danger: #C0392B; --danger-light: #FDEDEC;
+  /* Display + UI type. --font-display is only for headings and the wordmark;
+     Instrument Serif has a single weight (400), so never ask it for bold. */
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Ink — dark brand surfaces: nav, hero panels, footer */
+  --ink: #14161A;
+  --ink-soft: #2A2E36;      /* raised/hover surface on ink */
+  --ink-deep: #0B0D0F;      /* footer, deepest surface */
+  --ink-pale: #EFECE6;      /* pale tinted surface on paper */
+
+  /* Accent — terracotta. The only saturated brand colour; reserve it for
+     actions and wayfinding so it keeps its meaning. */
+  --accent: #A8442A;
+  --accent-hover: #8C3620;
+  --accent-light: #E4795A;        /* accent legible ON ink */
+  --accent-light-hover: #F0937A;
+  --accent-pale: #F8EDE9;
+  --accent-pale-border: #F0D9D1;
+  --accent-ink: #7E3019;          /* text on --accent-pale */
+
+  /* Paper — light surfaces */
+  --bg: #F6F3EE;
+  --surface: #FFFFFF;
+  --bg-soft: #FBF9F5;
+  --border: #DFDAD1;
+  --border-soft: #EAE5DD;
+
+  /* Text */
+  --text: #14161A;
+  --text-mid: #55595F;
+  --text-muted: #616570;
+
+  /* Status — functional signals, deliberately outside the brand accent.
+     Kept low-chroma so they read as information, not decoration. */
+  --good: #3D6B4E; --good-pale: #EBF1EC;
+  --warn: #855A18; --warn-hover: #6E4A12; --warn-pale: #FAF2E4; --warn-pale-border: #EEDCB8; --warn-light: #E0A44A;
+  --danger: #9E211A; --danger-pale: #FBEBE9; --danger-pale-border: #F3CFCB; --danger-hover: #7F1A14; --danger-light: #F2857A;
 }
 
 /* — ACCESSIBILITY — */
-.skip-link { position: absolute; top: -100px; left: 8px; background: var(--forest); color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; z-index: 1000; transition: top .15s; }
+.skip-link { position: absolute; top: -100px; left: 8px; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; z-index: 1000; transition: top .15s; }
 .skip-link:focus { top: 8px; }
 #main-content:focus { outline: none; }  /* mouse-only; :focus-visible below re-adds ring for keyboard users */
-:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; border-radius: 2px; }
+/* --accent-light is the ring colour because it is the one accent value that
+   clears 3:1 against BOTH the paper background and the ink nav/footer. */
+:focus-visible { outline: 3px solid var(--accent-light); outline-offset: 2px; border-radius: 2px; }
 .skip-link:focus-visible { outline-offset: 4px; }
 
 /* "Last verified" line on trail pages */
@@ -51,22 +92,23 @@ body { min-width: 0; font-family: 'Inter', sans-serif; background: var(--bg); co
 .last-updated time { font-weight: 600; }
 
 /* — NAV — */
-nav { background: var(--forest); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
-.nav-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; flex-shrink: 0; }
-.nav-logo span { color: #7EC8A0; }
+nav { background: var(--ink); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: var(--font-display); color: #fff; font-size: 20px; letter-spacing: .01em; text-decoration: none; flex-shrink: 0; }
+.nav-logo span { color: var(--accent-light); }
 .nav-links { display: flex; gap: 24px; align-items: center; }
-.nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color .2s; }
+.nav-links a { color: rgba(255,255,255,.72); text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color .2s; }
 .nav-links a:hover, .nav-links a.active { color: #fff; }
-.nav-cta { background: var(--glacier) !important; color: #fff !important; padding: 7px 16px; border-radius: 6px; font-size: 13px !important; }
+.nav-cta { background: var(--accent) !important; color: #fff !important; padding: 7px 16px; border-radius: 6px; font-size: 13px !important; }
+.nav-cta:hover { background: var(--accent-hover) !important; }
 .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; }
 .nav-hamburger span { display: block; width: 22px; height: 2px; background: rgba(255,255,255,.85); border-radius: 2px; }
 
 /* — FOOTER — */
-.site-footer { background: #0F2318; padding: 40px 24px 28px; }
+.site-footer { background: var(--ink-deep); padding: 40px 24px 28px; }
 .footer-inner { max-width: 1040px; margin: 0 auto; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; }
-.footer-brand .footer-logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 18px; text-decoration: none; display: block; margin-bottom: 6px; }
-.footer-brand .footer-logo span { color: #7EC8A0; }
+.footer-brand .footer-logo { font-family: var(--font-display); color: #fff; font-size: 20px; text-decoration: none; display: block; margin-bottom: 6px; }
+.footer-brand .footer-logo span { color: var(--accent-light); }
 .footer-brand p { font-size: 12px; color: rgba(255,255,255,.75); max-width: 220px; line-height: 1.6; }
 .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
 .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.9); margin-bottom: 12px; }
@@ -76,12 +118,12 @@ nav { background: var(--forest); padding: 0 24px; display: flex; align-items: ce
 .footer-copy { font-size: 12px; color: rgba(255,255,255,.7); }
 .footer-email { font-size: 12px; color: rgba(255,255,255,.8); text-decoration: none; }
 .footer-email:hover { color: #fff; }
-.footer-logo-solo { font-family: 'Playfair Display', serif; color: #fff; font-size: 16px; text-decoration: none; }
-.footer-logo-solo span { color: #7EC8A0; }
+.footer-logo-solo { font-family: var(--font-display); color: #fff; font-size: 18px; text-decoration: none; }
+.footer-logo-solo span { color: var(--accent-light); }
 
 @media (max-width: 640px) {
   nav { padding: 0 16px; }
-  .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--forest); flex-direction: column; padding: 12px 16px 20px; gap: 2px; border-top: 1px solid rgba(255,255,255,.1); z-index: 99; }
+  .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--ink); flex-direction: column; padding: 12px 16px 20px; gap: 2px; border-top: 1px solid rgba(255,255,255,.1); z-index: 99; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 10px 4px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,.07); width: 100%; }
   .nav-links .nav-cta { margin-top: 8px; text-align: center; padding: 11px; border-radius: 7px; }

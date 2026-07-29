@@ -79,16 +79,16 @@
       <span id="tst-curr-label" style="font-size:12px;font-weight:600;letter-spacing:.04em">${curr}</span>
       <span style="font-size:9px;opacity:.55">▾</span>
     `;
-    btn.style.cssText = 'display:flex;align-items:center;gap:5px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:6px;padding:5px 10px;cursor:pointer;color:rgba(255,255,255,0.88);font-family:Inter,sans-serif;transition:background .2s;white-space:nowrap;';
+    btn.style.cssText = 'display:flex;align-items:center;gap:5px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:6px;padding:5px 10px;cursor:pointer;color:rgba(255,255,255,0.88);font-family:var(--font-ui);transition:background .2s;white-space:nowrap;';
     btn.addEventListener('mouseenter', () => { btn.style.background='rgba(255,255,255,0.18)'; });
     btn.addEventListener('mouseleave', () => { btn.style.background='rgba(255,255,255,0.1)'; });
 
     const drop = document.createElement('div');
-    drop.style.cssText = 'display:none;position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid #DDD8CE;border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.13);min-width:220px;padding:8px;z-index:500;';
+    drop.style.cssText = 'display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.13);min-width:220px;padding:8px;z-index:500;';
 
     if (isAuto && CURRENCIES[curr]) {
       const hint = document.createElement('p');
-      hint.style.cssText = 'font-size:11px;color:#7A7A7A;padding:3px 10px 8px;border-bottom:1px solid #F0EDE7;margin-bottom:4px;font-family:Inter,sans-serif;';
+      hint.style.cssText = 'font-size:11px;color:var(--text-muted);padding:3px 10px 8px;border-bottom:1px solid var(--border-soft);margin-bottom:4px;font-family:var(--font-ui);';
       hint.textContent = `Auto-detected: ${CURRENCIES[curr].name}`;
       drop.appendChild(hint);
     }
@@ -97,9 +97,9 @@
       const item = document.createElement('button');
       const isActive = code === curr;
       item.dataset.code = code;
-      item.style.cssText = `display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border:none;background:${isActive?'#E8F0EB':'transparent'};cursor:pointer;font-family:Inter,sans-serif;font-size:13px;color:#1C1C1C;border-radius:6px;text-align:left;transition:background .15s;`;
-      item.innerHTML = `<span style="font-size:16px;line-height:1">${info.flag}</span><span style="font-weight:${isActive?600:400};flex:1">${info.name}</span><span style="color:#7A7A7A;font-size:11px">${code}</span>`;
-      item.addEventListener('mouseenter', () => { if(item.dataset.code !== curr) item.style.background='#F7F4EE'; });
+      item.style.cssText = `display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border:none;background:${isActive?'var(--ink-pale)':'transparent'};cursor:pointer;font-family:var(--font-ui);font-size:13px;color:var(--text);border-radius:6px;text-align:left;transition:background .15s;`;
+      item.innerHTML = `<span style="font-size:16px;line-height:1">${info.flag}</span><span style="font-weight:${isActive?600:400};flex:1">${info.name}</span><span style="color:var(--text-muted);font-size:11px">${code}</span>`;
+      item.addEventListener('mouseenter', () => { if(item.dataset.code !== curr) item.style.background='var(--bg)'; });
       item.addEventListener('mouseleave', () => { if(item.dataset.code !== curr) item.style.background='transparent'; });
       item.addEventListener('click', () => {
         localStorage.setItem('tst_currency', code);
@@ -108,7 +108,7 @@
         open = false;
         drop.style.display = 'none';
         drop.querySelectorAll('button').forEach(b => {
-          b.style.background = b.dataset.code === code ? '#E8F0EB' : 'transparent';
+          b.style.background = b.dataset.code === code ? 'var(--ink-pale)' : 'transparent';
           b.querySelector('span:nth-child(2)').style.fontWeight = b.dataset.code === code ? '600' : '400';
         });
       });

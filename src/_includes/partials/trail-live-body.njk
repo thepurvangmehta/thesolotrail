@@ -11,10 +11,10 @@
     <p class="hero-sub">{{ trek.tagline }}</p>
     {% if trek.lastVerified %}<p class="last-updated">Last verified: <time datetime="{{ trek.lastVerified }}">{{ trek.lastVerified }}</time></p>{% endif %}
     <div class="hero-tags">
-      <span class="htag green">Solo-friendly</span>
+      <span class="htag accent">Solo-friendly</span>
       {% if trek.maxAltitudeM %}<span class="htag">{{ trek.maxAltitudeM | commaNum }}m</span>{% endif %}
       <span class="htag">{{ trek.duration.min }}{% if trek.duration.max != trek.duration.min %}–{{ trek.duration.max }}{% endif %} day{% if trek.duration.max > 1 %}s{% endif %}</span>
-      <span class="htag amber">{{ trek.difficulty | capitalize }}</span>
+      <span class="htag diff-{{ trek.difficulty | diffClass }}">{{ trek.difficulty | capitalize }}</span>
       {% if trek.category %}<span class="htag">{{ trek.category | replace("-", " ") | capitalize }} trek</span>{% endif %}
     </div>
   </div>
