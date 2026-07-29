@@ -29,25 +29,17 @@
     <div class="action-cards">
       {% for t in collections.trailsNepal %}{% if t.status == "live" %}
       <a href="/trails/{{ t.id }}/" class="action-card">
-        <div class="icon">🏔️</div>
         <strong>Try {{ t.shortName }} first</strong>
         <span>Our full solo guide — {{ t.maxAltitudeM | commaNum }}m, {{ t.country }}</span>
       </a>
       {% endif %}{% endfor %}
       <a href="/trails/" class="action-card">
-        <div class="icon">🗺️</div>
         <strong>All trails</strong>
         <span>Browse every trek we cover</span>
       </a>
-      <a href="/community/" class="action-card">
-        <div class="icon">💬</div>
-        <strong>Community</strong>
-        <span>Talk to other solo trekkers</span>
-      </a>
       <a href="/downloads/" class="action-card">
-        <div class="icon">⚡</div>
-        <strong>Go Pro</strong>
-        <span>Get every guide on launch day</span>
+        <strong>Trail Kits</strong>
+        <span>Offline PDF + GPS waypoints for live guides</span>
       </a>
     </div>
   </div>

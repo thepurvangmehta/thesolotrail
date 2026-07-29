@@ -5,18 +5,18 @@
 .hub-crumb { color: rgba(255,255,255,.5); margin-bottom: 16px; }
 .hub-crumb a { color: rgba(255,255,255,.6); }
 .hub-crumb a:hover { color: #fff; }
-.hub-crumb .breadcrumb-sep { color: rgba(255,255,255,.45); }
+.hub-crumb .breadcrumb-sep { color: rgba(255,255,255,.45); margin: 0 6px; }
 .hub-hero h1 {
   font-family: var(--font-display);
   font-size: clamp(28px, 4.6vw, 44px);
-  color: #fff; font-weight: 400; line-height: 1.15;
+  color: #fff; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15;
   margin-bottom: 14px; text-wrap: balance;
 }
 .hub-lede { font-size: 16px; color: rgba(255,255,255,.72); line-height: 1.72; max-width: 62ch; }
 .hub-stats { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 22px; }
 .hub-stat { font-size: 13px; color: rgba(255,255,255,.55); }
 .hub-stat strong {
-  font-family: var(--font-display); font-size: 22px; font-weight: 400;
+  font-family: var(--font-display); font-size: 22px; font-weight: 700;
   color: var(--accent-light); margin-right: 5px;
 }
 
@@ -31,7 +31,7 @@
 .hub-faq { background: var(--surface); border-top: 1px solid var(--border); padding: 52px 24px 56px; }
 .hub-faq-inner { max-width: 760px; margin: 0 auto; }
 .hub-faq h2 {
-  font-family: var(--font-display); font-size: 26px; font-weight: 400;
+  font-family: var(--font-display); font-size: 26px; font-weight: 700;
   color: var(--ink); margin-bottom: 22px;
 }
 .hub-faq-item { border-bottom: 1px solid var(--border); padding: 4px 0; }

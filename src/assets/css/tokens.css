@@ -2,28 +2,14 @@
    Every page loads this first, then a page-type stylesheet on top. */
 
 /* — SELF-HOSTED FONTS — */
-/* Inter (variable: weight 100–900) for UI/body, Instrument Serif (400 + italic) for display.
-   Self-hosted from Google Fonts (Latin subset, both OFL-1.1). */
+/* Inter (variable: weight 100–900) for everything — display and UI both.
+   Self-hosted from Google Fonts (Latin subset, OFL-1.1). */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
   src: url('/assets/fonts/Inter-latin.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/assets/fonts/InstrumentSerif-latin.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/assets/fonts/InstrumentSerif-latin-italic.woff2') format('woff2');
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,9 +24,10 @@ body { min-width: 0; font-family: var(--font-ui); background: var(--bg); color: 
    Contrast: every text/surface pair below clears WCAG AA (4.5:1). If you retune
    a value, re-check it — the pale surfaces have the least headroom. */
 :root {
-  /* Display + UI type. --font-display is only for headings and the wordmark;
-     Instrument Serif has a single weight (400), so never ask it for bold. */
-  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  /* One typeface, one variable in practice — --font-display and --font-ui both
+     resolve to Inter. Kept as two tokens so headings and body copy can be
+     retuned independently later without touching every component rule. */
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Ink — dark brand surfaces: nav, hero panels, footer */
@@ -93,7 +80,7 @@ body { min-width: 0; font-family: var(--font-ui); background: var(--bg); color: 
 
 /* — NAV — */
 nav { background: var(--ink); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
-.nav-logo { font-family: var(--font-display); color: #fff; font-size: 20px; letter-spacing: .01em; text-decoration: none; flex-shrink: 0; }
+.nav-logo { font-family: var(--font-display); color: #fff; font-size: 19px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; flex-shrink: 0; }
 .nav-logo span { color: var(--accent-light); }
 .nav-links { display: flex; gap: 24px; align-items: center; }
 .nav-links a { color: rgba(255,255,255,.72); text-decoration: none; font-size: 13px; font-weight: 500; white-space: nowrap; transition: color .2s; }
@@ -107,7 +94,7 @@ nav { background: var(--ink); padding: 0 24px; display: flex; align-items: cente
 .site-footer { background: var(--ink-deep); padding: 40px 24px 28px; }
 .footer-inner { max-width: 1040px; margin: 0 auto; }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; }
-.footer-brand .footer-logo { font-family: var(--font-display); color: #fff; font-size: 20px; text-decoration: none; display: block; margin-bottom: 6px; }
+.footer-brand .footer-logo { font-family: var(--font-display); color: #fff; font-size: 19px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; display: block; margin-bottom: 6px; }
 .footer-brand .footer-logo span { color: var(--accent-light); }
 .footer-brand p { font-size: 12px; color: rgba(255,255,255,.75); max-width: 220px; line-height: 1.6; }
 .footer-links { display: flex; gap: 40px; flex-wrap: wrap; }
@@ -118,7 +105,7 @@ nav { background: var(--ink); padding: 0 24px; display: flex; align-items: cente
 .footer-copy { font-size: 12px; color: rgba(255,255,255,.7); }
 .footer-email { font-size: 12px; color: rgba(255,255,255,.8); text-decoration: none; }
 .footer-email:hover { color: #fff; }
-.footer-logo-solo { font-family: var(--font-display); color: #fff; font-size: 18px; text-decoration: none; }
+.footer-logo-solo { font-family: var(--font-display); color: #fff; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; }
 .footer-logo-solo span { color: var(--accent-light); }
 
 @media (max-width: 640px) {
