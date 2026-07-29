@@ -21,6 +21,7 @@
   "trailhead": "Base village/town",
   "nearestCity": "Nearest major city",
   "guideRequired": false,
+  "_guideRequired_note": "true for EITHER a terrain-danger judgment call (e.g. Kalavantin Durg) OR a legal requirement (Nepal conservation areas, mandatory since Apr 2023) — the FAQ builder stays generic on purpose and pulls the specific reason from gettingThere.permitNote, so put the real 'why' there, not here.",
 
   "heroImage": "https://images.unsplash.com/...",
   "cardImage": "https://images.unsplash.com/...",

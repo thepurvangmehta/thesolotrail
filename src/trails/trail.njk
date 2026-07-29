@@ -103,6 +103,28 @@ eleventyComputed:
   document.querySelectorAll('.pack-item').forEach(function(item) {
     item.addEventListener('click', function() { item.classList.toggle('checked'); });
   });
+
+  {# Stage 0 of the guide-marketplace plan: no backend and no third-party
+     form account exists yet, so this builds a mailto: link from the form
+     fields instead of posting anywhere. Every field is included in the body
+     so a reply needs no back-and-forth to get the basics. #}
+  var guideForm = document.getElementById('guide-request-form');
+  if (guideForm) {
+    guideForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var f = guideForm;
+      var subject = 'Guide request — {{ trek.name }} (' + f.name.value + ')';
+      var body = 'Trek: {{ trek.name }}\n' +
+        'Name: ' + f.name.value + '\n' +
+        'Email: ' + f.email.value + '\n' +
+        'Planned dates: ' + (f.dates.value || 'Not specified') + '\n' +
+        'Group size: ' + f.groupSize.value + '\n\n' +
+        'Message:\n' + (f.message.value || '(none)');
+      window.location.href = 'mailto:hello@thesolotrail.com?subject=' +
+        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
+    });
+  }
 </script>
 {% endif %}
 {% endblock %}

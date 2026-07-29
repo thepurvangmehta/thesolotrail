@@ -288,6 +288,28 @@
       </div>
     </div>
 
+    {% if trek.guideProgramActive %}
+    {# Stage 0 of the guide-marketplace plan: a real request, routed to email
+       since the site is static (no backend, no third-party form account set
+       up yet). Honest framing on purpose — this is a manual introduction
+       service being piloted with one real contact, not a live booking system
+       with a vetted roster. Don't imply more than that's true. #}
+    <div class="sidebar-card guide-request-card" id="guide-request">
+      <div class="sc-head">Guide for this trek</div>
+      <div class="sc-body">
+        <p class="guide-request-copy">{{ trek.guideProgramIntro or ("We're piloting a direct introduction to a local guide for " + (trek.shortName or trek.name) + ". This is early — a real person reads every request and replies personally, not an instant booking system." ) }}</p>
+        <form class="guide-request-form" id="guide-request-form">
+          <label>Your name<input type="text" name="name" required></label>
+          <label>Your email<input type="email" name="email" required></label>
+          <label>Planned dates<input type="text" name="dates" placeholder="e.g. Oct 12–22, 2026"></label>
+          <label>Group size<input type="number" name="groupSize" min="1" value="1"></label>
+          <label>Anything else the guide should know<textarea name="message" rows="3" placeholder="Experience level, questions, flexibility on dates…"></textarea></label>
+          <button type="submit" class="guide-request-submit">Request an introduction</button>
+        </form>
+        <p class="guide-request-disclosure">Sends an email to our team — no account, no payment, no commitment. We'll reply personally before anything else happens.</p>
+      </div>
+    </div>
+    {% else %}
     {# Demand-signal test for a future local-guide booking feature — not a
        real product yet. Same visitors, same trek page, but the copy asks a
        specific question ("would you use a guide for THIS trek") instead of
@@ -302,6 +324,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
 
   </aside>
 </div>

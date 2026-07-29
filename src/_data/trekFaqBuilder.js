@@ -28,10 +28,14 @@ function buildTrekFaqs(trek) {
   }
 
   // --- Guide required? ---
+  // Deliberately generic here: the reason a guide is needed varies by trek
+  // (a legal requirement on Nepal routes vs. a terrain-danger judgment call
+  // on somewhere like Kalavantin Durg), and permitNote/gettingThere already
+  // carries the specific, correct reason — this shouldn't presume either one.
   if (trek.guideRequired) {
     faqs.push({
       q: `Do I need a guide for ${name}?`,
-      a: `Yes — we treat a guide as effectively mandatory on this route rather than optional. ${
+      a: `Yes. ${
         (trek.gettingThere && trek.gettingThere.permitNote) ||
         "The terrain involves technical or exposed sections beyond what we'd recommend attempting alone."
       }`,

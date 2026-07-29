@@ -18,13 +18,15 @@
   },
   "trailhead": "Nayapul",
   "nearestCity": "Pokhara",
-  "guideRequired": false,
+  "guideRequired": true,
+  "guideProgramActive": true,
   "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=1600",
   "cardImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Macchapuchhare_view_from_Annapurna_Base_Camp.jpg?width=800",
   "_gallery_highlights_note": "Example data — replace with curated photos when available. Other trails opt in by adding the same shape.",
   "highlights": [
-    "Solo-friendly teahouses at every overnight stop — no group-booking required.",
-    "ACAP permit (~₨3,000) and TIMS card (~₨2,000) arranged independently at Birethanti or Kathmandu.",
+    "A licensed guide has been legally required for foreign trekkers here since April 2023 — enforcement varies by checkpoint, but we'd rather tell you the rule exists than have you find out at Birethanti.",
+    "Solo-friendly teahouses at every overnight stop — no group-booking required, guide or not.",
+    "ACAP permit (~₨3,000) and TIMS card (~₨2,000) — TIMS is now issued through your guide or their agency, not arranged independently.",
     "Helicopter rescue is registered and affordable (~USD 4,500 insured) — buy travel insurance that explicitly covers it.",
     "Macchapuchhare base camp at 4,130m is the visual reward — mornings are clearer than afternoons."
   ],
@@ -46,7 +48,7 @@
     }
   ],
   "seoTitle": "Annapurna Base Camp Solo Trek Guide — The Solo Trail",
-  "seoDescription": "Complete solo trekker's guide to Annapurna Base Camp. 10-day itinerary, permits, costs, safety and packing list. No guide required.",
+  "seoDescription": "Solo trekker's guide to Annapurna Base Camp — the 2023 guide requirement explained, 10-day itinerary, permits, costs, safety and packing list.",
   "seasons": [
     {
       "label": "Oct – Nov",
@@ -81,8 +83,8 @@
       "name": "TIMS",
       "fullName": "Trekkers' Information Management System",
       "priceUSD": 17,
-      "where": "Same office as ACAP — collect both at once",
-      "notes": "SAARC nationals pay $9. Cash only. Queue early (8am) in peak season."
+      "where": "Issued through your guide or their TAAN-registered agency, not independently",
+      "notes": "SAARC nationals pay $9. Cash only. Since April 2023, TIMS for foreign trekkers is processed alongside mandatory guide registration — your guide/agency will handle this, not a solo counter visit."
     }
   ],
   "itinerary": [
@@ -238,7 +240,7 @@
         "body": "Shared taxi to Nayapul: ~NPR 800. Private jeep to Kande (saves a day): ~NPR 1,200. Book from Pokhara Lakeside the evening before."
       }
     ],
-    "permitNote": "Get ACAP + TIMS permits in Pokhara (ACAP office, Damside area) on your arrival day. Office opens 8am. Bring passport, 2 photos, and USD/NPR cash."
+    "permitNote": "Nepal has required foreign trekkers to hire a licensed guide in conservation areas — including the Annapurna Conservation Area — since April 2023, checked via TIMS registration and enforced at checkpoints along this route. In practice, enforcement is inconsistent: some checkpoints check closely, others barely glance at paperwork, and solo trekkers still complete this route without incident. We'd rather be straight about that than pretend the rule doesn't exist — it's real, it's unevenly enforced, and we recommend going with a licensed guide regardless: for the compliance question, and because a good guide genuinely helps with acclimatisation pacing and the avalanche-corridor timing flagged below, the trek's one real objective hazard. Get ACAP + TIMS sorted through your guide/agency in Pokhara (Damside area) on arrival day — bring passport, 2 photos, and USD/NPR cash."
   },
   "costs": {
     "permits": [
@@ -271,6 +273,11 @@
       }
     ],
     "onTrail": [
+      {
+        "item": "Licensed guide (per day)",
+        "note": "Commonly cited range for this route — confirm directly, varies by experience and season",
+        "amountUSD": 30
+      },
       {
         "item": "Teahouse room (per night)",
         "note": "Higher at altitude — this is average",
@@ -318,6 +325,7 @@
       {
         "title": "Before you leave",
         "items": [
+          "Arrange a licensed guide through a TAAN-registered agency — legally required since April 2023, and worth it even where enforcement is loose",
           "Buy travel insurance with helicopter evacuation cover",
           "Share your full itinerary with someone at home",
           "Register at each ACAP checkpoint (they track you)",
