@@ -104,25 +104,70 @@ eleventyComputed:
     item.addEventListener('click', function() { item.classList.toggle('checked'); });
   });
 
-  {# Stage 0 of the guide-marketplace plan: no backend and no third-party
-     form account exists yet, so this builds a mailto: link from the form
-     fields instead of posting anywhere. Every field is included in the body
-     so a reply needs no back-and-forth to get the basics. #}
+  {# Stage 0 of the guide-marketplace plan: submits via Web3Forms (a
+     no-account, no-backend form API — see docs/analytics.md-style note in
+     the guide-request card) rather than a mailto: link, so the trekker
+     never has to leave the page or open their own email client. The
+     access_key lives in the trek's own data file (guideFormAccessKey) —
+     until that's set to a real key, submission fails gracefully into the
+     mailto fallback below rather than silently losing the request. #}
   var guideForm = document.getElementById('guide-request-form');
-  if (guideForm) {
+  var guideResult = document.getElementById('guide-request-result');
+  if (guideForm && guideResult) {
+    var submitBtn = guideForm.querySelector('.guide-request-submit');
+    var submitLabel = guideForm.querySelector('.guide-request-submit-label');
+    var fallbackMailto = function(f) {
+      var subject = 'Guide request — {{ trek.name }} (' + f.name.value + ')';
+      var body = 'Trek: {{ trek.name }}\nName: ' + f.name.value + '\nEmail: ' + f.email.value +
+        '\nPlanned dates: ' + (f.dates.value || 'Not specified') + '\nGroup size: ' + f.groupSize.value +
+        '\n\nMessage:\n' + (f.message.value || '(none)');
+      return 'mailto:thepurvangmehta@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    };
     guideForm.addEventListener('submit', function(e) {
       e.preventDefault();
       var f = guideForm;
-      var subject = 'Guide request — {{ trek.name }} (' + f.name.value + ')';
-      var body = 'Trek: {{ trek.name }}\n' +
-        'Name: ' + f.name.value + '\n' +
-        'Email: ' + f.email.value + '\n' +
-        'Planned dates: ' + (f.dates.value || 'Not specified') + '\n' +
-        'Group size: ' + f.groupSize.value + '\n\n' +
-        'Message:\n' + (f.message.value || '(none)');
-      window.location.href = 'mailto:thepurvangmehta@gmail.com?subject=' +
-        encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
+      if (f.botcheck.checked) return; // honeypot tripped — silently drop, likely a bot
+      var accessKey = f.access_key.value;
+      guideResult.hidden = true;
+      guideResult.className = 'guide-request-result';
+      if (!accessKey || accessKey === 'PENDING_ACCESS_KEY') {
+        // Form isn't wired to a real access key yet — fail open to mailto
+        // rather than pretend the request went somewhere it didn't.
+        window.location.href = fallbackMailto(f);
+        return;
+      }
+      submitBtn.disabled = true;
+      submitLabel.textContent = 'Sending…';
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: f.subject.value,
+          name: f.name.value,
+          email: f.email.value,
+          dates: f.dates.value || 'Not specified',
+          group_size: f.groupSize.value,
+          message: f.message.value || '(none)',
+          trek: '{{ trek.name }}'
+        })
+      }).then(function(r) { return r.json(); }).then(function(data) {
+        if (data.success) {
+          guideForm.hidden = true;
+          guideResult.textContent = "Thanks — we've got your request and will reply personally within a couple of days.";
+          guideResult.className = 'guide-request-result ok';
+          guideResult.hidden = false;
+          if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
+        } else {
+          throw new Error(data.message || 'submission failed');
+        }
+      }).catch(function() {
+        submitBtn.disabled = false;
+        submitLabel.textContent = 'Request an introduction';
+        guideResult.innerHTML = 'Something went wrong sending that. <a href="' + fallbackMailto(f) + '">Email us directly instead</a>.';
+        guideResult.className = 'guide-request-result err';
+        guideResult.hidden = false;
+      });
     });
   }
 </script>

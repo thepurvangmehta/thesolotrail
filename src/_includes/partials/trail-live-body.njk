@@ -299,14 +299,20 @@
       <div class="sc-body">
         <p class="guide-request-copy">{{ trek.guideProgramIntro or ("We're piloting a direct introduction to a local guide for " + (trek.shortName or trek.name) + ". This is early — a real person reads every request and replies personally, not an instant booking system." ) }}</p>
         <form class="guide-request-form" id="guide-request-form">
+          <input type="hidden" name="access_key" value="{{ trek.guideFormAccessKey or 'PENDING_ACCESS_KEY' }}">
+          <input type="hidden" name="subject" value="Guide request — {{ trek.name }}">
+          <input type="checkbox" name="botcheck" class="guide-request-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <label>Your name<input type="text" name="name" required></label>
           <label>Your email<input type="email" name="email" required></label>
           <label>Planned dates<input type="text" name="dates" placeholder="e.g. Oct 12–22, 2026"></label>
           <label>Group size<input type="number" name="groupSize" min="1" value="1"></label>
           <label>Anything else the guide should know<textarea name="message" rows="3" placeholder="Experience level, questions, flexibility on dates…"></textarea></label>
-          <button type="submit" class="guide-request-submit">Request an introduction</button>
+          <button type="submit" class="guide-request-submit">
+            <span class="guide-request-submit-label">Request an introduction</span>
+          </button>
         </form>
-        <p class="guide-request-disclosure">Sends an email to our team — no account, no payment, no commitment. We'll reply personally before anything else happens.</p>
+        <div class="guide-request-result" id="guide-request-result" role="status" aria-live="polite" hidden></div>
+        <p class="guide-request-disclosure">No account, no payment, no commitment. We'll reply personally before anything else happens.</p>
       </div>
     </div>
     {% else %}
