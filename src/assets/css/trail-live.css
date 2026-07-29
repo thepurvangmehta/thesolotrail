@@ -25,11 +25,15 @@
 /* — QUICK STATS BAR — */
 .stats-bar { background: #fff; border-bottom: 1px solid var(--border); display: flex; width: 100%; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .stats-bar::-webkit-scrollbar { display: none; }
-.stat-item { flex: 1; min-width: 110px; padding: 16px 20px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+/* flex: 0 0 auto (not flex: 1) — a stretched equal-width column is what forced
+   long values like a compound trailhead name to truncate with an ellipsis.
+   Each column now sizes to its own content and the bar (already
+   horizontally scrollable) reveals the rest; nothing is ever cut. */
+.stat-item { flex: 0 0 auto; min-width: 110px; padding: 16px 20px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 2px; }
 .stat-item:last-child { border-right: none; }
-.stat-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
-.stat-value { font-size: 16px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.stat-sub { font-size: 11px; color: var(--text-muted); }
+.stat-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+.stat-value { font-size: 16px; font-weight: 600; color: var(--text); white-space: nowrap; }
+.stat-sub { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
 
 /* — MAIN LAYOUT — */
 .page-body { max-width: 1100px; margin: 0 auto; padding: 40px 24px; display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: start; }
@@ -121,7 +125,9 @@
 .cost-row:last-child { border-bottom: none; }
 .cost-item { color: var(--text); }
 .cost-note { font-size: 12px; color: var(--text-muted); }
-.cost-amount { font-weight: 600; color: var(--text); white-space: nowrap; flex-shrink: 0; max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
+/* No ellipsis — a max-width here only controls where a long amount ("800–1,500
+   per group/day") wraps onto a second line, never hides part of it. */
+.cost-amount { font-weight: 600; color: var(--text); text-align: right; flex-shrink: 0; max-width: 50%; }
 
 /* — ALERT BOXES — */
 .alert-box { border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; display: flex; gap: 12px; align-items: flex-start; }
@@ -164,7 +170,7 @@
 .permit-row:last-child { border-bottom: none; }
 .permit-name { font-weight: 600; color: var(--text); }
 .permit-note { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
-.permit-price { font-weight: 600; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 55%; }
+.permit-price { font-weight: 600; color: var(--accent); text-align: right; max-width: 55%; }
 
 .weather-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
 .weather-row:last-child { border-bottom: none; }

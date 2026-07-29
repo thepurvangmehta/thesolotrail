@@ -223,11 +223,11 @@
     }
   ],
   "gettingThere": {
-    "intro": "All roads lead to Pokhara. From there, it's a 30-minute drive to the trailhead.",
+    "intro": "Every route into this trek funnels through the same two gateways, wherever you're starting from: Kathmandu, then Pokhara. From Pokhara it's a 30-minute drive to the trailhead.",
     "steps": [
       {
-        "title": "India → Kathmandu",
-        "body": "Fly direct from Delhi (2.5h), Mumbai (3h), Bangalore (3.5h). IndiGo, Air India, and Himalaya Airlines all operate this route. Book 3–4 weeks ahead for reasonable fares."
+        "title": "Reach Kathmandu",
+        "body": "Tribhuvan International Airport (KTM) is Nepal's only real point of entry, so this is step one regardless of where you fly from. It has direct flights from major hubs across South Asia, the Gulf, and Southeast Asia; from Europe or the Americas, the usual routing is one stop via Delhi, Doha, Istanbul, Bangkok, or Kuala Lumpur. Book 3–4 weeks ahead in peak season (Mar–May, Sep–Nov) — fares climb fast closer to the date."
       },
       {
         "title": "Kathmandu → Pokhara",
@@ -255,8 +255,8 @@
     ],
     "transport": [
       {
-        "item": "Flight: India → Kathmandu (one-way)",
-        "note": "Varies by origin and timing",
+        "item": "International flight to Kathmandu (one-way)",
+        "note": "Varies hugely by origin and timing — figure is illustrative, not a global average",
         "amountUSD": 120
       },
       {
