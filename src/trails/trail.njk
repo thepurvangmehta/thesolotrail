@@ -117,7 +117,16 @@ eleventyComputed:
      'application/json' fetch — which triggers a preflight — would be blocked
      by the browser before it ever reached the script. text/plain keeps this a
      CORS-exempt "simple request"; Apps Script still parses the body as JSON
-     on the server side via JSON.parse(e.postData.contents). #}
+     on the server side via JSON.parse(e.postData.contents).
+
+     mode: 'no-cors' below is likewise deliberate, not an oversight: Apps
+     Script's response never carries an Access-Control-Allow-Origin header
+     (there's no supported way to add one from ContentService), so a normal
+     cors-mode fetch has its response blocked from JS even when the script
+     ran and the row was appended — it just looks like a failure. no-cors
+     trades away the ability to read the response for a request that
+     actually resolves; the Sheet itself is the source of truth for whether
+     an entry landed, not this success message. #}
   var guideForm = document.getElementById('guide-request-form');
   var guideResult = document.getElementById('guide-request-result');
   if (guideForm && guideResult) {
@@ -147,6 +156,7 @@ eleventyComputed:
       submitLabel.textContent = 'Sending…';
       fetch(sheetUrl, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
           trek: '{{ trek.name }}',
@@ -156,16 +166,16 @@ eleventyComputed:
           group_size: f.groupSize.value,
           message: f.message.value || '(none)'
         })
-      }).then(function(r) { return r.json(); }).then(function(data) {
-        if (data.success) {
-          guideForm.hidden = true;
-          guideResult.textContent = "Thanks — we've got your request and will reply personally within a couple of days.";
-          guideResult.className = 'guide-request-result ok';
-          guideResult.hidden = false;
-          if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
-        } else {
-          throw new Error(data.error || 'submission failed');
-        }
+      }).then(function() {
+        // no-cors gives back an opaque response — reaching here means the
+        // request went out and didn't error at the network level, which is
+        // all we can know client-side. Good enough for a fire-and-forget
+        // lead form backed by a Sheet we can just go look at.
+        guideForm.hidden = true;
+        guideResult.textContent = "Thanks — we've got your request and will reply personally within a couple of days.";
+        guideResult.className = 'guide-request-result ok';
+        guideResult.hidden = false;
+        if (window.dataLayer) window.dataLayer.push({ event: 'guide_request_submit', trek_id: '{{ trek.id }}' });
       }).catch(function() {
         submitBtn.disabled = false;
         submitLabel.textContent = 'Request an introduction';
