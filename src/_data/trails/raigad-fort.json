@@ -194,15 +194,5 @@
       }
     ]
   },
-  "trailKit": {
-    "available": false,
-    "gumroadLink": null,
-    "priceUSD": 5.99,
-    "items": []
-  },
-  "affiliates": {
-    "insurance": null,
-    "activities": []
-  },
   "imageCredit": "Photo: CC BY-SA 4.0 · Wikimedia Commons"
 }

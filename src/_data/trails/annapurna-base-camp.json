@@ -518,51 +518,5 @@
       ]
     }
   ],
-  "trailKit": {
-    "available": true,
-    "gumroadLink": "#",
-    "priceUSD": 5.99,
-    "items": [
-      "Print-ready PDF guide (all 10 days)",
-      "GPX waypoints for OsmAnd & Gaia GPS",
-      "Emergency contacts by altitude zone",
-      "ACAP + TIMS permit reference card"
-    ]
-  },
-  "affiliates": {
-    "insurance": {
-      "provider": "SafetyWing",
-      "link": "#",
-      "calloutHeading": "Helicopter evacuation from ABC costs $3,000–5,000. Get covered before you go.",
-      "calloutBody": "Travel insurance with helicopter rescue isn't optional above 3,000m. We recommend SafetyWing Nomad: covers emergency evacuation, hospitalisation, and trip interruption. From ~$50/month.",
-      "disclosure": "We earn a 10% recurring commission if you subscribe through this link, at no extra cost to you."
-    },
-    "activities": [
-      {
-        "title": "Paragliding over Phewa Lake",
-        "description": "30-min tandem flight with Annapurna views. The classic pre-trek experience.",
-        "priceFromUSD": 80,
-        "link": "#"
-      },
-      {
-        "title": "Sarangkot sunrise",
-        "description": "Jeep + short hike to the best Annapurna viewpoint. Do this the morning you leave for the trail.",
-        "priceFromUSD": 25,
-        "link": "#"
-      },
-      {
-        "title": "Phewa Lake boat + island temple",
-        "description": "Hire a rowing boat and visit Tal Barahi temple. 2 hours, deeply relaxing after a flight day.",
-        "priceFromUSD": 8,
-        "link": "#"
-      },
-      {
-        "title": "Pokhara old market walking tour",
-        "description": "Half-day walk through Lakeside and Old Bazar. Good for gear shopping orientation too.",
-        "priceFromUSD": 20,
-        "link": "#"
-      }
-    ]
-  },
   "imageCredit": "Photo: CC BY-SA 4.0 · Wikimedia Commons"
 }

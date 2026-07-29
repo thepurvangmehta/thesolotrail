@@ -74,9 +74,6 @@
   "costs": {},
   "_logistics_note": "Leave gettingThere/costs as empty objects until logistics content is ready — the template renders a 'coming soon' placeholder for empty sections instead of hiding the tab.",
 
-  "trailKit": { "available": false, "gumroadLink": null, "priceUSD": 5.99, "items": [] },
-  "affiliates": { "insurance": null, "activities": [] },
-
   "lastVerified": null,
   "publishedDate": null
 }

@@ -54,15 +54,5 @@
       "notes": "INR 200 per person per day. Paid at the trailhead."
     }
   ],
-  "trailKit": {
-    "available": false,
-    "gumroadLink": null,
-    "priceUSD": 5.99,
-    "items": []
-  },
-  "affiliates": {
-    "insurance": null,
-    "activities": []
-  },
   "imageCredit": "Photo via Wikimedia Commons"
 }

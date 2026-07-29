@@ -77,13 +77,6 @@
 .diff-pill.easy:hover { border-color: var(--good); color: var(--good); background: var(--good-pale); }
 .diff-pill.expert:hover { border-color: var(--danger); color: var(--danger); background: var(--danger-pale); }
 
-/* — KIT BANNER — */
-.kit-banner { background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%); border-radius: 16px; padding: 40px 44px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-.kit-banner-text h2 { font-family: var(--font-display); font-size: clamp(20px, 2.6vw, 28px); color: #fff; font-weight: 700; margin-bottom: 8px; }
-.kit-banner-text p { font-size: 14px; color: rgba(255,255,255,.65); max-width: 420px; line-height: 1.6; }
-.kit-banner-cta { display: inline-block; background: var(--accent-light); color: var(--ink); font-weight: 700; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: background .15s; }
-.kit-banner-cta:hover { background: var(--accent-light-hover); }
-
 /* — MANIFESTO — */
 .manifesto { background: var(--ink); padding: 64px 24px; text-align: center; }
 .manifesto-inner { max-width: 640px; margin: 0 auto; }
@@ -110,7 +103,6 @@
   .category-card { height: 160px; }
   .picks-grid { grid-template-columns: 1fr; }
   .diff-strip { padding: 20px 16px; }
-  .kit-banner { padding: 28px 24px; }
   .manifesto { padding: 44px 20px; }
 }
 @media (max-width: 400px) {

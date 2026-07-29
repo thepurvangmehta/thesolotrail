@@ -67,12 +67,6 @@
 .empty-state { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-muted); }
 .empty-state p { font-size: 15px; margin-top: 8px; }
 
-.pro-strip { background: var(--ink); padding: 40px 24px; text-align: center; margin-top: 24px; }
-.pro-strip h2 { font-family: var(--font-display); font-size: 22px; color: #fff; font-weight: 700; margin-bottom: 8px; }
-.pro-strip p { font-size: 14px; color: rgba(255,255,255,.65); margin-bottom: 20px; }
-.btn-pro-strip { display: inline-block; background: var(--accent); color: #fff; padding: 11px 28px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; }
-.btn-pro-strip:hover { background: var(--accent-hover); }
-
 @media (max-width: 820px) { .trails-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) {
   .trails-hero { padding: 36px 16px 32px; }

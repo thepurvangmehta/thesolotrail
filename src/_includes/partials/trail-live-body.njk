@@ -288,36 +288,5 @@
       </div>
     </div>
 
-    {% if trek.affiliates and trek.affiliates.insurance %}
-    <div class="insurance-callout">
-      <span class="ins-icon">🛟</span>
-      <div class="ins-body">
-        <h4>{{ trek.affiliates.insurance.calloutHeading }}</h4>
-        <p>{{ trek.affiliates.insurance.calloutBody }}</p>
-        <a href="{{ trek.affiliates.insurance.link }}" class="ins-cta">Get covered →</a>
-        <p class="ins-disclosure">{{ trek.affiliates.insurance.disclosure }}</p>
-      </div>
-    </div>
-    {% endif %}
-
-    {% if trek.trailKit and trek.trailKit.available %}
-    <div class="sidebar-card">
-      <div class="guide-cta">
-        <div class="guide-cta-title">Trail Kit</div>
-        <div class="guide-cta-desc">Offline PDF + GPX waypoints for this trek.</div>
-        <div class="guide-features">
-          {% for it in trek.trailKit.items %}<div class="gf">{{ it }}</div>{% endfor %}
-        </div>
-        <a href="{{ trek.trailKit.gumroadLink }}" class="btn-primary">Get the kit — ${{ trek.trailKit.priceUSD }}</a>
-      </div>
-    </div>
-    {% endif %}
-
-    <div class="pro-teaser">
-      <div class="pro-teaser-label">The Solo Trail Pro</div>
-      <div class="pro-teaser-title">Every guide, every kit</div>
-      <div class="pro-teaser-desc">Offline PDFs and GPS waypoints for every trail we cover — the moment a new one drops.</div>
-      <a href="/downloads/" class="btn-pro">See Pro →</a>
-    </div>
   </aside>
 </div>

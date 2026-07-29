@@ -155,17 +155,6 @@
 .sc-head { padding: 14px 18px; font-size: 13px; font-weight: 600; color: var(--text); border-bottom: 1px solid var(--border); background: var(--bg-soft); }
 .sc-body { padding: 16px 18px; }
 
-.guide-cta { background: var(--ink); border-radius: 12px; padding: 22px 20px; color: #fff; }
-.guide-cta-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin-bottom: 8px; }
-.guide-cta-desc { font-size: 13px; color: rgba(255,255,255,.72); line-height: 1.6; margin-bottom: 18px; }
-.guide-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-.gf { font-size: 13px; color: rgba(255,255,255,.85); display: flex; gap: 8px; align-items: flex-start; }
-.gf::before { content: '✓'; color: var(--accent-light); font-weight: 700; flex-shrink: 0; }
-.btn-primary { display: block; width: 100%; text-align: center; background: var(--accent); color: #fff; padding: 12px; border-radius: 7px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .2s; border: none; cursor: pointer; font-family: 'Inter', sans-serif; }
-.btn-primary:hover { background: var(--accent-hover); }
-.btn-secondary { display: block; width: 100%; text-align: center; background: transparent; color: rgba(255,255,255,.8); padding: 10px; border-radius: 7px; font-size: 13px; font-weight: 500; text-decoration: none; margin-top: 8px; border: 1px solid rgba(255,255,255,.2); transition: border-color .2s; cursor: pointer; font-family: 'Inter', sans-serif; }
-.btn-secondary:hover { border-color: rgba(255,255,255,.5); }
-
 .permit-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13px; gap: 8px; }
 .permit-row:last-child { border-bottom: none; }
 .permit-name { font-weight: 600; color: var(--text); }
@@ -184,16 +173,6 @@
 .solo-tip { background: var(--ink-pale); border-left: 3px solid var(--ink); border-radius: 0 8px 8px 0; padding: 12px 14px; margin: 20px 0; font-size: 13px; color: var(--ink); line-height: 1.65; }
 .solo-tip strong { font-weight: 600; }
 
-.pro-teaser { background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%); border-radius: 10px; padding: 18px 20px; color: #fff; margin-top: 32px; }
-.pro-teaser-label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 6px; }
-.pro-teaser-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
-.pro-teaser-desc { font-size: 13px; color: rgba(255,255,255,.7); margin-bottom: 16px; line-height: 1.6; }
-.pro-features-mini { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-.pfm { font-size: 12px; color: rgba(255,255,255,.8); display: flex; align-items: flex-start; gap: 7px; }
-.pfm::before { content: '✓'; color: var(--accent-light); font-size: 13px; font-weight: 600; flex-shrink: 0; }
-.btn-pro { display: block; text-align: center; background: var(--accent); color: #fff; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; transition: background .2s; }
-.btn-pro:hover { background: var(--accent-hover); }
-
 /* — PACKING — */
 .pack-category { margin-bottom: 16px; }
 .pack-cat-title { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
@@ -202,41 +181,6 @@
 .pack-item.checked { color: var(--text-muted); text-decoration: line-through; }
 .buy-link { display: inline-block; font-size: 10px; font-weight: 600; color: var(--warn); text-decoration: none; margin-left: 6px; padding: 1px 5px; border: 1px solid var(--warn); border-radius: 3px; vertical-align: middle; white-space: nowrap; }
 .buy-link:hover { background: var(--warn); color: #fff; }
-
-/* — TRAIL KIT CTA — */
-.kit-cta { background: var(--ink); padding: 52px 24px; }
-.kit-cta-inner { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
-.kit-cta-badge { display: inline-block; background: var(--accent-light); color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 3px; margin-bottom: 12px; }
-.kit-cta h2 { font-family: var(--font-display); font-size: clamp(22px,3vw,30px); color: #fff; font-weight: 700; margin-bottom: 8px; line-height: 1.25; }
-.kit-cta-sub { font-size: 14px; color: rgba(255,255,255,.6); line-height: 1.65; max-width: 460px; margin-bottom: 16px; }
-.kit-contents { display: flex; flex-wrap: wrap; gap: 6px 20px; }
-.kit-item { font-size: 12px; color: rgba(255,255,255,.7); }
-.kit-item::before { content: '✓ '; color: var(--accent-light); font-weight: 700; }
-.kit-price-box { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 24px 28px; text-align: center; min-width: 196px; flex-shrink: 0; }
-.kit-price-label { font-size: 11px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
-.kit-price-amount { font-family: var(--font-display); font-size: 34px; color: #fff; font-weight: 700; line-height: 1; margin-bottom: 3px; }
-.kit-price-usd { font-size: 12px; color: rgba(255,255,255,.35); margin-bottom: 16px; }
-.kit-buy-btn { display: block; background: var(--accent-light); color: var(--ink); font-size: 13px; font-weight: 700; padding: 11px 20px; border-radius: 7px; text-decoration: none; text-align: center; }
-.kit-buy-btn:hover { background: var(--accent-light-hover); }
-.kit-buy-sub { font-size: 10px; color: rgba(255,255,255,.3); margin-top: 8px; }
-
-/* — INSURANCE CALLOUT — */
-.insurance-callout { background: var(--danger-pale); border: 1.5px solid var(--danger-pale-border); border-radius: 10px; padding: 20px 22px; margin-top: 24px; display: flex; gap: 14px; align-items: flex-start; }
-.ins-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
-.ins-body h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
-.ins-body p { font-size: 13px; color: var(--text-mid); line-height: 1.6; margin-bottom: 10px; }
-.ins-cta { display: inline-block; background: var(--danger); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 14px; border-radius: 5px; text-decoration: none; }
-.ins-cta:hover { background: var(--danger-hover); }
-.ins-disclosure { font-size: 10px; color: var(--text-muted); margin-top: 6px; margin-bottom: 0; }
-
-/* — ACTIVITIES — */
-.pk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 8px; }
-.pk-grid > * { min-width: 0; }
-.pk-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 13px 15px; text-decoration: none; color: inherit; display: block; transition: border-color .15s; }
-.pk-card:hover { border-color: var(--accent); }
-.pk-card-title { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
-.pk-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-.pk-card-price { font-size: 12px; color: var(--accent); font-weight: 600; margin-top: 5px; }
 
 /* — RESPONSIVE — */
 @media (max-width: 900px) { .page-body { grid-template-columns: 1fr; } .sidebar { order: 2; } }
@@ -311,7 +255,6 @@
 .alert-box.warning { border-left-color: var(--warn); }
 .alert-box.danger { border-left-color: var(--danger); }
 .alert-icon { font-size: 18px; }
-@media (max-width: 520px) { .pk-grid { grid-template-columns: 1fr; } .kit-cta-inner { grid-template-columns: 1fr; } .kit-price-box { min-width: unset; } }
 
 /* — PER-TREK FAQ (visible block backing the FAQPage schema) — */
 .trek-faq { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
